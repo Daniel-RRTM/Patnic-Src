@@ -1,0 +1,53 @@
+
+
+
+META
+  INDEX         -->  X_H_3
+  USE           -->  KITPART_BASE
+  BY            -->  RedRastaRigger(inhouse)
+
+  DESCRIPTION   vvv
+
+
+
+}
+
+
+//----------------------------------------------------------------------------\\
+//----------------------------------------------------------------------------\\
+//----------------------------------------------------------------------------\\
+
+MAIN
+
+//-------\\
+  
+  COMPONENTS
+    C_6_NAME            --->  HeartBleedBug
+    C_12_ATLAS_INDEX            --->  X_H_3
+    C_0_DESCRIPTION              --->  This well known Exploit, causes heart-implants to overcharge the heart cant keep up the pace and explodes. Its sudden and gruesome death was feared by citizens in the early days of internal cyberware and the go-to argument of Naturalistic activists
+    C_35_KIT_MECHANICAL_SUMMARY  --->  -20 hitpoints
+    C_48_RARITY                  --->  3
+    C_37_M_TYPE                  --->  MEAT
+    C_31_KIT_CAT_TYPE           --->  HACK
+    C_38_KIT_PART_TYPE           --->  BASE
+    C_36_KIT_MOD_TIME            --->  2
+    C_33_COOLDOWN_TIMER          --->  4
+    C_49_EVENT_REFERENCE        --->  X_H_3
+   
+
+//-------\\
+
+  FLAGS
+    F_5_KITPART_TYPE
+    F_15_KITPART_TYPE_BASE
+
+
+//----------------------------------------------------------------------------\\
+//----------------------------------------------------------------------------\\
+//----------------------------------------------------------------------------\\
+
+
+REFERENCE
+
+
+END

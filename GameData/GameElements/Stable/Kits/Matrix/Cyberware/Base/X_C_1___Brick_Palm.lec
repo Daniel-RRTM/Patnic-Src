@@ -1,0 +1,53 @@
+
+
+
+META
+  INDEX         -->  X_C_1
+  USE           -->  KITPART_BASE
+  BY            -->  RedRastaRigger(inhouse)
+
+  DESCRIPTION   vvv
+
+
+
+}
+
+
+//----------------------------------------------------------------------------\\
+//----------------------------------------------------------------------------\\
+//----------------------------------------------------------------------------\\
+
+MAIN
+
+//-------\\
+  
+  COMPONENTS
+    C_6_NAME                     --->  Brick-palm
+    C_12_ATLAS_INDEX             --->  X_C_1
+    C_0_DESCRIPTION              --->  A conducting metal surface on the palm, it has the magicall abillityto turn your comlink into a brick by shortcircuting
+    C_35_KIT_MECHANICAL_SUMMARY  --->  conducts electrizity, deals 5 damage
+    C_48_RARITY                  --->  3
+    C_37_M_TYPE                  --->  MEAT
+    C_31_KIT_CAT_TYPE            --->  CYBERWARE
+    C_38_KIT_PART_TYPE           --->  BASE
+    C_36_KIT_MOD_TIME            --->  2
+    C_33_COOLDOWN_TIMER          --->  4
+    C_49_EVENT_REFERENCE         --->  X_C_1
+   
+
+//-------\\
+
+  FLAGS
+    F_5_KITPART_TYPE
+    F_15_KITPART_TYPE_BASE
+
+
+//----------------------------------------------------------------------------\\
+//----------------------------------------------------------------------------\\
+//----------------------------------------------------------------------------\\
+
+
+REFERENCE
+
+
+END

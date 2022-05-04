@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/RunKit.wav-12d7df84a6c629786c4da8a49ff8501e.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/FX/RunKit.wav"
+dest_files=[ "res://.import/RunKit.wav-12d7df84a6c629786c4da8a49ff8501e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

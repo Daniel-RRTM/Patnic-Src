@@ -1,0 +1,56 @@
+
+
+
+META
+  INDEX         -->  SENTDROID
+  USE           -->  ACTOR_RACE
+  BY            -->  RedRastaRigger(inhouse)
+
+  DESCRIPTION   vvv
+
+
+
+}
+
+
+//----------------------------------------------------------------------------\\
+//----------------------------------------------------------------------------\\
+//----------------------------------------------------------------------------\\
+
+MAIN
+
+//-------\\
+  
+  COMPONENTS
+    C_12_ATLAS_INDEX    --->  SENTDROID
+    C_6_NAME             --->  SentDroid
+    C_0_DESCRIPTION      --->  A sentient droid, Robots dreaming of Isaaac
+    C_27_RACIAL_ENEMIES  --->  HUMAN
+    C_28_RACIAL_FRIENDS  --->  ORC AND DWARF AND TROLL
+    C_19_ATTRIBUTES      vvvv
+      CON  --->  5
+      AGI  --->  5
+      REA  --->  5
+      STR  --->  5
+      WIL  --->  7
+      LOG  --->  7
+      INT  --->  3
+      CHA ---> 3
+
+
+//-------\\
+
+  FLAGS
+    F_6_ACTOR_ATTRIBUTES
+    F_11_ACTOR_ATTRIBUTES_RACE
+
+
+//----------------------------------------------------------------------------\\
+//----------------------------------------------------------------------------\\
+//----------------------------------------------------------------------------\\
+
+
+REFERENCE
+
+
+END

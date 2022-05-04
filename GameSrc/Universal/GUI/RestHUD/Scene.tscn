@@ -1,0 +1,239 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/DynamicFonts/Text_Default.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/DynamicFonts/Text_Header.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/DynamicFonts/new_dynamicfontdata.tres" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Themes/ThemeRedCopper.tres" type="Theme" id=4]
+[ext_resource path="res://Assets/Themes/ThemeOxfordBLue.tres" type="Theme" id=5]
+[ext_resource path="res://GameSrc/Universal/GUI/RestHUD/Text.gd" type="Script" id=6]
+[ext_resource path="res://GameSrc/Universal/GUI/RestHUD/Manager.gd" type="Script" id=7]
+[ext_resource path="res://GameSrc/Universal/GUI/RestHUD/ScreenSwapText.gd" type="Script" id=8]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.462745 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.196078, 0.196078, 0.196078, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.592157, 0.643137, 0.764706, 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 22
+font_data = ExtResource( 3 )
+
+[node name="Settingwechsel" type="Node2D"]
+position = Vector2( 11.2246, 88.1133 )
+
+[node name="dim" type="Panel" parent="."]
+margin_left = -1208.0
+margin_top = -48.0
+margin_right = 752.0
+margin_bottom = 1160.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Status" type="Panel" parent="."]
+visible = false
+margin_left = 53.0
+margin_top = 16.0
+margin_right = 720.0
+margin_bottom = 44.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanicroomNR" type="RichTextLabel" parent="Status"]
+margin_left = 8.0
+margin_top = 4.0
+margin_right = 104.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 136, 20 )
+custom_fonts/normal_font = SubResource( 3 )
+text = "P@nicroom nr: "
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PRMR text" type="RichTextLabel" parent="Status"]
+margin_left = 112.0
+margin_top = 4.0
+margin_right = 152.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 136, 20 )
+custom_fonts/normal_font = ExtResource( 1 )
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="current runner" type="RichTextLabel" parent="Status"]
+margin_left = 168.0
+margin_top = 4.0
+margin_right = 320.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( -160, 20 )
+custom_fonts/normal_font = SubResource( 3 )
+text = "Current Runner:"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CR text" type="RichTextLabel" parent="Status"]
+margin_left = 320.0
+margin_top = 4.0
+margin_right = 488.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 136, 20 )
+custom_fonts/normal_font = SubResource( 3 )
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="credits" type="RichTextLabel" parent="Status"]
+margin_left = 488.0
+margin_top = 4.0
+margin_right = 576.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 136, 20 )
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_text = "credits:"
+text = "credits:"
+scroll_active = false
+
+[node name="credits count" type="RichTextLabel" parent="Status"]
+margin_left = 576.0
+margin_top = 4.0
+margin_right = 696.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( -160, 20 )
+custom_fonts/normal_font = SubResource( 3 )
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shortcut" type="Panel" parent="."]
+margin_left = 640.0
+margin_top = 147.0
+margin_right = 680.0
+margin_bottom = 187.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="Button" parent="shortcut"]
+margin_left = -176.0
+margin_top = 12.8867
+margin_right = -46.0
+margin_bottom = 32.8867
+rect_min_size = Vector2( 130, 0 )
+theme = ExtResource( 5 )
+text = "Inventory  [1]"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="Button" parent="shortcut"]
+margin_left = -176.0
+margin_top = 39.8867
+margin_right = -46.0
+margin_bottom = 59.8867
+rect_min_size = Vector2( 130, 0 )
+rect_pivot_offset = Vector2( -67.2246, 52.8867 )
+theme = ExtResource( 5 )
+text = "Char       [2]"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3" type="Button" parent="shortcut"]
+margin_left = -176.0
+margin_top = 68.8867
+margin_right = -46.0
+margin_bottom = 88.8867
+rect_min_size = Vector2( 130, 0 )
+theme = ExtResource( 5 )
+text = "Rootnet    [3]"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6" type="Button" parent="shortcut"]
+margin_left = -43.2246
+margin_top = 68.8867
+margin_right = 86.7754
+margin_bottom = 88.8867
+rect_min_size = Vector2( 130, 0 )
+theme = ExtResource( 5 )
+text = "Retreat    [6]"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4" type="Button" parent="shortcut"]
+margin_left = -43.2246
+margin_top = 12.8867
+margin_right = 86.7754
+margin_bottom = 32.8867
+rect_min_size = Vector2( 130, 0 )
+theme = ExtResource( 5 )
+text = "Workshop   [4]"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5" type="Button" parent="shortcut"]
+margin_left = -43.2246
+margin_top = 39.8867
+margin_right = 86.7754
+margin_bottom = 59.8867
+rect_min_size = Vector2( 130, 0 )
+rect_pivot_offset = Vector2( -67.2246, 52.8867 )
+theme = ExtResource( 5 )
+text = "Retreat    [5]"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="panic button" type="Button" parent="shortcut"]
+margin_left = -176.0
+margin_top = -80.0
+margin_right = 80.0
+margin_bottom = -8.0
+theme = ExtResource( 4 )
+
+[node name="text" type="RichTextLabel" parent="shortcut/panic button"]
+margin_right = 256.0
+margin_bottom = 72.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]P@NIC!![/center]"
+text = "P@NIC!!"
+scroll_active = false
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="shortcut/1" to="shortcut/1" method="_on_pressed"]
+[connection signal="pressed" from="shortcut/2" to="shortcut/2" method="_on_pressed"]
+[connection signal="pressed" from="shortcut/3" to="shortcut/3" method="_on_pressed"]
+[connection signal="pressed" from="shortcut/6" to="shortcut/6" method="_on_pressed"]
+[connection signal="pressed" from="shortcut/4" to="shortcut/4" method="_on_pressed"]
+[connection signal="pressed" from="shortcut/5" to="shortcut/5" method="_on_pressed"]

@@ -1,0 +1,63 @@
+{
+
+   "C_6_NAME"               : "T-Shirt Cannon",
+   "F_5_KITPART_TYPE"            : "N/A",
+   "F_15_KITPART_TYPE_BASE"      : "N/A",
+   "C_12_ATLAS_INDEX"           : "T_G_1",
+   "C_0_DESCRIPTION"         : "TOTAL RECALL: MAY SHOOT CAUSE OF FIRMWARE-BUG STRRAIGHTJACKETS",
+   "C_35_KIT_MECHANICAL_SUMMARY" : "deals 3 damage, takes abillity to move for 3 actions",
+   "C_48_RARITY"             : "3",
+
+   "C_37_M_TYPE"             : "MEAT",
+   "C_31_KIT_CAT_TYPE"           : "GUN",
+   "C_38_KIT_PART_TYPE"          : "BASE",
+   "C_36_KIT_MOD_TIME"           : "2",
+   "C_33_COOLDOWN_TIMER"     : "2",
+   
+
+
+
+   "C_49_EVENT_REFERENCE":{
+      
+      "TIME":{
+      "TIME-0":"INSTANT",
+      "TIME-1":"N/A",
+      "TIME-2":"N/A",
+      "TIME-3":"N/A"
+      },
+
+
+      "TRIGGER":{
+         "TRIGGER-0":{
+            "BASE":"ACTOR",
+            "SPECIFIC":[
+               {"BASE":"BASE"}
+            ]}
+
+      },
+      
+
+      "SPACE":{
+         "SPACE-0":{
+            "MEDIUM":"LINEA",
+            "SOURCE":"SELF",
+            "REACH":"4",
+            "M_TYPE":"MEAT"
+         }
+
+      },
+      
+
+      "EFFECT":{
+         "EFFECT-0":{
+            "CONDITION":[
+               ["Physiological_Movement_Incapacitated","3","1"]
+            ],
+            "STAT_MOD":{"U_DEAL_PLAIN_DAMAGE":"-3"}
+         }
+
+      }}
+
+      
+
+}

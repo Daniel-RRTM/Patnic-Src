@@ -1,0 +1,189 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/DynamicFonts/new_dynamicfontdata.tres" type="DynamicFontData" id=1]
+[ext_resource path="res://GameSrc/Universal/GUI/EquipedKitSet/Scene.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GameSrc/PatnicRoom/scenes/Gameloop/RestMode/Station/Title.gd" type="Script" id=5]
+[ext_resource path="res://Assets/CustomeStyle/Panel/Main_Menue.tres" type="StyleBox" id=7]
+[ext_resource path="res://GameSrc/Universal/GUI/KitSetModder/Scene.tscn" type="PackedScene" id=9]
+[ext_resource path="res://GameSrc/Universal/GUI/Inventory/Scene.tscn" type="PackedScene" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="Node2D" type="Control"]
+
+[node name="Title" type="Control" parent="."]
+margin_left = 160.0
+margin_top = 119.0
+margin_right = 200.0
+margin_bottom = 159.0
+script = ExtResource( 5 )
+
+[node name="Panel" type="Panel" parent="Title"]
+margin_left = 1072.0
+margin_top = -45.0
+margin_right = 1464.0
+margin_bottom = 165.0
+custom_styles/panel = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="TextureRect" parent="Title/Panel"]
+margin_left = 8.0
+margin_top = 22.0
+margin_right = 40.0
+margin_bottom = 54.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="TextureRect" parent="Title/Panel"]
+margin_left = 176.0
+margin_top = 62.0
+margin_right = 208.0
+margin_bottom = 94.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3" type="TextureRect" parent="Title/Panel"]
+margin_left = 320.0
+margin_top = 22.0
+margin_right = 352.0
+margin_bottom = 54.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Station title" type="Control" parent="Title/Panel"]
+margin_right = 392.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MEAT" type="RichTextLabel" parent="Title/Panel/Station title"]
+visible = false
+margin_top = 1.0
+margin_right = 392.0
+margin_bottom = 49.0
+custom_colors/default_color = Color( 0.878431, 0.266667, 0.266667, 1 )
+custom_colors/font_color_shadow = Color( 0.807843, 0.654902, 0.298039, 1 )
+custom_constants/shadow_offset_x = 6
+custom_constants/shadow_offset_y = 3
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]WORKSHOP"
+text = "WORKSHOP"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MATRIX" type="RichTextLabel" parent="Title/Panel/Station title"]
+visible = false
+margin_top = 1.0
+margin_right = 392.0
+margin_bottom = 49.0
+custom_colors/default_color = Color( 0, 0.611765, 0.266667, 1 )
+custom_colors/font_color_shadow = Color( 0.482353, 0.807843, 0.298039, 1 )
+custom_constants/shadow_offset_x = 6
+custom_constants/shadow_offset_y = 3
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]TERMINAL"
+text = "TERMINAL"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MAGIC" type="RichTextLabel" parent="Title/Panel/Station title"]
+visible = false
+margin_top = 1.0
+margin_right = 392.0
+margin_bottom = 49.0
+custom_colors/default_color = Color( 0.12549, 0.352941, 0.737255, 1 )
+custom_colors/font_color_shadow = Color( 0.298039, 0.701961, 0.807843, 1 )
+custom_constants/shadow_offset_x = 6
+custom_constants/shadow_offset_y = 3
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]RETREAT"
+text = "RETREAT"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="reminder" type="RichTextLabel" parent="Title"]
+margin_left = 1080.0
+margin_top = 89.0
+margin_right = 1456.0
+margin_bottom = 137.0
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="countdown" type="RichTextLabel" parent="Title"]
+margin_left = 1072.0
+margin_top = 129.0
+margin_right = 1465.0
+margin_bottom = 162.0
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GearedKitSetTable" parent="." instance=ExtResource( 4 )]
+margin_top = 792.0
+margin_bottom = 832.0
+
+[node name="KitSetOverview" parent="." instance=ExtResource( 9 )]
+visible = false
+margin_left = -24.0
+margin_top = -216.0
+margin_right = -24.0
+margin_bottom = -216.0
+
+[node name="BuilldSelection" parent="." instance=ExtResource( 12 )]
+visible = false
+position = Vector2( 14, -80 )
+
+[node name="KitEffectDetails" type="Control" parent="."]
+margin_left = 1016.0
+margin_top = 384.0
+margin_right = 1056.0
+margin_bottom = 424.0

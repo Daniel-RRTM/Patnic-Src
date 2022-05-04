@@ -1,0 +1,10 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[ext_resource path="res://Assets/DynamicFonts/new_dynamicfontdata.tres" type="DynamicFontData" id=1]
+
+[resource]
+size = 54
+outline_size = 2
+outline_color = Color( 0.309804, 0.141176, 0.780392, 1 )
+use_filter = true
+font_data = ExtResource( 1 )

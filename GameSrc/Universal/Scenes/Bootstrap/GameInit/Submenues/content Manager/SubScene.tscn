@@ -1,0 +1,201 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/DynamicFonts/new_dynamicfontdata.tres" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/DynamicFonts/Text_Default.tres" type="DynamicFont" id=2]
+[ext_resource path="res://GameSrc/Universal/Scenes/Bootstrap/GameInit/Submenues/content Manager/ContentManager.gd" type="Script" id=3]
+[ext_resource path="res://GameSrc/Universal/Scenes/Bootstrap/GameInit/Submenues/content Manager/CustomeContentLoader.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Themes/ThemeSpanishViolet.tres" type="Theme" id=5]
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.172549, 0.176471, 0.152941, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.803922, 0.807843, 0.152941, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_color = Color( 0.596078, 0.639216, 0.427451, 0.682353 )
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.172549, 0.176471, 0.152941, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.847059, 0.941176, 0.0941176, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_color = Color( 0.596078, 0.639216, 0.427451, 0.6 )
+shadow_size = 3
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="DynamicFont" id=6]
+size = 15
+font_data = ExtResource( 1 )
+
+[node name="Node" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 312.0
+margin_top = 168.0
+margin_right = 1112.0
+margin_bottom = 528.0
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_left = 8.0
+margin_top = 304.0
+margin_right = 48.0
+margin_bottom = 344.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="boot1" type="Control" parent="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="reset" type="Button" parent="Control/boot1"]
+margin_left = 320.0
+margin_top = 168.0
+margin_right = 456.0
+margin_bottom = 200.0
+custom_colors/font_color = Color( 0.960784, 1, 0.254902, 1 )
+custom_colors/font_color_hover = Color( 0.972549, 1, 0.721569, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+text = "RESET FOLDER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="folder" type="Button" parent="Control/boot1"]
+visible = false
+margin_left = 472.0
+margin_top = 168.0
+margin_right = 608.0
+margin_bottom = 200.0
+custom_colors/font_color = Color( 0.960784, 1, 0.254902, 1 )
+custom_colors/font_color_hover = Color( 0.972549, 1, 0.721569, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+text = "SHOW FOLDER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="boot3" type="Control" parent="Control"]
+margin_left = 256.0
+margin_top = 144.0
+margin_right = 296.0
+margin_bottom = 184.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/boot3"]
+margin_left = 512.0
+margin_top = 244.0
+margin_right = 896.0
+margin_bottom = 268.0
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+
+[node name="detail" type="Control" parent="."]
+visible = false
+margin_left = 552.0
+margin_top = 56.0
+margin_right = 592.0
+margin_bottom = 96.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel3" type="Panel" parent="detail"]
+margin_right = 424.0
+margin_bottom = 88.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="detail"]
+margin_left = -8.0
+margin_right = 560.0
+margin_bottom = 40.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[color=yellow] Details"
+text = " Details"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="detail"]
+margin_left = 16.0
+margin_top = 40.0
+margin_right = 416.0
+margin_bottom = 80.0
+custom_fonts/normal_font = SubResource( 6 )
+bbcode_enabled = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="List" type="Control" parent="."]
+margin_top = -40.0
+margin_right = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="List"]
+margin_left = 336.0
+margin_top = 232.0
+margin_right = 1088.0
+margin_bottom = 472.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="List/ScrollContainer"]
+custom_constants/separation = 35
+script = ExtResource( 4 )
+
+[connection signal="pressed" from="Control/boot1/reset" to="." method="_on_reset_pressed"]

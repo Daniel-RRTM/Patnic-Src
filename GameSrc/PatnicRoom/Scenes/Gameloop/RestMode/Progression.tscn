@@ -1,0 +1,524 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://GameSrc/Universal/GUI/RestHUD/Scene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/DynamicFonts/Text_Default.tres" type="DynamicFont" id=2]
+[ext_resource path="res://GameSrc/PatnicRoom/scenes/Gameloop/RestMode/Button.gd" type="Script" id=3]
+[ext_resource path="res://GameSrc/PatnicRoom/scenes/Gameloop/RestMode/Progression.gd" type="Script" id=4]
+[ext_resource path="res://GameSrc/PatnicRoom/scenes/Gameloop/RestMode/Progress.gd" type="Script" id=5]
+[ext_resource path="res://GameSrc/PatnicRoom/scenes/Gameloop/RestMode/ProgressBar.gd" type="Script" id=6]
+[ext_resource path="res://Assets/DynamicFonts/new_dynamicfontdata.tres" type="DynamicFontData" id=7]
+[ext_resource path="res://GameSrc/PatnicRoom/scenes/Gameloop/RestMode/Self.gd" type="Script" id=8]
+[ext_resource path="res://Assets/Themes/ThemeSpanishViolet.tres" type="Theme" id=9]
+[ext_resource path="res://Assets/CustomeStyle/RTL/Rest_Frame_Title.tres" type="DynamicFont" id=10]
+[ext_resource path="res://GameSrc/PatnicRoom/scenes/Gameloop/RestMode/kitSlotLink.gd" type="Script" id=11]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.0941176, 0.117647, 0.670588, 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+outline_size = 1
+outline_color = Color( 0.172549, 0.137255, 0.788235, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0.00392157, 0.133333, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.203922, 0.290196, 0.815686, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.203922, 0.564706, 0.168627, 1 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 30
+outline_size = 1
+outline_color = Color( 0.137255, 0.788235, 0.423529, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0.133333, 0.0156863, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.203922, 0.815686, 0.243137, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.572549, 0.117647, 0.117647, 1 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 30
+outline_size = 1
+outline_color = Color( 0.788235, 0.137255, 0.34902, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.133333, 0, 0.00784314, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.815686, 0.203922, 0.360784, 1 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.360784, 0.0156863, 0.423529, 1 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 30
+outline_size = 1
+outline_color = Color( 0.788235, 0.137255, 0.701961, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.133333, 0, 0.109804, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.811765, 0.203922, 0.815686, 1 )
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.580392, 0.580392, 0.0352941, 1 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 30
+outline_size = 1
+outline_color = Color( 0.737255, 0.788235, 0.137255, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 0.133333, 0.129412, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.815686, 0.764706, 0.203922, 1 )
+
+[node name="Settingwechsel" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="background" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Settingwechsel" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1176, 8 )
+
+[node name="SwitchPanel" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Progression" type="Control" parent="SwitchPanel"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Workstation" type="Panel" parent="SwitchPanel/Progression"]
+margin_left = -24.0
+margin_top = 136.0
+margin_right = 1216.0
+margin_bottom = 392.0
+theme = ExtResource( 9 )
+script = ExtResource( 5 )
+
+[node name="Title" type="RichTextLabel" parent="SwitchPanel/Progression/Workstation"]
+margin_left = 48.0
+margin_right = 488.0
+margin_bottom = 62.0
+custom_fonts/normal_font = ExtResource( 10 )
+bbcode_text = "Station"
+text = "Station"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Retreat" type="Control" parent="SwitchPanel/Progression/Workstation"]
+margin_left = -264.0
+margin_top = -104.0
+margin_right = -224.0
+margin_bottom = -64.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Barframe" type="Panel" parent="SwitchPanel/Progression/Workstation/Retreat"]
+margin_left = 480.0
+margin_top = 176.0
+margin_right = 1256.0
+margin_bottom = 216.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="SwitchPanel/Progression/Workstation/Retreat/Barframe"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 768.0
+margin_bottom = 32.0
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 3 )
+step = 1.0
+percent_visible = false
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="RichTextLabel" parent="SwitchPanel/Progression/Workstation/Retreat"]
+margin_left = 352.0
+margin_top = 176.0
+margin_right = 480.0
+margin_bottom = 216.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_text = "Retreat"
+text = "Retreat"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="counter" type="RichTextLabel" parent="SwitchPanel/Progression/Workstation/Retreat"]
+margin_left = 1292.0
+margin_top = 176.0
+margin_right = 1484.0
+margin_bottom = 216.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="link" type="Button" parent="SwitchPanel/Progression/Workstation/Retreat"]
+visible = false
+margin_left = 1280.0
+margin_top = 176.0
+margin_right = 1472.0
+margin_bottom = 218.0
+custom_fonts/font = SubResource( 5 )
+custom_styles/normal = SubResource( 4 )
+text = "FINISHED"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Terminal" type="Control" parent="SwitchPanel/Progression/Workstation"]
+margin_left = -264.0
+margin_top = 8.0
+margin_right = -224.0
+margin_bottom = 48.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Barframe" type="Panel" parent="SwitchPanel/Progression/Workstation/Terminal"]
+margin_left = 480.0
+margin_top = 176.0
+margin_right = 1256.0
+margin_bottom = 216.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="SwitchPanel/Progression/Workstation/Terminal/Barframe"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 768.0
+margin_bottom = 32.0
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 6 )
+step = 1.0
+percent_visible = false
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="RichTextLabel" parent="SwitchPanel/Progression/Workstation/Terminal"]
+margin_left = 352.0
+margin_top = 176.0
+margin_right = 480.0
+margin_bottom = 216.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_text = "Terminal"
+text = "Terminal"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="counter" type="RichTextLabel" parent="SwitchPanel/Progression/Workstation/Terminal"]
+margin_left = 1292.0
+margin_top = 176.0
+margin_right = 1484.0
+margin_bottom = 216.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="link" type="Button" parent="SwitchPanel/Progression/Workstation/Terminal"]
+visible = false
+margin_left = 1280.0
+margin_top = 176.0
+margin_right = 1472.0
+margin_bottom = 218.0
+custom_fonts/font = SubResource( 8 )
+custom_styles/normal = SubResource( 7 )
+text = "FINISHED"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Workshop" type="Control" parent="SwitchPanel/Progression/Workstation"]
+margin_left = -264.0
+margin_top = -48.0
+margin_right = -224.0
+margin_bottom = -8.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="counter" type="RichTextLabel" parent="SwitchPanel/Progression/Workstation/Workshop"]
+margin_left = 1292.0
+margin_top = 174.811
+margin_right = 1484.0
+margin_bottom = 214.811
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Barframe" type="Panel" parent="SwitchPanel/Progression/Workstation/Workshop"]
+margin_left = 480.0
+margin_top = 176.0
+margin_right = 1256.0
+margin_bottom = 216.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="SwitchPanel/Progression/Workstation/Workshop/Barframe"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 768.0
+margin_bottom = 32.0
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 9 )
+step = 1.0
+percent_visible = false
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="RichTextLabel" parent="SwitchPanel/Progression/Workstation/Workshop"]
+margin_left = 352.0
+margin_top = 176.0
+margin_right = 480.0
+margin_bottom = 216.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_text = "Workshop"
+text = "Workshop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="link" type="Button" parent="SwitchPanel/Progression/Workstation/Workshop"]
+visible = false
+margin_left = 1280.0
+margin_top = 174.811
+margin_right = 1472.0
+margin_bottom = 216.811
+custom_fonts/font = SubResource( 11 )
+custom_styles/normal = SubResource( 10 )
+text = "FINISHED"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="SwitchPanel/Progression/Workstation"]
+
+[node name="Self" type="Panel" parent="SwitchPanel/Progression"]
+margin_left = -24.0
+margin_top = 504.0
+margin_right = 1216.0
+margin_bottom = 704.0
+theme = ExtResource( 9 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="RichTextLabel" parent="SwitchPanel/Progression/Self"]
+margin_left = 48.0
+margin_right = 488.0
+margin_bottom = 62.0
+custom_fonts/normal_font = ExtResource( 10 )
+bbcode_text = "Self"
+text = "Self"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KitSlot" type="Control" parent="SwitchPanel/Progression/Self"]
+margin_left = -264.0
+margin_top = -104.0
+margin_right = -224.0
+margin_bottom = -64.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="SwitchPanel/Progression/Self/KitSlot"]
+margin_left = 480.0
+margin_top = 176.0
+margin_right = 1256.0
+margin_bottom = 216.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="SwitchPanel/Progression/Self/KitSlot/Panel"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 768.0
+margin_bottom = 32.0
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 18 )
+step = 1.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SwitchPanel/Progression/Self/KitSlot"]
+margin_left = 352.0
+margin_top = 176.0
+margin_right = 480.0
+margin_bottom = 216.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "Kitslot"
+text = "Kitslot"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="counter" type="RichTextLabel" parent="SwitchPanel/Progression/Self/KitSlot"]
+margin_left = 1292.0
+margin_top = 184.0
+margin_right = 1484.0
+margin_bottom = 224.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="link" type="Button" parent="SwitchPanel/Progression/Self/KitSlot"]
+visible = false
+margin_left = 1284.0
+margin_top = 176.0
+margin_right = 1476.0
+margin_bottom = 218.0
+custom_fonts/font = SubResource( 20 )
+custom_styles/normal = SubResource( 19 )
+text = "FINISHED"
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Perk" type="Control" parent="SwitchPanel/Progression/Self"]
+margin_left = -264.0
+margin_top = -48.0
+margin_right = -224.0
+margin_bottom = -8.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="SwitchPanel/Progression/Self/Perk"]
+margin_left = 480.0
+margin_top = 176.0
+margin_right = 1256.0
+margin_bottom = 216.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="SwitchPanel/Progression/Self/Perk/Panel"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 768.0
+margin_bottom = 32.0
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 21 )
+step = 1.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SwitchPanel/Progression/Self/Perk"]
+margin_left = 352.0
+margin_top = 176.0
+margin_right = 480.0
+margin_bottom = 216.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_text = "Perk"
+text = "Perk"
+
+[node name="counter" type="RichTextLabel" parent="SwitchPanel/Progression/Self/Perk"]
+margin_left = 1292.0
+margin_top = 176.0
+margin_right = 1484.0
+margin_bottom = 216.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="link" type="Button" parent="SwitchPanel/Progression/Self/Perk"]
+visible = false
+margin_left = 1284.0
+margin_top = 174.0
+margin_right = 1476.0
+margin_bottom = 216.0
+custom_fonts/font = SubResource( 23 )
+custom_styles/normal = SubResource( 22 )
+text = "STILL WIP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="SwitchPanel/Progression/Self"]
+wait_time = 0.56
+
+[connection signal="pressed" from="SwitchPanel/Progression/Workstation/Retreat/link" to="SwitchPanel/Progression/Workstation/Retreat/link" method="_on_Button_pressed"]
+[connection signal="pressed" from="SwitchPanel/Progression/Workstation/Terminal/link" to="SwitchPanel/Progression/Workstation/Terminal/link" method="_on_Button_pressed"]
+[connection signal="pressed" from="SwitchPanel/Progression/Workstation/Workshop/link" to="SwitchPanel/Progression/Workstation/Workshop/link" method="_on_Button_pressed"]
+[connection signal="timeout" from="SwitchPanel/Progression/Workstation/Timer" to="SwitchPanel/Progression/Workstation" method="_on_Timer_timeout"]
+[connection signal="pressed" from="SwitchPanel/Progression/Self/KitSlot/link" to="SwitchPanel/Progression/Self/KitSlot/link" method="_on_Button_pressed"]
+[connection signal="pressed" from="SwitchPanel/Progression/Self/Perk/link" to="SwitchPanel/Progression/Self/Perk/link" method="_on_Button_pressed"]
+[connection signal="timeout" from="SwitchPanel/Progression/Self/Timer" to="SwitchPanel/Progression/Self" method="_on_Timer_timeout"]

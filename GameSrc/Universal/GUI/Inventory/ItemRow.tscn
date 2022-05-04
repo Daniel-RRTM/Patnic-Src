@@ -1,0 +1,105 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/DynamicFonts/new_dynamicfontdata.tres" type="DynamicFontData" id=1]
+[ext_resource path="res://GameSrc/Universal/GUI/Inventory/ItemRow.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.462745, 0.541176, 0.694118, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.2, 0.603922, 0.207843, 0.505882 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.572549, 0.180392, 0.180392, 0 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 232.0
+margin_top = 208.0
+margin_right = 232.0
+margin_bottom = 208.0
+script = ExtResource( 2 )
+
+[node name="Name" type="Panel" parent="."]
+margin_right = 184.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 150, 25 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Name"]
+margin_left = 8.0
+margin_right = 186.0
+margin_bottom = 25.0
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Summary" type="Panel" parent="."]
+margin_left = 200.0
+margin_right = 584.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 184, 25 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Summary"]
+margin_left = 8.0
+margin_right = 520.0
+margin_bottom = 25.0
+custom_fonts/normal_font = SubResource( 2 )
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="Panel" parent="."]
+margin_left = 592.0
+margin_right = 617.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 25, 25 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Time"]
+margin_left = 5.0
+margin_right = 29.0
+margin_bottom = 25.0
+custom_fonts/normal_font = SubResource( 2 )
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = -8.0
+margin_top = 3.0
+margin_right = 624.0
+margin_bottom = 23.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

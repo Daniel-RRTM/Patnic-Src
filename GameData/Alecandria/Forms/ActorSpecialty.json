@@ -1,0 +1,27 @@
+{
+  "mandatory to fill out" : [
+       "C_14_SPECIALTY_NAME"
+      ,"C_50_ACTOR_ROLE_DESCRIPTION"
+      ,"C_47_SYNONYM"
+      ,"C_6_NAME"
+      ,"C_19_ATTRIBUTES"
+      ,"C_20_SKILLBLOCK"
+  ],
+
+  "flags to add" : [
+     "F_7_ACTOR_ATTRIBUTES_SPECIALTY"
+    ,"F_6_ACTOR_ATTRIBUTES"
+  ],
+
+  "mirrored values" : {
+  },
+
+  "static values":{      },
+
+  "dynamic values":[      ],
+
+  "filename prefix" : "[ACTOR] [SPECIALTY] ",
+
+  "entity with effect": false
+
+  }

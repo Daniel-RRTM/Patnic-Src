@@ -1,0 +1,61 @@
+
+
+
+META
+  INDEX         -->  DOOMSDAY_PREPPER
+  USE           -->  ACTOR_SPECIALTY
+  BY            -->  RedRastaRigger(inhouse)
+
+  DESCRIPTION   vvv
+
+
+
+}
+
+
+//----------------------------------------------------------------------------\\
+//----------------------------------------------------------------------------\\
+//----------------------------------------------------------------------------\\
+
+MAIN
+
+//-------\\
+  
+  COMPONENTS
+    C_12_ATLAS_INDEX                 --->  DOOMSDAY_PREPPER
+    C_6_NAME                         --->  Doomsday Prepper
+    C_0_DESCRIPTION      --->  half gun-nut, half nut-job. Just the right ingredients for an Apocalypse
+    C_47_SYNONYM                     --->  Prepper AND Survivalist AND Outlaw
+    C_37_M_TYPE                      --->  MEAT
+    C_19_ATTRIBUTES      vvvv
+      CON  --->  5
+      AGI  --->  5
+      REA  --->  5
+      STR  --->  5
+      WIL  --->  5
+      LOG  --->  5
+      INT  --->  5
+      CHA ---> 5
+    C_20_SKILLBLOCK      vvvv
+      SURVIVAL      --->  5
+      SNEAKING      --->  5
+      PERCEPTION    --->  5
+      INTIMIDATION  --->  5
+      COMPUTER      --->  5
+
+//-------\\
+
+  FLAGS
+    F_6_ACTOR_ATTRIBUTES
+    F_7_ACTOR_ATTRIBUTES_SPECIALTY
+
+
+//----------------------------------------------------------------------------\\
+//----------------------------------------------------------------------------\\
+//----------------------------------------------------------------------------\\
+
+
+REFERENCE
+
+
+END

@@ -1,0 +1,1084 @@
+[
+	{
+		"suggestion": "Something offensive or hyperbolic, best case both",
+		"description": "Is shown to the player in things like mousehover or onlook-action",
+		"validInputs": [
+
+		],
+		"validType": "STRING",
+		"nameToShow": "Description",
+		"componentName": "C_0_DESCRIPTION"
+	},
+	{
+		"suggestion": "Interactables are often but not neccesarilly unwalkable, Meat Tiles are",
+		"description": "determinds if an Actor can walk on this tile",
+		"validInputs": [
+
+		],
+		"validType": "BOOLEAN",
+		"nameToShow": "Walkable",
+		"componentName": "C_1_IS_WALKABLE"
+	},
+	{
+		"suggestion": "*tilesetname*_*rownumber*_*collumnumber* of its picture in folder : GameData/Tiled/Tileset",
+		"description": "Name of the Texture to be shown",
+		"validInputs": [
+			"Terrain_0_0",
+			"Terrain_0_1",
+			"Terrain_0_2",
+			"Terrain_0_13",
+			"Terrain_0_14",
+			"Terrain_0_15",
+			"Terrain_1_0",
+			"Terrain_1_1",
+			"Terrain_1_2",
+			"Terrain_1_3",
+			"Terrain_1_13",
+			"Terrain_1_14",
+			"Terrain_1_15",
+			"Terrain_2_0",
+			"Terrain_2_1",
+			"Terrain_2_13",
+			"Terrain_2_14",
+			"Terrain_2_15",
+			"Terrain_3_0",
+			"Terrain_4_0",
+			"Terrain_4_13",
+			"Terrain_4_14",
+			"Terrain_4_15",
+			"Terrain_5_13",
+			"Terrain_5_15",
+			"Terrain_6_13",
+			"Terrain_6_14",
+			"Terrain_6_15",
+			"Indoors_0_13",
+			"Indoors_1_13",
+			"Indoors_0_0",
+			"Indoors_0_1",
+			"Indoors_0_2",
+			"Indoors_0_3",
+			"Indoors_0_6",
+			"Indoors_0_7",
+			"Indoors_0_8",
+			"Indoors_0_9",
+			"Indoors_1_0",
+			"Indoors_1_1",
+			"Indoors_1_2",
+			"Indoors_1_3",
+			"Indoors_1_6",
+			"Indoors_1_7",
+			"Indoors_1_8",
+			"Indoors_1_9",
+			"Indoors_2_0",
+			"Indoors_2_1",
+			"Indoors_2_2",
+			"Indoors_2_6",
+			"Indoors_2_7",
+			"Indoors_2_8",
+			"Indoors_3_0",
+			"Indoors_3_1",
+			"Indoors_3_6",
+			"Indoors_3_7",
+			"Indoors_6_0",
+			"Indoors_6_1",
+			"Indoors_8_0",
+			"Indoors_8_1",
+			"Indoors_8_3",
+			"Indoors_8_4",
+			"Indoors_10_0",
+			"Indoors_10_1",
+			"Indoors_10_2",
+			"Indoors_10_4",
+			"POI_0_0",
+			"POI_0_2",
+			"POI_0_4",
+			"POI_0_6",
+			"POI_0_8",
+			"POI_0_10",
+			"POI_0_12",
+			"POI_0_14",
+			"POI_2_0",
+			"POI_2_1",
+			"General_0_0",
+			"General_0_1",
+			"General_0_2",
+			"General_0_3",
+			"General_0_4",
+			"General_0_5",
+			"General_2_0",
+			"General_4_0",
+			"General_4_1",
+			"General_4_2",
+			"Marker_0_0",
+			"Marker_0_1",
+			"Marker_0_2",
+			"Marker_0_3",
+			"Marker_2_0",
+			"Marker_2_1",
+			"Marker_2_2",
+			"Marker_3_0",
+			"Marker_3_1",
+			"Marker_3_2",
+			"Marker_5_0",
+			"Marker_5_1",
+			"Marker_5_2",
+			"Nature_0_0",
+			"Decoration_0_0",
+			"Decoration_0_1",
+			"Decoration_0_2",
+			"Decoration_0_3",
+			"Decoration_0_4",
+			"Decoration_0_5",
+			"Decoration_0_6",
+			"Decoration_0_7",
+			"Decoration_0_8",
+			"Decoration_0_9",
+			"Decoration_0_10",
+			"Decoration_0_11",
+			"Decoration_0_12",
+			"Decoration_1_0",
+			"Decoration_1_1",
+			"Decoration_1_2",
+			"Decoration_2_0",
+			"Shop_2_2",
+			"Decoration_2_2",
+			"Decoration_3_0",
+			"Decoration_3_1",
+			"Decoration_3_2",
+			"Decoration_4_0",
+			"Decoration_4_1",
+			"Decoration_4_2",
+			"Decoration_5_0",
+			"Decoration_5_2",
+			"Decoration_6_0",
+			"Decoration_6_2",
+			"Decoration_7_2",
+			"Decoration_8_2",
+			"Decoration_9_2",
+			"Security_0_0",
+			"Security_0_1",
+			"Security_0_2",
+			"Security_1_0",
+			"Security_1_1",
+			"Security_1_2",
+			"Security_1_6",
+			"Security_1_7",
+			"Security_1_8",
+			"Security_2_0",
+			"Security_2_1",
+			"Security_2_2",
+			"Security_2_6",
+			"Security_2_7",
+			"Security_2_8",
+			"Security_3_0",
+			"Security_3_1",
+			"Security_3_2",
+			"Security_3_6",
+			"Security_3_7",
+			"Security_4_0",
+			"Security_4_1",
+			"Security_4_2",
+			"Conditions_0_0",
+			"Conditions_0_1",
+			"Conditions_0_2",
+			"Shop_0_0",
+			"Shop_0_1",
+			"Shop_0_2",
+			"Shop_0_3",
+			"Shop_1_0",
+			"Shop_1_1",
+			"Shop_1_2",
+			"Shop_1_3",
+			"Shop_2_0",
+			"Shop_2_1",
+			"Shop_2_3",
+			"Shop_3_0",
+			"Shop_3_1",
+			"Shop_3_2",
+			"Shop_3_3",
+			"Introduction_0_0",
+			"Introduction_0_1",
+			"Introduction_0_2",
+			"Introduction_0_3",
+			"Introduction_0_13",
+			"Introduction_0_15",
+			"Introduction_2_0",
+			"Introduction_2_1",
+			"Terrain_2_6",
+			"Introduction_4_0",
+			"Actors_0_0",
+			"Actors_0_2",
+			"Actors_0_4",
+			"Actors_0_6",
+			"Actors_2_0",
+			"Actors_2_2",
+			"Actors_2_4",
+			"Actors_2_6",
+			"Actors_4_0",
+			"Actors_4_2",
+			"Actors_4_4",
+			"Actors_4_6",
+			"Actors_6_3"
+		],
+		"validType": "STATIC_LIST",
+		"nameToShow": "Texture-ID",
+		"configKey": "texture",
+		"componentName": "C_12_ATLAS_INDEX"
+	},
+	{
+		"suggestion": "Magics and Matrix are not implemented yet!",
+		"description": "Determinds on which layer the entity is indexed on Map",
+		"validInputs": [
+			"ACTOR",
+			"PLAYER",
+			"MEAT_GROUND",
+			"MEAT_INTERACTABLE",
+			"MATRIX_GROUND",
+			"MATRIX_INTERACTABLE",
+			"MAGIC_GROUND",
+			"MAGIC_INTERACTABLE",
+			"SELECTION",
+			"CONDITION"
+		],
+		"validType": "STATIC_LIST",
+		"nameToShow": "Layer",
+		"componentName": "C_3_LAYER"
+	},
+	{
+		"suggestion": "WIP, not implemented,has no influence at the moment",
+		"description": "Determinds the handicap for sourronding dice tosses",
+		"validInputs": [
+
+		],
+		"validType": "INTEGER",
+		"nameToShow": "Magic Noise",
+		"componentName": "C_4_MAGIC_NOISE"
+	},
+	{
+		"suggestion": "WIP, not implemented,has no influence at the moment",
+		"description": "Determinds the handicap for sourronding dice tosses",
+		"validInputs": [
+
+		],
+		"validType": "INTEGER",
+		"nameToShow": "Matrix Noise",
+		"componentName": "C_5_MATRIX_NOISE"
+	},
+	{
+		"suggestion": "max 2 words / 15 chars",
+		"description": "short reference shown in the most cases",
+		"validInputs": [
+
+		],
+		"validType": "STRING",
+		"nameToShow": "Name",
+		"componentName": "C_6_NAME"
+	},
+	{
+		"suggestion": "Will be dynamically found at Bootstrap (at parsing tilesets)",
+		"description": "Number of tile in Master-atlas",
+		"validInputs": [
+
+		],
+		"validType": "INTEGER",
+		"nameToShow": "static Tileset Number (do not fill)",
+		"componentName": "C_7_STATIC_TILESET_NR"
+	},
+	{
+		"suggestion": "*tilesetname*_*rownumber*_*collumnumber* of its picture in folder : GameData/Tiled/Tileset",
+		"description": "Name of the Texture to be shown",
+		"validInputs": [
+			"Terrain_0_0",
+			"Terrain_0_1",
+			"Terrain_0_2",
+			"Terrain_0_13",
+			"Terrain_0_14",
+			"Terrain_0_15",
+			"Terrain_1_0",
+			"Terrain_1_1",
+			"Terrain_1_2",
+			"Terrain_1_3",
+			"Terrain_1_13",
+			"Terrain_1_14",
+			"Terrain_1_15",
+			"Terrain_2_0",
+			"Terrain_2_1",
+			"Terrain_2_13",
+			"Terrain_2_14",
+			"Terrain_2_15",
+			"Terrain_3_0",
+			"Terrain_4_0",
+			"Terrain_4_13",
+			"Terrain_4_14",
+			"Terrain_4_15",
+			"Terrain_5_13",
+			"Terrain_5_15",
+			"Terrain_6_13",
+			"Terrain_6_14",
+			"Terrain_6_15",
+			"Indoors_0_13",
+			"Indoors_1_13",
+			"Indoors_0_0",
+			"Indoors_0_1",
+			"Indoors_0_2",
+			"Indoors_0_3",
+			"Indoors_0_6",
+			"Indoors_0_7",
+			"Indoors_0_8",
+			"Indoors_0_9",
+			"Indoors_1_0",
+			"Indoors_1_1",
+			"Indoors_1_2",
+			"Indoors_1_3",
+			"Indoors_1_6",
+			"Indoors_1_7",
+			"Indoors_1_8",
+			"Indoors_1_9",
+			"Indoors_2_0",
+			"Indoors_2_1",
+			"Indoors_2_2",
+			"Indoors_2_6",
+			"Indoors_2_7",
+			"Indoors_2_8",
+			"Indoors_3_0",
+			"Indoors_3_1",
+			"Indoors_3_6",
+			"Indoors_3_7",
+			"Indoors_6_0",
+			"Indoors_6_1",
+			"Indoors_8_0",
+			"Indoors_8_1",
+			"Indoors_8_3",
+			"Indoors_8_4",
+			"Indoors_10_0",
+			"Indoors_10_1",
+			"Indoors_10_2",
+			"Indoors_10_4",
+			"POI_0_0",
+			"POI_0_2",
+			"POI_0_4",
+			"POI_0_6",
+			"POI_0_8",
+			"POI_0_10",
+			"POI_0_12",
+			"POI_0_14",
+			"POI_2_0",
+			"POI_2_1",
+			"General_0_0",
+			"General_0_1",
+			"General_0_2",
+			"General_0_3",
+			"General_0_4",
+			"General_0_5",
+			"General_2_0",
+			"General_4_0",
+			"General_4_1",
+			"General_4_2",
+			"Marker_0_0",
+			"Marker_0_1",
+			"Marker_0_2",
+			"Marker_0_3",
+			"Marker_2_0",
+			"Marker_2_1",
+			"Marker_2_2",
+			"Marker_3_0",
+			"Marker_3_1",
+			"Marker_3_2",
+			"Marker_5_0",
+			"Marker_5_1",
+			"Marker_5_2",
+			"Nature_0_0",
+			"Decoration_0_0",
+			"Decoration_0_1",
+			"Decoration_0_2",
+			"Decoration_0_3",
+			"Decoration_0_4",
+			"Decoration_0_5",
+			"Decoration_0_6",
+			"Decoration_0_7",
+			"Decoration_0_8",
+			"Decoration_0_9",
+			"Decoration_0_10",
+			"Decoration_0_11",
+			"Decoration_0_12",
+			"Decoration_1_0",
+			"Decoration_1_1",
+			"Decoration_1_2",
+			"Decoration_2_0",
+			"Shop_2_2",
+			"Decoration_2_2",
+			"Decoration_3_0",
+			"Decoration_3_1",
+			"Decoration_3_2",
+			"Decoration_4_0",
+			"Decoration_4_1",
+			"Decoration_4_2",
+			"Decoration_5_0",
+			"Decoration_5_2",
+			"Decoration_6_0",
+			"Decoration_6_2",
+			"Decoration_7_2",
+			"Decoration_8_2",
+			"Decoration_9_2",
+			"Security_0_0",
+			"Security_0_1",
+			"Security_0_2",
+			"Security_1_0",
+			"Security_1_1",
+			"Security_1_2",
+			"Security_1_6",
+			"Security_1_7",
+			"Security_1_8",
+			"Security_2_0",
+			"Security_2_1",
+			"Security_2_2",
+			"Security_2_6",
+			"Security_2_7",
+			"Security_2_8",
+			"Security_3_0",
+			"Security_3_1",
+			"Security_3_2",
+			"Security_3_6",
+			"Security_3_7",
+			"Security_4_0",
+			"Security_4_1",
+			"Security_4_2",
+			"Conditions_0_0",
+			"Conditions_0_1",
+			"Conditions_0_2",
+			"Shop_0_0",
+			"Shop_0_1",
+			"Shop_0_2",
+			"Shop_0_3",
+			"Shop_1_0",
+			"Shop_1_1",
+			"Shop_1_2",
+			"Shop_1_3",
+			"Shop_2_0",
+			"Shop_2_1",
+			"Shop_2_3",
+			"Shop_3_0",
+			"Shop_3_1",
+			"Shop_3_2",
+			"Shop_3_3",
+			"Introduction_0_0",
+			"Introduction_0_1",
+			"Introduction_0_2",
+			"Introduction_0_3",
+			"Introduction_0_13",
+			"Introduction_0_15",
+			"Introduction_2_0",
+			"Introduction_2_1",
+			"Terrain_2_6",
+			"Introduction_4_0",
+			"Actors_0_0",
+			"Actors_0_2",
+			"Actors_0_4",
+			"Actors_0_6",
+			"Actors_2_0",
+			"Actors_2_2",
+			"Actors_2_4",
+			"Actors_2_6",
+			"Actors_4_0",
+			"Actors_4_2",
+			"Actors_4_4",
+			"Actors_4_6",
+			"Actors_6_3"
+		],
+		"validType": "STATIC_LIST",
+		"nameToShow": "MetaData of LEC",
+		"componentName": "C_8_LEC_META"
+	},
+	{
+		"suggestion": "Implemented but no Influence / Usage",
+		"description": "Amount of money in possesion",
+		"validInputs": [
+
+		],
+		"validType": "INTEGER",
+		"nameToShow": "Credits",
+		"componentName": "C_9_CREDITS_ACCOUNT"
+	},
+	{
+		"suggestion": "WIP, not implemented,has no influence at the moment",
+		"description": "Unique advantages of the Char",
+		"validInputs": [
+
+		],
+		"validType": "ARRAY",
+		"nameToShow": "Perks",
+		"componentName": "C_10_PERKS"
+	},
+	{
+		"suggestion": "Are used as Index for API_001_Atlas.ActorRace , CAPSLOCK is recommended",
+		"description": "toString of the Template name",
+		"validInputs": [
+			"DWARF",
+			"ELF",
+			"HUMAN",
+			"ORC",
+			"REPTILOID",
+			"SENTDROID",
+			"TROLL"
+		],
+		"validType": "DYNAMIC_LIST",
+		"nameToShow": "Race name",
+		"configKey": "race",
+		"componentName": "C_11_RACE_NAME"
+	},
+	{
+		"crossreference": [
+			"C_69_KITSET_FAMILY"
+		],
+		"suggestion": "",
+		"description": "determinds the mousehover text",
+		"validInputs": [
+
+		],
+		"validType": "STRING",
+		"nameToShow": "role description",
+		"componentName": "C_12_ATLAS_INDEX"
+	},
+	{
+		"suggestion": "WIP, not implemented,has no influence at the moment",
+		"description": "All Bodypart-template of Race",
+		"validInputs": [
+
+		],
+		"validType": "CONTAINER",
+		"nameToShow": "List of All Bodyparts",
+		"componentName": "C_15_BODYPARTS"
+	},
+	{
+		"suggestion": "",
+		"description": "Bodypart hit %",
+		"validInputs": [
+
+		],
+		"validType": "INTEGER",
+		"nameToShow": "propabillity to get random hit in percent",
+		"componentName": "C_17_HITPROBABILLITY"
+	},
+	{
+		"suggestion": "modul of C_19, we recommend C_19 for usage",
+		"description": "Single Attribute value of C_19",
+		"validInputs": [
+
+		],
+		"validType": "NULL",
+		"nameToShow": "Attribute mod",
+		"componentName": "C_18_ATTRIBUTEMOD"
+	},
+	{
+		"suggestion": "",
+		"description": "add modifiers to the biological potential of an Actors",
+		"validInputs": [
+			"AGILLITY",
+			"CONSTITUTION",
+			"STRENGTH",
+			"REACTION",
+			"LOGIC",
+			"INTUITION",
+			"WILLPOWER",
+			"CHARISMA"
+		],
+		"validType": "STATIC_LIST",
+		"nameToShow": "Attributes",
+		"configKey": "attributes",
+		"componentName": "C_19_ATTRIBUTES"
+	},
+	{
+		"suggestion": "",
+		"description": "List of all skills and their values",
+		"validInputs": [
+
+		],
+		"validType": {
+			"CRAFTING": 0,
+			"PHYLOSOPHIZING": 1,
+			"CONCEPTUALICING": 2,
+			"PERCEVING": 3,
+			"ASSENSING": 4,
+			"DEBUGGING": 5,
+			"ENDURING": 6,
+			"COPING": 7,
+			"FILTERING": 8,
+			"SNEAKING": 9,
+			"REPRESSING": 10,
+			"SILENCING": 11
+		},
+		"nameToShow": "Skillblock",
+		"configKey": "skills",
+		"componentName": "C_20_SKILLBLOCK"
+	},
+	{
+		"suggestion": "often the same as C_6, maybe shorter",
+		"description": "often used Reference name",
+		"validInputs": [
+
+		],
+		"validType": "VECTOR2D",
+		"nameToShow": "Name",
+		"componentName": "C_21_POS_TO_WALK_TO"
+	},
+	{
+		"suggestion": "Gets calculatet on runtime by Actors Attributes",
+		"description": "max. succeses per dice-role",
+		"validInputs": [
+
+		],
+		"validType": "INTEGER",
+		"nameToShow": "Limits",
+		"componentName": "C_22_LIMITS"
+	},
+	{
+		"suggestion": "Gets calculatet on runtime by Actors Attributes",
+		"description": "max units Actor can carry",
+		"validInputs": [
+
+		],
+		"validType": "INTEGER",
+		"nameToShow": "Carriage capacity",
+		"componentName": "C_23_CARRIAGE"
+	},
+	{
+		"suggestion": "not counting Kitsets from Starting-cheat ",
+		"description": "current maxm of kitsets,integral to Char-progression",
+		"validInputs": [
+
+		],
+		"validType": "INTEGER",
+		"nameToShow": "Paintollerance",
+		"configKey": "max kitsets",
+		"componentName": "C_25_MAX_KITSETS"
+	},
+	{
+		"suggestion": "",
+		"description": "name of its fightingstyle",
+		"validInputs": [
+
+		],
+		"validType": "DICTIONARY",
+		"nameToShow": "Indirect _005_Character_Stats",
+		"componentName": "C_26_INDIRECT__005_Character_Stats"
+	},
+	{
+		"suggestion": "",
+		"description": "choose\traces for prejudices",
+		"validInputs": [
+			"DWARF",
+			"ELF",
+			"HUMAN",
+			"ORC",
+			"REPTILOID",
+			"SENTDROID",
+			"TROLL"
+		],
+		"validType": "STATIC_LIST",
+		"nameToShow": "racial enemies",
+		"componentName": "C_27_RACIAL_ENEMIES"
+	},
+	{
+		"suggestion": "yes this is reference",
+		"description": "choose\traces for pride",
+		"validInputs": [
+			"DWARF",
+			"ELF",
+			"HUMAN",
+			"ORC",
+			"REPTILOID",
+			"SENTDROID",
+			"TROLL"
+		],
+		"validType": "STATIC_LIST",
+		"nameToShow": "racial friends",
+		"componentName": "C_28_RACIAL_FRIENDS"
+	},
+	{
+		"suggestion": "WIP, not implemented,has no influence at the moment",
+		"description": "the usual price when its bought",
+		"validInputs": [
+
+		],
+		"validType": "INTEGER",
+		"nameToShow": "listing price",
+		"componentName": "C_29_LISTING_PRICE"
+	},
+	{
+		"suggestion": "WIP, not implemented,has no influence at the moment",
+		"description": "size and wight taking up to carry",
+		"validInputs": [
+
+		],
+		"validType": "INTEGER",
+		"nameToShow": "backpack slots",
+		"componentName": "C_30_NEEDED_BACKPACK_SLOTS"
+	},
+	{
+		"suggestion": "",
+		"description": "type of kit of the Surv9",
+		"validInputs": [
+			"HACK",
+			"DRONE",
+			"CYBERWARE",
+			"RITE",
+			"SPELL",
+			"INFUSION",
+			"GUN",
+			"MEELE",
+			"ARMOR"
+		],
+		"validType": "STATIC_LIST",
+		"nameToShow": "kit Category",
+		"componentName": "C_31_KIT_CAT_TYPE"
+	},
+	{
+		"suggestion": "guide value: Rarity*1",
+		"description": "by actions of player",
+		"validInputs": [
+
+		],
+		"validType": "INTEGER",
+		"nameToShow": "cooldown",
+		"componentName": "C_33_COOLDOWN_TIMER"
+	},
+	{
+		"suggestion": "",
+		"description": "is shown to the player in logs",
+		"validInputs": [
+
+		],
+		"validType": "STRING",
+		"nameToShow": "log entry",
+		"componentName": "C_34_LOG_TO_STRING"
+	},
+	{
+		"suggestion": "about 80 characters at max",
+		"description": "shown as short explaination of usage",
+		"validInputs": [
+
+		],
+		"validType": "STRING",
+		"nameToShow": "summary",
+		"componentName": "C_35_KIT_MECHANICAL_SUMMARY"
+	},
+	{
+		"suggestion": "guide value: Rarity*1,5",
+		"description": "number of Panicrooms before its usable",
+		"validInputs": [
+
+		],
+		"validType": "STRING",
+		"nameToShow": "setup time",
+		"componentName": "C_36_KIT_MOD_TIME"
+	},
+	{
+		"suggestion": "",
+		"description": "name of its fightingstyle",
+		"validInputs": [
+			"MEAT",
+			"MAGIC",
+			"MATRIX"
+		],
+		"validType": "STRING",
+		"nameToShow": "layer of perception",
+		"componentName": "C_37_M_TYPE"
+	},
+	{
+		"suggestion": "Base: Main definition, Mod: Specialication, Appendix: Side-effect",
+		"description": "place in Kitset",
+		"validInputs": [
+			"BASE",
+			"MOD",
+			"APPENDIX"
+		],
+		"validType": "STRING",
+		"nameToShow": "kit Part",
+		"componentName": "C_38_KIT_PART_TYPE"
+	},
+	{
+		"suggestion": "",
+		"description": "countdown untill the Kit in its Restroom is finished",
+		"validInputs": [
+
+		],
+		"validType": "INTEGER",
+		"nameToShow": "progression edited KitSet",
+		"configKey": "kitslot progression",
+		"componentName": "C_39_KITSLOT_PROGRESSION"
+	},
+	{
+		"suggestion": "",
+		"description": "X and Y on the tilemap",
+		"validInputs": [
+
+		],
+		"validType": "INTEGER",
+		"nameToShow": "position",
+		"configKey": "trait progression",
+		"componentName": "C_41_PERK_PROGRESSION"
+	},
+	{
+		"suggestion": "",
+		"description": "name of its fightingstyle",
+		"validInputs": [
+
+		],
+		"validType": "ARRAY",
+		"nameToShow": "role description",
+		"componentName": "C_42_ROLE_VARIETY"
+	},
+	{
+		"suggestion": "",
+		"description": "unique Title",
+		"validInputs": [
+
+		],
+		"validType": "STRING",
+		"nameToShow": "Streetname",
+		"configKey": "street-name",
+		"componentName": "C_44_STREETNAME"
+	},
+	{
+		"suggestion": "",
+		"description": "the by parents given name,used outsides the Shadows",
+		"validInputs": [
+
+		],
+		"validType": "STRING",
+		"nameToShow": "Character name",
+		"configKey": "name",
+		"componentName": "C_45_CHARACTER_NAME"
+	},
+	{
+		"suggestion": "",
+		"description": "often owned by an Actor",
+		"validInputs": [
+
+		],
+		"validType": "STRING",
+		"nameToShow": "List of Items",
+		"configKey": "gear",
+		"componentName": "C_46_ACTOR_ITEMS"
+	},
+	{
+		"suggestion": "",
+		"description": "list of differnt names for this spcialication",
+		"validInputs": [
+
+		],
+		"validType": "ARRAY",
+		"nameToShow": "synonyms",
+		"componentName": "C_47_SYNONYM"
+	},
+	{
+		"suggestion": "1: Drek, 5: Fixer, 10: R&D-Prototype",
+		"description": "chance to loot on a scale of 1 to 10",
+		"validInputs": [
+			"Drek                 standard",
+			"Worn out             standard",
+			"Do it yourself       standard",
+			"Wageslave            standard",
+			"Industrial           standard",
+			"Upper class          standard",
+			"Federal              standard",
+			"Fixer                standard",
+			"Elite runner         standard",
+			"Megacon prototype    standard"
+		],
+		"validType": "STATIC_LIST",
+		"nameToShow": "Rarity",
+		"componentName": "C_48_RARITY"
+	},
+	{
+		"suggestion": "",
+		"description": "Is used to build EffectEntity",
+		"validInputs": [
+
+		],
+		"validType": "EFFECT",
+		"nameToShow": "EffectEntity",
+		"componentName": "C_49_EVENT_REFERENCE"
+	},
+	{
+		"suggestion": "",
+		"description": "list of kitsets",
+		"validInputs": [
+
+		],
+		"validType": "ARRAY",
+		"nameToShow": "Actors KitSets",
+		"configKey": "kitsets",
+		"componentName": "C_51_PLAYER_KITSETS"
+	},
+	{
+		"suggestion": "",
+		"description": "adds their indexes as kitsets to the Character by openeing the menue",
+		"validInputs": [
+
+		],
+		"validType": "ARRAY",
+		"nameToShow": "Starting Kitsets Cheat",
+		"componentName": "C_52_STARTING_KITSETS"
+	},
+	{
+		"suggestion": "",
+		"description": "name of its fightingstyle",
+		"validInputs": [
+
+		],
+		"validType": "NULL",
+		"nameToShow": "Gear",
+		"componentName": "C_56_GEAR"
+	},
+	{
+		"suggestion": "",
+		"description": "name of its fightingstyle",
+		"validInputs": [
+
+		],
+		"validType": "INTEGER",
+		"nameToShow": "role description",
+		"componentName": "C_57_HITPOINTS"
+	},
+	{
+		"suggestion": "",
+		"description": "Can be swapped by change statmode",
+		"validInputs": [
+
+		],
+		"validType": "STRING",
+		"nameToShow": "Alternative Textures",
+		"componentName": "C_58_ALTERNATIVE_TEXTURES"
+	},
+	{
+		"suggestion": "",
+		"description": "Metadata for ModKitPart",
+		"validInputs": [
+
+		],
+		"validType": "ARRAY",
+		"nameToShow": "Mod KitSet Data",
+		"componentName": "C_59_KIT_MOD_CHANGE"
+	},
+	{
+		"suggestion": "",
+		"description": "choose the kit to specialice",
+		"validInputs": [
+
+		],
+		"validType": "STRING",
+		"nameToShow": "base-kit reference",
+		"componentName": "C_60_BASE_KIT_REFERENCE"
+	},
+	{
+		"suggestion": "",
+		"description": "has the variety and probabillity of drops",
+		"validInputs": [
+
+		],
+		"validType": "DICTIONARY",
+		"nameToShow": "LootTable Data",
+		"componentName": "C_61_LOOT_TABLE"
+	},
+	{
+		"suggestion": "",
+		"description": "name of its fightingstyle",
+		"validInputs": [
+
+		],
+		"validType": "STRING",
+		"nameToShow": "role description",
+		"componentName": "C_62_LOOT_STATE"
+	},
+	{
+		"suggestion": "on a scale of 1 to 10",
+		"description": "quality of Item",
+		"validInputs": [
+
+		],
+		"validType": "INTEGER",
+		"nameToShow": "Tier",
+		"componentName": "C_65_TIER"
+	},
+	{
+		"suggestion": "",
+		"description": "name of its fightingstyle",
+		"validInputs": [
+
+		],
+		"validType": "ARRAY",
+		"nameToShow": "role description",
+		"componentName": "C_68_KITVENTORY"
+	},
+	{
+		"suggestion": "",
+		"description": "Index of the BaseKitPart",
+		"validInputs": [
+
+		],
+		"validType": "STRING",
+		"nameToShow": "KitSetFamily",
+		"componentName": "C_69_KITSET_FAMILY"
+	},
+	{
+		"suggestion": "",
+		"description": "name of its fightingstyle",
+		"validInputs": [
+
+		],
+		"validType": "STRING",
+		"nameToShow": "role description",
+		"componentName": "C_70_SELECTED_TARGET"
+	},
+	{
+		"suggestion": "",
+		"description": "name of its fightingstyle",
+		"validInputs": [
+
+		],
+		"validType": "STRING",
+		"nameToShow": "role description",
+		"componentName": "C_71_EVENTT_BY"
+	},
+	{
+		"suggestion": "",
+		"description": "name of its fightingstyle",
+		"validInputs": [
+
+		],
+		"validType": "STRING",
+		"nameToShow": "role description",
+		"componentName": "C_72_LEC_META_USE"
+	},
+	{
+		"suggestion": "",
+		"description": "name of its fightingstyle",
+		"validInputs": [
+
+		],
+		"validType": "KitSetEntity",
+		"nameToShow": "role description",
+		"componentName": "C_73_KITSET_OF_EVENT"
+	},
+	{
+		"suggestion": "",
+		"description": "name of its fightingstyle",
+		"validInputs": [
+
+		],
+		"validType": "DICTIONARY",
+		"nameToShow": "role description",
+		"componentName": "C_74_EVENT_MAIN_DICT"
+	},
+	{
+		"suggestion": "",
+		"description": "name of its fightingstyle",
+		"validInputs": [
+
+		],
+		"validType": "STRING",
+		"nameToShow": "role description",
+		"componentName": "C_76_EVENT_REFERENCE_DICT"
+	}
+]

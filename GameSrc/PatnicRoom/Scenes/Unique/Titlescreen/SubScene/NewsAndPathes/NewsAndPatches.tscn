@@ -1,0 +1,93 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/CustomeStyle/Panel/Main_Menue.tres" type="StyleBox" id=1]
+[ext_resource path="res://Assets/DynamicFonts/Text_Header.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/DynamicFonts/new_dynamicfontdata.tres" type="DynamicFontData" id=3]
+[ext_resource path="res://GameSrc/PatnicRoom/scenes/Unique/Titlescreen/SubScene/NewsAndPathes/textInserts.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+outline_size = 3
+outline_color = Color( 0.172549, 0.203922, 0.286275, 1 )
+font_data = ExtResource( 3 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="News" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Body" type="Panel" parent="News"]
+margin_left = 392.0
+margin_top = 392.0
+margin_right = 984.0
+margin_bottom = 944.0
+custom_styles/panel = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Content" type="RichTextLabel" parent="News/Body"]
+margin_left = 11.0
+margin_top = 56.0
+margin_right = 592.0
+margin_bottom = 544.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="RichTextLabel" parent="News/Body"]
+margin_right = 592.0
+margin_bottom = 56.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center][color=yellow]News"
+text = "News"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Patchnotes" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Body" type="Panel" parent="Patchnotes"]
+margin_left = 1038.0
+margin_top = 392.0
+margin_right = 1352.0
+margin_bottom = 944.0
+custom_styles/panel = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Content" type="RichTextLabel" parent="Patchnotes/Body"]
+margin_left = 13.0
+margin_top = 64.0
+margin_right = 306.0
+margin_bottom = 544.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="RichTextLabel" parent="Patchnotes/Body"]
+margin_right = 314.0
+margin_bottom = 56.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center][color=yellow]Patchnotes"
+text = "Patchnotes"
+__meta__ = {
+"_edit_use_anchors_": false
+}

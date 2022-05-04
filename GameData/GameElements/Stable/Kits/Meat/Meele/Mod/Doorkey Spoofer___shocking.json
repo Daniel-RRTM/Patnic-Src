@@ -1,0 +1,34 @@
+{
+   "C_6_NAME": "shocking",
+   "F_5_KITPART_TYPE": "N/A",
+   "F_16_KITPART_TYPE_MOD": "N/A",
+   "C_12_ATLAS_INDEX": "X_H_1__M_2",
+   "C_0_DESCRIPTION": "This well known hack, causes heart-implants to overcharge and electronics untill the heart cant keep up the pace and explodes. Its sudden and gruesome death was feared by citizens in the early days of internal cyberware and the go-to argument of Naturalistic activists",
+   "C_35_KIT_MECHANICAL_SUMMARY": "spreads a electrical discharge into the room",
+   "C_48_RARITY": "5",
+   "C_37_M_TYPE": "MEAT",
+   "C_31_KIT_CAT_TYPE": "HACK",
+   "C_38_KIT_PART_TYPE": "MOD",
+   "C_36_KIT_MOD_TIME": "2",
+   "C_33_COOLDOWN_TIMER": "1",
+   "C_60_BASE_KIT_REFERENCE": "X_H_1",
+   "C_59_KIT_MOD_CHANGE": [
+
+
+      {
+         "slot": "SPACE",
+         "unit": "ONSET",
+         "mode": "CHANGE",
+         "value": {
+            "meta": "REACH",
+            "value": "7"
+         }
+      }
+   ]
+}
+
+
+
+
+
+

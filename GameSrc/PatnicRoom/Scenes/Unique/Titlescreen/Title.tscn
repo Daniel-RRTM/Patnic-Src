@@ -1,0 +1,240 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://GameSrc/PatnicRoom/scenes/Unique/Titlescreen/MenuePointsManager.gd" type="Script" id=1]
+[ext_resource path="res://Assets/CustomeStyle/Panel/Main_Menue.tres" type="StyleBox" id=2]
+[ext_resource path="res://GameSrc/PatnicRoom/scenes/Unique/Titlescreen/scripts/AnimatedPNG.gd" type="Script" id=3]
+[ext_resource path="res://GameSrc/PatnicRoom/scenes/Unique/Titlescreen/scripts/AnimatedText.gd" type="Script" id=4]
+[ext_resource path="res://GameSrc/PatnicRoom/scenes/Unique/Titlescreen/init.gd" type="Script" id=5]
+[ext_resource path="res://Assets/GUI/Titlescreen/Title.png" type="Texture" id=6]
+[ext_resource path="res://Assets/CustomeStyle/Button/MainMenue/Hover.tres" type="StyleBox" id=7]
+[ext_resource path="res://Assets/DynamicFonts/new_dynamicfontdata.tres" type="DynamicFontData" id=8]
+[ext_resource path="res://Assets/DynamicFonts/FixedSysTemplate.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Assets/temp/HUD_OVERLAY.tres" type="StyleBox" id=10]
+[ext_resource path="res://Assets/CustomeStyle/Button/MainMenue/Normal.tres" type="StyleBox" id=11]
+[ext_resource path="res://Assets/CustomeStyle/Button/MainMenue/Pressed.tres" type="StyleBox" id=12]
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 9 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_bottom = 2
+border_color = Color( 0.92549, 1, 0.278431, 1 )
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 6.0
+expand_margin_right = 6.0
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 0.780392 )
+corner_radius_top_left = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+outline_size = 1
+outline_color = Color( 0.337255, 0.396078, 0.529412, 1 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 18
+font_data = ExtResource( 8 )
+
+[node name="root" type="Node2D"]
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Dim" type="Panel" parent="."]
+margin_left = -16.0
+margin_top = -72.0
+margin_right = 2000.0
+margin_bottom = 1184.0
+custom_styles/panel = ExtResource( 10 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = -8.0
+margin_top = 392.0
+margin_right = 320.0
+margin_bottom = 944.0
+custom_styles/panel = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 56.0
+margin_top = 448.0
+margin_right = 266.0
+margin_bottom = 802.0
+custom_constants/separation = 30
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="load" type="Button" parent="VBoxContainer"]
+margin_right = 210.0
+margin_bottom = 33.0
+custom_colors/font_color = Color( 0.878431, 1, 0.988235, 1 )
+custom_colors/font_color_hover = Color( 0.992157, 1, 0.72549, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = ExtResource( 11 )
+text = "Load game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="new" type="Button" parent="VBoxContainer"]
+margin_top = 63.0
+margin_right = 210.0
+margin_bottom = 96.0
+custom_colors/font_color = Color( 0.705882, 1, 0.866667, 1 )
+custom_colors/font_color_hover = Color( 0.992157, 1, 0.72549, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.25098, 0.25098, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 12 )
+custom_styles/normal = ExtResource( 11 )
+text = "Start new Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="News" type="Button" parent="VBoxContainer"]
+margin_top = 126.0
+margin_right = 210.0
+margin_bottom = 159.0
+custom_colors/font_color = Color( 0.878431, 1, 0.988235, 1 )
+custom_colors/font_color_hover = Color( 0.992157, 1, 0.72549, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.25098, 0.25098, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 12 )
+custom_styles/normal = ExtResource( 11 )
+text = "News & Patches"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Button" parent="VBoxContainer"]
+margin_top = 189.0
+margin_right = 210.0
+margin_bottom = 222.0
+custom_colors/font_color = Color( 0.878431, 1, 0.988235, 1 )
+custom_colors/font_color_hover = Color( 0.992157, 1, 0.72549, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.25098, 0.25098, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 12 )
+custom_styles/normal = ExtResource( 11 )
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Intro" type="Button" parent="VBoxContainer"]
+margin_top = 252.0
+margin_right = 210.0
+margin_bottom = 285.0
+custom_colors/font_color = Color( 0.878431, 1, 0.988235, 1 )
+custom_colors/font_color_hover = Color( 0.992157, 1, 0.72549, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.25098, 0.25098, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = ExtResource( 12 )
+custom_styles/normal = ExtResource( 11 )
+text = "Introduction"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+visible = false
+margin_top = 253.0
+margin_right = 210.0
+margin_bottom = 286.0
+custom_colors/font_color = Color( 0.878431, 1, 0.988235, 1 )
+custom_colors/font_color_hover = Color( 0.992157, 1, 0.72549, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.25098, 0.25098, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = ExtResource( 12 )
+custom_styles/normal = ExtResource( 11 )
+text = "Settings"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="block2" type="Panel" parent="VBoxContainer/Options"]
+margin_left = -208.0
+margin_top = -5.0
+margin_right = 224.0
+margin_bottom = 35.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InjectablePanel" type="Node" parent="."]
+
+[node name="Obligatory" type="Panel" parent="."]
+margin_left = 1224.0
+margin_top = 1040.0
+margin_right = 1922.0
+margin_bottom = 1128.0
+custom_styles/panel = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Obligatory"]
+margin_left = 16.0
+margin_top = 8.0
+margin_right = 696.0
+margin_bottom = 196.0
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "The Game is still in Alpha but we update Bi-weekly, stay tuned :)"
+text = "The Game is still in Alpha but we update Bi-weekly, stay tuned :)"
+
+[node name="gametitle" type="Sprite" parent="."]
+position = Vector2( 1008, 224 )
+scale = Vector2( 1, 0.997616 )
+texture = ExtResource( 6 )
+script = ExtResource( 3 )
+
+[node name="dynamic subtitle" type="RichTextLabel" parent="gametitle"]
+margin_left = -360.0
+margin_top = 26.0191
+margin_right = 712.0
+margin_bottom = 90.0191
+custom_fonts/normal_font = SubResource( 5 )
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Control" type="Control" parent="."]
+margin_left = 2.51971
+margin_right = 42.5197
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="VBoxContainer/load" to="VBoxContainer" method="_on_press" binds= [ 0 ]]
+[connection signal="pressed" from="VBoxContainer/new" to="VBoxContainer" method="_on_press" binds= [ 1 ]]
+[connection signal="pressed" from="VBoxContainer/News" to="VBoxContainer" method="_on_press" binds= [ 2 ]]
+[connection signal="pressed" from="VBoxContainer/Credits" to="VBoxContainer" method="_on_press" binds= [ 5 ]]
+[connection signal="pressed" from="VBoxContainer/Intro" to="VBoxContainer" method="_on_press" binds= [ 3 ]]
+[connection signal="pressed" from="VBoxContainer/Options" to="VBoxContainer" method="_on_press" binds= [ 4 ]]

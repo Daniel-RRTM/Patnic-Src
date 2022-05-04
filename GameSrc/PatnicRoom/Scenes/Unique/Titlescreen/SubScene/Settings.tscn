@@ -1,0 +1,274 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Assets/DynamicFonts/Text_Default.tres" type="DynamicFont" id=1]
+[ext_resource path="res://GameSrc/PatnicRoom/scenes/Unique/Titlescreen/SubScene/Settings/Settings.gd" type="Script" id=2]
+[ext_resource path="res://Assets/DynamicFonts/new_dynamicfontdata.tres" type="DynamicFontData" id=3]
+[ext_resource path="res://GameSrc/PatnicRoom/scenes/Unique/Titlescreen/SubScene/Settings/Category Manager.gd" type="Script" id=4]
+[ext_resource path="res://GameSrc/PatnicRoom/scenes/Unique/Titlescreen/SubScene/option.gd" type="Script" id=5]
+[ext_resource path="res://Assets/temp/Neon_Hover.tres" type="StyleBox" id=6]
+
+
+
+
+
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0.129412, 0.278431, 0.411765 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.913725, 0.984314, 1, 1 )
+corner_radius_top_left = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.203922, 0.654902, 0.729412, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+outline_color = Color( 1, 1, 1, 0.4 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0.129412, 0.278431, 0.411765 )
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.913725, 0.984314, 1, 1 )
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+
+[sub_resource type="DynamicFont" id=6]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.105882, 0.145098, 0.192157, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.0941176, 0.572549, 0.941176, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_color = Color( 0.247059, 0.65098, 0.721569, 0.6 )
+shadow_size = 10
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Frame" type="Panel" parent="."]
+margin_left = 392.0
+margin_top = 392.0
+margin_right = 1352.0
+margin_bottom = 944.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="External content" type="Panel" parent="Frame"]
+margin_left = 56.0
+margin_top = 64.0
+margin_right = 312.0
+margin_bottom = 152.0
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Community mods" type="CheckBox" parent="Frame/External content"]
+margin_left = 16.0
+margin_top = 8.0
+margin_right = 226.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_hover = Color( 0.894118, 0.913725, 0.701961, 1 )
+text = "Community mods"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Personal mods" type="CheckBox" parent="Frame/External content"]
+margin_left = 16.0
+margin_top = 47.0
+margin_right = 226.0
+margin_bottom = 81.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_hover = Color( 0.894118, 0.913725, 0.701961, 1 )
+text = "Personal mods"
+script = ExtResource( 5 )
+
+[node name="category" type="RichTextLabel" parent="Frame/External content"]
+margin_top = -32.0
+margin_right = 256.0
+custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 1, 1, 1, 0.4 )
+bbcode_enabled = true
+bbcode_text = "[center]External content"
+text = "External content"
+
+[node name="Accessibillity" type="Panel" parent="Frame"]
+margin_left = 336.0
+margin_top = 64.0
+margin_right = 624.0
+margin_bottom = 200.0
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Photophobia" type="CheckBox" parent="Frame/Accessibillity"]
+margin_left = 16.0
+margin_top = 8.0
+margin_right = 226.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_hover = Color( 0.894118, 0.913725, 0.701961, 1 )
+text = "Photophobia"
+expand_icon = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Color deficancy" type="CheckBox" parent="Frame/Accessibillity"]
+margin_left = 16.0
+margin_top = 48.0
+margin_right = 252.0
+margin_bottom = 82.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_hover = Color( 0.894118, 0.913725, 0.701961, 1 )
+text = "color deficiency"
+expand_icon = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Clearer Interface" type="CheckBox" parent="Frame/Accessibillity"]
+margin_left = 16.0
+margin_top = 88.0
+margin_right = 252.0
+margin_bottom = 122.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_hover = Color( 0.894118, 0.913725, 0.701961, 1 )
+text = "clearer Interfaces"
+expand_icon = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="category" type="RichTextLabel" parent="Frame/Accessibillity"]
+margin_top = -32.0
+margin_right = 256.0
+custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 1, 1, 1, 0.4 )
+bbcode_enabled = true
+bbcode_text = "[center]Accessibility"
+text = "Accessibility"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controles" type="Panel" parent="Frame"]
+margin_left = 56.0
+margin_top = 224.0
+margin_right = 312.0
+margin_bottom = 360.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="category" type="RichTextLabel" parent="Frame/Controles"]
+margin_top = -32.0
+margin_right = 256.0
+rect_pivot_offset = Vector2( 208, 120 )
+custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 1, 1, 1, 0.4 )
+bbcode_enabled = true
+bbcode_text = "[center]Controles"
+text = "Controles"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="explanation" type="Panel" parent="."]
+margin_left = 1352.0
+margin_top = 392.0
+margin_right = 1608.0
+margin_bottom = 576.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="RichTextLabel" parent="explanation"]
+margin_left = 2.0
+margin_top = 8.0
+margin_right = 250.0
+margin_bottom = 176.0
+custom_fonts/normal_font = SubResource( 6 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 464.0
+margin_top = 656.0
+margin_right = 656.0
+margin_bottom = 696.0
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Comming Soon"
+text = "Comming Soon"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1088.0
+margin_top = 832.0
+margin_right = 1280.0
+margin_bottom = 896.0
+custom_styles/hover = ExtResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = ExtResource( 1 )
+text = "Save"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="mouse_entered" from="Frame/External content/Community mods" to="Frame/External content/Community mods" method="_on_mouse_hover"]
+[connection signal="mouse_entered" from="Frame/External content/Personal mods" to="Frame/External content/Personal mods" method="_on_mouse_hover"]
+[connection signal="mouse_entered" from="Frame/Accessibillity/Photophobia" to="Frame/Accessibillity/Photophobia" method="_on_mouse_hover"]
+[connection signal="mouse_entered" from="Frame/Accessibillity/Color deficancy" to="Frame/Accessibillity/Color deficancy" method="_on_mouse_hover"]
+[connection signal="mouse_entered" from="Frame/Accessibillity/Clearer Interface" to="Frame/Accessibillity/Clearer Interface" method="_on_mouse_hover"]
+[connection signal="pressed" from="Button" to="." method="saveSettings"]

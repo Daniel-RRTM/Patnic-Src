@@ -1,0 +1,53 @@
+{
+
+    "name" : {
+        "explanation" : "is shown in front-end",
+        "mandatory"   : true
+    },
+
+
+    "slot" : {
+        "explanation" : "is the time unit of the effect",
+        "mandatory"   : false
+    },
+
+
+    "unit" : {
+        "explanation"   : "is the unit where its found",
+        "valid options" : [ "SPACE" , "TIRGGER" , "EFFECT" , "TIME" ],
+        "mandatory"     : true
+    },
+
+
+    "stat" : {
+        "explanation"   : "is the category in a unit where its found",
+        "valid options" : { "TIRGGER" : [ "BASE"      , "SPECIFIC"                        ],
+                            "SPACE"   : [ "REACH"     , "MEDIUM"    , "SOURCE" , "M_TYPE" ],
+                            "EFEFCT"  : [ "CONDITION" , "STAT_MOD"                        ]},
+        "mandatory"     : true
+    },
+
+
+    "keyword" : {
+        "explanation" : "is used as reference in back-end",
+        "mandatory"   : true
+    },
+
+
+    "to string" : {
+        "explanation" : "explanation of thing by mousehover for example",
+        "mandatory"   : true
+    },
+
+
+    "module reference" : {
+        "explanation"  : "module reference it should use to load input-node",
+        "mandatory"    : false
+    }
+
+
+}
+    
+
+
+
