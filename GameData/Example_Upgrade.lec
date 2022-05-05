@@ -1,0 +1,61 @@
+META{
+  INDEX  --->  X_H_2__M_2
+  USE    --->  KITPART_MOD
+  BY     --->  RedRastaRigger(inhouse)
+}
+
+
+
+//==============================================================================\\
+//==============================================================================\\
+//==============================================================================\\
+
+
+
+MAIN{
+
+
+//------------------------------------------------------------------------------\\
+  COMPONENTS[
+  C_6_NAME ---> enduring
+  C_12_ATLAS_INDEX ---> C_S_1__M_1
+  C_0_DESCRIPTION ---> The Flame that burns half as bright, burns double as long
+  C_35_KIT_MECHANICAL_SUMMARY ---> extends condition to 10 rounds, deals only 1 damage
+  C_48_RARITY ---> 5
+  C_37_M_TYPE ---> MAGIC
+  C_31_KIT_CAT_TYPE ---> SPELL
+  C_38_KIT_PART_TYPE ---> MOD
+  C_36_KIT_MOD_TIME ---> 2
+  C_33_COOLDOWN_TIMER ---> 4
+  C_49_EVENT_REFERENCE ---> X_H_2
+  ]
+
+
+//------------------------------------------------------------------------------\\
+  FLAGS[
+    F_5_KITPART_TYPE
+    F_15_KITPART_TYPE_MOD
+  ]
+
+
+//------------------------------------------------------------------------------\\
+  UPGRADE[
+    CHANGE:
+      CONSIDER OR PROP EQUALLS BURNABLE TO CONSIDER OR PROP NOT BURNABLE
+    ADD:
+      CONSIDER OR PROP EQUALLS WET
+    REMOVE:
+      CONSIDER AND PROP EQUALLS BURNABLE
+  ]
+
+
+
+//==============================================================================\\
+//==============================================================================\\
+//==============================================================================\\
+
+
+
+REFERENCE{
+
+}

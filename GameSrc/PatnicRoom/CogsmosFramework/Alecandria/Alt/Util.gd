@@ -45,8 +45,6 @@ static func buildMainStructure(content:Array,toReturn={}) -> Dictionary:
 		var currentPackage = []
 		if PACKAGE_BEGIN in line :  toReturn[line.rstrip(PACKAGE_BEGIN)] = [] 
 		elif !PACKAGE_END in line :  
-			#for value in line.split(KEY_VALUE_SEPARATOR) : currentPackage.append(value.lstrip(" ").rstrip(" ")) ; 
-			#for value in line : currentPackage.append(value.lstrip(" ").rstrip(" ")) ; 
 			currentPackage.append(line) ; 
 			toReturn.values().back().append(line)
 	return toReturn
@@ -81,9 +79,44 @@ static func getEntityByType(type:String) -> Entity :
 static func getPackageParserByKeyWord() -> Dictionary:
 	return{
 		 "COMPONENTS" : _Alecandria_LecToEnt_PackageComponents
-		,"FLAGS"      : ""
-		,"PROPERTIES" : ""
-		,"SELECT"     : ""
-		,"RUN"        : ""
+		,"FLAGS"      : _Alecandria_LecToEnt_PackageFlag
+		,"PROPERTIES" : _Alecandria_LecToEnt_PackageProperties
+		,"SELECT"     : _Alecandria_LecToEnt_PackageSelect
+		,"RUN"        : _Alecandria_LecToEnt_PackageRun
+		,"TABLE"      : _Alecandria_LecToEnt_PackageTable
+		,"UPGRADE"    : _Alecandria_LecToEnt_PackageUpgrade
 	} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+static func addToAtlas(ent):
+	if isValid(ent):
+			
+			match ent.getCompValue("C_72_LEC_META_USE"):
+				"KITPART_BASE"      : API_001_Atlas.KitParts().addEntity(ent)
+				"KITPART_MOD"       : API_001_Atlas.KitParts().addEntity(ent)
+				"ACTOR_ROLE"        : API_001_Atlas.Role().addEntity(ent)
+				"ACTOR_RACE"        : API_001_Atlas.Race().addEntity(ent)
+				"ACTOR_SPECIALTY"   : API_001_Atlas.Specialties().addEntity(ent)
+
+
+
+static func isValid(ent):
+	for compToString in ENUM.LEC.TYPES_METADATA[ent.getCompValue("C_72_LEC_META_USE")]["MANDATORY"]: 
+		if !ent.hasComp(compToString): 
+			printerr("not all mandatory Components in Dictionary for Parsing to Entity! Missing: "+compToString)
+			return false
+	return true
 

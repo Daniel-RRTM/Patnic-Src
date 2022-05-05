@@ -28,6 +28,7 @@ var TYPES_METADATA = {
 	,"ACTOR_ROLE"      :  {   "CLASS" : Entity            , "MANDATORY"  : ENUM.MINIMAL_COMP.ROLE           }
 	,"ACTOR_RACE"      :  {   "CLASS" : Entity            , "MANDATORY"  : ENUM.MINIMAL_COMP.RACE           }
 	,"ACTOR_SPECIALTY" :  {   "CLASS" : Entity            , "MANDATORY"  : ENUM.MINIMAL_COMP.SPECIALTY      }
+	,"ACTOR_RNG_TABLE" :  {   "CLASS" : ActorRNGTemplate  , "MANDATORY"  : []                               }
 }
 
 

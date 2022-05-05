@@ -1,9 +1,9 @@
 {
 	"folders": [ 	{ "path" : "."             },
 					{ "path" : "..\\Website"   },
-					{ "path" : "..\\Patnic-IDE" },
-					{ "path" : "..\\Patnic-CLI"       },
-					{ "path" : "..\\Patnic-Docs"     }],
+					{ "path" : "..\\Installer" },
+					{ "path" : "..\\CLI"       },
+					{ "path" : "..\\Docs"     }],
 
 
 	"settings": {

@@ -24,6 +24,8 @@ MAIN{
     C_31_KIT_CAT_TYPE            --->  SPELL
     C_36_KIT_MOD_TIME            --->  2
     C_33_COOLDOWN_TIMER          --->  4
+    C_38_KIT_PART_TYPE           --->  BASE
+    C_37_M_TYPE                  --->  MAGIC
   ]
 
 
@@ -37,22 +39,23 @@ MAIN{
 //------------------------------------------------------------------------------\\
   SELECT[
     SEIZE:
-      MEDIUM  --->  LINEA
-      SOURCE  --->  SELF
-      REACH   --->  4
+      MEDIUM ---> LINEA
+      SOURCE ---> SELF
+      REACH ---> 4
     CONSIDER:
-      THIS    --->  TYPE IS INTERACT AND TILE
-      THIS    --->  PROP EQUALLS BURNABLE
+      THIS ---> TYPE IS INTERACT AND TILE
+      OR ---> PROP EQUALLS BURNABLE
+      AND ---> PROP EQUALLS BURNABLE
     PERFORM:
-      CACHE   --->  SET   --->  THIS  ->  FILE
+      CACHE ---> SET THIS FILE
   ]
 
 
 //------------------------------------------------------------------------------\\
   RUN[
     PERFORM:
-      COND  --->  BURNING         --->  LVL 3  AND  DURA 5
-      COMP  --->  C_57_HITPOINTS  --->  DECREMENT BY 1
+      THIS ---> COMP C_57_HITPOINTS DECREMENT BY 1
+      THIS ---> COND BURNING LVL 3 AND DURA 5
   ]
 }
 
