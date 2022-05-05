@@ -2,7 +2,7 @@
 
 
 # Version 0.0.0.030522.0
-this is an manual push
+this is an automated push!
 
 
 # Version added lootbox
