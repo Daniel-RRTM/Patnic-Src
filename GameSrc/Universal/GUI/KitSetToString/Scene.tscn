@@ -56,9 +56,6 @@ margin_left = -48.0
 margin_top = 256.0
 margin_right = -48.0
 margin_bottom = 256.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Window" type="Control" parent="."]
 margin_right = 40.0
@@ -92,6 +89,9 @@ __meta__ = {
 margin_left = -24.0
 margin_right = 16.0
 margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Row" type="Control" parent="Window/Legend"]
 visible = false

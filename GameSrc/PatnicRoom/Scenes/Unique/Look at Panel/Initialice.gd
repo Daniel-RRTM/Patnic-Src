@@ -74,5 +74,5 @@ func getDataToFill(ent) -> Dictionary:
 
 
 func _input(event) -> void:
-	if !Util.Nodes.isMouseOnNode(self.get_node("panel")):
+	if !Utils.node().isMouseOnNode(self.get_node("panel")):
 		self.queue_free()

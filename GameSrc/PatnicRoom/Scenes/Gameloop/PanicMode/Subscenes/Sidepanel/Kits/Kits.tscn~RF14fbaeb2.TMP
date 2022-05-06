@@ -261,7 +261,7 @@ margin_left = 1648.0
 margin_top = 128.0
 margin_right = 1724.0
 margin_bottom = 148.0
-text = "----->"
+text = "------>"
 __meta__ = {
 "_edit_use_anchors_": false
 }

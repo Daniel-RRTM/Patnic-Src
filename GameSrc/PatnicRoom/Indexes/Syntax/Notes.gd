@@ -261,8 +261,8 @@ var performCOMPONENT = {
 	,"requirements"  :  {   "CONSIDER" : "CONSIDER to reduce the SELECTed entities to your intention"   }
 	,"followup"      :      "None"
 	,"Parameter"     :  [
-		{   "ADD-->*value*"     :  "ADDs COMPONENT with VALUE"   },
-		{   "MOD-->*value*"     :  "MODs value of COMPONENT"     },
+		{   "ADD--->*value*"     :  "ADDs COMPONENT with VALUE"   },
+		{   "MOD--->*value*"     :  "MODs value of COMPONENT"     },
 		{   "REMOVE"            :  "REMOVEs COMPONENT"           },
 	]
 }

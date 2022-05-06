@@ -8,7 +8,7 @@ class_name _API_017_Cmd_SpawnTemplateActor
 static func getAutoDoc() -> Dictionary:
 	return{	"toString"  : "spawn random actor above"                       ,
 			"parameter" : ["template"]                                     ,
-			"list"      :  [API_001_Atlas.RNGActorTemplate().getEntries()] ,
+			"list"      :  [API_001_Atlas.RNGActorTemplate().getEntries().keys()] ,
 			"group"     : "spawn"                                          ,
 			"input"     : "spawn actor"                                    }
 

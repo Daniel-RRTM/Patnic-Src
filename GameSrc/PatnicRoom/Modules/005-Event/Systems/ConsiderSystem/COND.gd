@@ -1,10 +1,10 @@
 extends _004_ConsiderParent
 class_name _004_Consider_Condition
 
-# CLASS    THIS --->  COND  -->  IS BURNING                                    X
-# CLASS    THIS --->  COND  -->  BURNING AND LESS THAN LVL 4                   X
-# CLASS    THIS --->  COND  -->  BURNING AND MORE THAN LVL 4                   X
-# CLASS    THIS --->  COND  -->  NOT WET                                       X
+# CLASS    THIS --->  COND  --->  IS BURNING                                    X
+# CLASS    THIS --->  COND  --->  BURNING AND LESS THAN LVL 4                   X
+# CLASS    THIS --->  COND  --->  BURNING AND MORE THAN LVL 4                   X
+# CLASS    THIS --->  COND  --->  NOT WET                                       X
 
 func run(consideration:Array) -> Array :
 	var para = saniticeParameter(consideration)

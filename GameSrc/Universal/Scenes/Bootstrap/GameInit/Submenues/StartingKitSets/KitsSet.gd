@@ -33,12 +33,13 @@ func setKitparts(catEnumNr):
 	resetKitsetEntry()
 	isCatSelect = false
 	
-	var kitpartEnt = API_001_Atlas.KitParts().getKitGroup(catEnumNr-1)
-	baseBox.loadedKitPartEntites = kitpartEnt.values()
-	var nameToShow = kitpartEnt.keys()
-	
-	for kitpart in nameToShow: baseBox.add_item(API_001_Atlas.KitParts().getEntry(kitpart).name()) 
-	baseBox.addEscape()
+	if catEnumNr != 0:
+		var kitpartEnt = API_001_Atlas.KitParts().getKitGroup(catEnumNr-1)
+		baseBox.loadedKitPartEntites = kitpartEnt.values()
+		var nameToShow = kitpartEnt.keys()
+		
+		for kitpart in nameToShow: baseBox.add_item(API_001_Atlas.KitParts().getEntry(kitpart).name()) 
+		baseBox.addEscape()
 
 
 

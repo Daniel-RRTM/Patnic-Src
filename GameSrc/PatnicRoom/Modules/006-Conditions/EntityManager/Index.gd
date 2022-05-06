@@ -12,17 +12,17 @@ static func getIndex() -> Dictionary : return {
 
 
 
-#  SPREADING ---> TYPE EQUALS TILE --> 50 -> 2
-#  SPREADING ---> INDEX EQUALS Suburban_0_1 --> 50 -> 2
+#  SPREADING ---> TYPE EQUALS TILE ---> 50 -> 2
+#  SPREADING ---> INDEX EQUALS Suburban_0_1 ---> 50 -> 2
 #  
 #  MOVING ---> RNG
 #  MOVING ---> ALONG
 #  MOVING ---> AGAINST
 #  
-#  TELEPORT ---> BY_DASH  --> RNG -> 2
-#  TELEPORT ---> BY_DASH  --> INPUT -> 2
-#  TELEPORT ---> BY_RNG   --> COMP  EQUALS C_2_index EQUALS Suburban_0_1
-#  TELEPORT ---> BY_RNG   --> PROP  EQUALS WET AND BURNABLE
+#  TELEPORT ---> BY_DASH  ---> RNG -> 2
+#  TELEPORT ---> BY_DASH  ---> INPUT -> 2
+#  TELEPORT ---> BY_RNG   ---> COMP  EQUALS C_2_index EQUALS Suburban_0_1
+#  TELEPORT ---> BY_RNG   ---> PROP  EQUALS WET AND BURNABLE
 #  
 #  CONSTRAINT ---> MOVEMENT
 #  CONSTRAINT ---> KIT_USE

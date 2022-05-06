@@ -1,9 +1,9 @@
 extends _004_ConsiderParent
 class_name _004_Consider_Flag
 
-# CLASS    THIS --->  FLAG  -->  NOT F_CHEAT_1_NO_CLIP                         X
-# CLASS    THIS --->  FLAG  -->  HAS F_1_INTERACTABLE_TYPE                     X
-# CLASS    THIS --->  FLAG  -->  HAS F_8_IS_WALL                               X
+# CLASS    THIS --->  FLAG  --->  NOT F_CHEAT_1_NO_CLIP                         X
+# CLASS    THIS --->  FLAG  --->  HAS F_1_INTERACTABLE_TYPE                     X
+# CLASS    THIS --->  FLAG  --->  HAS F_8_IS_WALL                               X
 
 func run(consideration:Array) -> Array :
 	var para = saniticeParameter(consideration)

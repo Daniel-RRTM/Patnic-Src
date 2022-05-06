@@ -5,7 +5,7 @@ class_name _Enum_LEC
 
 var ENUMS_TO_STRING = {
 	 "EXCEPTIONAL_PARSER" : EXCEPTIONAL_PARSER
-	,"STRUCTURE_BY_TYPE"  : STRUCTURE_BY_TYPE
+
 	,"TYPES_METADATA"     : TYPES_METADATA
 	,"VALUE_DEPTH"        : VALUE_DEPTH
 	,"COMPARE"            : COMPARE
@@ -23,6 +23,7 @@ var SPACING = [10,15,20,2,2]
 
 var TYPES_METADATA = {
 	 "KITPART_BASE"    :  {   "CLASS" : KitPartEntity     , "MANDATORY"  : ENUM.MINIMAL_COMP.KITPART_BASE   }
+	 ,"CONDITION"       :  {   "CLASS" : ConditionEntity     , "MANDATORY"  : []   }
 	,"KITPART_MOD"     :  {   "CLASS" : KitPartEntity     , "MANDATORY"  : ENUM.MINIMAL_COMP.KITPART_MOD    }
 	
 	,"ACTOR_ROLE"      :  {   "CLASS" : Entity            , "MANDATORY"  : ENUM.MINIMAL_COMP.ROLE           }
@@ -36,23 +37,6 @@ var TYPES_METADATA = {
 
 
 
-var STRUCTURE_BY_TYPE = [
-	 { "NAME"    : "PAIRING" 
-	 , "PARSER"  : Alecandria_LecToEnt_Pairing
-	 , "CONTENT" : [ "ACTOR_RACE","ACTOR_SPECIALTY" , "ACTOR_ROLE" , "ACTOR_SPECIALTY" , "KITPART_BASE" , "KITPART_MOD" ] }
-	
-	,{ "NAME"    : "ACTOR_RNG_TABLE" 
-	 , "PARSER"  : Alecandria_LecToEnt_ActorSpawning
-	 , "CONTENT" : [ "ACTOR_RNG_TABLE" ] }
-	
-	,{ "NAME"    : "CONDITION" 
-	 , "PARSER"  : Alecandria_LecToEnt_Condition
-	 , "CONTENT" : [ "CONDITION" ] }
-
-	,{ "NAME"    : "EVENT" 
-	 , "PARSER"  : Alecandria_LecToEnt_Event
-	 , "CONTENT" : [ "EVENT" ] }
-]
 
 
 

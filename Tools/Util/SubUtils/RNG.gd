@@ -4,7 +4,7 @@ class_name _Util_RNG
 
 
 
-func getBackground(ofScene:String):
+static func getBackground(ofScene:String):
 	var panicBackground = ENUM.INPUT_PANIC.BACKGROUND_FILEPATH
 	var titleBackground = ENUM.FILE_PATHS.TITLE_BACKGROUND
 	var restBackground  = ENUM.INPUT_REST.BACKGROUND_FILEPATH
@@ -15,7 +15,7 @@ func getBackground(ofScene:String):
 
 
 
-func getRandomNumber(from,to):
+static func getRandomNumber(from,to):
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	return rng.randi_range(from,to)

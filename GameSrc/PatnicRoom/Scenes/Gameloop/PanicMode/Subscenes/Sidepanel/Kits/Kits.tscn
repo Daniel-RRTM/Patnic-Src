@@ -772,7 +772,7 @@ margin_left = 536.0
 margin_top = 24.0
 margin_right = 612.0
 margin_bottom = 44.0
-text = "----->"
+text = "------>"
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -65,6 +65,6 @@ func showOnlookMenue():
 	var ent      = mouseLogic.checkForEntites(tilePos)
 	
 	if is_instance_valid(lookAtInst): lookAtInst.queue_free()
-	lookAtInst = load("res://GameSrc/PatnicRoom/scenes/Unique/Look at Panel/look at.tscn").instance()
+	lookAtInst = load("res://GameSrc/PatnicRoom/Scenes/Unique/Look at Panel/Look.tscn").instance()
 	lookAtInst.initialice(ent,mouseLogic.mousePos,self)
 	get_tree().get_root().add_child(lookAtInst)

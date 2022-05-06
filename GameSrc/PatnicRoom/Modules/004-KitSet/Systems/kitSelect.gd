@@ -18,7 +18,8 @@ func setSelections(positions:Array,toReturn = []) -> Array :
 # BUG B> LINEA KITSETS LIKE CRISPYFIER
 func validateSelects(consideration:Array,toReturn = []) -> Array :
 	for consi in consideration :
-		if toReturn.empty(): toReturn = API_005_Event.runConsideration(consi)
+		if toReturn.empty(): 
+			toReturn = API_005_Event.runConsideration(consi)
 
 		else: 
 			var newArray = []

@@ -56,7 +56,8 @@ func getEntryByName(name:String) -> Entity:
 
 func getKitGroup(string_enum_kitCat) -> Array:
 	if string_enum_kitCat is String : return allBasekitGroups[ENUM.KITS.CATEGORY[string_enum_kitCat.to_upper()]]
-	else                            : return allBasekitGroups[string_enum_kitCat]
+	elif string_enum_kitCat != -1   : return allBasekitGroups[string_enum_kitCat]
+	return []
 
 
 

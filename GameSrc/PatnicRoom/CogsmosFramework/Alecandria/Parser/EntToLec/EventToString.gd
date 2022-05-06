@@ -43,7 +43,7 @@ static func getCompSpacing(compToString:String) -> String :
 
 
 
-const ARROW = ["--->","-->","->"]
+const ARROW = ["--->","--->","->"]
 static func getEventDict(event:Dictionary) -> String : 
 	var toReturn = "\n"
 	

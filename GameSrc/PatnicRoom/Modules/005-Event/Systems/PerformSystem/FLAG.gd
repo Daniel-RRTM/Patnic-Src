@@ -1,9 +1,9 @@
 extends _004_PerformParent
 class_name _004_Perform_Flag
 
-# CLASS    FLAG  -->  ADD   F_CHEAT_1_NO_CLIP                                   
-# CLASS    FLAG  -->  SWAP  F_19_ACTOR_CAN_NOT_MOVE                             
-# CLASS    FLAG  -->  REMOVE  F_8_IS_WALL                                       
+# CLASS    FLAG  --->  ADD   F_CHEAT_1_NO_CLIP                                   
+# CLASS    FLAG  --->  SWAP  F_19_ACTOR_CAN_NOT_MOVE                             
+# CLASS    FLAG  --->  REMOVE  F_8_IS_WALL                                       
 
 func run(consideration:Array) -> void :
 	var para = saniticeParameter(consideration)

@@ -1,0 +1,59 @@
+META{
+  INDEX ---> C_S_1__M_2
+  USE   ---> KITPART_MOD
+  BY    ---> RedRastaRigger(inhouse)
+}
+
+
+
+//==============================================================================\\
+//==============================================================================\\
+//==============================================================================\\
+
+
+
+MAIN{
+
+
+//------------------------------------------------------------------------------\\
+  COMPONENTS[
+  C_6_NAME ---> scorching
+  C_12_ATLAS_INDEX ---> C_S_1__M_2
+  C_0_DESCRIPTION ---> The flame that burns Twice as bright, burns half as long
+  C_35_KIT_MECHANICAL_SUMMARY ---> shortens condition to 3 rounds, but deals 5 damage
+  C_48_RARITY ---> 5
+  C_37_M_TYPE ---> MAGIC
+  C_31_KIT_CAT_TYPE ---> SPELL
+  C_38_KIT_PART_TYPE ---> MOD
+  C_36_KIT_MOD_TIME ---> 2
+  C_33_COOLDOWN_TIMER ---> 4
+  C_49_EVENT_REFERENCE ---> C_S_1
+  C_69_KITSET_FAMILY ---> C_S_1
+  ]
+
+
+//------------------------------------------------------------------------------\\
+  FLAGS[
+    F_5_KITPART_TYPE
+    F_16_KITPART_TYPE_MOD
+  ]
+
+
+//------------------------------------------------------------------------------\\
+  UPGRADE[
+    CHANGE:
+      RUN PERFORM > FILE COND BURNING LVL 3 AND DURA 5 <---> FILE COND BURNING LVL 1 AND DURA 10
+      SELECT CONSIDER > THIS TYPE  IS INTERACT <---> THIS TYPE IS ACTOR
+  ]
+}
+
+
+//==============================================================================\\
+//==============================================================================\\
+//==============================================================================\\
+
+
+
+REFERENCE{
+
+}

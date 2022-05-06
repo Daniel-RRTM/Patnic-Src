@@ -1,7 +1,7 @@
 extends Node
 class_name Alecandria_Parser_EntToLec_UniversalToString
 
-const SECTION_SEPARATOR = "//----------------------------------------------------------------------------\\\\"
+const SECTION_SEPARATOR = "//------------------------------------------------------------------------------\\\\"
 const PACKAGE_SEPARATOR = "//-------\\\\"
 
 

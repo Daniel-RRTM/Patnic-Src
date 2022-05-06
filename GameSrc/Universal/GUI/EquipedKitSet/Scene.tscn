@@ -7,31 +7,31 @@
 [ext_resource path="res://Assets/Themes/ThemeOxfordBLue.tres" type="Theme" id=5]
 [ext_resource path="res://Assets/Themes/ThemeSpanishViolet.tres" type="Theme" id=6]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 20
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 15
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 20
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.192157, 0.643137, 0.188235, 0.498039 )
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0, 0.129412, 0.278431, 0.666667 )
 
 [node name="Geared Kitsets" type="Control"]
@@ -39,6 +39,9 @@ margin_left = -136.0
 margin_top = 770.0
 margin_right = -96.0
 margin_bottom = 810.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Window" type="Control" parent="."]
 margin_left = -16.0
@@ -115,7 +118,7 @@ margin_bottom = -16.0
 margin_left = 8.0
 margin_right = 112.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
 scroll_active = false
 
@@ -129,7 +132,7 @@ margin_bottom = -16.0
 margin_top = 1.0
 margin_right = 85.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -149,7 +152,7 @@ margin_left = 8.0
 margin_top = -4.0
 margin_right = 256.0
 margin_bottom = 20.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Family" type="Panel" parent="Kitsets/VBoxContainer/0"]
@@ -165,7 +168,7 @@ __meta__ = {
 margin_left = 9.0
 margin_right = 94.0
 margin_bottom = 24.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="mod" type="Panel" parent="Kitsets/VBoxContainer/0"]
@@ -181,7 +184,7 @@ __meta__ = {
 margin_left = 8.0
 margin_right = 208.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="base" type="Panel" parent="Kitsets/VBoxContainer/0"]
@@ -194,7 +197,7 @@ margin_bottom = -18.0
 margin_left = 8.0
 margin_right = 256.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Control" type="Control" parent="Kitsets/VBoxContainer/0"]
@@ -206,8 +209,8 @@ margin_left = 160.0
 margin_top = -41.0
 margin_right = 1248.0
 margin_bottom = -21.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 
 [node name="block" type="Panel" parent="Kitsets/VBoxContainer/0/Control"]
 visible = false
@@ -215,7 +218,7 @@ margin_left = 168.0
 margin_top = -50.0
 margin_right = 1248.0
 margin_bottom = -10.0
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -224,7 +227,7 @@ __meta__ = {
 margin_top = 30.0
 margin_right = 40.0
 margin_bottom = 30.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 bbcode_text = "0 >"
 text = "0 >"
 scroll_active = false
@@ -251,7 +254,7 @@ margin_bottom = -16.0
 margin_left = 8.0
 margin_right = 112.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 1 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -267,7 +270,7 @@ margin_bottom = -16.0
 margin_top = 1.0
 margin_right = 85.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -287,7 +290,7 @@ margin_left = 8.0
 margin_top = -4.0
 margin_right = 256.0
 margin_bottom = 20.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Family" type="Panel" parent="Kitsets/VBoxContainer/1"]
@@ -303,7 +306,7 @@ __meta__ = {
 margin_left = 9.0
 margin_right = 94.0
 margin_bottom = 24.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -322,7 +325,7 @@ __meta__ = {
 margin_left = 8.0
 margin_right = 208.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="base" type="Panel" parent="Kitsets/VBoxContainer/1"]
@@ -335,7 +338,7 @@ margin_bottom = -18.0
 margin_left = 8.0
 margin_right = 256.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Control" type="Control" parent="Kitsets/VBoxContainer/1"]
@@ -347,8 +350,8 @@ margin_left = 160.0
 margin_top = -41.0
 margin_right = 1248.0
 margin_bottom = -21.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -359,7 +362,7 @@ margin_left = 168.0
 margin_top = -50.0
 margin_right = 1248.0
 margin_bottom = -10.0
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -368,7 +371,7 @@ __meta__ = {
 margin_top = 30.0
 margin_right = 40.0
 margin_bottom = 30.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 bbcode_text = "0 >"
 text = "0 >"
 scroll_active = false
@@ -395,7 +398,7 @@ margin_bottom = -16.0
 margin_left = 8.0
 margin_right = 112.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 1 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -411,7 +414,7 @@ margin_bottom = -16.0
 margin_top = 1.0
 margin_right = 85.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -431,7 +434,7 @@ margin_left = 8.0
 margin_top = -4.0
 margin_right = 256.0
 margin_bottom = 20.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Family" type="Panel" parent="Kitsets/VBoxContainer/2"]
@@ -447,7 +450,7 @@ __meta__ = {
 margin_left = 9.0
 margin_right = 94.0
 margin_bottom = 24.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -466,7 +469,7 @@ __meta__ = {
 margin_left = 8.0
 margin_right = 208.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="base" type="Panel" parent="Kitsets/VBoxContainer/2"]
@@ -479,7 +482,7 @@ margin_bottom = -18.0
 margin_left = 8.0
 margin_right = 256.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Control" type="Control" parent="Kitsets/VBoxContainer/2"]
@@ -491,8 +494,8 @@ margin_left = 160.0
 margin_top = -41.0
 margin_right = 1248.0
 margin_bottom = -21.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -503,7 +506,7 @@ margin_left = 168.0
 margin_top = -50.0
 margin_right = 1248.0
 margin_bottom = -10.0
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -512,7 +515,7 @@ __meta__ = {
 margin_top = 30.0
 margin_right = 40.0
 margin_bottom = 30.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 bbcode_text = "0 >"
 text = "0 >"
 scroll_active = false
@@ -539,7 +542,7 @@ margin_bottom = -16.0
 margin_left = 8.0
 margin_right = 112.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 1 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -555,7 +558,7 @@ margin_bottom = -16.0
 margin_top = 1.0
 margin_right = 85.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -575,7 +578,7 @@ margin_left = 8.0
 margin_top = -4.0
 margin_right = 256.0
 margin_bottom = 20.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Family" type="Panel" parent="Kitsets/VBoxContainer/3"]
@@ -591,7 +594,7 @@ __meta__ = {
 margin_left = 9.0
 margin_right = 94.0
 margin_bottom = 24.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -610,7 +613,7 @@ __meta__ = {
 margin_left = 8.0
 margin_right = 208.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="base" type="Panel" parent="Kitsets/VBoxContainer/3"]
@@ -623,7 +626,7 @@ margin_bottom = -18.0
 margin_left = 8.0
 margin_right = 256.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Control" type="Control" parent="Kitsets/VBoxContainer/3"]
@@ -635,8 +638,8 @@ margin_left = 160.0
 margin_top = -41.0
 margin_right = 1248.0
 margin_bottom = -21.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -647,7 +650,7 @@ margin_left = 168.0
 margin_top = -50.0
 margin_right = 1248.0
 margin_bottom = -10.0
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -656,7 +659,7 @@ __meta__ = {
 margin_top = 30.0
 margin_right = 40.0
 margin_bottom = 30.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 bbcode_text = "0 >"
 text = "0 >"
 scroll_active = false
@@ -683,7 +686,7 @@ margin_bottom = -16.0
 margin_left = 8.0
 margin_right = 112.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 1 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -699,7 +702,7 @@ margin_bottom = -16.0
 margin_top = 1.0
 margin_right = 85.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -719,7 +722,7 @@ margin_left = 8.0
 margin_top = -4.0
 margin_right = 256.0
 margin_bottom = 20.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Family" type="Panel" parent="Kitsets/VBoxContainer/4"]
@@ -735,7 +738,7 @@ __meta__ = {
 margin_left = 9.0
 margin_right = 94.0
 margin_bottom = 24.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -754,7 +757,7 @@ __meta__ = {
 margin_left = 8.0
 margin_right = 208.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="base" type="Panel" parent="Kitsets/VBoxContainer/4"]
@@ -767,7 +770,7 @@ margin_bottom = -18.0
 margin_left = 8.0
 margin_right = 256.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Control" type="Control" parent="Kitsets/VBoxContainer/4"]
@@ -779,11 +782,8 @@ margin_left = 160.0
 margin_top = -41.0
 margin_right = 1248.0
 margin_bottom = -21.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+custom_styles/hover = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 
 [node name="block" type="Panel" parent="Kitsets/VBoxContainer/4/Control"]
 visible = false
@@ -791,7 +791,7 @@ margin_left = 168.0
 margin_top = -50.0
 margin_right = 1248.0
 margin_bottom = -10.0
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -800,7 +800,7 @@ __meta__ = {
 margin_top = 30.0
 margin_right = 40.0
 margin_bottom = 30.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 bbcode_text = "0 >"
 text = "0 >"
 scroll_active = false
@@ -827,7 +827,7 @@ margin_bottom = -16.0
 margin_left = 8.0
 margin_right = 112.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 1 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -843,7 +843,7 @@ margin_bottom = -16.0
 margin_top = 1.0
 margin_right = 85.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -863,7 +863,7 @@ margin_left = 8.0
 margin_top = -4.0
 margin_right = 256.0
 margin_bottom = 20.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Family" type="Panel" parent="Kitsets/VBoxContainer/5"]
@@ -879,7 +879,7 @@ __meta__ = {
 margin_left = 9.0
 margin_right = 94.0
 margin_bottom = 24.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -898,7 +898,7 @@ __meta__ = {
 margin_left = 8.0
 margin_right = 208.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="base" type="Panel" parent="Kitsets/VBoxContainer/5"]
@@ -911,7 +911,7 @@ margin_bottom = -18.0
 margin_left = 8.0
 margin_right = 256.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Control" type="Control" parent="Kitsets/VBoxContainer/5"]
@@ -923,8 +923,8 @@ margin_left = 160.0
 margin_top = -41.0
 margin_right = 1248.0
 margin_bottom = -21.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -935,7 +935,7 @@ margin_left = 168.0
 margin_top = -50.0
 margin_right = 1248.0
 margin_bottom = -10.0
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -944,7 +944,7 @@ __meta__ = {
 margin_top = 30.0
 margin_right = 40.0
 margin_bottom = 30.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 bbcode_text = "0 >"
 text = "0 >"
 scroll_active = false
@@ -971,7 +971,7 @@ margin_bottom = -16.0
 margin_left = 8.0
 margin_right = 112.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 1 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -987,7 +987,7 @@ margin_bottom = -16.0
 margin_top = 1.0
 margin_right = 85.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1007,7 +1007,7 @@ margin_left = 8.0
 margin_top = -4.0
 margin_right = 256.0
 margin_bottom = 20.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Family" type="Panel" parent="Kitsets/VBoxContainer/6"]
@@ -1022,7 +1022,7 @@ __meta__ = {
 [node name="RichTextLabel" type="RichTextLabel" parent="Kitsets/VBoxContainer/6/Family"]
 margin_right = 85.0
 margin_bottom = 24.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1041,7 +1041,7 @@ __meta__ = {
 margin_left = 8.0
 margin_right = 208.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="base" type="Panel" parent="Kitsets/VBoxContainer/6"]
@@ -1054,7 +1054,7 @@ margin_bottom = -18.0
 margin_left = 8.0
 margin_right = 256.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Control" type="Control" parent="Kitsets/VBoxContainer/6"]
@@ -1066,8 +1066,8 @@ margin_left = 160.0
 margin_top = -41.0
 margin_right = 1248.0
 margin_bottom = -21.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1078,7 +1078,7 @@ margin_left = 168.0
 margin_top = -50.0
 margin_right = 1248.0
 margin_bottom = -10.0
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1087,7 +1087,7 @@ __meta__ = {
 margin_top = 30.0
 margin_right = 40.0
 margin_bottom = 30.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 bbcode_text = "0 >"
 text = "0 >"
 scroll_active = false
@@ -1114,7 +1114,7 @@ margin_bottom = -16.0
 margin_left = 8.0
 margin_right = 112.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 1 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1130,7 +1130,7 @@ margin_bottom = -16.0
 margin_top = 1.0
 margin_right = 85.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1150,7 +1150,7 @@ margin_left = 8.0
 margin_top = -4.0
 margin_right = 256.0
 margin_bottom = 20.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Family" type="Panel" parent="Kitsets/VBoxContainer/7"]
@@ -1166,7 +1166,7 @@ __meta__ = {
 margin_left = 9.0
 margin_right = 94.0
 margin_bottom = 24.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1185,7 +1185,7 @@ __meta__ = {
 margin_left = 8.0
 margin_right = 208.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="base" type="Panel" parent="Kitsets/VBoxContainer/7"]
@@ -1198,7 +1198,7 @@ margin_bottom = -18.0
 margin_left = 8.0
 margin_right = 256.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Control" type="Control" parent="Kitsets/VBoxContainer/7"]
@@ -1210,8 +1210,8 @@ margin_left = 160.0
 margin_top = -41.0
 margin_right = 1248.0
 margin_bottom = -21.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1222,7 +1222,7 @@ margin_left = 168.0
 margin_top = -50.0
 margin_right = 1248.0
 margin_bottom = -10.0
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1231,7 +1231,7 @@ __meta__ = {
 margin_top = 30.0
 margin_right = 40.0
 margin_bottom = 30.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 bbcode_text = "0 >"
 text = "0 >"
 scroll_active = false
@@ -1258,7 +1258,7 @@ margin_bottom = -16.0
 margin_left = 8.0
 margin_right = 112.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 1 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1274,7 +1274,7 @@ margin_bottom = -16.0
 margin_top = 1.0
 margin_right = 85.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1294,7 +1294,7 @@ margin_left = 8.0
 margin_top = -4.0
 margin_right = 256.0
 margin_bottom = 20.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Family" type="Panel" parent="Kitsets/VBoxContainer/8"]
@@ -1310,7 +1310,7 @@ __meta__ = {
 margin_left = 9.0
 margin_right = 94.0
 margin_bottom = 24.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1329,7 +1329,7 @@ __meta__ = {
 margin_left = 8.0
 margin_right = 208.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="base" type="Panel" parent="Kitsets/VBoxContainer/8"]
@@ -1342,7 +1342,7 @@ margin_bottom = -18.0
 margin_left = 8.0
 margin_right = 256.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Control" type="Control" parent="Kitsets/VBoxContainer/8"]
@@ -1354,8 +1354,8 @@ margin_left = 160.0
 margin_top = -41.0
 margin_right = 1248.0
 margin_bottom = -21.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1366,7 +1366,7 @@ margin_left = 168.0
 margin_top = -50.0
 margin_right = 1248.0
 margin_bottom = -10.0
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1375,7 +1375,7 @@ __meta__ = {
 margin_top = 30.0
 margin_right = 40.0
 margin_bottom = 30.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 bbcode_text = "0 >"
 text = "0 >"
 scroll_active = false
@@ -1402,7 +1402,7 @@ margin_bottom = -16.0
 margin_left = 8.0
 margin_right = 112.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 1 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1418,7 +1418,7 @@ margin_bottom = -16.0
 margin_top = 1.0
 margin_right = 85.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1438,7 +1438,7 @@ margin_left = 8.0
 margin_top = -4.0
 margin_right = 256.0
 margin_bottom = 20.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Family" type="Panel" parent="Kitsets/VBoxContainer/9"]
@@ -1454,7 +1454,7 @@ __meta__ = {
 margin_left = 9.0
 margin_right = 94.0
 margin_bottom = 24.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1473,7 +1473,7 @@ __meta__ = {
 margin_left = 8.0
 margin_right = 208.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="base" type="Panel" parent="Kitsets/VBoxContainer/9"]
@@ -1486,7 +1486,7 @@ margin_bottom = -18.0
 margin_left = 8.0
 margin_right = 256.0
 margin_bottom = 25.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 scroll_active = false
 
 [node name="Control" type="Control" parent="Kitsets/VBoxContainer/9"]
@@ -1498,8 +1498,8 @@ margin_left = 160.0
 margin_top = -41.0
 margin_right = 1248.0
 margin_bottom = -21.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1510,7 +1510,7 @@ margin_left = 168.0
 margin_top = -50.0
 margin_right = 1248.0
 margin_bottom = -10.0
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1519,7 +1519,7 @@ __meta__ = {
 margin_top = 30.0
 margin_right = 40.0
 margin_bottom = 30.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 bbcode_text = "0 >"
 text = "0 >"
 scroll_active = false
@@ -1528,12 +1528,12 @@ __meta__ = {
 }
 
 [connection signal="pressed" from="Kitsets/VBoxContainer/0/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 0 ]]
-[connection signal="pressed" from="Kitsets/VBoxContainer/1/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 0 ]]
-[connection signal="pressed" from="Kitsets/VBoxContainer/2/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 0 ]]
-[connection signal="pressed" from="Kitsets/VBoxContainer/3/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 0 ]]
-[connection signal="pressed" from="Kitsets/VBoxContainer/4/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 0 ]]
-[connection signal="pressed" from="Kitsets/VBoxContainer/5/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 0 ]]
-[connection signal="pressed" from="Kitsets/VBoxContainer/6/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 0 ]]
-[connection signal="pressed" from="Kitsets/VBoxContainer/7/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 0 ]]
-[connection signal="pressed" from="Kitsets/VBoxContainer/8/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 0 ]]
-[connection signal="pressed" from="Kitsets/VBoxContainer/9/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 0 ]]
+[connection signal="pressed" from="Kitsets/VBoxContainer/1/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="Kitsets/VBoxContainer/2/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="Kitsets/VBoxContainer/3/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 3 ]]
+[connection signal="pressed" from="Kitsets/VBoxContainer/4/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 4 ]]
+[connection signal="pressed" from="Kitsets/VBoxContainer/5/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 5 ]]
+[connection signal="pressed" from="Kitsets/VBoxContainer/6/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 6 ]]
+[connection signal="pressed" from="Kitsets/VBoxContainer/7/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 7 ]]
+[connection signal="pressed" from="Kitsets/VBoxContainer/8/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 8 ]]
+[connection signal="pressed" from="Kitsets/VBoxContainer/9/Control/0" to="Kitsets" method="kitslot_pressed" binds= [ 9 ]]

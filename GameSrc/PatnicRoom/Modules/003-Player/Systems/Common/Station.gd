@@ -45,7 +45,7 @@ func run():
 	var kitset   = currentStation.kitset
 	var kitParts = [ kitset.base, kitset.mod, kitset.appendix ]
 	kitset       = API_004_KitSet.getMergedKitsets(kitParts)
-	API_003_Player.kitsets().append(kitset)
+	API_003_Player.currentChar.kitventory().kitsets().append(kitset)
 
 
 

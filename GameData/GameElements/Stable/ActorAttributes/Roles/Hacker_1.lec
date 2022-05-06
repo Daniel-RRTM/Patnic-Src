@@ -1,62 +1,62 @@
-
-
-
-META
-  INDEX         -->  HACKER_1
-  USE           -->  ACTOR_ROLE
-  BY            -->  RedRastaRigger(inhouse)
-
-  DESCRIPTION   vvv
-
-
-
+META{
+  INDEX ---> HACKER_1
+  USE ---> ACTOR_ROLE
+  BY ---> RedRastaRigger(inhouse)
 }
 
 
-//----------------------------------------------------------------------------\\
-//----------------------------------------------------------------------------\\
-//----------------------------------------------------------------------------\\
 
-MAIN
+//==============================================================================\\
+//==============================================================================\\
+//==============================================================================\\
 
-//-------\\
-  
-  COMPONENTS
-    C_12_ATLAS_INDEX    --->  HACKER_1
-    C_6_NAME             --->  Hacker T1
-    C_65_TIER            --->  1
-    C_0_DESCRIPTION      --->  edgy show off's without any understanding of their gun's
-    C_47_SYNONYM         --->  pistolero AND Hobo with gun AND gun-owner
-    C_37_M_TYPE          --->  MEAT
-    C_19_ATTRIBUTES      vvvv
-      CON  --->  5
-      AGI  --->  5
-      REA  --->  5
-      STR  --->  5
-      WIL  --->  5
-      LOG  --->  5
-      INT  --->  5
+
+
+MAIN{
+
+
+//------------------------------------------------------------------------------\\
+  COMPONENTS[
+    C_12_ATLAS_INDEX ---> HACKER_1
+    C_6_NAME ---> Hacker T1
+    C_65_TIER ---> 1
+    C_0_DESCRIPTION ---> edgy show off's without any understanding of their gun's
+    C_47_SYNONYM ---> pistolero AND Hobo with gun AND gun-owner
+    C_37_M_TYPE ---> MEAT
+    C_19_ATTRIBUTES(
+      CON ---> 5
+      AGI ---> 5
+      REA ---> 5
+      STR ---> 5
+      WIL ---> 5
+      LOG ---> 5
+      INT ---> 5
       CHA ---> 5
-    C_20_SKILLBLOCK      vvvv
-      SURVIVAL      --->  5
-      SNEAKING      --->  5
-      PERCEPTION    --->  5
-      INTIMIDATION  --->  5
-      COMPUTER      --->  5
+    )
+    C_20_SKILLBLOCK(
+      SURVIVAL ---> 5
+      SNEAKING ---> 5
+      PERCEPTION ---> 5
+      INTIMIDATION ---> 5
+      COMPUTER ---> 5
+    )
+]
 
-//-------\\
 
-  FLAGS
+//------------------------------------------------------------------------------\\
+  FLAGS[
     F_6_ACTOR_ATTRIBUTES
     F_10_ACTOR_ATTRIBUTES_ROLES
+  ]
+}
 
 
-//----------------------------------------------------------------------------\\
-//----------------------------------------------------------------------------\\
-//----------------------------------------------------------------------------\\
+//==============================================================================\\
+//==============================================================================\\
+//==============================================================================\\
 
 
-REFERENCE
 
+REFERENCE{
 
-END
+}

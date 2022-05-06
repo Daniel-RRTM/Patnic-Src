@@ -1,9 +1,9 @@
 extends _004_ConsiderParent
 class_name _004_Consider_Component
 
-# CLASS    THIS --->  COMP  -->  C_65_TIER EQUALLS 1                           X
-# CLASS    THIS --->  COMP  -->  C_48_RARITY NOT 10                            X
-# CLASS    THIS --->  COMP  -->  C_57_HITPOINTS MORE THAN BISECT               X
+# CLASS    THIS --->  COMP  --->  C_65_TIER EQUALLS 1                           X
+# CLASS    THIS --->  COMP  --->  C_48_RARITY NOT 10                            X
+# CLASS    THIS --->  COMP  --->  C_57_HITPOINTS MORE THAN BISECT               X
 
 func run(consideration:Array) -> Array :
 	var para = saniticeParameter(consideration)

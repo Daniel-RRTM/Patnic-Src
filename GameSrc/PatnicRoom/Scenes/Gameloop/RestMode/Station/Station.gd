@@ -18,7 +18,7 @@ func initialice():
 	API_009_Sound.buildSceneReference()
 	stationEnum = Davinci.externalCachedInput
 	
-	get_node("background").texture = Utils.rng().getRngBackground()
+	get_node("background").texture = Utils.rng().getBackground("rest")
 	
 	API_003_Player.getStations().changeStation(stationEnum)
 	

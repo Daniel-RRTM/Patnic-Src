@@ -10,7 +10,7 @@ func loadItems(itemsToLoad:Array):
 	
 	for item in itemsToLoad:
 		var currentRow = get_node("VBoxContainer")
-		var sceneToLoad = load("res://GameSrc/Universal/GUI/gear_inventroy/ItemRow.tscn").instance()
+		var sceneToLoad = load("res://GameSrc/Universal/GUI/Inventory/ItemRow.tscn").instance()
 		currentRow.add_child(sceneToLoad)
 		
 		var compsToLoad = getCompsToShowByClass(item)

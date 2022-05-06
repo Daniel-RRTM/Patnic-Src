@@ -1,7 +1,7 @@
 extends _004_PerformParent
 class_name _004_Perform_Component
 
-# CLASS    COMP  -->  C_1_IS_WALKABLE SET TRUE                                 X
+# CLASS    COMP  --->  C_1_IS_WALKABLE SET TRUE                                 X
 # CLASS    COMP --->  C_9_CREDITS_ACCOUNT DECREMENT BY 100                     X
 # CLASS    COMP --->  C_48_RARITY INCREMENT BY 2                               X
 

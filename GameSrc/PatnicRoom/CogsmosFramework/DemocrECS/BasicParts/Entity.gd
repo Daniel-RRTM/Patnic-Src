@@ -71,7 +71,8 @@ func hasCond(condName:String)  -> bool:   return conditions.has(condName)
 func hasFlag(flagName:String)  -> bool:   return flags.has(flagName)
 
 # FUNC >                                                        
-func hasProperty(propEnum:int) -> bool:   return properties.has(propEnum)
+func hasProperty(propEnum:int) -> bool:   
+	return properties.has(propEnum)
 
 
 

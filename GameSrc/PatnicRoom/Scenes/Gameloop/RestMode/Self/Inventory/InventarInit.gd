@@ -3,7 +3,7 @@ extends Control
 
 func _ready():
 	API_009_Sound.buildSceneReference()
-	Gameloop.scene.get_node("background").texture = Utils.rng().getRngBackground()
+	Gameloop.scene.get_node("background").texture = Utils.rng().getBackground("rest")
 
 
 
@@ -11,17 +11,17 @@ var player = API_003_Player.currentChar
 func getSpecificCLickedNode():
 	for i in 10:
 		var currentNode = get_node("root_Kits/list").get_node(str(i+1))
-		if Util.Nodes.isMouseOnNode(currentNode):
+		if Utils.node().isMouseOnNode(currentNode):
 			var kitPartString
 			
 			
-			if Util.Nodes.isMouseOnNode(currentNode.get_node("Base")):
+			if Utils.node().isMouseOnNode(currentNode.get_node("Base")):
 				kitPartString = currentNode.get_node("Base").get_node("text").bbcode_text
 				
-			elif Util.Nodes.isMouseOnNode(currentNode.get_node("Mod")):
+			elif Utils.node().isMouseOnNode(currentNode.get_node("Mod")):
 				kitPartString = currentNode.get_node("Mod").get_node("text").bbcode_text
 			
-			elif Util.Nodes.isMouseOnNode(currentNode.get_node("Appendix")):
+			elif Utils.node().isMouseOnNode(currentNode.get_node("Appendix")):
 				kitPartString = currentNode.get_node("Appendix").get_node("text").bbcode_text
 			
 

@@ -1,9 +1,9 @@
 extends _004_PerformParent
 class_name _004_Perform_Condition
 
-# CLASS    COND  -->  INCAPACITATED  -->  LVL 3  AND  DURA 5                   X
-# CLASS    COND  -->  INCAPACITATED  -->  DURA 3  AND  LVL 5                   
-# CLASS    COND  -->  INCAPACITATED  -->  DURA 3  AND  LVL 5                   
+# CLASS    COND  --->  INCAPACITATED  --->  LVL 3  AND  DURA 5                   X
+# CLASS    COND  --->  INCAPACITATED  --->  DURA 3  AND  LVL 5                   
+# CLASS    COND  --->  INCAPACITATED  --->  DURA 3  AND  LVL 5                   
 
 func run(consideration:Array) -> void :
 	var para = saniticeParameter(consideration)

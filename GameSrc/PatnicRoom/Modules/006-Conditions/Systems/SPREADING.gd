@@ -49,12 +49,12 @@ static func getDoc() -> Dictionary :   return {
 
 static func getArrToDict(parameter:Array) -> Dictionary :
 	return {
-		"PERCENT"   :   int(parameter[1])              ,
+		"PERCENT"   :   int(parameter[4])              ,
 		"NAME"      :   "SPREADING"                    ,
-		"REACH"     :   int(parameter[2])              ,       
-		"CONDITION" : { "REFERENCE"  : parameter[0][0] ,
-						"COMPARATOR" : parameter[0][1] ,
-						"VALUE"      : parameter[0][2] }
+		"REACH"     :   int(parameter[5])              ,       
+		"CONDITION" : { "REFERENCE"  : parameter[1] ,
+						"COMPARATOR" : parameter[2] ,
+						"VALUE"      : parameter[3] }
 	}
 
 

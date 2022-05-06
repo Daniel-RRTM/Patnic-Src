@@ -51,7 +51,7 @@ func setKitPartButtonVisibillity(kitPartStr,add,rem,exc):
 
 func onBuildPressed() -> void:
 	API_003_Player.stationSetter.confirmTask()
-	get_node("/root/Node2D/Title").loadToString()
+	get_node("../..//Title").loadToString()
 
 
 

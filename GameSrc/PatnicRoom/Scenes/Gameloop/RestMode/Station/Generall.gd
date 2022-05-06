@@ -6,7 +6,7 @@ var metaValues = Rest_Form_Getter.getFormMeta()
 
 
 func _ready():
-	get_node("background").texture = Utils.rng().getRngBackground()
+	get_node("background").texture = Utils.rng().getBackground("rest")
 	Gameloop.scene                 = self
 	var mTypeValues                = metaValues[Davinci.externalCachedInput]
 	API_003_Player._005_Common_Station.changeStation(Davinci.externalCachedInput)

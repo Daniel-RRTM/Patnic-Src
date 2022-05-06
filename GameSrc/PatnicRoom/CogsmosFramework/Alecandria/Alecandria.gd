@@ -4,7 +4,7 @@ extends Node
 
 
 func _ready()-> void:
-	Alecandria_Parser_LecToEnt_Hub.parseGameData()
+	_Alecandria_LecToEnt.parse()
 	API_001_Atlas.sortKitpartsAtlas()
 	
 

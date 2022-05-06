@@ -1,9 +1,9 @@
 extends _004_ConsiderParent
 class_name _004_Consider_Type
 
-# CLASS    THIS --->  TYPE  -->  IS TILE                                       X
-# CLASS    THIS --->  TYPE  -->  NOT ACTOR                                     X
-# CLASS    THIS --->  TYPE  -->  IS INTERACT                                   X
+# CLASS    THIS --->  TYPE  --->  IS TILE                                       X
+# CLASS    THIS --->  TYPE  --->  NOT ACTOR                                     X
+# CLASS    THIS --->  TYPE  --->  IS INTERACT                                   X
 
 func run(consideration:Array) -> Array :
 	var para = saniticeParameter(consideration)

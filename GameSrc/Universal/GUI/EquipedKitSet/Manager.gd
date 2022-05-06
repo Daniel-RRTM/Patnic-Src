@@ -52,8 +52,9 @@ func kitslot_pressed(rowNr: int) -> void:
 	#for entry in get_node("/../kit_effect_details").get_children(): entry.queue_free() 
 	
 	if get_node("VBoxContainer/"+str(rowNr)).get_node("Control/block").visible == false:
-		get_node("../../kitset_overview").get_node("parent").loadKitset(listOfKitSets[rowNr])
-		get_node("../../kitset_overview").visible = true
+		var cache = get_node("../../KitSetOverview")
+		cache.get_node("parent").loadKitset(listOfKitSets[rowNr])
+		get_node("../../KitSetOverview").visible = true
 	
 	API_003_Player.stationSetter.setKitset(listOfKitSets[rowNr])
 

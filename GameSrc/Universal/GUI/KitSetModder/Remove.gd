@@ -20,8 +20,8 @@ func selectKitPartToAdd(kitPartEnum):
 		if  kitpart.family() == kitsetToBuild.base.family() and kitPartEnum == kitpart.partType():
 			kitPartsToShow.append(kitpart)
 			
-	get_parent().get_parent().get_parent().get_parent().get_node("build_selection/ScrollContainer").loadItems(kitPartsToShow)
-	get_parent().get_parent().get_parent().get_parent().get_node("build_selection").visible =true
+	get_parent().get_parent().get_parent().get_parent().get_node("BuilldSelection/ScrollContainer").loadItems(kitPartsToShow)
+	get_parent().get_parent().get_parent().get_parent().get_node("BuilldSelection").visible =true
 
 
 

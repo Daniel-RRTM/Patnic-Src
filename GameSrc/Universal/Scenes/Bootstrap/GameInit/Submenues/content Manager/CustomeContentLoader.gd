@@ -3,7 +3,7 @@ extends VBoxContainer
 
 var allKnownElements = []
 func _ready() -> void:
-	var allDomains = [ENUM.ALECANDRIA.COMMUNITY_GAME_DATA,ENUM.ALECANDRIA.PERSONAL_GAME_DATA]
+	var allDomains = [ENUM.ALECANDRIA.PERSONAL_GAME_DATA,ENUM.ALECANDRIA.COMMUNITY_GAME_DATA]
 	
 	for filepathBase in allDomains:
 		var allElements = get_files(filepathBase)

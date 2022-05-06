@@ -12,7 +12,7 @@ static func saniticeParameter(parameter:Array) -> Array :
 
 
 static func trimDownParameter(values:Array) -> Array:
-	for arrow in ["--->","-->","->"] : values.erase(arrow)
+	for arrow in ["--->","--->","->"] : values.erase(arrow)
 	for key in SYNTAX.EVENT.EFFECTS.keys():
 		if values[0] in key: values.remove(0)  
 	return values

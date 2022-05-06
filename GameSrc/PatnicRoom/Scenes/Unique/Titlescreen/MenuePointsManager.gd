@@ -17,8 +17,7 @@ func getSceneToAdd(sceneEnum):
 		MENUE_POINT.NEW_GAME       : return load("res://GameSrc/PatnicRoom/Scenes/Unique/Titlescreen/SubScene/CreateNewGame/CreateNewGameAlt.tscn").instance()
 		MENUE_POINT.INTRODUCTION   : return load(baseFilePath+"/SubScene/Introduction.tscn").instance()
 		MENUE_POINT.CREDITS        : return load(baseFilePath+"/SubScene/credits.tscn").instance()
-		MENUE_POINT.NEWS           : return load(baseFilePath+"/SubScene/NewsAndPathes/News&Patches.tscn").instance()
-		
+		MENUE_POINT.NEWS           : return load(baseFilePath+"/SubScene/NewsAndPathes/NewsAndPatches.tscn").instance()
 		MENUE_POINT.SETTINGS        : return load(baseFilePath+"/SubScene/Settings.tscn").instance()
 		MENUE_POINT.LOAD_GAME       :  return load(baseFilePath+"/SubScene/Load/Load.tscn").instance()
 

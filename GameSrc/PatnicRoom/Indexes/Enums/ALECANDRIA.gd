@@ -13,8 +13,8 @@ var ENUMS_TO_STRING = {
 
 const BASE_GAME_DATA_PATH = "res://GameData/GameElements/"
 
-const COMMUNITY_GAME_DATA = BASE_GAME_DATA_PATH+"/Community"
-const PERSONAL_GAME_DATA  = BASE_GAME_DATA_PATH+"/Personal"
-const STABLE_GAME_DATA    = BASE_GAME_DATA_PATH+"/Stable"
+const COMMUNITY_GAME_DATA = BASE_GAME_DATA_PATH+"Community"
+const PERSONAL_GAME_DATA  = BASE_GAME_DATA_PATH+"Personal"
+const STABLE_GAME_DATA    = BASE_GAME_DATA_PATH+"Stable"
 
 

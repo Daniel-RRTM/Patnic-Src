@@ -3,7 +3,7 @@ extends Node
 func _ready():
 	Gameloop.scene = self
 	API_009_Sound.buildSceneReference()
-	get_node("background").texture = Utils.rng().getRngBackground()
+	get_node("background").texture = Utils.rng().getBackground("rest")
 	
 	
 	

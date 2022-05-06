@@ -7,7 +7,7 @@ class_name DemocrECTS_EntityManager
 
 
 # REFACTOR 
-#>>> Dictionary --> Entity <<<#
+#>>> Dictionary ---> Entity <<<#
 static func constructNewEntity(metaData:Dictionary, toParse:Dictionary) -> Entity:
 	var entityAttributes = {
 	"COMPONENTS"  : DemocrECS.getAllComponents(),
@@ -37,7 +37,7 @@ static func constructNewEntity(metaData:Dictionary, toParse:Dictionary) -> Entit
 	return entity as Entity
 
 
-#>>> Entity --> Specific Entity <<<#
+#>>> Entity ---> Specific Entity <<<#
 static func convertEntity(metaData:Dictionary, toParse:Entity) -> Entity:
 	if !_hasMandatoryComponents(getFlagsAndCompsOfEnt(toParse), metaData): return null
 	

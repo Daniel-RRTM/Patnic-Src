@@ -1,9 +1,9 @@
 extends _004_PerformParent
 class_name _004_Perform_Property
 
-# CLASS    THIS --->  PROP  -->  SWAP  CONDUCTING                              
-# CLASS    THIS --->  PROP  -->  ADD  BURNABLE                                 
-# CLASS    THIS --->  PROP  -->  REMOVE  WET                                   
+# CLASS    THIS --->  PROP  --->  SWAP  CONDUCTING                              
+# CLASS    THIS --->  PROP  --->  ADD  BURNABLE                                 
+# CLASS    THIS --->  PROP  --->  REMOVE  WET                                   
 
 func run(perfomance:Array) -> void :
 	var para = saniticeParameter(perfomance)

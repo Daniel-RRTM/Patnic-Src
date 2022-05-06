@@ -13,13 +13,13 @@ func _on_Text_pressed() -> void:
 				
 				ENUM.KITS.PARTS.BASE: 
 					effect = kitpart.event()
-					var effectDetails = load("res://GameSrc/Universal/GUI/Effect/Base/scene.tscn").instance()
+					var effectDetails = load("res://GameSrc/Universal/GUI/EventTString/Base/Scene.tscn").instance()
 					get_node("/root/Node2D/kit_effect_details").add_child(effectDetails)
 					effectDetails.loadKitpartByIndex(kitpart.index())
 					
 				ENUM.KITS.PARTS.MOD: 
 					effect = kitpart.event().main()
-					var effectDetails = load("res://GameSrc/Universal/GUI/Effect/Mod/root.tscn").instance()
+					var effectDetails = load("res://GameSrc/Universal/GUI/EventTString/Mod/Scene.tscn").instance()
 					get_node("/root/Node2D/kit_effect_details").add_child(effectDetails)
 					#effectDetails.loadEffect(effect)
 					effectDetails.fillInByIndex(kitpart.index())
