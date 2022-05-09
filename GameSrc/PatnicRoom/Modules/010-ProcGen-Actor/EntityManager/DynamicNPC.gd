@@ -28,7 +28,7 @@ func dictGenerateActor(dict:Dictionary) -> ActorEntity:
 	ent.addTemplate("race",raceTemplate)
 	ent.addTemplate("role",roleTemplate)
 	ent.addTemplate("specialty",specialtyTemplate)
-
+	ent.addComponent(C_11_RACE_NAME.new(raceTemplate.getCompValue("C_6_NAME")))
 
 	#>>> Add Synonym <<<#
 	var synonymComponent = roleTemplate.getComp("C_47_SYNONYM")

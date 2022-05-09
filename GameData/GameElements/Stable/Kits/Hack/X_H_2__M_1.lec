@@ -42,8 +42,7 @@ MAIN{
 //------------------------------------------------------------------------------\\
   UPGRADE[
     ADD:
-      SELECT CONSIDER ---> THIS COMP C_11_RACE_NAME EQUALLS Orc
-      SELECT CONSIDER ---> THIS COMP C_11_RACE_NAME EQUALLS troll
+      SELECT CONSIDER ---> AND COMP C_11_RACE_NAME EQUALLS Orc AND Troll
       RUN PERFORM ---> FILE UNIQ DEAL_PLAIN_DAMAGE 10
   ]
 }

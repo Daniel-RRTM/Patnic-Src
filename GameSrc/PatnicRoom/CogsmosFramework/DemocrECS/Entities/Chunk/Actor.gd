@@ -20,8 +20,8 @@ var position: Vector2
 func index()        -> String:	return getCompValue("C_12_ATLAS_INDEX")
 func name()         -> String:	return getCompTempValue("role","C_6_NAME")
 func staticTilesetlNr() -> String:	return getCompValue("C_7_STATIC_TILESET_NR")
-func synonym()          -> String:	return getCompValue("C_47_SYNONYM")
 func mouseHover_quack() -> String:  return synonym()
+func synonym()          -> String:return Utils.rng().getRandomFromArray(getCompValue("C_47_SYNONYM"))
 
 
 

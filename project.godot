@@ -1000,11 +1000,6 @@ _global_script_classes=[ {
 "path": "res://GameSrc/PatnicRoom/Modules/011-ProcGen-Loot/EntityManager/EntMan.gd"
 }, {
 "base": "Node",
-"class": "_7_EntMan_Actor",
-"language": "GDScript",
-"path": "res://GameSrc/PatnicRoom/Modules/010-ProcGen-Actor/EntityManager/CreateNPCProcess.gd"
-}, {
-"base": "Node",
 "class": "_API_017_Cmd_AddAllKitParts",
 "language": "GDScript",
 "path": "res://GameSrc/PatnicRoom/Modules/008-CLI/Systems/CommandOperations/ADD_ALL_KITPARTS.gd"
@@ -1287,7 +1282,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "_KitsUILoaderAlt",
 "language": "GDScript",
-"path": "res://GameSrc/PatnicRoom/Scenes/Gameloop/PanicMode/Subscenes/Sidepanel/Kits/KitsUILoader.gd"
+"path": "res://GameSrc/PatnicRoom/scenes/Gameloop/PanicMode/Subscenes/Sidepanel/Kits/KitsUILoader.gd"
 }, {
 "base": "Node",
 "class": "_RACE",
@@ -1397,7 +1392,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "_menueLoader",
 "language": "GDScript",
-"path": "res://GameSrc/PatnicRoom/Scenes/Gameloop/PanicMode/HUD/Menue loader.gd"
+"path": "res://GameSrc/PatnicRoom/scenes/Gameloop/PanicMode/HUD/Menue loader.gd"
 } ]
 _global_script_class_icons={
 "ActorEntity": "",
@@ -1598,7 +1593,6 @@ _global_script_class_icons={
 "_15_Sound_Index": "",
 "_15_Sound_SceneManager": "",
 "_18_TileEntManager": "",
-"_7_EntMan_Actor": "",
 "_API_017_Cmd_AddAllKitParts": "",
 "_API_017_Cmd_AddCredits": "",
 "_API_017_Cmd_LoadStoryMap": "",

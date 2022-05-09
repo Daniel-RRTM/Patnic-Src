@@ -7,13 +7,11 @@ extends Node
 # ----- INITIALICER -------------------------------------------------------- ##
 
 
-var createNPCProcess : _7_EntMan_Actor
 var entMan           : _03_00_EntityManager
 
 func _init() :
 	self.name        = "API_0007_ProcgenActor"
 	entMan           = _03_00_EntityManager.new()
-	createNPCProcess = _7_EntMan_Actor.new()
 
 
 

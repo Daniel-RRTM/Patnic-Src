@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/03_Suburban.png-936dc72a1d84464004f6e59d49e3ac10.stex"
+path="res://.import/03_Suburban.png-00b3fbb8bd0e2f56d8c18d31090caaf8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GameSrc/PatnicRoom/Scenes/Gameloop/PanicMode/03_Suburban.png"
-dest_files=[ "res://.import/03_Suburban.png-936dc72a1d84464004f6e59d49e3ac10.stex" ]
+source_file="res://GameSrc/PatnicRoom/scenes/Gameloop/PanicMode/03_Suburban.png"
+dest_files=[ "res://.import/03_Suburban.png-00b3fbb8bd0e2f56d8c18d31090caaf8.stex" ]
 
 [params]
 
@@ -28,6 +28,7 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

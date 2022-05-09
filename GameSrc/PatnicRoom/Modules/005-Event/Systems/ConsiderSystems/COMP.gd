@@ -14,14 +14,30 @@ static func run(para:Dictionary, toConsider:Array) -> Array :
 		
 		if ent.hasComp(para.compName):
 			var compInstance = ent.getComp(para.compName)
-
-			match compInstance.getType_quack():
-				"BOOLEAN"   : if validateBoolean(para.value.to_upper(), compInstance.value)      : toReturn.append(ent)      
-				"INTEGER"   : if validateInteger(para.value, compInstance.value, para.operand)   : toReturn.append(ent)
-				"STRING"    : if validateString(para.value, compInstance.value)                  : toReturn.append(ent)
-				"CONTAINER" : printerr("CONSIDERING AN CONTAINER/DICTIONARY COMPONENT IS NOT IMPLEMENTED YET")
-				"ARRAY"     : printerr("CONSIDERING AN ARRAY COMPONENT IS NOT IMPLEMENTED YET")
-				"NULL"      : printerr("CONSIDERING AN NULL COMPONENT IS NOT IMPLEMENTED YET")
+			
+			
+			if para.value is Array:
+				for value in para.value:
+					match compInstance.getType_quack():
+						"BOOLEAN"   : if validateBoolean(value.to_upper(), compInstance.value)      : toReturn.append(ent)      
+						"INTEGER"   : if validateInteger(value, compInstance.value, para.operand)   : toReturn.append(ent)
+						"STRING"    : if validateString(value, compInstance.value)                  : toReturn.append(ent)
+						"CONTAINER" : printerr("CONSIDERING AN CONTAINER/DICTIONARY COMPONENT IS NOT IMPLEMENTED YET")
+						"ARRAY"     : printerr("CONSIDERING AN ARRAY COMPONENT IS NOT IMPLEMENTED YET")
+						"NULL"      : printerr("CONSIDERING AN NULL COMPONENT IS NOT IMPLEMENTED YET")
+			
+			else:
+				match compInstance.getType_quack():
+					"BOOLEAN"   : if validateBoolean(para.value.to_upper(), compInstance.value)      : toReturn.append(ent)      
+					"INTEGER"   : if validateInteger(para.value, compInstance.value, para.operand)   : toReturn.append(ent)
+					"STRING"    : if validateString(para.value, compInstance.value)                  : toReturn.append(ent)
+					"CONTAINER" : printerr("CONSIDERING AN CONTAINER/DICTIONARY COMPONENT IS NOT IMPLEMENTED YET")
+					"ARRAY"     : printerr("CONSIDERING AN ARRAY COMPONENT IS NOT IMPLEMENTED YET")
+					"NULL"      : printerr("CONSIDERING AN NULL COMPONENT IS NOT IMPLEMENTED YET")
+			
+	
+	
+	
 	
 	return toReturn
 
@@ -50,7 +66,16 @@ static func validateBoolean(parameter, component) -> bool :
 static func getValueToString_quack() -> String :   return "has [color=lime]Condition [/color][color=orange]" 
 
 
-static func convertArrayToDict(parameters:Array) -> Dictionary : return {	
+static func convertArrayToDict(parameters:Array) -> Dictionary : 
+	if parameters.has("AND"):
+		parameters.erase("AND")
+		var toReturn = {}
+		toReturn["compName"] = parameters.pop_front()
+		toReturn["operand"] = parameters.pop_front()
+		toReturn["value"] = parameters
+		return toReturn
+	else:
+		return {	
 		 "compName" : parameters[0]
 		,"operand"  : parameters[1]
 		,"value"    : parameters.pop_back()   

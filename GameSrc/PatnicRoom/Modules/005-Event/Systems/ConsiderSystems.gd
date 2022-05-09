@@ -47,7 +47,7 @@ func getTriggeredFromConsiderations(taskData:Dictionary) -> Array:
 		
 		
 		elif "OR" in consi.connector :
-			taskData.triggeredEnts += self.operations[consi.operation].run(consi.parameter,taskData.selectedEnts)
+			taskData.triggeredEnts += self.operations[consi.operation].run(consi.parameter,taskData.triggeredEnts)
 		
 		
 		elif "AND" in consi.connector :

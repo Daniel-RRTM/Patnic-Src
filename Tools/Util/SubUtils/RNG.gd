@@ -3,6 +3,10 @@ class_name _Util_RNG
 
 
 
+static func getRandomFromArray(all:Array):
+	return all[getRandomNumber(0,all.size()-1)]
+
+
 
 static func getBackground(ofScene:String):
 	var panicBackground = ENUM.INPUT_PANIC.BACKGROUND_FILEPATH
