@@ -17,17 +17,17 @@ MAIN{
 
 //------------------------------------------------------------------------------\\
   COMPONENTS[
-  C_6_NAME ---> Earthwall
-  C_12_ATLAS_INDEX ---> C_S_2
-  C_0_DESCRIPTION ---> often used by Nomads to build rudimentary housings...To be Frank their just hobos.
-  C_35_KIT_MECHANICAL_SUMMARY ---> pulls up a wall of earth
-  C_48_RARITY --->  3
-  C_31_KIT_CAT_TYPE --->  SPELL
-  C_37_M_TYPE ---> MEAT
-  C_38_KIT_PART_TYPE ---> BASE
-  C_36_KIT_MOD_TIME ---> 2
-  C_33_COOLDOWN_TIMER ---> 4
-  C_49_EVENT_REFERENCE ---> C_S_2
+    C_6_NAME ---> Earthwall
+    C_12_ATLAS_INDEX ---> C_S_2
+    C_0_DESCRIPTION ---> often used by Nomads to build rudimentary housings...To be Frank their just hobos.
+    C_35_KIT_MECHANICAL_SUMMARY ---> pulls up a wall of earth
+    C_48_RARITY --->  3
+    C_31_KIT_CAT_TYPE --->  SPELL
+    C_37_M_TYPE ---> MEAT
+    C_38_KIT_PART_TYPE ---> BASE
+    C_36_KIT_MOD_TIME ---> 2
+    C_33_COOLDOWN_TIMER ---> 4
+    C_49_EVENT_REFERENCE ---> C_S_2
   ]
 
 

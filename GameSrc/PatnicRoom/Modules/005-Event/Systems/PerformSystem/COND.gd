@@ -8,7 +8,7 @@ class_name _004_Perform_Condition
 func run(consideration:Array) -> void :
 	var para = saniticeParameter(consideration)
 	
-	for ent in API_004_KitSet.selection.triggers: 
+	for ent in API_004_KitSet.selection.triggeredEnts: 
 		API_006_Condition.attachConditionToEnt(ent, para.condName, para.duration, para.level)
 
 

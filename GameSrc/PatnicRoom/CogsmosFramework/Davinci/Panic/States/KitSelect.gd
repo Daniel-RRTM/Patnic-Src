@@ -8,7 +8,7 @@ func _init() -> void:
 	stateAfterSucces     = -1 #DONE in L 19 and 20
 	validInputEnums      = [ENUM.INPUT_PANIC.INPUTS.ACTION.SELECT]
 	typeEnum             = 2
-
+ 
 
 # FUNC IOOB preventer
 func isSpecificallyValid_quack(currentType:int,currentState:int) -> bool:   

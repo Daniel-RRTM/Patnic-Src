@@ -1,12 +1,12 @@
 extends Object
-class_name _004_Seize_SourceSelf
+class_name _004_Seize_SourceSelfAlt
 
 
 
 
 
 
-static func run()->Array:  return [API_003_Player.currentChar.pos()]
+static func run(taskData:Dictionary)->Array:  return [API_003_Player.currentChar.pos()]
 
 
 

@@ -3,19 +3,19 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "TileMaps/Story/Suburban_One.json",
+    "activeFile": "TileSets/JSON/001_Terrain.json",
     "expandedProjectPaths": [
-        "TileMaps/beta Maps",
-        "TileMaps/custome",
-        ".",
-        "TileSets",
-        "TileMaps/Unique",
-        "TileMaps",
-        "TileMaps/custome/Suburban",
         "TileSets/JSON",
-        "TileMaps/Story",
         "TileSets/cache",
-        "TileMaps/Special"
+        ".",
+        "TileMaps/custome/Suburban",
+        "TileMaps/Special",
+        "TileMaps/beta Maps",
+        "TileMaps",
+        "TileSets",
+        "TileMaps/custome",
+        "TileMaps/Unique",
+        "TileMaps/Story"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
@@ -518,15 +518,16 @@
     "map.tileWidth": 16,
     "openFiles": [
         "TileMaps/Story/Suburban_One.json",
-        "TileSets/JSON/002_Indoors.json"
+        "TileSets/JSON/002_Indoors.json",
+        "TileSets/JSON/001_Terrain.json"
     ],
     "project": "GameData.tiled-project",
     "property.type": "bool",
     "recentFiles": [
-        "TileSets/JSON/002_Indoors.json",
         "TileMaps/Story/Suburban_One.json",
-        "TileSets/JSON/007_Decoration.json",
+        "TileSets/JSON/002_Indoors.json",
         "TileSets/JSON/001_Terrain.json",
+        "TileSets/JSON/007_Decoration.json",
         "TileSets/JSON/006_Nature.json",
         "TileSets/JSON/008_Security.json",
         "TileSets/JSON/010_Shop.json",

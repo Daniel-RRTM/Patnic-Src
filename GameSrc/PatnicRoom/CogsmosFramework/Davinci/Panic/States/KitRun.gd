@@ -12,7 +12,7 @@ func _init() -> void:
 
 
 func actOnInput_quack(currentInput:InputEvent) -> void:   
-	for step in API_004_KitSet.selection.event["RUN"]["PERFORM"]:
+	for step in API_004_KitSet.selection.perform:
 		var cachedStep = step.duplicate()
 		API_005_Event.runKitSet(cachedStep)
 		API_009_Sound.playRunKit()

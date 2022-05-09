@@ -9,6 +9,7 @@ func run(toPerform:Array) -> void :
 	toPerform.erase("OF")
 	toPerform.erase("FILE")
 	toPerform.erase("BY")
+	API_004_KitSet.selection.triggers = API_004_KitSet.selection.triggeredEnts
 	match toPerform.pop_front():
 		"UNIQ"  : uniqueStatmod.run(toPerform)
 		"COMP"  : component.run(toPerform)

@@ -25,8 +25,8 @@ func getMergedKitsets(arrayOfKitparts:Array) -> KitSetEntity : return _kitSetMer
 
 func redirectSelection(directionEnum) -> void : manageDirectionalSelect(directionEnum)
 
-func drawHighlight()  -> void : _kitSelect.drawSelection(selection.selects,API_004_KitSet.selection.highlightTexture)
-func drawAlert()      -> void : _kitSelect.drawSelection(selection.triggers,API_004_KitSet.selection.alertTexture)
+func drawHighlight()  -> void : _kitSelect.drawSelection(selection.selectedEnts,API_004_KitSet.selection.highlightTexture)
+func drawAlert()      -> void : _kitSelect.drawSelection(selection.triggeredEnts,API_004_KitSet.selection.alertTexture)
 
 
 
@@ -41,15 +41,11 @@ func drawAlert()      -> void : _kitSelect.drawSelection(selection.triggers,API_
 
 
 func manageKitSelection(inputNr:String) -> void:
-	selection = _008_KitSelect_Util.setUpReferences(int(inputNr)-1)
-	
-	#>>> VECTOR 2D <<<#
-	selection.selects = _008_KitSelect_Util.saniticePosition(API_005_Event.getSelectedPositions()) 
-	
-	#>>> ENTITIES ACROSS ALL LAYERS <<<#
-	if selection.medium != "SELF": selection.selects  = _kitSelect.setSelections(selection.selects)
-	else: selection.selects = [API_003_Player.currentChar] 
-	selection.triggers = _kitSelect.validateSelects(API_004_KitSet.selection.event["SELECT"]["CONSIDER"])
+	API_004_KitSet.selection = _004_SelectionManager._setSelectionReference(int(inputNr)-1)
+	API_004_KitSet.selection.sourcePos = API_005_Event.runSource(API_004_KitSet.selection)
+	API_004_KitSet.selection.selectedPos = API_005_Event.runMedium(API_004_KitSet.selection)
+	API_004_KitSet.selection.selectedEnts = _004_SelectionManager._getEntsOfPos(API_004_KitSet.selection.selectedPos)
+	API_004_KitSet.selection.triggeredEnts = API_005_Event.getTriggeredSelects(API_004_KitSet.selection)
 	
 
 
@@ -57,13 +53,13 @@ func manageKitSelection(inputNr:String) -> void:
 	
 func manageDirectionalSelect(directionEnum)->void:
 	SokraTiles.getLayerNode(ENUM.SOKRATILES.LAYER.SELECTION).clearLayer()
-	for caches in [selection.selects,selection.triggers]:   caches.clear()
-
-	_004_Seize_MediumUniversal.run(int(selection.reach),directionEnum,API_003_Player.currentChar.pos())
-
-	selection.selects  = _kitSelect.setSelections(_008_KitSelect_Util.saniticePosition(selection.selects))
-	selection.triggers = _kitSelect.validateSelects(API_004_KitSet.selection.event["SELECT"]["CONSIDER"])
-
+	for caches in [selection.selectedEnts,selection.triggeredEnts]:   caches.clear()
+	
+	for pos in selection.sourcePos:   _004_Seize_MediumUniversalAlt.run(int(selection.reach),directionEnum,pos)
+	
+	selection.selectedEnts = _004_SelectionManager._getEntsOfPos(API_004_KitSet.selection.selectedPos)
+	selection.triggeredEnts = API_005_Event.getTriggeredSelects(API_004_KitSet.selection)
+	
 	API_004_KitSet.selection.alertTexture = "Marker_5_2"
 	API_004_KitSet.drawAlert()
 

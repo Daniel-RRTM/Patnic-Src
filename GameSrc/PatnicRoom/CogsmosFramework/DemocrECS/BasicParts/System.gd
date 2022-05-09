@@ -39,6 +39,12 @@ func addTask(operationName:String, operationParameter=[], affectedEnt=null) -> v
 	if !operations.keys().has(operationName): printerr("Operation ["+operationName+"] in System ["+name+"] not found!")
 	else: tasks.append({   "affectedEnt":affectedEnt , "operation":operationName , "parameter":operationParameter   })
 
+func addTaskByDict(taskData:Dictionary) -> void:
+	if !taskData.has("operationName"): printerr("taskData for "+name+" is not set as key")
+	if !operations.keys().has(taskData.operationName): printerr("Operation ["+taskData.operationName+"] in System ["+name+"] not found!")
+	else: tasks.append(taskData)
+
+
 
 
 # ----- GETTER ------------------------------------------------------------- ##
