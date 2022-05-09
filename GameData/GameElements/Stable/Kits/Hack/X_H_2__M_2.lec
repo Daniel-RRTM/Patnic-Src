@@ -42,7 +42,7 @@ MAIN{
 //------------------------------------------------------------------------------\\
   UPGRADE[
     ADD:
-      RUN PERFORM ---> FILE UNIQ SPAWN_TILE_AROUND Terrain_2_0 2
+      RUN PERFORM ---> FILE UNIQ SPAWN_TILE_AROUND Terrain_2_0 1
   ]
 }
 

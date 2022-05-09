@@ -1,5 +1,5 @@
 META{
-  INDEX ---> EXOTIC
+  INDEX ---> SUBURBAN_DEFAULT
   USE   ---> ACTOR_RNG_TABLE
   BY    ---> RedRastaRigger(inhouse)
 }

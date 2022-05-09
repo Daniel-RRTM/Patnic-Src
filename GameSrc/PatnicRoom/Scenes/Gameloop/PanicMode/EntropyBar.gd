@@ -8,7 +8,7 @@ onready var allSubtitle = Utils.json().fileToDictionary("res:/tools/RuntimeConfi
 var progress: int
 
 func _ready() -> void:
-	text.bbcode_text = str(API_013_Entropy.getEntropyToString())
+	#text.bbcode_text = str(API_013_Entropy.getEntropyToString())
 	Signals.connect("updateEntropy",self,"updateEntropy")
 	
  
@@ -18,17 +18,17 @@ func changePanelColor(hexColor:Color,panel:Panel):
 	panel.set_modulate(Color(hexColor)) 
 
 
-func updateEntropy():
-	var entropyLevel = API_013_Entropy.getEntropy()
-	if entropyLevel != 10:
-		API_013_Entropy.incrementEntropy()
-	else:
-		fullEntropy=true
+#func updateEntropy():
+	#var entropyLevel = API_013_Entropy.getEntropy()
+	#if entropyLevel != 10:
+	#	API_013_Entropy.incrementEntropy()
+	#else:
+	#	fullEntropy=true
 	
-	text.bbcode_text = str(API_013_Entropy.getEntropyToString())
+	#text.bbcode_text = str(API_013_Entropy.getEntropyToString())
 	
-	var color = API_013_Entropy.getEntropyProgressColour()
-	changePanelColor(Color(color),innerPanel)
+	#var color = API_013_Entropy.getEntropyProgressColour()
+	#changePanelColor(Color(color),innerPanel)
 
 var timer = 0
 var fullEntropy=false

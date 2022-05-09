@@ -54,7 +54,7 @@ MAIN{
 //------------------------------------------------------------------------------\\
   RUN[
     PERFORM:
-      FILE ---> UNIQ DEAL_PLAIN_DAMAGE 20
+      FILE ---> UNIQ DEAL_PLAIN_DAMAGE 10
   ]
 }
 

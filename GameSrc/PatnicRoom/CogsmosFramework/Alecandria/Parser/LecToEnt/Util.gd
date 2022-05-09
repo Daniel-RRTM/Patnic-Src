@@ -43,12 +43,13 @@ static func scopeSector(content:Array) -> Dictionary:
 
 static func getEntityByType(type:String) -> Entity :
 	match type:
-		"RACE"         : return Entity.new()
-		"ROLE"         : return Entity.new()
-		"SPECIALTY"    : return Entity.new()
-		"CONDITION"    : return ConditionEntity.new()
-		"KITPART_BASE" : return KitPartEntity.new() as Entity
-		"KITPART_MOD"  : return KitPartEntity.new() as Entity
+		"RACE"            : return Entity.new()
+		"ROLE"            : return Entity.new()
+		"SPECIALTY"       : return Entity.new()
+		"ACTOR_RNG_TABLE" : return ActorRngTemplateEntity.new()
+		"CONDITION"       : return ConditionEntity.new()
+		"KITPART_BASE"    : return KitPartEntity.new() as Entity
+		"KITPART_MOD"     : return KitPartEntity.new() as Entity
 	return Entity.new()
 
 

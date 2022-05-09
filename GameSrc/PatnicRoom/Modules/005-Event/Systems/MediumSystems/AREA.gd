@@ -1,6 +1,7 @@
 extends Node
-class_name _004_Seize_MediumAreaAlt
+class_name _004_Seize_MediumArea
 
+# ----- PROCESS -------------------------------------------------------------- ##
 
 
 static func run(taskData:Dictionary) -> Array:
@@ -9,10 +10,6 @@ static func run(taskData:Dictionary) -> Array:
 		foobarToo(source,true)
 		foobarToo(source,false)
 	return API_004_KitSet.selection.selectedPos
-
-
-
-
 
 
 static func foobarToo(source,upperHalf):
@@ -30,13 +27,14 @@ static func foobarToo(source,upperHalf):
 		
 		
 		if itteration != 1:
-			_004_Seize_MediumUniversalAlt.run(itteration,ENUM.SOKRATILES.DIRECTION_FOUR.EAST,middlePoint)
-			_004_Seize_MediumUniversalAlt.run(itteration,ENUM.SOKRATILES.DIRECTION_FOUR.WEST,middlePoint)
+			_004_Seize_MediumUniversal.run(itteration,ENUM.SOKRATILES.DIRECTION_FOUR.EAST,middlePoint)
+			_004_Seize_MediumUniversal.run(itteration,ENUM.SOKRATILES.DIRECTION_FOUR.WEST,middlePoint)
 		
 		if toItterate == 0 : return
 
 
 
+# ----- DOC ------------------------------------------------------------------ ##
 
 
 func getAutoDoc() -> Dictionary : return {

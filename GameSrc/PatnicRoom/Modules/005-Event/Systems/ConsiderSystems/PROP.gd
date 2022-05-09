@@ -1,9 +1,12 @@
 extends _004_ConsiderParent
-class_name _004_Consider_PropertyAlt
+class_name _004_Consider_Property
 
 # CLASS    THIS --->  PROP  --->  BURNABLE                                      X
 # CLASS    THIS --->  PROP  --->  WET                                           X
 # CLASS    THIS --->  PROP  --->  NOT CONDUCTING                                X
+
+# ----- PROCESS -------------------------------------------------------------- ##
+
 
 static func run(para:Dictionary, toConsider:Array) -> Array :
 	var toReturn = []
@@ -17,23 +20,24 @@ static func run(para:Dictionary, toConsider:Array) -> Array :
 
 
 
-
-func getParameter_quack()     -> Dictionary :   return {}
-func getValueToString_quack() -> String     :   return "has [color=lime]Flag [/color][color=orange]" 
-func getName_quack()          -> String     :   return "HAS_COND"
+# ----- DOC ------------------------------------------------------------------ ##
 
 
-static func convertArrayToDict(parameters:Array) -> Dictionary : 
-	return {	"propName" : parameters[1]   ,
-				"operand"  : parameters[0]   ,
-				"value"    : DemocrECS.getPropertyEnumNr(parameters[1])   }
+static func getValueToString_quack() -> String :   return "has [color=lime]Flag [/color][color=orange]" 
+
+
+static func convertArrayToDict(parameters:Array) -> Dictionary : return {	
+		 "propName" : parameters[1]
+		,"operand"  : parameters[0]
+		,"value"    : DemocrECS.getPropertyEnumNr(parameters[1])   
+	}
 
 
 static func getAutoDoc() -> Dictionary : return {
 	 "descriiption" : "returns selections with the Propperty!"
 	,"concept"      : "CONSIDER"
 	,"name"         : "PROP"
-	,"inputs"       :  [  ["NOT"] , PROPERTIES.OF ]
+	,"inputs"       :  [  ["HAS","NOT"] , "Property" ]
 }
 
 

@@ -1,11 +1,10 @@
 extends Node 
 class_name _004_Seize_MediumQuad
 
+# ----- PROCESS -------------------------------------------------------------- ##
 
 
-
-
-static func run():
+static func run(taskData:Dictionary):
 	var selection = API_004_KitSet.selection
 	for source in selection.source:
 		for height in range(33):
@@ -31,8 +30,7 @@ static func runSelect():
 
 
 
-
-
+# ----- DOC ------------------------------------------------------------------ ##
 
 
 func getAutoDoc() -> Dictionary : return {

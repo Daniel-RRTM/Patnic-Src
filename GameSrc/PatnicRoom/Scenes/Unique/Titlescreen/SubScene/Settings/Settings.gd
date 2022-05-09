@@ -12,6 +12,6 @@ func _ready() -> void: pass
 #		get_node("Frame/"+category).distribute(defaultSettings[category])
 
 
-f#unc saveSettings(): 
+#unc saveSettings(): 
 #	Settings.emit_signal("saveSettings")
 #	print(Settings.settingsDict)

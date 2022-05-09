@@ -19,9 +19,9 @@ func declaration() -> Dictionary  :   return getCompValue("C_74_EVENT_MAIN_DICT"
 #>>> Core <<<#
 
 
-func role()        -> Array       :   return declaration()["MAIN"]["ROLE"]
-func race()        -> Array       :   return declaration()["MAIN"]["RACE"]
-func specialty()   -> Array       :   return declaration()["MAIN"]["SPECIALTY"]
+func role()        -> Array       :   return declaration()["ROLE"]
+func race()        -> Array       :   return declaration()["RACE"]
+func specialty()   -> Array       :   return declaration()["SPECIALTY"]
 func tratit()      -> Array       :   return declaration()["CHARACTERISTICS"]["TRAIT"]
 
 

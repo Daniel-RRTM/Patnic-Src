@@ -1,9 +1,12 @@
 extends _004_ConsiderParent
-class_name _004_Consider_TypeAlt
+class_name _004_Consider_Type
 
 # CLASS    THIS --->  TYPE  --->  IS TILE                                       X
 # CLASS    THIS --->  TYPE  --->  NOT ACTOR                                     X
 # CLASS    THIS --->  TYPE  --->  IS INTERACT                                   X
+
+# ----- PROCESS -------------------------------------------------------------- ##
+
 
 static func run(para:Dictionary, toConsider:Array) -> Array :
 	var toReturn = []
@@ -22,19 +25,16 @@ static func run(para:Dictionary, toConsider:Array) -> Array :
 
 
 
+# ----- DOC ------------------------------------------------------------------ ##
 
 
-	
+static func getValueToString_quack() -> String :   return "has [color=lime]Flag [/color][color=orange]" 
 
 
-func getParameter_quack()     -> Dictionary :   return {}
-func getValueToString_quack() -> String     :   return "has [color=lime]Flag [/color][color=orange]" 
-func getName_quack()          -> String     :   return "HAS_COND"
-
-
-static func convertArrayToDict(parameters:Array) -> Dictionary : 
-	return {	"typeName" : parameters[1]   ,
-				"operand"  : parameters[0]   }
+static func convertArrayToDict(parameters:Array) -> Dictionary : return {	
+		 "typeName" : parameters[1]
+		,"operand"  : parameters[0]
+	}
 
 
 static func getAutoDoc() -> Dictionary : return {

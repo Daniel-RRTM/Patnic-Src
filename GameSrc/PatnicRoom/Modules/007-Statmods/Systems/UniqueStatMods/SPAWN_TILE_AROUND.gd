@@ -12,11 +12,12 @@ static func run(ent,toPerform:Array):
 	if !is_instance_valid(ent): ent = instance_from_id(ent)
 	var tilemapNode = SokraTiles.getLayerNode(entTemp.layer())
 	
-	API_004_KitSet.selection.selects = []
+	API_004_KitSet.selection.selectedPos.clear()
 	API_004_KitSet.selection.reach = para.reach
-	API_004_KitSet.selection.source = ent.pos()
+	API_004_KitSet.selection.sourcePos = [ent.pos()]
+	var posArr = _004_Seize_MediumArea.run(API_004_KitSet.selection) 
 	
-	for pos in _004_Seize_MediumArea.run():
+	for pos in posArr:
 			var cache = DemocrECS.copyEntity(entTemp)
 			cache.setPos(pos)
 			var oldEnt = tilemapNode.getEntByPos_quack(pos)
@@ -49,8 +50,8 @@ static func getDoc():
 
 
 static func saniticeParameter(parameters:Array) -> Dictionary : 
-	return { 	"entToSpawn" : parameters[1]      ,
-				"reach"      : int(parameters[2]) }
+	return { 	"entToSpawn" : parameters[0]      ,
+				"reach"      : int(parameters[1]) }
 
 
 

@@ -5,28 +5,29 @@ class_name _004_Perform_Property
 # CLASS    THIS --->  PROP  --->  ADD  BURNABLE                                 
 # CLASS    THIS --->  PROP  --->  REMOVE  WET                                   
 
-func run(perfomance:Array) -> void :
-	var para = saniticeParameter(perfomance)
+# ----- PROCESS -------------------------------------------------------------- ##
+
+
+static func run(para:Dictionary,ent) -> void :
 	var propEnum = PROPERTIES.OF[para.prop]
 	
-	for ent in API_004_KitSet.selection.triggers:
-		match para.mode:
-			"SWAP"   : if !ent.hasProperty(para.prop) :   ent.addProperty(propEnum);   else : ent.removeProperty(propEnum)
-			"ADD"    : if !ent.hasProperty(para.prop) :   ent.addProperty(propEnum)
-			"REMOVE" : if  ent.hasProperty(para.prop) :   ent.removeProperty(propEnum)
+	match para.mode:
+		"SWAP"   : if !ent.hasProperty(para.prop) :   ent.addProperty(propEnum);   else : ent.removeProperty(propEnum)
+		"ADD"    : if !ent.hasProperty(para.prop) :   ent.addProperty(propEnum)
+		"REMOVE" : if  ent.hasProperty(para.prop) :   ent.removeProperty(propEnum)
 
 
 
+# ----- DOC ------------------------------------------------------------------ ##
 
 
-func getParameter_quack()     -> Dictionary :   return {}
-func getValueToString_quack() -> String     :   return "has [color=lime]Flag [/color][color=orange]" 
-func getName_quack()          -> String     :   return "HAS_COND"
+static func getValueToString_quack() -> String     :   return "has [color=lime]Flag [/color][color=orange]" 
 
 
-func saniticeParameter(parameters:Array) -> Dictionary : 
-	return {	"prop" : parameters[2]   ,
-				"mode" : parameters[3]   }
+static func convertArrayToDict(parameters:Array) -> Dictionary : return {	
+		 "prop" : parameters[2]
+		,"mode" : parameters[3]   
+	}
 
 	
 

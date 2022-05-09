@@ -6,39 +6,31 @@ func declare() -> void:
 	self.name              = "_005_Medium,"
 	self.description       = "applies the shape of selections on source(s)"
 	self.APIRef            = API_005_Event
+	self.signalsConnection = {}
 	
-	self.signalsConnection = {   
-		#"API_008_runCmds" : "runTasks"   
+	self.operations = {
+		 "COMP" : _004_Consider_Component
+		,"COND" : _004_Consider_Condition
+		,"FLAG" : _004_Consider_Flag
+		,"PROP" : _004_Consider_Property
+		,"TYPE" : _004_Consider_Type
 	}
-	
-	# REFACTOR using parameter 
-	self.operations  = {
-		 "COMP"   : _004_Consider_ComponentAlt
-		,"COND"  : _004_Consider_ConditionAlt
-		,"FLAG" : _004_Consider_FlagAlt
-		,"PROP"   : _004_Consider_PropertyAlt
-		,"TYPE"   : _004_Consider_TypeAlt
-	}
-
 
 func prepare() -> void: pass
 
 
 
-func _operateOnParameter(taskData:Dictionary) -> Array:
-	if   !taskData.has("source"): printerr("taskData for "+name+" is not set as key")
-	elif !operations.keys().has(taskData.source): printerr("Operation ["+taskData.source+"] in System ["+name+"] not found!")
-	else : return self.operations[taskData.source].run(taskData)
-	return []
+# ----- PROCESS -------------------------------------------------------------- ##
 
 
 
 func parseConsiderationsToDictionaries(taskData:Array) -> Array:
-	var toReturn = []
+	var toReturn : Array
 	for consideration in taskData:
+		var currentConsider : Dictionary	 
 		
-		var currentConsider = {	 "connector" : consideration.pop_front()
-								,"operation" : consideration.pop_front() }
+		currentConsider["connector"] = consideration.pop_front()
+		currentConsider["operation"] = consideration.pop_front()
 		currentConsider["parameter"] = self.operations[currentConsider.operation].convertArrayToDict(consideration)
 		
 		toReturn.append(currentConsider)

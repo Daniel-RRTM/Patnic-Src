@@ -1,28 +1,24 @@
 extends _004_PerformParent
 class_name _004_Perform_UniqueStatmod
 
+# ----- PROCESS -------------------------------------------------------------- ##
 
-func run(perfomance:Array) -> void :
-	var operationName = perfomance.pop_front() 
-	for ent in API_004_KitSet.selection.triggers :   
-		API_007_Statmod.manageUniqueStatmod(ent,operationName,perfomance)
-		#SYNTAX.EVENT.STAT_MODS[perfomance[0]].run(ent,perfomance)
 
+static func run(para:Dictionary,ent) -> void :
+	API_007_Statmod.manageUniqueStatmod(ent,para.type,para.parameter)
 
 
 
-
+# ----- DOC ------------------------------------------------------------------ ##
 		
 
+static func getValueToString_quack() -> String     :   return "has [color=lime]Flag [/color][color=orange]" 
 
 
-func getParameter_quack()     -> Dictionary :   return {}
-func getValueToString_quack() -> String     :   return "has [color=lime]Flag [/color][color=orange]" 
-func getName_quack()          -> String     :   return "HAS_COND"
-
-
-func saniticeParameter(parameters:Array) -> Dictionary : 
-	return {  "statMod" : parameters[2]  }
+static func convertArrayToDict(parameters:Array) -> Dictionary : return {
+		 "type"      : parameters.pop_front()
+		,"parameter" : parameters
+	}
 
 
 

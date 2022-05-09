@@ -1,6 +1,7 @@
 extends Node
-class_name _004_Seize_MediumUniversalAlt
+class_name _004_Seize_MediumUniversal
 
+# ----- PROCESS -------------------------------------------------------------- ##
 
 
 static func run(reach:int,direction:int,source:Vector2) -> void :
@@ -23,6 +24,8 @@ static func convertDirectionToVector(directionEnum) -> Vector2 :
 	return posMod
 
 
+
+# ----- DOC ------------------------------------------------------------------ ##
 
 
 func getAutoDoc() -> Dictionary : return {

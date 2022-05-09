@@ -22,7 +22,7 @@ func mergeKitParts(kitparts:Array) -> KitSetEntity :
 	kitSetEnt.toString = getToString(kitSetEnt)
 	kitSetEnt.event    = kitSetEnt.base.event().duplicate(true)
 
-	if is_instance_valid(kitSetEnt.mod)      :   loadModPart(kitSetEnt)
+	if is_instance_valid(kitSetEnt.mod)      :   kitSetEnt.event = loadModPart(kitSetEnt)
 	if is_instance_valid(kitSetEnt.appendix) :   pass
 	
 	return kitSetEnt
@@ -30,13 +30,13 @@ func mergeKitParts(kitparts:Array) -> KitSetEntity :
 
 
 
-func loadModPart(kitSetEnt:KitSetEntity) -> void :
+func loadModPart(kitSetEnt:KitSetEntity) -> Dictionary :
 	var event = kitSetEnt.getMergedEvent().duplicate(true)
 	for mode in kitSetEnt.mod.event().keys():
-		if "CHANGE" in mode : modifyMod(kitSetEnt.mod.event()[mode],event)
-		if "ADD" in mode     : addMod(kitSetEnt.mod.event()[mode],event)
-		if "REMOVE" in mode     : deleteMod(kitSetEnt.mod.event()[mode],event)
-
+		if   "CHANGE" in mode :   event = modifyMod(kitSetEnt.mod.event()[mode],event)
+		elif "ADD"    in mode :   event = addMod(kitSetEnt.mod.event()[mode],event)
+		elif "REMOVE" in mode :   event = deleteMod(kitSetEnt.mod.event()[mode],event)
+	return event
 
 
 func getToString(kitset:KitSetEntity):
@@ -52,14 +52,20 @@ func getToString(kitset:KitSetEntity):
 
 
 
-func addMod(toMod:Array,event:Dictionary) -> void :
+func addMod(toMod:Array,event:Dictionary) -> Dictionary :
 	for mod in toMod: 
-		var section = mod.pop_front() 
-		var package = mod.pop_front()
-		event[section][package].append(mod)
+		var convertedDict = {}
+		var section       = mod.pop_front()
+		var package       = mod.pop_front()
+		
+		if   "CONSIDER" in package : convertedDict = API_005_Event.convertConsiderArrayToDictionary([mod])
+		elif "PERFORM"  in package : convertedDict = API_005_Event.convertPerformanceArrayToDictionary([mod])
+		
+		event[section][package].append(convertedDict[0])
+	return event
 
 
-func deleteMod(toMod:Array,event:Dictionary) -> void :
+func deleteMod(toMod:Array,event:Dictionary) -> Dictionary :
 	for mod in toMod: 
 		var cache = mod.duplicate(true)
 		var section = cache.pop_front() 
@@ -67,16 +73,15 @@ func deleteMod(toMod:Array,event:Dictionary) -> void :
 		for step in event[section][package]:
 			if cache == step:
 				event[section][package].erase(step)
+	return event
 
 
-
-func modifyMod(toMod:Array,event:Dictionary) -> void :
-	
+func modifyMod(toMod:Array,event:Dictionary) -> Dictionary :
 	for mod in toMod: 
 		for step in event[mod.package][mod.concept]:
 			if PoolStringArray(step).join(" ") == mod.target: step = mod.value
 		
-		
+	return event
 #		var cache   = mod.duplicate(true)
 #		var section = cache.pop_front() 
 #		var package = cache.pop_front()

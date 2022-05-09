@@ -5,26 +5,21 @@ class_name _004_Perform_Condition
 # CLASS    COND  --->  INCAPACITATED  --->  DURA 3  AND  LVL 5                   
 # CLASS    COND  --->  INCAPACITATED  --->  DURA 3  AND  LVL 5                   
 
-func run(consideration:Array) -> void :
-	var para = saniticeParameter(consideration)
-	
-	for ent in API_004_KitSet.selection.triggeredEnts: 
-		API_006_Condition.attachConditionToEnt(ent, para.condName, para.duration, para.level)
+# ----- PROCESS -------------------------------------------------------------- ##
+
+
+static func run(para:Dictionary,ent) -> void :
+	API_006_Condition.attachConditionToEnt(ent, para.condName, para.duration, para.level)
 
 
 
-
-
-
-
+# ----- DOC ------------------------------------------------------------------ ##
 		
 
-func getParameter_quack()     -> Dictionary :   return {}
-func getValueToString_quack() -> String     :   return "has [color=lime]Flag [/color][color=orange]" 
-func getName_quack()          -> String     :   return "HAS_COND"
+static func getValueToString_quack() -> String     :   return "has [color=lime]Flag [/color][color=orange]" 
 
 
-func saniticeParameter(parameters:Array) -> Dictionary : 
+static func convertArrayToDict(parameters:Array) -> Dictionary : 
 	parameters.erase("THAN")
 	return {	"condName" : parameters[0]        ,
 				"duration" : int(parameters[5])   ,

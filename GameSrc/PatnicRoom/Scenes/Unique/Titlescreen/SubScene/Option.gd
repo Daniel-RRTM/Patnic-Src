@@ -15,7 +15,7 @@ func initialice(option):
 	pressed = defaultValue
 
 
-func setValue(): Settings.settingsDict[name] = pressed
+#func setValue(): Settings.settingsDict[name] = pressed
 
 
 

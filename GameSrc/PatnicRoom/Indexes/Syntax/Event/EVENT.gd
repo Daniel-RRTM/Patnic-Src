@@ -52,18 +52,18 @@ static func MEDIUM() -> Dictionary: return {		"LINEA"    : _004_Seize_MediumLine
 													"AREA"     : _004_Seize_MediumArea     }
 
 
-static func PERFORM() -> Dictionary: return {		"COMP"     : _004_Consider_Component.new()   ,
-													"FLAG"     : _004_Consider_Flag.new()        ,
-													"PROP"     : _004_Consider_Property.new()    ,
-													"UNIQ"     : _004_Consider_Property.new()    ,
-													"COND"     : _004_Consider_Condition.new()   }
+static func PERFORM() -> Dictionary: return {		"COMP"     : _004_Consider_Component   ,
+													"FLAG"     : _004_Consider_Flag       ,
+													"PROP"     : _004_Consider_Property ,
+													"UNIQ"     : _004_Consider_Property    ,
+													"COND"     : _004_Consider_Condition   }
 
 
-static func CONSIDER() -> Dictionary: return {		"COMP"     : _004_Consider_Component.new()   , 
-													"TYPE"     : _004_Consider_Type.new()        , 
-													"FLAG"     : _004_Consider_Flag.new()        ,
-													"PROP"     : _004_Consider_Property.new()    ,
-													"COND"     : _004_Consider_Condition.new()   }
+static func CONSIDER() -> Dictionary: return {		"COMP"     : _004_Consider_Component   , 
+													"TYPE"     : _004_Consider_Type       , 
+													"FLAG"     : _004_Consider_Flag      ,
+													"PROP"     : _004_Consider_Property  ,
+													"COND"     : _004_Consider_Condition  }
 
 
 

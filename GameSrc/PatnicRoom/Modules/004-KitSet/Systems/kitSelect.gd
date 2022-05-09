@@ -2,8 +2,28 @@ extends Component
 class_name _008_KitSelect
 
 
+static func _setSelectionReference(inputNr:int) -> Dictionary:
+	var event = API_003_Player.currentChar.kitventory().kitsets().getByNr(inputNr).event
+	var selection = {}
+	
+	selection["reach"]            = event["SELECT"]["SEIZE"]["REACH"]
+	selection["source"]           = event["SELECT"]["SEIZE"]["SOURCE"]
+	selection["medium"]           = event["SELECT"]["SEIZE"]["MEDIUM"]
+	selection["perform"]          = event["RUN"]["PERFORM"]
+	selection["consider"]         = event["SELECT"]["CONSIDER"]
+	selection["alertTexture"]     = API_005_Event.getAlertColor(selection.medium)
+	selection["highlightTexture"] = API_005_Event.getHighlightColor(selection.medium)
+	
+	selection["sourcePos"] = []
+	selection["selectedPos"] = []
+	selection["selectedEnts"] = []
+	selection["triggeredEnts"] = []
+	
+	return selection
 
-func setSelections(positions:Array,toReturn = []) -> Array :
+
+
+static func getEntsOfPos(positions:Array,toReturn = []) -> Array :
 	for layer in ENUM.SOKRATILES.SELECTABLE_LAYER.keys():
 		var tilemapNode = SokraTiles.getLayerNode(layer)
 		for position in positions:
@@ -15,29 +35,7 @@ func setSelections(positions:Array,toReturn = []) -> Array :
 
 
 
-# BUG B> LINEA KITSETS LIKE CRISPYFIER
-func validateSelects(consideration:Array,toReturn = []) -> Array :
-	for consi in consideration :
-		if toReturn.empty(): 
-			toReturn = API_005_Event.runConsideration(consi)
-
-		else: 
-			var newArray = []
-			for entry in API_005_Event.runConsideration(consi): 
-				if toReturn.has(entry):
-					newArray.append(entry)
-			toReturn = newArray
-	return toReturn
-
-
-
 func drawSelection(entsToDraw,texture) -> void :
 	for ent in entsToDraw:   SokraTiles.getSelection().drawCell_quack(texture,ent.pos())
-
-
-
-
-
-
 
 

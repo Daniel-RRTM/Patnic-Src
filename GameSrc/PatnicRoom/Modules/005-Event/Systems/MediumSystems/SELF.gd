@@ -1,6 +1,7 @@
 extends Node
-class_name _004_Seize_MediumSelfAlt
+class_name _004_Seize_MediumSelf
 
+# ----- PROCESS -------------------------------------------------------------- ##
 
 
 static func run(taskData:Dictionary) -> Array:
@@ -8,6 +9,7 @@ static func run(taskData:Dictionary) -> Array:
 
 
 
+# ----- DOC ------------------------------------------------------------------ ##
 
 
 func getAutoDoc() -> Dictionary : return {

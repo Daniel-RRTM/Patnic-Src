@@ -6,6 +6,11 @@ var value
 func _init(valuePara):
 	name = "C_47_SYNONYM"
 	value = valuePara
+	
+	if value is String : 
+		var cache : Array
+		for synonym in valuePara.split(" AND "): cache.append(synonym)
+		value = cache
 
 
 

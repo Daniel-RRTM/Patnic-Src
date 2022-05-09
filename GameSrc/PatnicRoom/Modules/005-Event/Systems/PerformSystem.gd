@@ -1,48 +1,47 @@
-extends Object
-class_name _004_Perform
+extends System
+class_name _005_PerformSystem
 
 
-# REFACTOR[epic=LEC-SYNTAX] Changing into Enums for Dynamic expansion          
+func declare() -> void:
+	self.name              = "_005_Perfrom,"
+	self.description       = "manipulates triggered ents of selection"
+	self.APIRef            = API_005_Event
+	self.signalsConnection = {}
+	
+	self.operations = {
+		 "COMP" : _004_Perform_Component
+		,"COND" : _004_Perform_Condition
+		,"FLAG" : _004_Perform_Flag
+		,"PROP" : _004_Perform_Property
+		,"UNIQ" : _004_Perform_UniqueStatmod
+	}
 
 
-func run(toPerform:Array) -> void :
-	toPerform.erase("OF")
-	toPerform.erase("FILE")
-	toPerform.erase("BY")
-	API_004_KitSet.selection.triggers = API_004_KitSet.selection.triggeredEnts
-	match toPerform.pop_front():
-		"UNIQ"  : uniqueStatmod.run(toPerform)
-		"COMP"  : component.run(toPerform)
-		"COND"  : condition.run(toPerform)
-		"PROP"  : property.run(toPerform)
-		"FLAG"  : flag.run(toPerform)
+func prepare() -> void: pass
+
+
+
+# ----- PROCESS -------------------------------------------------------------- ##
+
+
+func _operateOnParameter(taskData:Dictionary,ent) -> Array:
+	if   !taskData.has("operation"): printerr("taskData for "+name+" is not set as key")
+	elif !operations.keys().has(taskData.operation): printerr("Operation ["+taskData.operation+"] in System ["+name+"] not found!")
+	else : return self.operations[taskData.operation].run(taskData.parameter,ent)
+	return []
+
+
+
+func parseConsiderationsToDictionaries(taskData:Array) -> Array:
+	var toReturn : Array
+	for consideration in taskData:
+		var currentConsider : Dictionary
 		
+		currentConsider["typeOfCache"] = consideration.pop_front()
+		currentConsider["operation"]   = consideration.pop_front()
+		currentConsider["parameter"]   = self.operations[currentConsider.operation].convertArrayToDict(consideration)
 		
-		_:printerr("ERROR!! at EVENT_PARSE, PERFORM : "+str(toPerform)+" NOT FOUND")
-
-
-
-var uniqueStatmod :=  _004_Perform_UniqueStatmod.new()
-var component     :=  _004_Perform_Component.new()
-var flag          :=  _004_Perform_Flag.new()
-var property      :=  _004_Perform_Property.new()
-var condition     :=  _004_Perform_Condition.new()
-
-
-func _init() -> void :
-	component.initialice(DemocrECS.getAllComponents())
-	flag.initialice(_Flags.getFlags())
-	property.initialice({})
-
-
-
-
-
-static func getType() -> Dictionary :    return {
-	 "TILE"         :   TileEntity
-	,"INTERACT" :   InteractEntity
-	,"ACTOR"        :   ActorEntity
-}
-
+		toReturn.append(currentConsider)
+	return toReturn
 
 

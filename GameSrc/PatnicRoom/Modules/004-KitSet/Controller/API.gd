@@ -41,10 +41,10 @@ func drawAlert()      -> void : _kitSelect.drawSelection(selection.triggeredEnts
 
 
 func manageKitSelection(inputNr:String) -> void:
-	API_004_KitSet.selection = _004_SelectionManager._setSelectionReference(int(inputNr)-1)
+	API_004_KitSet.selection = _008_KitSelect._setSelectionReference(int(inputNr)-1)
 	API_004_KitSet.selection.sourcePos = API_005_Event.runSource(API_004_KitSet.selection)
 	API_004_KitSet.selection.selectedPos = API_005_Event.runMedium(API_004_KitSet.selection)
-	API_004_KitSet.selection.selectedEnts = _004_SelectionManager._getEntsOfPos(API_004_KitSet.selection.selectedPos)
+	API_004_KitSet.selection.selectedEnts = _008_KitSelect.getEntsOfPos(API_004_KitSet.selection.selectedPos)
 	API_004_KitSet.selection.triggeredEnts = API_005_Event.getTriggeredSelects(API_004_KitSet.selection)
 	
 
@@ -55,9 +55,9 @@ func manageDirectionalSelect(directionEnum)->void:
 	SokraTiles.getLayerNode(ENUM.SOKRATILES.LAYER.SELECTION).clearLayer()
 	for caches in [selection.selectedEnts,selection.triggeredEnts]:   caches.clear()
 	
-	for pos in selection.sourcePos:   _004_Seize_MediumUniversalAlt.run(int(selection.reach),directionEnum,pos)
+	for pos in selection.sourcePos:   _004_Seize_MediumUniversal.run(int(selection.reach),directionEnum,pos)
 	
-	selection.selectedEnts = _004_SelectionManager._getEntsOfPos(API_004_KitSet.selection.selectedPos)
+	selection.selectedEnts = _008_KitSelect.getEntsOfPos(API_004_KitSet.selection.selectedPos)
 	selection.triggeredEnts = API_005_Event.getTriggeredSelects(API_004_KitSet.selection)
 	
 	API_004_KitSet.selection.alertTexture = "Marker_5_2"

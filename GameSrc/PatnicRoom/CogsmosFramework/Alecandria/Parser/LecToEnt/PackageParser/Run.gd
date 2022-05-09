@@ -19,8 +19,14 @@ static func run(content:Array,ent) -> Array:
 			effectDict[concept].append(arrPara)
 	
 	
-	if ent.hasComp("C_49_EVENT_REFERENCE"): ent.getComp("C_49_EVENT_REFERENCE").value["RUN"] = effectDict
-	else:ent.addComponent(C_49_EVENT_REFERENCE.new({"RUN":effectDict}))
+	
+	if ent.hasComp("C_49_EVENT_REFERENCE"): 
+		var cache    = ent.getCompValue("C_49_EVENT_REFERENCE")
+		cache["RUN"] = {   "PERFORM":API_005_Event.convertPerformanceArrayToDictionary(effectDict["PERFORM"])   }
+		ent.getComp("C_49_EVENT_REFERENCE").value = cache
+	
+	
+	else:ent.addComponent(C_49_EVENT_REFERENCE.new({"RUN":{"PERFORM":API_005_Event.convertPerformanceArrayToDictionary(effectDict["PERFORM"])}}))
 	
 	
 	return ent

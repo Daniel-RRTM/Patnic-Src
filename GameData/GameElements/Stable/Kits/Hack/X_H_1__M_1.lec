@@ -42,7 +42,7 @@ MAIN{
 //------------------------------------------------------------------------------\\
   UPGRADE[
     ADD:
-      SELECT CONSIDER ---> THIS COMP C_65_TIER EQUALLS 2
+      SELECT CONSIDER ---> OR COMP C_65_TIER EQUALLS 2
   ]
 }
 

@@ -19,7 +19,7 @@ func RNGeneratBasicActor(toGenerate:ActorRngTemplateEntity) -> ActorEntity:
 func dictGenerateActor(dict:Dictionary) -> ActorEntity:
 	#>>> Basic Entries <<<#
 	var ent               = ActorEntity.new()
-	var specialtyTemplate = API_001_Atlas.Specialty().getEntry(dict["C_12_FOR_SPECIALTY"])
+	var specialtyTemplate = API_001_Atlas.Specialties().getEntry(dict["C_12_FOR_SPECIALTY"])
 	var raceTemplate      = API_001_Atlas.Race().getEntry(dict["C_12_FOR_RACE"])
 	var roleTemplate      = API_001_Atlas.Role().getEntry(dict["C_12_FOR_ROLE"])
 	

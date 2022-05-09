@@ -46,7 +46,7 @@ static func getDoc():
 
 
 static func saniticeParameter(parameters:Array) -> Dictionary : 
-	return { "damageValue" : parameters[1] }
+	return { "damageValue" : parameters[0] }
 
 
 
