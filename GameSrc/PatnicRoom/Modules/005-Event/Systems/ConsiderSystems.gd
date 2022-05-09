@@ -27,13 +27,7 @@ func prepare() -> void: pass
 func parseConsiderationsToDictionaries(taskData:Array) -> Array:
 	var toReturn : Array
 	for consideration in taskData:
-		var currentConsider : Dictionary	 
-		
-		currentConsider["connector"] = consideration.pop_front()
-		currentConsider["operation"] = consideration.pop_front()
-		currentConsider["parameter"] = self.operations[currentConsider.operation].convertArrayToDict(consideration)
-		
-		toReturn.append(currentConsider)
+		toReturn.append(parseSingleConsiderArray(consideration))
 	return toReturn
 
 
@@ -56,4 +50,14 @@ func getTriggeredFromConsiderations(taskData:Dictionary) -> Array:
 	return taskData.triggeredEnts
 
 
+
+
+
+
+func parseSingleConsiderArray(taskData:Array) -> Dictionary:
+	var currentConsider : Dictionary
+	currentConsider["connector"] = taskData.pop_front()
+	currentConsider["operation"]   = taskData.pop_front()
+	currentConsider["parameter"]   = self.operations[currentConsider.operation].convertArrayToDict(taskData)
+	return currentConsider 
 

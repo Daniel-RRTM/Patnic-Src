@@ -43,7 +43,7 @@ MAIN{
     SEIZE:
       MEDIUM ---> LINEA
       SOURCE ---> SELF
-      REACH ---> 4
+      REACH ---> 3
     CONSIDER:
       THIS ---> TYPE IS ACTOR
     PERFORM:

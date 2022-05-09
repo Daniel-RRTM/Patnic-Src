@@ -7,7 +7,7 @@ class_name _004_Consider_Component
 
 # ----- PROCESS -------------------------------------------------------------- ##
 
-
+# REFACTOR 
 static func run(para:Dictionary, toConsider:Array) -> Array :
 	var toReturn = []
 	for ent in toConsider:

@@ -78,8 +78,21 @@ func deleteMod(toMod:Array,event:Dictionary) -> Dictionary :
 
 func modifyMod(toMod:Array,event:Dictionary) -> Dictionary :
 	for mod in toMod: 
-		for step in event[mod.package][mod.concept]:
-			if PoolStringArray(step).join(" ") == mod.target: step = mod.value
+		
+		# REFACTOR 
+		if "SEIZE" in mod.concept:
+			var cache = mod.target.split(" ")
+			event[mod.package][mod.concept][cache[0]] = mod.value[1] 
+		
+		if "CONSIDER" in mod.concept:event[mod.package][mod.concept].append(API_005_Event.convertSingleConsider(mod.valusse))
+		if "PERFORM" in mod.concept:event[mod.package][mod.concept].append(API_005_Event.convertSinglePerform(mod.value))
+		
+#		else:
+#
+#			for step in event[mod.package][mod.concept]:
+#
+#				if PoolStringArray(step).join(" ") == mod.target: 
+#					step = mod.value
 		
 	return event
 #		var cache   = mod.duplicate(true)

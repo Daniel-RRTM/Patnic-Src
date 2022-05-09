@@ -35,13 +35,15 @@ func _operateOnParameter(taskData:Dictionary,ent) -> Array:
 func parseConsiderationsToDictionaries(taskData:Array) -> Array:
 	var toReturn : Array
 	for consideration in taskData:
-		var currentConsider : Dictionary
-		
-		currentConsider["typeOfCache"] = consideration.pop_front()
-		currentConsider["operation"]   = consideration.pop_front()
-		currentConsider["parameter"]   = self.operations[currentConsider.operation].convertArrayToDict(consideration)
-		
-		toReturn.append(currentConsider)
+			
+		toReturn.append(parseSinglePerformArray(consideration))
 	return toReturn
 
 
+
+func parseSinglePerformArray(taskData:Array) -> Dictionary:
+	var currentConsider : Dictionary
+	currentConsider["typeOfCache"] = taskData.pop_front()
+	currentConsider["operation"]   = taskData.pop_front()
+	currentConsider["parameter"]   = self.operations[currentConsider.operation].convertArrayToDict(taskData)
+	return currentConsider 

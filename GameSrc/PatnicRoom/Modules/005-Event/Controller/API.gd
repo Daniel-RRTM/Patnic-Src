@@ -24,6 +24,13 @@ func convertConsiderArrayToDictionary(considerations:Array) -> Array :
 func convertPerformanceArrayToDictionary(considerations:Array) -> Array : 
 	return performSystem.parseConsiderationsToDictionaries(considerations)
 
+# REFACTOR 
+func convertSinglePerform(considerations:Array) -> Dictionary : 
+	return performSystem.parseSinglePerformArray(considerations)
+
+func convertSingleConsider(considerations:Array) -> Dictionary : 
+	return considerSystem.parseSingleConsiderArray(considerations)
+
 
 func runSource(taskData:Dictionary) -> Array : 
 	return sourceSystem.operateOnParameter(taskData)
