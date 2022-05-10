@@ -65,6 +65,11 @@ _global_script_classes=[ {
 "path": "res://GameSrc/PatnicRoom/Components/C12.gd"
 }, {
 "base": "Component",
+"class": "C_13_GENDER",
+"language": "GDScript",
+"path": "res://GameSrc/PatnicRoom/Components/C13.gd"
+}, {
+"base": "Component",
 "class": "C_15_BODYPARTS",
 "language": "GDScript",
 "path": "res://GameSrc/PatnicRoom/Components/C15.gd"
@@ -1282,7 +1287,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "_KitsUILoaderAlt",
 "language": "GDScript",
-"path": "res://GameSrc/PatnicRoom/scenes/Gameloop/PanicMode/Subscenes/Sidepanel/Kits/KitsUILoader.gd"
+"path": "res://GameSrc/PatnicRoom/Scenes/Gameloop/PanicMode/Subscenes/Sidepanel/Kits/KitsUILoader.gd"
 }, {
 "base": "Node",
 "class": "_RACE",
@@ -1392,7 +1397,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "_menueLoader",
 "language": "GDScript",
-"path": "res://GameSrc/PatnicRoom/scenes/Gameloop/PanicMode/HUD/Menue loader.gd"
+"path": "res://GameSrc/PatnicRoom/Scenes/Gameloop/PanicMode/HUD/Menue loader.gd"
 } ]
 _global_script_class_icons={
 "ActorEntity": "",
@@ -1406,6 +1411,7 @@ _global_script_class_icons={
 "C_10_PERKS": "",
 "C_11_RACE_NAME": "",
 "C_12_ATLAS_INDEX": "",
+"C_13_GENDER": "",
 "C_15_BODYPARTS": "",
 "C_17_HITPROBABILLITY": "",
 "C_18_ATTRIBUTEMOD": "",

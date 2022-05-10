@@ -21,6 +21,7 @@ MAIN{
     C_6_NAME ---> Orc
     C_0_DESCRIPTION ---> just like humans,but in tiny
     C_27_RACIAL_ENEMIES ---> ELF
+    C_13_GENDER ---> MAN AND WOMAN AND MISC
     C_28_RACIAL_FRIENDS ---> ORC AND DWARF
     C_19_ATTRIBUTES(
       CON ---> 5

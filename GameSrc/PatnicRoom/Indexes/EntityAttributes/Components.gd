@@ -16,7 +16,7 @@ static func getComponents() -> Dictionary:
 	"C_10_PERKS"             			:   C_10_PERKS,
 	"C_11_RACE_NAME"        	 		:   C_11_RACE_NAME,
 	"C_12_ATLAS_INDEX"        			: 	C_12_ATLAS_INDEX,
-
+	"C_13_GENDER"                       :   C_13_GENDER,
 	
 	"C_15_BODYPARTS"   			        :	C_15_BODYPARTS,
 

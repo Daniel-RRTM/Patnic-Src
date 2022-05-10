@@ -21,6 +21,7 @@ MAIN{
     C_6_NAME ---> SentDroid
     C_0_DESCRIPTION ---> A sentient droid, Robots dreaming of Isaaac
     C_27_RACIAL_ENEMIES ---> ELF
+    C_13_GENDER ---> MISC
     C_28_RACIAL_FRIENDS ---> ORC AND DWARF
     C_19_ATTRIBUTES(
       CON ---> 5

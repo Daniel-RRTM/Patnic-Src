@@ -35,6 +35,7 @@ func dictGenerateActor(dict:Dictionary) -> ActorEntity:
 	var randomNumber     = Utils.rng().getRandomNumber(0,synonymComponent.value.size()-1)
 	var synonym          = synonymComponent.value[randomNumber]
 	ent.addComponent(C_47_SYNONYM.new(synonym)) 
+	ent.addComponent(C_13_GENDER.new(Utils.rng().getRandomFromArray(raceTemplate.getCompValue("C_13_GENDER").split(" AND "))))
 	
 
 	#>>> Add Attributes <<<#
