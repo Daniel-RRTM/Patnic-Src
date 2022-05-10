@@ -3,19 +3,19 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "TileSets/JSON/001_Terrain.json",
+    "activeFile": "TileMaps/Story/Suburban_Two.json",
     "expandedProjectPaths": [
         "TileSets/JSON",
         "TileSets/cache",
-        ".",
         "TileMaps/custome/Suburban",
         "TileMaps/Special",
-        "TileMaps/beta Maps",
-        "TileMaps",
         "TileSets",
         "TileMaps/custome",
         "TileMaps/Unique",
-        "TileMaps/Story"
+        ".",
+        "TileMaps/beta Maps",
+        "TileMaps/Story",
+        "TileMaps"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
@@ -170,6 +170,14 @@
             "viewCenter": {
                 "x": 594.5,
                 "y": 1279
+            }
+        },
+        "TileMaps/Story/Suburban_Two.json": {
+            "scale": 0.5,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 871,
+                "y": 754
             }
         },
         "TileMaps/SuburbanTestSide.json": {
@@ -519,7 +527,8 @@
     "openFiles": [
         "TileMaps/Story/Suburban_One.json",
         "TileSets/JSON/002_Indoors.json",
-        "TileSets/JSON/001_Terrain.json"
+        "TileSets/JSON/001_Terrain.json",
+        "TileMaps/Story/Suburban_Two.json"
     ],
     "project": "GameData.tiled-project",
     "property.type": "bool",
@@ -527,6 +536,7 @@
         "TileMaps/Story/Suburban_One.json",
         "TileSets/JSON/002_Indoors.json",
         "TileSets/JSON/001_Terrain.json",
+        "TileMaps/Story/Suburban_Two.json",
         "TileSets/JSON/007_Decoration.json",
         "TileSets/JSON/006_Nature.json",
         "TileSets/JSON/008_Security.json",
@@ -534,8 +544,7 @@
         "TileSets/JSON/12_Actors.json",
         "TileSets/JSON/009_Conditions.json",
         "TileMaps/Unique/Template.json",
-        "TileMaps/Story/Barrens.json",
-        "TileMaps/Story/Arcology.json"
+        "TileMaps/Story/Barrens.json"
     ],
     "tileset.lastUsedFormat": "json",
     "tileset.tileSize": {

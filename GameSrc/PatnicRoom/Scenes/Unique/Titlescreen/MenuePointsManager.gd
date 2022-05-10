@@ -12,7 +12,8 @@ func _on_press(extra_arg_one) -> void:
 
 
 func getSceneToAdd(sceneEnum):
-	var baseFilePath = "res://GameSrc/PatnicRoom/scenes/Unique/Titlescreen/" # REFACTOR 
+	
+	var baseFilePath = ENUM.FILE_PATHS.SCENES.TITLE.split("/Title.tscn")[0]
 	match sceneEnum:
 		MENUE_POINT.NEW_GAME       : return load("res://GameSrc/PatnicRoom/Scenes/Unique/Titlescreen/SubScene/CreateNewGame/CreateNewGameAlt.tscn").instance()
 		MENUE_POINT.INTRODUCTION   : return load(baseFilePath+"/SubScene/Introduction.tscn").instance()

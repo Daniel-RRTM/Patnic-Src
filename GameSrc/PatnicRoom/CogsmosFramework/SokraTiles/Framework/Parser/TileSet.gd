@@ -2,15 +2,10 @@ extends Object
 # BOOKMARK[epic=Cogsmos] SokraTiles --- TileSet                                
 class_name TilesetParser
 
-# REFACTOR 
-const FILEPATH = "res://Gamedata/Tiled/TileSets/JSON"
-
-
-# REVIEW                   
 
 static func run() -> void:
-	for tilesetPath in getListOfFilePathsOfDirectory(FILEPATH):
-		var tilesetMetaData = Utils.json().fileToDictionary(tilesetPath)
+	for tilesetPath in Utils.directory().getFileNamesInFilepath(ENUM.FILE_PATHS.TILE_SETS):
+		var tilesetMetaData = Utils.json().fileToDictionary(ENUM.FILE_PATHS.TILE_SETS+"/"+tilesetPath)
 		var currentTileset  = []
 		
 		for tile in tilesetMetaData.tiles: 
@@ -26,23 +21,5 @@ static func getTileEnt(tile:Dictionary, cachedTile={}):
 	return DemocrECS.initialiceNewEntry(cachedTile)
 
 
-
-
-
-
-
-static func getListOfFilePathsOfDirectory(path, filesArray=[]):
-	var dir = Directory.new()                                   
-	
-	dir.open(path)
-	dir.list_dir_begin()
-
-	while true:
-		var file = dir.get_next()
-		if file == "" or file.empty()                              : break                                                             
-		elif !file.begins_with(".") and !file.ends_with(".import") : filesArray.append(path+"/"+file)
-			
-	dir.list_dir_end()
-	return filesArray
 
 

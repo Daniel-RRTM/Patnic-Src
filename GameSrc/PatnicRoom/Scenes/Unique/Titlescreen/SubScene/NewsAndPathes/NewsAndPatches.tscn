@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/CustomeStyle/Panel/Main_Menue.tres" type="StyleBox" id=1]
 [ext_resource path="res://Assets/DynamicFonts/Text_Header.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Assets/DynamicFonts/new_dynamicfontdata.tres" type="DynamicFontData" id=3]
-[ext_resource path="res://GameSrc/PatnicRoom/scenes/Unique/Titlescreen/SubScene/NewsAndPathes/textInserts.gd" type="Script" id=4]
+[ext_resource path="res://GameSrc/PatnicRoom/Scenes/Unique/Titlescreen/SubScene/Load/textInserts.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20

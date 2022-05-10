@@ -15,11 +15,13 @@ func _ready() -> void:
 	
 	#>>> Race <<<#
 	raceNode.add_item("")
-	for raceToString in options.race.keys() : raceNode.add_item(raceToString.dedent())
+	for raceToString in options.race.keys() : 
+		raceNode.add_item(raceToString.dedent())
 	
 	#>>> Kit <<<#
-	kitsNode.add_icon_item(load(" "),"")
-	for kit in options.kits : kitsNode.add_icon_item(load(kit.image),kit.name)
+	kitsNode.add_item("")
+	for kit in options.kits : 
+		kitsNode.add_icon_item(load(kit.image),kit.name)
 
 
 
@@ -34,24 +36,20 @@ func _input(event: InputEvent) -> void:
 
 
 func _on_OptionButton_item_selected(index):
-	#if !nameNode.bbcode_text.empty() and raceNode.selected != 0 and kitsNode.selected != 0 :
 	startButton.visible = !nameNode.text.empty() and kitsNode.selected != 0 and raceNode.selected != 0
 
 
 
 func setUpChargenDict():
 	var kitSelect   = kitsNode.get_item_text(kitsNode.selected)
-	var raceSelect  = raceNode.get_item_text(raceNode.selected)
-	var nameSelect  = nameNode.text
-	
-	var kitsOfCat   = API_001_Atlas.KitParts().getKitGroup(kitSelect.to_upper())
-	var randomKitnr = Utils.rng().getRandomNumber(1,kitsOfCat.size())
-	kitSelect       = [kitsOfCat.values()[randomKitnr-1].baseKit.index(),"",""]
+	var kitsOfCat   = API_001_Atlas.KitParts().getKitGroup(kitSelect.to_upper()).keys()
+	var randomKitnr = Utils.rng().getRandomFromArray(kitsOfCat)
+	kitSelect       = [randomKitnr,"",""]
 	
 	var dict = Utils.json().fileToDictionary("res://Config/Savestate/template/char1.json")
 	dict ["kitsets"]  = [kitSelect]
-	dict ["race"]     = raceSelect
-	dict["name"]      = nameSelect
+	dict ["race"]     = raceNode.get_item_text(raceNode.selected)
+	dict["name"]      = nameNode.text
 	dict["credits"]   = 0
 	
 	return dict

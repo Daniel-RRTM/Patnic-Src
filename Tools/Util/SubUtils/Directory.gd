@@ -18,11 +18,11 @@ func getDirNamesInFilepath(filePath:String, saveStates=[]) -> Array:
 func getFileNamesInFilepath(filePath:String, saveStates=[]) -> Array:
 	var dirManager = Directory.new()
 	dirManager.open(filePath)
-	dirManager.list_dir_begin()
+	dirManager.list_dir_begin(true,false)
 	var currentDirName = dirManager.get_next()
 	
-	while currentDirName != "":
-		if currentDirName.current_is_dir(): saveStates.append(currentDirName)
+	while currentDirName != ""  :
+		saveStates.append(currentDirName)
 		currentDirName = dirManager.get_next()
 	
 	return saveStates

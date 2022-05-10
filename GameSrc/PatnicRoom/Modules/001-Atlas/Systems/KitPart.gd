@@ -54,10 +54,10 @@ func getEntryByName(name:String) -> Entity:
 
 
 
-func getKitGroup(string_enum_kitCat) -> Array:
+func getKitGroup(string_enum_kitCat) -> Dictionary:
 	if string_enum_kitCat is String : return allBasekitGroups[ENUM.KITS.CATEGORY[string_enum_kitCat.to_upper()]]
 	elif string_enum_kitCat != -1   : return allBasekitGroups[string_enum_kitCat]
-	return []
+	return {}
 
 
 
