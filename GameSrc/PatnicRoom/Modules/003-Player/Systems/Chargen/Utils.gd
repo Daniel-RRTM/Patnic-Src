@@ -30,6 +30,6 @@ static func loadStartingKits(playerEnt) -> void:
 					else             :   kitsetArr.append("Null")
 
 				var kitsetEnt = API_004_KitSet.getMergedKitsets(kitsetArr)
-				playerEnt.kitventory().kitsets().append(kitsetEnt)
+				playerEnt.kitventory().kitsets().appendWithStartingKits(kitsetEnt)
 
 

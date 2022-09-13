@@ -14,6 +14,7 @@ static func run(ent,performance:Array) -> void :
 	
 		if ent is ActorEntity : 
 			API_010_ProcGen_Actor.removeActorFromGame(ent)
+			API_004_KitSet.selection.triggeredEnts.erase(ent)
 	
 		elif ent is InteractEntity:   
 			var newEnt = DemocrECS.copyEntity(API_001_Atlas.Tiles().getEntry("Indoors_1_13"))
@@ -41,6 +42,9 @@ static func getDoc():
 		"toString"         : "Deal damage to actors",
 
 		"inputModule"      : "SLIDER"
+		,"list"       : [["1","2","...","99"]]
+		,"parameter"       : ["number"]
+
 
 	}
 

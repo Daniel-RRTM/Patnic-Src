@@ -18,7 +18,7 @@ func add_linebreak()                -> void:	_addRawContent( str("\r\n") )
 func add_header(content,size:int=3) -> void:	_add_header(content, size)
 
 func add_bold(content)              -> void:	_addRawContent( str("**") + content + str("**") )
-func add_boldln(content)            -> void:	_addRawContent( str("**") + content + str("** \r\n") )
+func add_boldln(content)            -> void:	_addRawContent( str("**") + content + str("**  \r\n") )
 
 func add_italic(content)            -> void:	_addRawContent( str("*")  + content + str("*")  )
 func add_italicln(content)          -> void:	_addRawContent( str("*")  + content + str("* \r\n")  )

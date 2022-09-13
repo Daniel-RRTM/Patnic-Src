@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://GameSrc/Alecandria/Editor/MainTextEdit.gd" type="Script" id=1]
+[ext_resource path="res://GameSrc/Alt Alecandria/MainTextEdit.gd" type="Script" id=1]
 [ext_resource path="res://GameSrc/Alecandria/Root.gd" type="Script" id=2]
-[ext_resource path="res://GameSrc/Alecandria/Editor/SideTextEdit.gd" type="Script" id=3]
+[ext_resource path="res://GameSrc/Alt Alecandria/SideTextEdit.gd" type="Script" id=3]
 [ext_resource path="res://GameSrc/Alecandria/compToString.gd" type="Script" id=4]
 [ext_resource path="res://Assets/DynamicFonts/Text_Default.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Assets/DynamicFonts/new_dynamicfontdata.tres" type="DynamicFontData" id=6]

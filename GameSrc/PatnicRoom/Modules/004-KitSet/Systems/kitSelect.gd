@@ -2,10 +2,10 @@ extends Component
 class_name _008_KitSelect
 
 
-static func _setSelectionReference(inputNr:int) -> Dictionary:
-	var event = API_003_Player.currentChar.kitventory().kitsets().getByNr(inputNr).event
+static func _setSelectionReference(kitSet:KitSetEntity) -> Dictionary:
+	var event = kitSet.event
 	var selection = {}
-	
+	selection["entity"]           = kitSet
 	selection["reach"]            = event["SELECT"]["SEIZE"]["REACH"]
 	selection["source"]           = event["SELECT"]["SEIZE"]["SOURCE"]
 	selection["medium"]           = event["SELECT"]["SEIZE"]["MEDIUM"]
@@ -24,12 +24,17 @@ static func _setSelectionReference(inputNr:int) -> Dictionary:
 
 
 static func getEntsOfPos(positions:Array,toReturn = []) -> Array :
+	if API_004_KitSet.selection.medium == "SELF" : 
+		return [API_003_Player.currentChar]
+	
+	
 	for layer in ENUM.SOKRATILES.SELECTABLE_LAYER.keys():
 		var tilemapNode = SokraTiles.getLayerNode(layer)
 		for position in positions:
 			
 			var ent = tilemapNode.getEntByPos_quack(position)
-			if is_instance_valid(ent): toReturn.append(ent)
+			if is_instance_valid(ent): 
+				toReturn.append(ent)
 		
 	return toReturn
 

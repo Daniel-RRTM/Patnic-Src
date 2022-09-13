@@ -53,7 +53,8 @@ class Kitsets:
 	func getByNr(nr)  			-> KitSetEntity : 		return cacheKitset.getKitSetByNr(nr)
 	func getByName(string)  	-> KitSetEntity : 		return cacheKitset.getKitSetByString(string)
 
-	func remove(kitset)         -> void         : 		cacheKitset.remove(kitset)
+	func remove(kitset)         -> void         : 		cacheKitset.removeKitset(kitset)
 	func append(kitset)         -> void         : 		cacheKitset.addKitSet(kitset)
-
+	func appendWithStartingKits(kitset)         -> void         : 		cacheKitset.addKitSet(kitset,false)
+	
 

@@ -6,7 +6,7 @@ func buildRef(fsmPara):
 
 func _enter_tree() -> void: 
 	get_node("AnimationPlayer").play("rightToLeft")
-
+	
 
 
 
@@ -19,3 +19,13 @@ func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 	if anim_name == "LeftToRight":
 		fsm.playEnterAnimation()
 		self.queue_free()
+
+
+
+func refreshFilter(buttonName:String) -> void:
+	API_014_NewsLog.catToShow[buttonName] = !API_014_NewsLog.catToShow[buttonName]
+	API_014_NewsLog.reprintAll()
+	
+
+
+

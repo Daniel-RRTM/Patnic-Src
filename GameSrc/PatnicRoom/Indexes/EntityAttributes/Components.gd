@@ -17,9 +17,9 @@ static func getComponents() -> Dictionary:
 	"C_11_RACE_NAME"        	 		:   C_11_RACE_NAME,
 	"C_12_ATLAS_INDEX"        			: 	C_12_ATLAS_INDEX,
 	"C_13_GENDER"                       :   C_13_GENDER,
-	
+	"C_14_LEC_RAW_DATA"                 :   C_14_LEC_RAW_DATA,
 	"C_15_BODYPARTS"   			        :	C_15_BODYPARTS,
-
+	"C_16_MAX_HITPOINTS"				: 	C_16_MAX_HITPOINTS,
 	"C_17_HITPROBABILLITY"          	:   C_17_HITPROBABILLITY,
 	"C_18_ATTRIBUTEMOD" 				:   C_18_ATTRIBUTEMOD,
 	"C_19_ATTRIBUTES"  				    : 	C_19_ATTRIBUTES,
@@ -27,7 +27,7 @@ static func getComponents() -> Dictionary:
 	"C_21_POS_TO_WALK_TO"               :   C_21_POS_TO_WALK_TO,
 	"C_22_LIMITS"     			    	:   C_22_LIMITS,
 	"C_23_CARRIAGE"     				: 	C_23_CARRIAGE,
-
+	"C_24_PASSIVE_ACTIVE"              : C_24_PASSIVE_ACTIVE,
 	"C_25_MAX_KITSETS"                  :   C_25_MAX_KITSETS,
 	"C_26_INDIRECT_STATS" 		    	:	C_26_INDIRECT_STATS,
 	"C_27_RACIAL_ENEMIES" 			    : 	C_27_RACIAL_ENEMIES,

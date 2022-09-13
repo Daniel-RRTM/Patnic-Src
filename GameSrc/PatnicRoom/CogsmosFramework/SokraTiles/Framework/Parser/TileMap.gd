@@ -8,11 +8,20 @@ class_name SokraTiles_TilemapParser
 
 
 
-static func parseTileMap(filepathToMap:String) -> Dictionary:
+static func parseByString(filepathToMap:String) -> Dictionary:
 	var tiledImport = Utils.json().fileToDictionary(filepathToMap)
-	var mapMetaData = cleanUpTiledImport(tiledImport)
-	var toReturn    = {}
+	var mapMetaData = cleanUpTiledImport(Utils.json().fileToDictionary(filepathToMap))
+	var toReturn    = itterateLayers(mapMetaData)
 	
+	return toReturn
+
+
+
+
+
+
+static func itterateLayers(mapMetaData:Dictionary) -> Dictionary:
+	var toReturn = {}
 	for mapLevel in mapMetaData.levels:
 		var parsedMap = {}
 		
@@ -26,14 +35,8 @@ static func parseTileMap(filepathToMap:String) -> Dictionary:
 				if layerInLevel == "PLAYER":  findPlayer(formatedLayer)
 			
 			toReturn = parsedMap
-	
 	return toReturn
-
-
  
-
-
-
 
 
 # FUNC !	!                                             
@@ -81,7 +84,11 @@ static func cleanUpTiledImport(tiledImport,mapMetaData={}):
 static func getLayersOfLevel(import,ordered=[]):
 	for level in import: 
 		var sublayers = {}
-		for layerDict in level.layers: sublayers[layerDict.name] = layerDict.data
+		
+		for layerDict in level.layers: 
+			if layerDict.type =="objectgroup": SokraTiles.spawnLayer = layerDict
+			else:sublayers[layerDict.name] = layerDict.data
+		
 		ordered.append(sublayers)
 	return ordered
 

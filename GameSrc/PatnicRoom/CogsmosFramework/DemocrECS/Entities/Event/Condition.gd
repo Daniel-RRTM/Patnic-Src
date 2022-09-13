@@ -29,7 +29,7 @@ func texture()       -> String     : return getCompValue("C_12_ATLAS_INDEX")
 
 
 # ----- LOGTIC ------------------------------------------------------------- ##
-
+ 
 
 func run():
 	for effect in effects:   SYNTAX.EVENT.EFFECTS[effect["NAME"]].run(self,effect)

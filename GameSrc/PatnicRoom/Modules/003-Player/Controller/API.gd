@@ -38,12 +38,29 @@ func generateNewChar(chargenDict:Dictionary)   -> void  :  _005_LoadChar.generat
 func loadChar()                                -> void  :  _005_LoadChar.parse("one",1)
 func loadQuickStartChar()                      -> void  :  _005_LoadChar.parse("quickStart",1)
 func loadCharBySaveStateName(saveState:String) -> void  :  _005_LoadChar.parse(saveState,1)
-
+func saveChar()                                -> void  :  _005_SaveChar.savePlayState()
 func setIndirectStats(ent)                     -> void  :  _005_Character_IndirectStats.calculate(ent)
 
-	
 
 
+func getJSONCrossReference() -> Dictionary: return {
+	"common":{
+		"C_9_CREDITS_ACCOUNT"       : "credits"
+#		,"C_X_ARCHIVEMENTS"         : "archivements"
+		,"C_68_KITVENTORY"          : "kitventory"
+#		,"C_X_STATIONEN"            : "archivements"
+	},
+	"character":{
+		 "C_39_KITSLOT_PROGRESSION" : "kitslot progression"
+		,"C_51_PLAYER_KITSETS"      : "kitsets"
+		,"C_45_CHARACTER_NAME"      : "name"
+		,"C_12_ATLAS_INDEX"         : "texture"
+		,"C_25_MAX_KITSETS"         : "max kitsets"
+		,"C_44_STREETNAME"          : "street-name"
+		,"C_19_ATTRIBUTES"          : "attributes"
+		,"C_11_RACE_NAME"           : "race"
+	}
+}
 
 
 

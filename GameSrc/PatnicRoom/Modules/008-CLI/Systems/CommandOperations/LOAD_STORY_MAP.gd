@@ -8,7 +8,7 @@ class_name _API_017_Cmd_LoadStoryMap
 static func getAutoDoc() -> Dictionary:
 	return{	"toString"  : "load story map"                     ,
 			"parameter" : ["name"]                             ,
-			"list"      : [AresProcGenes.staticMaps["STORY"]]  ,
+			"list"      : [SokraTiles.allCuratedMaps.keys()]  ,
 			"group"     : "spawn"                              ,
 			"input"     : "story map"                          }
 
@@ -18,7 +18,7 @@ static func getAutoDoc() -> Dictionary:
 
 
 static func run(parameter:Array) -> void:
-	var path = AresProcGenes.staticMaps["STORY"][parameter[0]]
+	var path = SokraTiles.allCuratedMaps[parameter[0]]
 	if path == null : return
 	AresProcGenes.loadStaticMap(path)
 

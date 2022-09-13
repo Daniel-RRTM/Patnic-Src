@@ -41,19 +41,22 @@ func drawAlert()      -> void : _kitSelect.drawSelection(selection.triggeredEnts
 
 
 func manageKitSelection(inputNr:String) -> void:
-	API_004_KitSet.selection = _008_KitSelect._setSelectionReference(int(inputNr)-1)
-	API_004_KitSet.selection.sourcePos = API_005_Event.runSource(API_004_KitSet.selection)
-	API_004_KitSet.selection.selectedPos = API_005_Event.runMedium(API_004_KitSet.selection)
-	API_004_KitSet.selection.selectedEnts = _008_KitSelect.getEntsOfPos(API_004_KitSet.selection.selectedPos)
-	API_004_KitSet.selection.triggeredEnts = API_005_Event.getTriggeredSelects(API_004_KitSet.selection)
+	var kitSet = API_003_Player.currentChar.kitventory().kitsets().getByNr(int(inputNr)-1)
+	API_004_KitSet.selection = _008_KitSelect._setSelectionReference(kitSet)
 	
-
+	if kitSet.currentCooldownTime != kitSet.cooldownTime: API_004_KitSet.selection = null
+	else:
+		API_004_KitSet.selection.sourcePos = API_005_Event.runSource(API_004_KitSet.selection)
+		API_004_KitSet.selection.selectedPos = API_005_Event.runMedium(API_004_KitSet.selection)
+		API_004_KitSet.selection.selectedEnts = _008_KitSelect.getEntsOfPos(API_004_KitSet.selection.selectedPos)
+		API_004_KitSet.selection.triggeredEnts = API_005_Event.getTriggeredSelects(API_004_KitSet.selection)
+	
 
 
 	
 func manageDirectionalSelect(directionEnum)->void:
 	SokraTiles.getLayerNode(ENUM.SOKRATILES.LAYER.SELECTION).clearLayer()
-	for caches in [selection.selectedEnts,selection.triggeredEnts]:   caches.clear()
+	for caches in [selection.selectedEnts,selection.triggeredEnts,selection.selectedPos]:   caches.clear()
 	
 	for pos in selection.sourcePos:   _004_Seize_MediumUniversal.run(int(selection.reach),directionEnum,pos)
 	

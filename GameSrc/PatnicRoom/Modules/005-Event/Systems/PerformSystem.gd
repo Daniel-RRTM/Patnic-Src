@@ -14,6 +14,8 @@ func declare() -> void:
 		,"FLAG" : _004_Perform_Flag
 		,"PROP" : _004_Perform_Property
 		,"UNIQ" : _004_Perform_UniqueStatmod
+		,"PASSIVE" : _004_Perform_Passive
+		,"MSG" : _004_Perform_Msg
 	}
 
 

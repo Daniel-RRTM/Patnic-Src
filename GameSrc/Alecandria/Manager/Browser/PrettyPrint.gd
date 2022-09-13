@@ -27,12 +27,19 @@ static func printMeta(components:Dictionary) -> String:
 static func printMain(components:Dictionary) -> String:
 	var toReturn = "MAIN \n"
 	for comp in components.values():
-		if !["C_71_LEC_META_BY","C_72_LEC_META_USE","C_12_ATLAS_INDEX"].has(comp.name):
-			if comp.name == "C_49_EVENT_REFERENCE": 
-				toReturn += "  "+comp.getAutoDoc()["nameToShow"]
-				for i in 20-comp.getAutoDoc()["nameToShow"].length(): toReturn += " "
-				toReturn += "->    >>> ENTER HERE FOR EVENT >>>\n"
-			else:toReturn += printPair(comp,20)
+		
+		if comp.name == "C_14_LEC_RAW_DATA":
+			toReturn += "  Raw LEC             "
+			toReturn += "->    >>> SHOW RAW DATA >>>\n"
+		
+		else:
+		
+			if !["C_71_LEC_META_BY","C_72_LEC_META_USE","C_12_ATLAS_INDEX"].has(comp.name):
+				if comp.name == "C_49_EVENT_REFERENCE": 
+					toReturn += "  "+comp.getAutoDoc()["nameToShow"]
+					for i in 20-comp.getAutoDoc()["nameToShow"].length(): toReturn += " "
+					toReturn += "->    >>> SHOW EVENT >>>\n"
+				else:toReturn += printPair(comp,20)
 	return toReturn
 
 

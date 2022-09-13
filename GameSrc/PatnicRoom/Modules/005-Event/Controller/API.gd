@@ -45,9 +45,11 @@ func getTriggeredSelects(taskData:Dictionary) -> Array:
 
 
 func runKitSet(step:Dictionary) -> void  : 
+	API_004_KitSet.selection.entity.currentCooldownTime = 0
 	if "FILE" in step.typeOfCache:
 		for select in API_004_KitSet.selection.triggeredEnts:
 			performSystem._operateOnParameter(step,select)
+	elif "SELF" in step.typeOfCache:performSystem._operateOnParameter(step,API_003_Player.currentChar)
 
 
 

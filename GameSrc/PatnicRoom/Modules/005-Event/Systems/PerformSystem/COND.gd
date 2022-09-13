@@ -28,10 +28,12 @@ static func convertArrayToDict(parameters:Array) -> Dictionary :
 
 
 func getAutoDoc() -> Dictionary : return {
-	"descriiption"  : "instanciates a Condition by set input and attaches it to triggered selection"
+	"description"  : "instanciates a Condition by set input and attaches it to triggered selection"
 	,"concept"      : "PERFORM"
 	,"name"         : "COND"
-	,"inputs"       :  [  API_001_Atlas.Condition.getEntries() , "number as intensity" , "number as duration" ]
+	,"inputs"       :  [ 
+		["COND_INDEX" , "LVL" , "DURA"]
+	 ]
 }
 
 

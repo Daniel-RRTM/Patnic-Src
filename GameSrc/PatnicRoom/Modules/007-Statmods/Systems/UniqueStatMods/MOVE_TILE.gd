@@ -10,7 +10,7 @@ static func run(ent,toPerform:Array):
 		var currentPos = ent.pos() 
 		var finalPos
 		
-		for nextTile in API_004_KitSet.selection.selects:
+		for nextTile in API_004_KitSet.selection.selectedPos:
 			if nextTile is ActorEntity or nextTile.hasComp("C_1_IS_WALKABLE"): 
 				finalPos = nextTile.pos()
 			else: return
@@ -40,5 +40,7 @@ static func getDoc():
 		"toString"         : "WIP",
 
 		"inputModule"      : "VOID"
+		,"parameter"       : [["1","2","...","99"]]
+		,"list"       : ["number"]
 
 	}

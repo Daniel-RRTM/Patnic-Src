@@ -33,7 +33,8 @@ func addEntOnMap_quack(entity) -> void:
 
 
 func removeEntOnMap_quack(ent) -> void:
-	if !entsOnMap.has(ent.pos()): return
+	if !entsOnMap.has(ent.pos()): 
+		return
 	if entsOnMap[ent.pos()] != ent.get_instance_id():
 		self.entsOnMap[ent.pos()].free()
 		entsOnMap.erase(ent.pos())

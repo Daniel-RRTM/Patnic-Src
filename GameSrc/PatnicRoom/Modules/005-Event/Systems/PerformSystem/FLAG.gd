@@ -30,10 +30,12 @@ static func convertArrayToDict(parameters:Array) -> Dictionary : return {
 
 
 func getAutoDoc() -> Dictionary : return {
-	"descriiption"  : "manipulates a Flag of triggered selection"
+	"description"  : "manipulates a Flag of triggered selection"
 	,"concept"      : "PERFORM"
 	,"name"         : "FLAG"
-	,"inputs"       :  [  ["ADD","REMOVE","SWAP"] , _Flags.getFlags() ]
+	,"inputs"       :  [
+		[["ADD","REMOVE","SWAP"] , "FLAG_INDEX"]
+	 ]
 }
 
 

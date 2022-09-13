@@ -17,7 +17,6 @@ func getKitSetByNr(kitsetNr:int):      			return listOfKits.values()[kitsetNr]
 
 
 func addKitSet(kitset):
-	
 	var kitPartEnt
 	if kitset is String: 		kitPartEnt = API_001_Atlas.KitParts().getEntry(kitset)
 	if kitset is KitPartEntity: kitPartEnt = kitset

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/DynamicFonts/new_dynamicfontdata.tres" type="DynamicFontData" id=1]
 [ext_resource path="res://GameSrc/Universal/GUI/Inventory/NewCalc.gd" type="Script" id=2]
+[ext_resource path="res://Assets/CustomeStyle/Panel/Main_Menue.tres" type="StyleBox" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0.129412, 0.278431, 0.411765 )
@@ -33,14 +34,11 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="."]
-margin_left = -16.0
-margin_top = 92.0
-margin_right = 630.0
+margin_left = -130.0
+margin_top = 202.0
+margin_right = 1108.0
 margin_bottom = 451.0
-custom_styles/panel = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+custom_styles/panel = ExtResource( 3 )
 
 [node name="Title" type="RichTextLabel" parent="."]
 visible = false
@@ -57,8 +55,8 @@ __meta__ = {
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 margin_left = -2.0
-margin_top = 100.0
-margin_right = 630.0
+margin_top = 212.0
+margin_right = 1339.0
 margin_bottom = 436.0
 script = ExtResource( 2 )
 

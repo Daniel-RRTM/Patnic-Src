@@ -26,7 +26,7 @@ static func loadLECsToBrowse(enumNr):
 		FORMS.VOID       : toLoad = {}
 		FORMS.RACE       : toLoad = API_001_Atlas.Race().getEntries()
 		FORMS.ROLE       : toLoad = API_001_Atlas.Role().getEntries()
-		FORMS.SPECIALTY  : toLoad = API_001_Atlas.Specialty().getEntries()
+		FORMS.SPECIALTY  : toLoad = API_001_Atlas.Specialties().getEntries()
 		FORMS.BASE       : toLoad = API_001_Atlas.KitParts().baseKitParts
 		FORMS.MOD        : toLoad = API_001_Atlas.KitParts().modKitParts
 		#FORMS.APPENDIX   : toLoad = API_001_Atlas.

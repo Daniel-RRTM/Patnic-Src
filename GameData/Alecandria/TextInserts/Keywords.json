@@ -3,28 +3,22 @@
 
     "Introduction":{
         "LEC"                 : "#80ffbb",
-
         "Alecandria"          : "#9000e3",
         "Editor"              : "#d080ff",
-
         "Linked"              : "#59ff96",
         "COMPOSITION"         : "#EBFE82",
         "Composition"         : "#59ff96",
-        "COMPONENT"         : "#EBFE82",
+        "COMPONENT"           : "#EBFE82",
         "Entity"              : "#59ff96",
         "ENTITY"              : "#EBFE82",
-        "VALUE"              : "#EBFE82",
-
-        "attribute"           : "#4b9ab3",
-        "text"           : "#4b9ab3",
-        "list"           : "#4b9ab3",
-        "group"           : "#4b9ab3",
+        "VALUE"               : "#EBFE82",
+        "text"                : "#4b9ab3",
+        "list"                : "#4b9ab3",
+        "group"               : "#4b9ab3",
         "attribute"           : "#4b9ab3",
         "attributes"          : "#4b9ab3",
-
-        "---->"                : "#2edac6",
+        "---->"               : "#2edac6",
         "v"                   : "#2edac6",
-
         "<< PREVIOUS PAGE <<" : "#fbff26",
         ">> NEXT PAGE >>"     : "#fbff26"
     },
@@ -32,10 +26,9 @@
 
     "Selection":{
         "Actor"               : "#6bceff",
-        "Items"               : "#6bceff",
+        "Misc"                : "#6bceff",
         "KitParts"            : "#6bceff",
-        "Events"              : "#6bceff",
-        "AND"                 : "#4425f5"
+        "ProcGen"             : "#6bceff"
     },
 
 
@@ -51,7 +44,6 @@
         "CREATE GAME ELEMENTE" : "#07e02b",
         "xxx"                  : "#ebb434"
     }
-
 
 
 }

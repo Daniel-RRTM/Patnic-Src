@@ -53,10 +53,13 @@ static func convertArrayToDict(parameters:Array) -> Dictionary :
 
 
 static func getAutoDoc() -> Dictionary : return {
-	 "descriiption" : "returns selections with true condition!"
+	 "description" : "returns valid entities, which have have (not) the condition or even a its compared value in LVL or DURA!"
 	,"concept"      : "CONSIDER"
 	,"name"         : "COND"
-	,"inputs"       :  [ "Condition" , ["NOT","EQUALS","LESS","MORE"] , ["LVL","DURA"] , "Value" ]
+	,"inputs"       :  [ 
+		[ ["NOT","IS"] , "COND_INDEX"],
+		[ "COND_INDEX" , ["NOT","EQUALS","LESS","MORE"] , ["LVL","DURA"] , "Value"]
+	]
 }
 
 

@@ -38,12 +38,10 @@ static func foobarToo(source,upperHalf):
 
 
 func getAutoDoc() -> Dictionary : return {
-	"descriiption"  : "selects by a circle"
+	"description"  : "selects by a circle with radius of parameter"
 	,"concept"      : "SEIZE"
 	,"name"         : "MEDIUM"
-	,"valids"       : [  ]
-	,"WIP"          : ""
-	,"example"      : [
-		"MEDIUM  --->  AREA"
+	,"valids"       : [
+		["radius"]
 	]
 }

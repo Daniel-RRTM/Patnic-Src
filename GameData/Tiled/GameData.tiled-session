@@ -3,19 +3,19 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "TileMaps/Story/Suburban_Two.json",
+    "activeFile": "TileMaps/Story/Sewers.json",
     "expandedProjectPaths": [
-        "TileSets/JSON",
-        "TileSets/cache",
-        "TileMaps/custome/Suburban",
-        "TileMaps/Special",
-        "TileSets",
-        "TileMaps/custome",
-        "TileMaps/Unique",
-        ".",
+        "TileMaps",
         "TileMaps/beta Maps",
-        "TileMaps/Story",
-        "TileMaps"
+        "TileMaps/Special",
+        "TileSets/JSON",
+        ".",
+        "TileSets",
+        "TileMaps/custome/Suburban",
+        "TileMaps/Unique",
+        "TileSets/cache",
+        "TileMaps/custome",
+        "TileMaps/Story"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
@@ -33,6 +33,14 @@
         },
         "C:/Desktop/Tiled Project/Tilesets/JSON/08_Nature.json": {
             "scaleInDock": 1
+        },
+        "C:/Users/user/Desktop/PatnicRoom Env/Workspace/Src/Config/ExperimentalTilemap.json": {
+            "scale": 1.5,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 1065,
+                "y": 683.3333333333333
+            }
         },
         "C:/Users/user/Desktop/back up/GameData/Tiled/TileMaps/beta Maps/Suburban_One.json": {
             "scale": 1.5,
@@ -141,43 +149,51 @@
             }
         },
         "TileMaps/Story/Arcology.json": {
-            "scale": 0.53675,
+            "scale": 0.5,
             "selectedLayer": 8,
             "viewCenter": {
-                "x": 790.8709827666512,
-                "y": 799.2547741034002
+                "x": 791,
+                "y": 800
             }
         },
         "TileMaps/Story/Barrens.json": {
             "scale": 0.75,
-            "selectedLayer": 3,
+            "selectedLayer": 7,
             "viewCenter": {
                 "x": 791.3333333333333,
                 "y": 800
             }
         },
         "TileMaps/Story/Mall.json": {
-            "scale": 0.33,
-            "selectedLayer": 7,
+            "scale": 0.75,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 789.3939393939393,
+                "x": 791.3333333333333,
                 "y": 800
             }
         },
-        "TileMaps/Story/Suburban_One.json": {
-            "scale": 1,
-            "selectedLayer": 5,
+        "TileMaps/Story/Sewers.json": {
+            "scale": 1.5,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 594.5,
-                "y": 1279
+                "x": 764.3333333333333,
+                "y": 1401.3333333333333
+            }
+        },
+        "TileMaps/Story/Suburban_One.json": {
+            "scale": 1.5,
+            "selectedLayer": 7,
+            "viewCenter": {
+                "x": 674.6666666666666,
+                "y": 1270
             }
         },
         "TileMaps/Story/Suburban_Two.json": {
             "scale": 0.5,
-            "selectedLayer": 4,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 871,
-                "y": 754
+                "x": 791,
+                "y": 798
             }
         },
         "TileMaps/SuburbanTestSide.json": {
@@ -223,15 +239,15 @@
             "selectedLayer": 0,
             "viewCenter": {
                 "x": 791,
-                "y": 798
+                "y": 800
             }
         },
         "TileMaps/Unique/Tutorial.json": {
             "scale": 2,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 792,
-                "y": 799.75
+                "x": 791.75,
+                "y": 731.5
             }
         },
         "TileMaps/beta Maps/Suburban_One.json": {
@@ -380,10 +396,12 @@
             "scaleInEditor": 1
         },
         "TileSets/JSON/010_Shop.json": {
+            "dynamicWrapping": false,
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "TileSets/JSON/011_Introduction.json": {
+            "dynamicWrapping": true,
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -525,26 +543,23 @@
     "map.tileHeight": 16,
     "map.tileWidth": 16,
     "openFiles": [
-        "TileMaps/Story/Suburban_One.json",
-        "TileSets/JSON/002_Indoors.json",
-        "TileSets/JSON/001_Terrain.json",
-        "TileMaps/Story/Suburban_Two.json"
+        "TileMaps/Story/Sewers.json"
     ],
     "project": "GameData.tiled-project",
-    "property.type": "bool",
+    "property.type": "int",
     "recentFiles": [
+        "TileMaps/Story/Sewers.json",
         "TileMaps/Story/Suburban_One.json",
-        "TileSets/JSON/002_Indoors.json",
-        "TileSets/JSON/001_Terrain.json",
-        "TileMaps/Story/Suburban_Two.json",
-        "TileSets/JSON/007_Decoration.json",
-        "TileSets/JSON/006_Nature.json",
-        "TileSets/JSON/008_Security.json",
-        "TileSets/JSON/010_Shop.json",
+        "TileSets/JSON/004_General.json",
         "TileSets/JSON/12_Actors.json",
-        "TileSets/JSON/009_Conditions.json",
+        "TileSets/JSON/003_POI.json",
+        "TileMaps/Unique/Tutorial.json",
         "TileMaps/Unique/Template.json",
-        "TileMaps/Story/Barrens.json"
+        "TileMaps/Story/Mall.json",
+        "TileMaps/Story/Arcology.json",
+        "TileMaps/Story/Barrens.json",
+        "TileMaps/Story/Suburban_Two.json",
+        "TileSets/JSON/002_Indoors.json"
     ],
     "tileset.lastUsedFormat": "json",
     "tileset.tileSize": {

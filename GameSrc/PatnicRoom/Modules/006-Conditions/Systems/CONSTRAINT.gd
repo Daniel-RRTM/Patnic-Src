@@ -45,6 +45,6 @@ static func getDoc() -> Dictionary:   return {
 }
 
 static func getArrToDict(parameter:Array) -> Dictionary :
-	return {    "TYPE"  :  parameter[0] ,  
+	return {    "TYPE"  :  parameter[1] ,  
 				"NAME"  : "CONSTRAINT"  }
 

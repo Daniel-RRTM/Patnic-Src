@@ -7,7 +7,7 @@ class_name _007_006_SPAWN_TILE
 
 static func run(ent:Entity,performance:Array) -> void : 
 	var newEnt = DemocrECS.copyEntity(API_001_Atlas.Tiles().getEntry(performance[0]))
-	SokraTiles.swapInEntity(ent,newEnt)
+	if is_instance_valid(ent):SokraTiles.swapInEntity(ent,newEnt)
 
 
 
@@ -32,7 +32,9 @@ static func getDoc():
 		"toString"         : "Spawn Tile by index",
 
 		"inputModule"      : "TEXTURE"
-
+		,"parameter"       : ["TILE_INDEX"]
+		,"list"       : [API_001_Atlas.Tiles().getEntries()]
+		
 	}
 
 

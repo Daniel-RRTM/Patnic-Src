@@ -19,6 +19,7 @@ var ENUMS            : _TextToolBox_Enum
 var pairManager      : _TextToolBox_PairManager
 var menueManager     : _TextToolBox_MenueManager
 var browserManager   : _TextToolBox_BrowserManager
+var readerManager    : _TextToolBox_ReaderManager
 
 
 
@@ -34,6 +35,7 @@ func _ready() -> void:
 	pairManager    = _TextToolBox_PairManager.new(self)
 	menueManager   = _TextToolBox_MenueManager.new(self)
 	browserManager = _TextToolBox_BrowserManager.new(self)
+	readerManager  = _TextToolBox_ReaderManager.new(self)
 	
 	mainTed.grab_focus()
 	menueManager.loadMainMenue()
@@ -68,8 +70,12 @@ func _input(event: InputEvent) -> void :
 			
 			menueManager.checkMenueMode()
 			
+			#>>> DESIGN MODE <<<#
 			if   isCurrent(ENUMS.MODES.WRITE_PAIR): pairManager.checkPairMode()
-			elif isCurrent(ENUMS.MODES.READ) and !isCurrent(ENUMS.FORMS.VOID): browserManager.checkBrowseMode()
+			#>>> BROWSE MODE <<<#
+			elif isCurrent(ENUMS.MODES.BROWSE) and !isCurrent(ENUMS.FORMS.VOID): browserManager.checkBrowseMode()
+			#>>> READ MODE <<<#
+			elif isCurrent(ENUMS.MODES.READ) : readerManager.checkReaderMode()
 	
 
 

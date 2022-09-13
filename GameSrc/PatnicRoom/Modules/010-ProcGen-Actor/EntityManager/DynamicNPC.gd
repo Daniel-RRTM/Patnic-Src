@@ -25,9 +25,9 @@ func dictGenerateActor(dict:Dictionary) -> ActorEntity:
 	
 
 	#>>> Add Templates <<<#
-	ent.addTemplate("race",raceTemplate)
-	ent.addTemplate("role",roleTemplate)
-	ent.addTemplate("specialty",specialtyTemplate)
+	ent.addTemplate("RACE",raceTemplate)
+	ent.addTemplate("ROLE",roleTemplate)
+	ent.addTemplate("SPECIALTY",specialtyTemplate)
 	ent.addComponent(C_11_RACE_NAME.new(raceTemplate.getCompValue("C_6_NAME")))
 
 	#>>> Add Synonym <<<#
@@ -39,8 +39,8 @@ func dictGenerateActor(dict:Dictionary) -> ActorEntity:
 	
 
 	#>>> Add Attributes <<<#
-	var attributesOfRace = ent.getCompTempValue("race","C_19_ATTRIBUTES")
-	var attributesOfRole = ent.getCompTempValue("role","C_19_ATTRIBUTES")
+	var attributesOfRace = ent.getCompTempValue("RACE","C_19_ATTRIBUTES")
+	var attributesOfRole = ent.getCompTempValue("ROLE","C_19_ATTRIBUTES")
 	
 	var attributesSum = {}
 	for key in attributesOfRace.keys():
@@ -50,8 +50,8 @@ func dictGenerateActor(dict:Dictionary) -> ActorEntity:
 
 
 	#>>> Add Skills <<<#
-	var skillOfSpecialty = ent.getCompTempValue("specialty","C_20_SKILLBLOCK")
-	var skillOfRole      = ent.getCompTempValue("role","C_20_SKILLBLOCK")
+	var skillOfSpecialty = ent.getCompTempValue("SPECIALTY","C_20_SKILLBLOCK")
+	var skillOfRole      = ent.getCompTempValue("ROLE","C_20_SKILLBLOCK")
 	var skillSum = {}
 	for key in skillOfSpecialty.keys() : skillSum[key] = skillOfRole[key] + skillOfSpecialty[key]
 	ent.addComponent(C_20_SKILLBLOCK.new())

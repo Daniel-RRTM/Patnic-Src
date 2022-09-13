@@ -7,21 +7,6 @@
   "kitventory" : [
   ],
 
-  "ressources" : {
-     "Synths"      : 0
-    ,"Electronics" : 0
-    ,"Steel"       : 0
-    ,"biomass"     : 0
-  },
-
-  "cloudprinter storage" : [
-
-  ],
-
-  "unicycler licenses":[
-
-  ],
-
   "station":{
 
     "Workshop":{

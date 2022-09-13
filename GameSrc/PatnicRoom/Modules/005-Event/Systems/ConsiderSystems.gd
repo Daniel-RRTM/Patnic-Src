@@ -14,6 +14,7 @@ func declare() -> void:
 		,"FLAG" : _004_Consider_Flag
 		,"PROP" : _004_Consider_Property
 		,"TYPE" : _004_Consider_Type
+		,"TEMP" : _004_Consider_Template
 	}
 
 func prepare() -> void: pass
@@ -41,7 +42,7 @@ func getTriggeredFromConsiderations(taskData:Dictionary) -> Array:
 		
 		
 		elif "OR" in consi.connector :
-			taskData.triggeredEnts += self.operations[consi.operation].run(consi.parameter,taskData.triggeredEnts)
+			taskData.triggeredEnts += self.operations[consi.operation].run(consi.parameter,taskData.selectedEnts)
 		
 		
 		elif "AND" in consi.connector :

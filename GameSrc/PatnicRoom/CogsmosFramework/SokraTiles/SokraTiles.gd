@@ -12,22 +12,36 @@ extends Node
 var tilemap       = {}
 var tilemapNode   = {}
 var actors_on_map = {}
+var allCuratedMaps = {}
+
+var hasPlayerRested:bool
+var spawnLayer = {}
 
 
-func _ready() -> void : TilesetParser.run()
+func _ready() -> void : 
+	TilesetParser.run()
+	allCuratedMaps = SokraTiles_CuratedMapsParser.parse()
 
 
 
 # ----- TILEMAP ------------------------------------------------------------ ##
 
 
-func parseTilemap(tileMapFilePath:String) -> void :
-	self.tilemap = SokraTiles_TilemapParser.parseTileMap(tileMapFilePath)
-	Signals.emit_signal("Tilemap_Changed")
-
 func addLayerManager(layerEnum,chunkClass) -> void :
 	tilemapNode[layerEnum] = chunkClass
 
+func loadRandomChunk() -> void:
+	var chunkName = Utils.rng().getRandomFromArray(allCuratedMaps.keys())
+	API_014_NewsLog.metaEntry("Loading Random Chunk: "+chunkName)
+	AresProcGenes.loadStaticMap(allCuratedMaps[chunkName])
+
+func loadChunk(tileMapFilePath:String) -> void :
+	self.tilemap = SokraTiles_TilemapParser.parseByString(tileMapFilePath)
+	Signals.emit_signal("Tilemap_Changed")
+
+
+
+# ----- CELL --------------------------------------------------------------- ##
 
 
 func swapInEntity(oldEnt,newEnt):
@@ -39,6 +53,7 @@ func removeEntOnTilemap(ent):
 	var tilemapNode = SokraTiles.getLayerNode(ent.layer())
 	tilemapNode.drawCell_quack("-1",ent.pos())
 	tilemapNode.removeEntOnMap_quack(ent)
+	ent.queue_free()
 
 func addEntOnTilemap(ent):
 	var tilemapNode = SokraTiles.getLayerNode(ent.layer())
@@ -77,4 +92,9 @@ func getMatrixFloor()    -> SokraTiles_Chunk_Matrix_Floor         :   return til
 func getMagicInteract()  -> SokraTiles_Chunk_Magic_Interactables  :   return tilemapNode[ENUM.SOKRATILES.LAYER.MAGIC_INTERACTABLE]
 func getMagicFloor()     -> SokraTiles_Chunk_Magic_Floor          :   return tilemapNode[ENUM.SOKRATILES.LAYER.MAGIC_GROUND]
 
+
+
+# ----- GETTER --------------------------------------------------------------- ##
+
+func setHasPlayerRested(hasRestedPara) -> void : hasPlayerRested = hasRestedPara
 

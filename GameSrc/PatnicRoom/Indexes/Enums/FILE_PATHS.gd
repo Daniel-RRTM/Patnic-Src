@@ -28,6 +28,7 @@ const SCENES = {
 	,REST       = "res://GameSrc/PatnicRoom/scenes/Gameloop/RestMode/Progression.tscn"
 	,PANIC      = "res://GameSrc/PatnicRoom/scenes/Gameloop/PanicMode/PanicMode.tscn"
 	,ALECANDRIA = "res://GameSrc/Alecandria/Main.tscn"
+	
 }
 
 

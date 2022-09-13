@@ -12,10 +12,11 @@ func declare() -> void:
 	}
 	
 	self.operations  = {
-		"spawn actor"     : _API_017_Cmd_SpawnTemplateActor ,
+		"spawn cstm actor"     : _API_017_Cmd_SpawnCustomeActor ,
+		"spawn temp actor"     : _API_017_Cmd_SpawnTemplateActor ,
 		"all kitparts"    : _API_017_Cmd_AddAllKitParts     ,
-		"load unique map" : _API_017_Cmd_LoadUniqueMap      ,
-		"load story map"  : _API_017_Cmd_LoadStoryMap       ,
+		"unique map" : _API_017_Cmd_LoadUniqueMap      ,
+		"story map"  : _API_017_Cmd_LoadStoryMap       ,
 		"add credits"     : _API_017_Cmd_AddCredits         ,
 		"spawn tile"      : _API_017_Cmd_SpawnTile          ,
 		"restmode"        : _API_017_Cmd_Restmode           ,

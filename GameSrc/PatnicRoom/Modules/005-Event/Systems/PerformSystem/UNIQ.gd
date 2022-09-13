@@ -23,9 +23,11 @@ static func convertArrayToDict(parameters:Array) -> Dictionary : return {
 
 
 func getAutoDoc() -> Dictionary : return {
-	"descriiption"  : "runs a unique statmod on triggered selection"
+	"description"  : "runs a unique statmod on triggered selection"
 	,"concept"      : "PERFORM"
 	,"name"         : "UNIQ"
-	,"valids"       : [ API_007_Statmod.getStatModNames() , ["further parameter vary drasticly by the used statmod!"] ]
+	,"valids"       : [
+		["UNIQ_INDEX" , ["further parameter vary drasticly by the used statmod!"]]
+	]
 }
  

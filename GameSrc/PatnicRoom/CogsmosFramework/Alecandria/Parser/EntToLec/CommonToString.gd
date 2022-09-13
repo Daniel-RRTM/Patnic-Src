@@ -24,15 +24,16 @@ static func getComps(ent) -> String :
 	var comps = ent.components
 	
 	for compToString in comps.keys():
-		var compValue = ent.getCompValue(compToString)
-		
-		toReturn += "    "
-		toReturn += compToString
-		for i in range(compToString.length()-30,0): toReturn += " "
-		toReturn += "--->    "
-		
-		if is_instance_valid(compValue) : toReturn += getSpecificCompInfo(compValue)+"\n"
-		else                            : toReturn += str(compValue)+"\n"
+		if compToString != "C_14_LEC_RAW_DATA":
+			var compValue = ent.getCompValue(compToString)
+			
+			toReturn += "    "
+			toReturn += compToString
+			for i in range(compToString.length()-30,0): toReturn += " "
+			toReturn += "--->    "
+			
+			if is_instance_valid(compValue) : toReturn += getSpecificCompInfo(compValue)+"\n"
+			else                            : toReturn += str(compValue)+"\n"
 	
 	return toReturn
 

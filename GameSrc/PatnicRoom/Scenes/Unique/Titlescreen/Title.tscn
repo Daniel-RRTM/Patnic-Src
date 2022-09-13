@@ -66,9 +66,6 @@ margin_top = 392.0
 margin_right = 320.0
 margin_bottom = 944.0
 custom_styles/panel = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 56.0
@@ -77,9 +74,6 @@ margin_right = 266.0
 margin_bottom = 802.0
 custom_constants/separation = 30
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="load" type="Button" parent="VBoxContainer"]
 margin_right = 210.0
@@ -159,10 +153,9 @@ __meta__ = {
 }
 
 [node name="Options" type="Button" parent="VBoxContainer"]
-visible = false
-margin_top = 253.0
+margin_top = 315.0
 margin_right = 210.0
-margin_bottom = 286.0
+margin_bottom = 348.0
 custom_colors/font_color = Color( 0.878431, 1, 0.988235, 1 )
 custom_colors/font_color_hover = Color( 0.992157, 1, 0.72549, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.25098, 0.25098, 1 )
@@ -184,6 +177,22 @@ custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Intro2" type="Button" parent="."]
+anchor_top = 0.361582
+anchor_bottom = 0.361582
+margin_left = 56.0
+margin_top = 891.0
+margin_right = 266.0
+margin_bottom = 924.0
+custom_colors/font_color = Color( 0.878431, 1, 0.988235, 1 )
+custom_colors/font_color_hover = Color( 0.992157, 1, 0.72549, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.25098, 0.25098, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = ExtResource( 12 )
+custom_styles/normal = ExtResource( 11 )
+text = "Exit"
 
 [node name="InjectablePanel" type="Node" parent="."]
 
@@ -238,3 +247,4 @@ __meta__ = {
 [connection signal="pressed" from="VBoxContainer/Credits" to="VBoxContainer" method="_on_press" binds= [ 5 ]]
 [connection signal="pressed" from="VBoxContainer/Intro" to="VBoxContainer" method="_on_press" binds= [ 3 ]]
 [connection signal="pressed" from="VBoxContainer/Options" to="VBoxContainer" method="_on_press" binds= [ 4 ]]
+[connection signal="pressed" from="Intro2" to="VBoxContainer" method="_on_press" binds= [ 6 ]]

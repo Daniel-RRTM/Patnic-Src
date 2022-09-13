@@ -14,6 +14,9 @@ script = ExtResource( 4 )
 
 [node name="root_GUI" parent="." instance=ExtResource( 6 )]
 
+[node name="root_SidePanel" parent="." instance=ExtResource( 2 )]
+position = Vector2( 16, 0 )
+
 [node name="root_Map" parent="." instance=ExtResource( 7 )]
 
 [node name="root_Entropy Bar" parent="." instance=ExtResource( 3 )]
@@ -26,12 +29,6 @@ visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="root_SidePanel" parent="." instance=ExtResource( 2 )]
-position = Vector2( 16, 0 )
 
 [node name="root_ViewMode" parent="." instance=ExtResource( 9 )]
 position = Vector2( 8.00903, 0 )

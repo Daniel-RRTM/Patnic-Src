@@ -9,8 +9,8 @@ class_name _Alecandria_LecToEnt
 static func parse() -> void:
 	#for filepath in _Alecandria_Util.getLecsInFilepath(ENUM.ALECANDRIA.STABLE_GAME_DATA):
 	for filePath in _Alecandria_Util.getLecsInFilepath(ENUM.ALECANDRIA.STABLE_GAME_DATA):
-		var content          = _Alecandria_Parser_Util.loadContent(filePath)
-		content              = _Alecandria_Parser_Util.removeSeparators(content)
+		var rawData          = _Alecandria_Parser_Util.loadContent(filePath)
+		var content              = _Alecandria_Parser_Util.removeSeparators(rawData)
 		content              = _Alecandria_Parser_Util.scopeSector(content)
 		 
 		var metaSection      = _Alecandria_Parser_StructureBuilder.buildMetaStructure(content["META"])
@@ -22,7 +22,7 @@ static func parse() -> void:
 		
 		for package in mainSection.keys():
 			ent =  _Alecandria_Parser_Util.getPackageParserByKeyWord()[package].run(mainSection[package],ent)
-			
+			ent.addComponent(C_14_LEC_RAW_DATA.new(rawData))
 		
 		_Alecandria_Parser_Util.addToAtlas(ent)
 

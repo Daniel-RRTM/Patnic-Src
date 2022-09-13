@@ -13,14 +13,9 @@ extends Node
 var actorsOnMap = SokraTiles.getAllActorsOnMap()
 
 var staticMaps = {
-	"STORY" : {
-		"Suburban_One" : "res://GameData/Tiled/TileMaps/Story/Suburban_One.json",
-		"Arcology"     : "res://GameData/Tiled/TileMaps/Story/Arcology.json",
-		"Barrens"      : "res://GameData/Tiled/TileMaps/Story/Barrens.json",
-		"Mall"         : "res://GameData/Tiled/TileMaps/Story/Mall.json"
-	},
+	"STORY" : SokraTiles.allCuratedMaps,
 	"UNIQUE"  : {
-		"EXPERIMENTAL":"res://GameData/Tiled/TileMaps/Unique/Experimental.json",
+		"EXPERIMENTAL":ENUM.FILE_PATHS.EXPERIMENTAL_TILEMAP,
 		"TUTORIAL":"res://GameData/Tiled/TileMaps/Unique/Tutorial.json"
 	}
 }

@@ -27,7 +27,7 @@ func _init() :
 
 func updateOnEnteringPanicroom():
 	for station in [meat,matrix,magic]:
-		if is_instance_valid(station.kitset):
+		if is_instance_valid(station.kitset) and is_instance_valid(station.kitpartToMod):
 			currentStation = station
 			
 			if station.isCounting: station.currentLength += 1
@@ -39,13 +39,12 @@ func updateOnEnteringPanicroom():
 func run():
 	match currentStation.mode:
 		ENUM.KITS.STATION_MODE.ADD    : add()
-		ENUM.KITS.STATION_MODE.CHANGE : add()
+		ENUM.KITS.STATION_MODE.CHANGE : exchange()
 		ENUM.KITS.STATION_MODE.REMOVE : remove()
 	
-	var kitset   = currentStation.kitset
-	var kitParts = [ kitset.base, kitset.mod, kitset.appendix ]
-	kitset       = API_004_KitSet.getMergedKitsets(kitParts)
-	API_003_Player.currentChar.kitventory().kitsets().append(kitset)
+
+	
+	
 
 
 
@@ -53,14 +52,50 @@ func run():
 
 
 func remove(): 
-	match currentStation.kitpartToMod:
+	for part in [currentStation.kitset.base,currentStation.kitset.mod,currentStation.kitset.appendix]: 
+		if is_instance_valid(part):
+			API_003_Player.currentChar.kitventory().kitparts().append(part)
+	
+	API_003_Player.currentChar.kitventory().kitparts().append(currentStation.kitpartToMod)
+	
+	match currentStation.kitpartToMod.partType():
 		ENUM.KITS.PARTS.MOD      : currentStation.kitset.mod      = null
 		ENUM.KITS.PARTS.APPENDIX : currentStation.kitset.appendix = null
+		ENUM.KITS.PARTS.BASE : 
+			currentStation.kitset.appendix = null
+			currentStation.kitset.base = null
+			currentStation.kitset.mod = null
+
+
 
 func add(): 
 	match currentStation.kitpartToMod.partType():
 		ENUM.KITS.PARTS.MOD      : currentStation.kitset.mod      = currentStation.kitpartToMod 
 		ENUM.KITS.PARTS.APPENDIX : currentStation.kitset.appendix = currentStation.kitpartToMod
+	
+	var kitset   = currentStation.kitset
+	var kitParts = [ kitset.base, kitset.mod, kitset.appendix ]
+	kitset       = API_004_KitSet.getMergedKitsets(kitParts)
+	
+	var charKitsets = API_003_Player.currentChar.kitventory().kitsets().cacheKitset
+	var index = API_003_Player.currentChar.kitventory().kitsets().remove(currentStation.kitset.toString)
+	API_003_Player.currentChar.kitventory().kitsets().append(kitset)
+
+
+func exchange():
+	API_003_Player.currentChar.kitventory().kitsets().remove(currentStation.kitset)
+	var kitset = []
+	
+	if currentStation.kitpartToMod.partType() == ENUM.KITS.PARTS.MOD: 
+		API_003_Player.currentChar.kitventory().kitparts().append(currentStation.kitset.mod)
+		kitset = [currentStation.kitset.base,currentStation.kitpartToMod,currentStation.kitset.appendix]
+	
+	if currentStation.kitpartToMod.partType() == ENUM.KITS.PARTS.APPENDIX: 
+		API_003_Player.currentChar.kitventory().kitparts().append(currentStation.kitset.appendix)
+		kitset = [currentStation.kitset.base,currentStation.kitset.mod,currentStation.kitpartToMod]
+	
+	API_003_Player.currentChar.kitventory().kitsets().append(API_004_KitSet.getMergedKitsets(kitset))
+	
 
 
 func changeStation(enumOfMtype):

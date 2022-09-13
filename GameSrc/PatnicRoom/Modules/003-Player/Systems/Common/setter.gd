@@ -7,9 +7,8 @@ var currentStation
 
 func setKitset(kitset:KitSetEntity):
 	updateCurrentStation()
-	setOnDefault()
 	currentStation.kitset = kitset
-
+	updateCurrentStation()
 
 func setKitPartToMod(kitPart:KitPartEntity):
 	updateCurrentStation()

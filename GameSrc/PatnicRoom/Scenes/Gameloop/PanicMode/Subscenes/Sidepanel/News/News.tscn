@@ -1,9 +1,35 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://GameSrc/PatnicRoom/scenes/Gameloop/PanicMode/Subscenes/Sidepanel/News/News.gd" type="Script" id=1]
 [ext_resource path="res://Assets/CustomeStyle/Button/Default/SpanishViolet/Normal.tres" type="StyleBox" id=2]
+[ext_resource path="res://GameSrc/PatnicRoom/scenes/Gameloop/PanicMode/Subscenes/Sidepanel/News/TextEdit.gd" type="Script" id=3]
 [ext_resource path="res://Assets/DynamicFonts/Panel_Title.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Assets/DynamicFonts/new_dynamicfontdata.tres" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=7]
+size = 15
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.14902, 0.14902, 0.14902, 1 )
+border_width_left = 3
+border_width_right = 3
+border_color = Color( 0.635294, 1, 0.964706, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.14902, 0.14902, 0.14902, 1 )
+border_width_left = 2
+border_width_right = 2
+border_color = Color( 0.278431, 0.984314, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.196078, 0.196078, 0.196078, 1 )
@@ -37,7 +63,7 @@ border_color = Color( 0.592157, 0.643137, 0.764706, 1 )
 resource_name = "LeftToRight"
 length = 0.3
 tracks/0/type = "value"
-tracks/0/path = NodePath("Background:rect_position")
+tracks/0/path = NodePath("Control/Background:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -53,7 +79,7 @@ tracks/0/keys = {
 resource_name = "rightToLeft"
 length = 0.3
 tracks/0/type = "value"
-tracks/0/path = NodePath("Background:rect_position")
+tracks/0/path = NodePath("Control/Background:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -67,18 +93,69 @@ tracks/0/keys = {
 
 [node name="root_News" type="Control"]
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Background" type="Panel" parent="."]
-margin_left = 1895.16
-margin_right = 2618.16
-margin_bottom = 829.0
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Background" type="Panel" parent="Control"]
+margin_left = 1920.0
+margin_top = 826.0
+margin_right = 2643.0
+margin_bottom = 1655.0
 custom_styles/panel = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="Kit" type="CheckButton" parent="Control"]
+margin_left = 1200.0
+margin_top = 48.0
+margin_right = 1297.0
+margin_bottom = 88.0
+pressed = true
+text = "Kit"
+
+[node name="Meta" type="CheckButton" parent="Control"]
+margin_left = 1368.0
+margin_top = 48.0
+margin_right = 1480.0
+margin_bottom = 88.0
+pressed = true
+text = "Meta"
+
+[node name="Monitor" type="CheckButton" parent="Control"]
+margin_left = 1528.0
+margin_top = 48.0
+margin_right = 1658.0
+margin_bottom = 88.0
+pressed = true
+text = "Monitor"
+
+[node name="Gear" type="CheckButton" parent="Control"]
+margin_left = 1720.0
+margin_top = 48.0
+margin_right = 1830.0
+margin_bottom = 88.0
+pressed = true
+text = "Gear"
+
+[node name="TextEdit" type="TextEdit" parent="Control"]
+margin_left = 1192.0
+margin_top = 94.0
+margin_right = 1840.0
+margin_bottom = 822.0
+custom_colors/safe_line_number_color = Color( 1, 0.709804, 0.992157, 1 )
+custom_colors/symbol_color = Color( 0.74902, 0.74902, 0.74902, 1 )
+custom_colors/caret_color = Color( 0.231373, 0.831373, 0.105882, 1 )
+custom_colors/font_color = Color( 0.960784, 1, 0.678431, 1 )
+custom_colors/line_number_color = Color( 0.00784314, 0.87451, 0.956863, 1 )
+custom_colors/completion_scroll_color = Color( 1, 0.462745, 0.462745, 1 )
+custom_colors/number_color = Color( 0.603922, 1, 0.443137, 1 )
+custom_fonts/font = SubResource( 7 )
+custom_styles/read_only = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+syntax_highlighting = true
+show_line_numbers = true
+smooth_scrolling = true
+script = ExtResource( 3 )
 
 [node name="LiftedTab" type="Panel" parent="."]
 visible = false
@@ -954,4 +1031,8 @@ __meta__ = {
 anims/LeftToRight = SubResource( 5 )
 anims/rightToLeft = SubResource( 6 )
 
+[connection signal="pressed" from="Control/Kit" to="." method="refreshFilter" binds= [ "KIT" ]]
+[connection signal="pressed" from="Control/Meta" to="." method="refreshFilter" binds= [ "META" ]]
+[connection signal="pressed" from="Control/Monitor" to="." method="refreshFilter" binds= [ "MONITOR" ]]
+[connection signal="pressed" from="Control/Gear" to="." method="refreshFilter" binds= [ "GEAR" ]]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

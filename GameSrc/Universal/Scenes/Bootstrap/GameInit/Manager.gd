@@ -16,10 +16,10 @@ func _on_default_pressed() -> void:
 	OS.window_fullscreen = !OS.window_fullscreen
 	Gameloop.startTitleMode()
 
-
-func _on_DioJSONes_pressed():
+# TODOD entfernen
+func alt_Alecandria():
 	OS.window_fullscreen = !OS.window_fullscreen
-	get_tree().change_scene(ENUM.FILE_PATHS.SCENES.ALECANDRIA)
+	get_tree().change_scene("res://GameSrc/Alt Alecandria/Main.tscn")
 
 
 func _on_options_pressed() -> void:

@@ -17,7 +17,10 @@ func _ready():
 func _input(event:InputEvent) -> void:
 	if isMouseOnNode(self) and event.is_action("Interface_Mouse_Left"):
 		API_009_Sound.playLeavePanicRoom()
-		Gameloop.startPanicMode()
+		SokraTiles.setHasPlayerRested(true) 
+		get_tree().change_scene(ENUM.FILE_PATHS.SCENES.PANIC)
+		var test = API_003_Player.stations
+		
 		
 	if isMouseOnNode(self):
 		bbcode_text = "[color=red]"+writtenOut

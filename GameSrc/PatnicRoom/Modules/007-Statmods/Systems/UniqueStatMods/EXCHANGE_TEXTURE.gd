@@ -31,6 +31,9 @@ static func getDoc():
 		"toString"         : "Change Texture to C_58_ALTERNATIVE_TEXTURES",
 
 		"inputModule"      : "BOOL"
+		,"parameter"       : []
+		,"list"       : []
+
 
 	}
 

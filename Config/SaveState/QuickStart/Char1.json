@@ -11,12 +11,6 @@
 
 
 
-  "gear" : [
-
-  ],
-
-
-
   "attributes":{
     "con":"6",
     "agi":"3",
@@ -31,19 +25,11 @@
 
 
 
-  "skills" : {
 
-  },
 
 
 
   "kitsets":[
-  ],
-
-
-
-  "traits":[
-
   ]
 
 

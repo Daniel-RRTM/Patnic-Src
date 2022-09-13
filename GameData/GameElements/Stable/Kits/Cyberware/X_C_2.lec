@@ -1,0 +1,72 @@
+META{
+  INDEX ---> X_C_2
+  USE   ---> KITPART_BASE
+  BY    ---> RedRastaRigger(inhouse)
+}
+
+
+
+//==============================================================================\\
+//==============================================================================\\
+//==============================================================================\\
+
+
+
+MAIN{
+
+
+//------------------------------------------------------------------------------\\
+  COMPONENTS[
+    C_6_NAME ---> Dermal plates
+    C_12_ATLAS_INDEX ---> X_C_2
+    C_0_DESCRIPTION ---> strong steelplates, mounted beneath the skin
+    C_35_KIT_MECHANICAL_SUMMARY ---> grants 10 Hitpoints passively
+    C_48_RARITY --->  3
+    C_31_KIT_CAT_TYPE --->  CYBERWARE
+    C_37_M_TYPE ---> MEAT
+    C_38_KIT_PART_TYPE ---> BASE
+    C_36_KIT_MOD_TIME ---> 1
+    C_33_COOLDOWN_TIMER ---> 99
+    C_49_EVENT_REFERENCE ---> X_C_2
+  ]
+
+
+//------------------------------------------------------------------------------\\
+  FLAGS[
+    F_5_KITPART_TYPE
+    F_15_KITPART_TYPE_BASE
+  ]
+
+
+//------------------------------------------------------------------------------\\
+  SELECT[
+    SEIZE:
+      MEDIUM ---> SELF
+      SOURCE ---> SELF
+      REACH ---> 3
+    CONSIDER:
+      THIS ---> TYPE IS ACTOR
+    PERFORM:
+      CACHE ---> SET THIS FILE
+  ]
+
+
+//------------------------------------------------------------------------------\\
+  RUN[
+    PERFORM:
+      SELF ---> PASSIVE COMP C_57_HITPOINTS INCREMENT 10
+      SELF ---> PASSIVE COMP C_16_MAX_HITPOINTS INCREMENT 10
+  ]
+}
+
+
+
+//==============================================================================\\
+//==============================================================================\\
+//==============================================================================\\
+
+
+
+REFERENCE{
+
+}

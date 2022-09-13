@@ -4,6 +4,7 @@ class_name _KitsUILoader
 
 var itteration
 var kitsShown  = [null,null,null,null,null]
+var entsShown  = []
 var nodePaths  = {
 	 "TITLE"    : "Title/text"
 	,"COOLDOWN" : "Title/cooldownTimer"
@@ -13,8 +14,10 @@ var nodePaths  = {
 	,"APPENDIX" : "kitAppendix/AppendixText"
 }
 
+func _init() -> void: Signals.connect("Actor_Turn_Finished",self,"refreshCoolDowns")
 
 func _ready() -> void:
+	
 	getShownKitPanels()
 	fillFirstSide()
 
@@ -38,11 +41,12 @@ func fillSecondSide():
 
 
 func itterateThroughPage():
+	entsShown.clear()
 	for kitSetForm in kitsShown:
-		
 		var kitSetEntity = API_003_Player.currentChar.kitventory().kitsets().getByNr(itteration)
-		
-		if is_instance_valid(kitSetEntity):  fillKitsetForm(kitSetForm,kitSetEntity)
+		if is_instance_valid(kitSetEntity):  
+			fillKitsetForm(kitSetForm,kitSetEntity)
+			entsShown.append(kitSetEntity)
 		else: clearKitSetForm(kitSetForm)
 		itteration += 1
 
@@ -77,5 +81,13 @@ func formatKitNrBBCode():                      return "[color=yellow]"+str(itter
 
 
 
-
+func refreshCoolDowns() -> void:
+	for i in get_children().size():
+		var current = entsShown[i].currentCooldownTime
+		var total = entsShown[i].cooldownTime
+		var toStr
+		if current == total : toStr="[color=green]READY[/color]"
+		else                :toStr="[color=yellow]"+str(current)+"[/color]/[color=red]"+str(total)
+		get_node("Kit"+str(i+1)+"/Title/cooldownTimer").bbcode_text = toStr
+		
 

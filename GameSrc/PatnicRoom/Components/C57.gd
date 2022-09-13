@@ -16,7 +16,7 @@ func _init(valuePara):
 # --- AUTODOC -------- #
 ########################
 static func getAutoDoc(): return{
-	"suggestion"  : "",
+	"suggestion"  : "current Hitpoints, see C_16_MAX_HITPOINTS for max",
 	"description" : "name of its fightingstyle",
 	"validInputs" : [],
 	"validType"   : getType_quack(),

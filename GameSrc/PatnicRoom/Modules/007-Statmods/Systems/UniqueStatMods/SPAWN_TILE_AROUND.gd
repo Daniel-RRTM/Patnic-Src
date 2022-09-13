@@ -45,6 +45,8 @@ static func getDoc():
 		"toString"         : "Spawn Tile around by index",
 
 		"inputModule"      : "TEXTURE"
+		,"parameter"       : ["TILE_INDEX"]
+		,"list"       : [API_001_Atlas.Tiles().getEntries()]
 
 	}
 

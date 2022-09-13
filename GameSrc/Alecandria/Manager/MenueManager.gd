@@ -30,7 +30,7 @@ func checkMenueMode() -> void:
 		if   isMainMenue()       :   root.CURRENT_SCENE = _TextToolBox_Input.getMainMenueEnumByInput(inputLine)
 		elif isFormMenue()       :   formToLoad         = _TextToolBox_Input.getFormEnumByInput(inputLine)
 		
-		if "Browse" in inputLine :   root.CURRENT_MODE  = root.ENUMS.MODES.READ
+		if "Browse" in inputLine :   root.CURRENT_MODE  = root.ENUMS.MODES.BROWSE
 		if "Design" in inputLine :   root.CURRENT_MODE  = root.ENUMS.MODES.WRITE_PAIR
 		
 		setSceneByEnum(formToLoad,inputLine)
@@ -106,7 +106,7 @@ func isFilterReset()                        -> bool :   return root.sideTed.getI
 func isMainMenue()                          -> bool :   return root.isCurrent(root.ENUMS.SCENES.MAIN_MENUE)
 func isFormMenue()                          -> bool :   return root.isCurrent(root.ENUMS.SCENES.SELECTION)
 
-func isBrowsing()                           -> bool :   return root.isCurrent(root.ENUMS.MODES.READ)
+func isBrowsing()                           -> bool :   return root.isCurrent(root.ENUMS.MODES.BROWSE)
 func isPairDesigning()                      -> bool :   return root.isCurrent(root.ENUMS.MODES.WRITE_PAIR)
 
 func noCurrentFormIsFilled()                -> bool :   return root.isCurrent(root.ENUMS.FORMS.VOID)          

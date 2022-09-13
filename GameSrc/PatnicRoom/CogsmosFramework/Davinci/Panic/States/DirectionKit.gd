@@ -19,8 +19,9 @@ func isSpecificallyValid_quack(currentType:int,currentState:int) -> bool:
 
 func actOnInput_quack(currentInput:InputEvent) -> void:  
 	var inputEnum = Davinci.getInputToEnum(currentInput) as int
-	API_004_KitSet.redirectSelection(inputEnum)
-	API_004_KitSet.drawAlert()
-	API_009_Sound.playMovePlayer()
-	Davinci.playerState = ENUM.INPUT_PANIC.PLAYER_STATE.SELECTING
+	if API_004_KitSet.selection is Dictionary:
+		API_004_KitSet.redirectSelection(inputEnum)
+		API_004_KitSet.drawAlert()
+		API_009_Sound.playMovePlayer()
+		Davinci.playerState = ENUM.INPUT_PANIC.PLAYER_STATE.SELECTING
 

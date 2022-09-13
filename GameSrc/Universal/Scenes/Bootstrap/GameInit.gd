@@ -48,7 +48,8 @@ func runDefault() -> void:
 func runTilemapTest() -> void:
 	OS.window_fullscreen = true
 	generateQUickStartChar()
-	SokraTiles.parseTilemap(ENUM.FILE_PATHS.EXPERIMENTAL_TILEMAP)
+	SokraTiles.loadChunk(ENUM.FILE_PATHS.EXPERIMENTAL_TILEMAP)
+	SokraTiles.hasPlayerRested(true)
 	get_tree().change_scene(ENUM.FILE_PATHS.SCENES.PANIC)
 
 
@@ -68,7 +69,7 @@ func runRestmode() -> void:
 
 func runStatistics():
 	OS.window_fullscreen = true
-	Statistics_Hub.new().getStatistics()
+	Statistics_Hub.getStatistics()
 	get_tree().quit()
 
 

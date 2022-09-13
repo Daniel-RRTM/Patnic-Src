@@ -148,9 +148,6 @@ margin_left = -264.0
 margin_top = -104.0
 margin_right = -224.0
 margin_bottom = -64.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Barframe" type="Panel" parent="SwitchPanel/Progression/Workstation/Retreat"]
 margin_left = 480.0

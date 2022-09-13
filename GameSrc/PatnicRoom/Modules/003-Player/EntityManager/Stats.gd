@@ -6,12 +6,10 @@ class_name _005_Character_Stats
 
 
 var attributesInstance
-var skillsInstance
 var indirectInstance
 
 func initialice(playerEntityPara):
 	attributesInstance   = Attributes.new(playerEntityPara.getCompValue("C_19_ATTRIBUTES"))
-	skillsInstance       = Skills.new(playerEntityPara.getCompValue("C_20_SKILLBLOCK"))
 	indirectInstance     = Indirect.new(playerEntityPara)
 
 
@@ -20,7 +18,6 @@ func initialice(playerEntityPara):
 
 
 func attributes() -> Attributes : return attributesInstance
-func skills()     -> Skills     : return skillsInstance
 func indirects()   -> Indirect   : return indirectInstance
 
 

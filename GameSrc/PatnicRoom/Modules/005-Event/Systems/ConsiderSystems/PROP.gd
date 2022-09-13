@@ -34,10 +34,12 @@ static func convertArrayToDict(parameters:Array) -> Dictionary : return {
 
 
 static func getAutoDoc() -> Dictionary : return {
-	 "descriiption" : "returns selections with the Propperty!"
+	 "description" : "returns valid entities with or without searched Property"
 	,"concept"      : "CONSIDER"
 	,"name"         : "PROP"
-	,"inputs"       :  [  ["HAS","NOT"] , "Property" ]
+	,"inputs"       :  [  
+		[ ["HAS","NOT"] , "Property" ]
+	 ]
 }
 
 

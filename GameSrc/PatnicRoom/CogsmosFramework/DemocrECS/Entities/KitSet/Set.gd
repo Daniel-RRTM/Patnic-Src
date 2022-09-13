@@ -22,8 +22,10 @@ var currentCooldownTime : int
 # VAR > general timer of kitset 
 var cooldownTime : int		
 # VAR > combined name of three  
-var toString : String 	                 
+var toString : String 	
 
+func _init()-> void:                
+	Signals.connect("Actor_Turn_Finished",self,"setCooldown")
 
 
 # ----- PROXY FUNCTIONS ---------------------------------------------------- ##
@@ -45,4 +47,14 @@ func getFormatedCooldownTimer():
 func hasMod()               -> bool        :   return is_instance_valid(mod)
 func hasAppendix()          -> bool        :   return is_instance_valid(appendix)
 func getMergedEvent()             -> Dictionary  :   return event
+
+
+
+# ----- SETTER --------------------------------------------------------------- ##
+
+func setCooldown() -> void:
+	if currentCooldownTime != cooldownTime:
+		currentCooldownTime += 1
+
+
 

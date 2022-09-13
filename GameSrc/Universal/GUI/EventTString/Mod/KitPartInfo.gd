@@ -5,30 +5,35 @@ var mode = "N/A"
 var currentModNr = 0
 
 func fillInByIndex(modKitIndex):
-	var mods = API_001_Atlas.KitParts().getEntry(modKitIndex).event().main()["DATA"]
+	var mods = API_001_Atlas.KitParts().getEntry(modKitIndex).event()
 	
 	for category in mods.values():
-		if mods.has("ADDITION")     : mode = "[color=green]+"
-		if mods.has("MODIFICATION") : mode = "[color=yellow]+/-"
-		if mods.has("DELETION")     : mode = "[color=orange]-"
+		if mods.has("ADD")    : addOrRemoveToString(category,"[color=green]+")
+		if mods.has("CHANGE") : changeToString(category,"[color=orange]+/-")
+		if mods.has("REMOVE") : addOrRemoveToString(category,"[color=orange]-")
+
+
+
+
+func addOrRemoveToString(category,prefix) -> void:
+	for i in category.size():
+		var currentMod = category[i].duplicate(true)
 		
-		for i in category.size():
-			var currentMod = category[i].duplicate()
-			
-			var row = get_node("Effect/List/row"+str(i))
-			row.get_node("Mode/RTL").bbcode_text = mode
-			row.get_node("Upper/RTL").bbcode_text = currentMod.pop_front()
-			row.get_node("Middle/RTL").bbcode_text = currentMod.pop_front()
-			row.get_node("Lower/RTL").bbcode_text = str(currentMod)
-			
-			
-	
-	
+		var row = get_node("Effect/List/Row"+str(i))
+		row.get_node("Mode/RTL").bbcode_text = prefix
+		row.get_node("Upper/RTL").bbcode_text = currentMod.pop_front()
+		row.get_node("Middle/RTL").bbcode_text = currentMod.pop_front()
+		row.get_node("Lower/RTL").bbcode_text = str(currentMod)
 
 
-
-
-
+func changeToString(category,prefix) -> void:
+	for i in category.size():
+		var currentMod = category[i].duplicate(true)["value"] as Array
+		var row = get_node("Effect/List/Row"+str(i))
+		row.get_node("Mode/RTL").bbcode_text = prefix
+		row.get_node("Upper/RTL").bbcode_text = currentMod.pop_front()
+		row.get_node("Middle/RTL").bbcode_text = currentMod.pop_front()
+		row.get_node("Lower/RTL").bbcode_text = str(currentMod)
 
 
 

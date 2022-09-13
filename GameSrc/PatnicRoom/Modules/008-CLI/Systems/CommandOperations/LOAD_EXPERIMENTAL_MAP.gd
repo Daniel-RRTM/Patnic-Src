@@ -8,7 +8,7 @@ class_name _API_017_Cmd_LoadUniqueMap
 static func getAutoDoc() -> Dictionary:
 	return{	"toString"  : "load unique map"                    ,
 			"parameter" : ["name"]                             ,
-			"list"      : [AresProcGenes.staticMaps["UNIQUE"]] ,
+			"list"      : [AresProcGenes.staticMaps["UNIQUE"].keys()] ,
 			"group"     : "spawn"                              ,
 			"input"     : "unique map"                         }
 

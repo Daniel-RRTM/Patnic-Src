@@ -23,7 +23,12 @@ func createActorTemplate(toConvert) -> ActorEntity:
 
 func RNGenerateBasicActor(templateForGeneration) -> ActorEntity:
 	return entMan.RNGeneratBasicActor(templateForGeneration)
-
+	
+func createActorSpecific(toConvert) -> ActorEntity:
+	if toConvert is Array: 
+		return entMan.dictGenerateActor({"C_12_FOR_RACE":toConvert[0],"C_12_FOR_ROLE":toConvert[1],"C_12_FOR_SPECIALTY":toConvert[2]})
+	else:
+		return entMan.dictGenerateActor(toConvert)
 
 
 # ----- SETTER ------------------------------------------------------------- ##
@@ -40,5 +45,6 @@ func removeActorFromGame(ent:ActorEntity):
 	SokraTiles.getActor().entsOnMap.erase(ent.get_instance_id())
 	SokraTiles.getActor()._drawCell("-1",body.position)
 	ent.free()
+	if Utils.rng().getRandomFromArray([true,false]): API_011_ProcGen_Loot.generateLoot()
 
 

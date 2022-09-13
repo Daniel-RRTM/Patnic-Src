@@ -10,7 +10,7 @@ static func getAutoDoc() -> Dictionary:
 			"parameter" : ["template"]                                     ,
 			"list"      :  [API_001_Atlas.RNGActorTemplate().getEntries().keys()] ,
 			"group"     : "spawn"                                          ,
-			"input"     : "spawn actor"                                    }
+			"input"     : "spawn temp actor"                                    }
 
 
 

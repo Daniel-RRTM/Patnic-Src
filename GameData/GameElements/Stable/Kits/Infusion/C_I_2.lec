@@ -23,9 +23,9 @@ MAIN{
   C_35_KIT_MECHANICAL_SUMMARY --->  places tarmac in radius of 3
   C_48_RARITY --->  3
   C_31_KIT_CAT_TYPE --->  INFUSION
-  C_37_M_TYPE ---> MEAT
+  C_37_M_TYPE ---> MAGIC
   C_38_KIT_PART_TYPE ---> BASE
-  C_36_KIT_MOD_TIME ---> 2
+  C_36_KIT_MOD_TIME ---> 1
   C_33_COOLDOWN_TIMER ---> 1
   C_49_EVENT_REFERENCE ---> C_I_2
   ]
@@ -41,11 +41,11 @@ MAIN{
 //------------------------------------------------------------------------------\\
   SELECT[
     SEIZE:
-      MEDIUM ---> SELECT
+      MEDIUM ---> AREA
       SOURCE ---> SELF
-      REACH ---> 5
+      REACH ---> 3
     CONSIDER:
-      THIS ---> TYPE IS ACTOR
+      THIS ---> TYPE IS TILE
     PERFORM:
       CACHE ---> SET THIS FILE
   ]
@@ -54,7 +54,7 @@ MAIN{
 //------------------------------------------------------------------------------\\
   RUN[
     PERFORM:
-      FILE ---> UNIQ SPAWN_TILE_AROUND Terrain_0_0 3
+      FILE ---> UNIQ SPAWN_TILE Terrain_0_0
   ]
 }
 

@@ -52,6 +52,7 @@ func _on_Timer_timeout() -> void:
 			
 			if station.value == stationData.maxLength: 
 				station.get_node("../../link").visible = true
+				API_003_Player.stationSetter.setOnDefault()
 
 
 

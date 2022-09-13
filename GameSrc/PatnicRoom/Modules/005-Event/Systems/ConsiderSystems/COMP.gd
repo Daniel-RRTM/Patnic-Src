@@ -11,29 +11,18 @@ class_name _004_Consider_Component
 static func run(para:Dictionary, toConsider:Array) -> Array :
 	var toReturn = []
 	for ent in toConsider:
-		
 		if ent.hasComp(para.compName):
 			var compInstance = ent.getComp(para.compName)
+			var toCompare = para.value
+			if !DemocrECS.getAllComponents().keys().has(para.value) and ent.hasComp(para.value): toCompare.getCompValue(para.value)
 			
-			
-			if para.value is Array:
-				for value in para.value:
-					match compInstance.getType_quack():
-						"BOOLEAN"   : if validateBoolean(value.to_upper(), compInstance.value)      : toReturn.append(ent)      
-						"INTEGER"   : if validateInteger(value, compInstance.value, para.operand)   : toReturn.append(ent)
-						"STRING"    : if validateString(value, compInstance.value)                  : toReturn.append(ent)
-						"CONTAINER" : printerr("CONSIDERING AN CONTAINER/DICTIONARY COMPONENT IS NOT IMPLEMENTED YET")
-						"ARRAY"     : printerr("CONSIDERING AN ARRAY COMPONENT IS NOT IMPLEMENTED YET")
-						"NULL"      : printerr("CONSIDERING AN NULL COMPONENT IS NOT IMPLEMENTED YET")
-			
-			else:
-				match compInstance.getType_quack():
-					"BOOLEAN"   : if validateBoolean(para.value.to_upper(), compInstance.value)      : toReturn.append(ent)      
-					"INTEGER"   : if validateInteger(para.value, compInstance.value, para.operand)   : toReturn.append(ent)
-					"STRING"    : if validateString(para.value, compInstance.value)                  : toReturn.append(ent)
-					"CONTAINER" : printerr("CONSIDERING AN CONTAINER/DICTIONARY COMPONENT IS NOT IMPLEMENTED YET")
-					"ARRAY"     : printerr("CONSIDERING AN ARRAY COMPONENT IS NOT IMPLEMENTED YET")
-					"NULL"      : printerr("CONSIDERING AN NULL COMPONENT IS NOT IMPLEMENTED YET")
+			match compInstance.getType_quack():
+				"BOOLEAN"   : if validateBoolean(toCompare.to_upper(), compInstance.value)      : toReturn.append(ent)      
+				"INTEGER"   : if validateInteger(toCompare, compInstance.value, para.operand)   : toReturn.append(ent)
+				"STRING"    : if validateString(toCompare, compInstance.value)                  : toReturn.append(ent)
+				"CONTAINER" : printerr("CONSIDERING AN CONTAINER/DICTIONARY COMPONENT IS NOT IMPLEMENTED YET")
+				"ARRAY"     : printerr("CONSIDERING AN ARRAY COMPONENT IS NOT IMPLEMENTED YET")
+				"NULL"      : printerr("CONSIDERING AN NULL COMPONENT IS NOT IMPLEMENTED YET")
 			
 	
 	
@@ -83,10 +72,12 @@ static func convertArrayToDict(parameters:Array) -> Dictionary :
 
 
 static func getAutoDoc() -> Dictionary : return {
-	 "description"  : "returns selections with true condition, Entities who dont have the Component are deselected!"
+	 "description"  : "returns valid entities, which have the corespondig value in their Component!"
 	,"concept"      : "CONSIDER"
 	,"name"         : "COMP"
-	,"inputs"       :  [ "Component" , ["NOT","EQUALS","LESS","MORE"] , "Value" ]
+	,"inputs"       :  [ 
+		["COMP_INDEX" , ["NOT","EQUALS","LESS","MORE"] , ["Value","COMP_INDEX"]] 
+	]
 }
 
 

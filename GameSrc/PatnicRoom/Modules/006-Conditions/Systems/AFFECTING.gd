@@ -29,10 +29,10 @@ static func getDoc() -> Dictionary:   return {
 }
 
 static func getArrToDict(parameter:Array) -> Dictionary:
-	return {   "COMPONENT" : parameter[0]        ,
-			   "MODE"      : parameter[1]        ,
+	return {   "COMPONENT" : parameter[1]        ,
+			   "MODE"      : parameter[2]        ,
 			   "NAME"      : "AFFECTING"         ,
-			   "VALUE"     : int(parameter[2])   }
+			   "VALUE"     : int(parameter[3])   }
 
 
 

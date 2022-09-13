@@ -140,9 +140,6 @@ rect_min_size = Vector2( 130, 0 )
 theme = ExtResource( 5 )
 text = "Inventory  [1]"
 script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="2" type="Button" parent="shortcut"]
 margin_left = -176.0
@@ -178,7 +175,7 @@ margin_right = 86.7754
 margin_bottom = 88.8867
 rect_min_size = Vector2( 130, 0 )
 theme = ExtResource( 5 )
-text = "Retreat    [6]"
+text = "Termina    [6]"
 script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -207,9 +204,6 @@ rect_pivot_offset = Vector2( -67.2246, 52.8867 )
 theme = ExtResource( 5 )
 text = "Retreat    [5]"
 script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="panic button" type="Button" parent="shortcut"]
 margin_left = -176.0
@@ -227,9 +221,6 @@ bbcode_text = "[center]P@NIC!![/center]"
 text = "P@NIC!!"
 scroll_active = false
 script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="pressed" from="shortcut/1" to="shortcut/1" method="_on_pressed"]
 [connection signal="pressed" from="shortcut/2" to="shortcut/2" method="_on_pressed"]

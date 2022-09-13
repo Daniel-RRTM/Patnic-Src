@@ -37,8 +37,8 @@ font_data = ExtResource( 3 )
 script = ExtResource( 4 )
 
 [node name="Panel" type="Panel" parent="."]
-margin_right = 1128.0
-margin_bottom = 632.0
+margin_right = 1980.0
+margin_bottom = 1020.0
 custom_styles/panel = ExtResource( 12 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -61,7 +61,7 @@ custom_styles/pressed = ExtResource( 8 )
 custom_styles/normal = ExtResource( 13 )
 text = "START GAME"
 
-[node name="Alecandria" type="Button" parent="."]
+[node name="Alecandria2" type="Button" parent="."]
 margin_left = 776.0
 margin_top = 72.0
 margin_right = 1006.0
@@ -89,9 +89,6 @@ custom_styles/pressed = ExtResource( 11 )
 custom_styles/normal = ExtResource( 7 )
 text = "ADVANCED OPTIONS"
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="optionsPanel" type="Control" parent="."]
 visible = false
@@ -191,7 +188,7 @@ player-generatet content
 On 01.06.21"
 
 [connection signal="pressed" from="PatnicRoom" to="." method="_on_default_pressed"]
-[connection signal="pressed" from="Alecandria" to="." method="_on_DioJSONes_pressed"]
+[connection signal="pressed" from="Alecandria2" to="." method="alt_Alecandria"]
 [connection signal="pressed" from="Advanced" to="Advanced" method="_on_pressed"]
 [connection signal="pressed" from="optionsPanel/KitsToStart" to="." method="_on_kitsToStart_pressed"]
 [connection signal="pressed" from="optionsPanel/BootMode" to="." method="_on_bootMode_pressed"]

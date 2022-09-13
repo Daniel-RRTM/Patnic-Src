@@ -60,34 +60,35 @@ static func parse(chargenDict, charNr:int) -> void:
 
 
 static func loadCommonPart(filePath:String, entContent={}):
-	var dict       = Utils.json().fileToDictionary(filePath+"/common.json")
-
-	# STUB
-	entContent["C_9_CREDITS_ACCOUNT"]                     = dict["credits"]
-	#entContent["C_X_ARCHIVEMENTS"]                       = dict["archivements"]
-	#entContent["C_X_RESSOURCES"]                         = dict["ressources"]
-	#entContent["C_X__005_Common_Cloudprinter_INVENTORY"] = dict["_005_Common_Cloudprinter storage"]
-	#entContent["C_X_UNICYCLER_LICENSES"]                 = dict["unicycler licenses"]
-
-	var cacheAlt = []
-	for kitIndex in dict.kitventory:   cacheAlt.append(API_001_Atlas.KitParts().getEntry(kitIndex))
-	entContent["C_68_KITVENTORY"] = cacheAlt
-
+	var dictToParse = Utils.json().fileToDictionary(filePath+"/common.json")
+	var cachedCrossRef = API_003_Player.getJSONCrossReference().common
+	
+	for compIndex in cachedCrossRef.keys():
+		match compIndex:
+			
+			"C_68_KITVENTORY": 
+				entContent[compIndex] = []
+				for kit in dictToParse[cachedCrossRef[compIndex]]: 
+					entContent[compIndex].append(API_001_Atlas.KitParts().getEntry(kit))
+			
+			_: 
+				entContent[compIndex] = dictToParse[cachedCrossRef[compIndex]]
+	
 	return entContent
 
 
 
 
 static func loadChar(filePath:String, nr:int, entContent={}):
-	var compsToLoad = [	"C_45_CHARACTER_NAME"      , "C_44_STREETNAME"  , "C_11_RACE_NAME"        , "C_12_ATLAS_INDEX" ,
-						"C_19_ATTRIBUTES"          , "C_20_SKILLBLOCK"  , "C_51_PLAYER_KITSETS"   , "C_25_MAX_KITSETS" ,
-						"C_39_KITSLOT_PROGRESSION" , "C_46_ACTOR_ITEMS" , "C_41_PERK_PROGRESSION"                      ]
-	var dictOfChar  = Utils.json().fileToDictionary(filePath+"/Char"+str(nr)+".json")
-
-	for compToString in compsToLoad :
-		var configKey = DemocrECS.getComponentClass(compToString).getAutoDoc().configKey
-		entContent[compToString] = dictOfChar[configKey]
-
+	var dictToParse    = Utils.json().fileToDictionary(filePath+"/Char"+str(nr)+".json")
+	var cachedCrossRef = API_003_Player.getJSONCrossReference().character
+	
+	for compIndex in cachedCrossRef.keys():
+		match compIndex:
+			
+			_: 
+				entContent[compIndex] = dictToParse[cachedCrossRef[compIndex]]
+	
 	return entContent
 
 

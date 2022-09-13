@@ -22,11 +22,16 @@ func mergeKitParts(kitparts:Array) -> KitSetEntity :
 	
 	
 	kitSetEnt.toString = getToString(kitSetEnt)
-	kitSetEnt.event    = kitSetEnt.base.event().duplicate(true)
+	kitSetEnt.event = kitSetEnt.base.event().duplicate(true)
+	kitSetEnt.cooldownTime = kitSetEnt.base.cooldownTime()
 
-	if is_instance_valid(kitSetEnt.mod)      :   kitSetEnt.event = loadModPart(kitSetEnt)
+	if is_instance_valid(kitSetEnt.mod):
+		kitSetEnt.event = loadModPart(kitSetEnt)
+		kitSetEnt.cooldownTime += kitSetEnt.mod.cooldownTime()
+	
 	if is_instance_valid(kitSetEnt.appendix) :   pass
 	
+	kitSetEnt.currentCooldownTime = kitSetEnt.cooldownTime
 	return kitSetEnt
 
 
@@ -35,9 +40,11 @@ func mergeKitParts(kitparts:Array) -> KitSetEntity :
 func loadModPart(kitSetEnt:KitSetEntity) -> Dictionary :
 	var event = kitSetEnt.getMergedEvent().duplicate(true)
 	for mode in kitSetEnt.mod.event().keys():
-		if   "CHANGE" in mode :   event = modifyMod(kitSetEnt.mod.event()[mode],event)
-		elif "ADD"    in mode :   event = addMod(kitSetEnt.mod.event()[mode],event)
-		elif "REMOVE" in mode :   event = deleteMod(kitSetEnt.mod.event()[mode],event)
+		var mod = kitSetEnt.mod.event()[mode].duplicate(true)
+		
+		if   "CHANGE" in mode :   event = modifyMod(mod,event)
+		elif "ADD"    in mode :   event = addMod(mod,event)
+		elif "REMOVE" in mode :   event = deleteMod(mod,event)
 	return event
 
 
@@ -60,34 +67,44 @@ func addMod(toMod:Array,event:Dictionary) -> Dictionary :
 		var section       = mod.pop_front()
 		var package       = mod.pop_front()
 		
-		if   "CONSIDER" in package : convertedDict = API_005_Event.convertConsiderArrayToDictionary([mod])
-		elif "PERFORM"  in package : convertedDict = API_005_Event.convertPerformanceArrayToDictionary([mod])
+		if   "CONSIDER" in package : 
+			convertedDict = API_005_Event.convertConsiderArrayToDictionary([mod])
+		elif "PERFORM"  in package : 
+			convertedDict = API_005_Event.convertPerformanceArrayToDictionary([mod])
 		
 		event[section][package].append(convertedDict[0])
 	return event
 
 
+
 func deleteMod(toMod:Array,event:Dictionary) -> Dictionary :
 	for mod in toMod: 
-		var cache = mod.duplicate(true)
-		var section = cache.pop_front() 
-		var package = cache.pop_front()
-		for step in event[section][package]:
-			if cache == step:
-				event[section][package].erase(step)
+		var section = mod.pop_front()
+		var concept = mod.pop_front()
+		var conMod  = API_005_Event.convertSingleConsider(mod) if concept == "CONSIDER" else API_005_Event.convertSinglePerform(mod)
+		
+		for currentTarget in event[section][concept]:
+			if currentTarget.hash() == conMod.hash(): 
+				event[section][concept].erase(currentTarget)
+	
 	return event
+
 
 
 func modifyMod(toMod:Array,event:Dictionary) -> Dictionary :
 	for mod in toMod: 
 		
-		
 		if "SEIZE" in mod.concept:
-			var cache = mod.target.split(" ")
-			event[mod.package][mod.concept][cache[0]] = mod.value[1] 
+			var target = mod.target.split(" ") as Array
+			event[mod.package][mod.concept][target[0]] = mod.value[1]
 		
-		if "CONSIDER" in mod.concept:event[mod.package][mod.concept].append(API_005_Event.convertSingleConsider(mod.valusse))
-		if "PERFORM" in mod.concept:event[mod.package][mod.concept].append(API_005_Event.convertSinglePerform(mod.value))
+		else:
+			var conMod     = API_005_Event.convertSingleConsider(mod.value)             if mod.concept == "CONSIDER" else API_005_Event.convertSinglePerform(mod.value)
+			var conTarget  = API_005_Event.convertSingleConsider(mod.target.split(" ")) if mod.concept == "CONSIDER" else API_005_Event.convertSinglePerform(mod.target.split(" "))
+			
+			for i in event[mod.package][mod.concept].size():
+				if event[mod.package][mod.concept][i].hash() == conTarget.hash(): 
+					event[mod.package][mod.concept][i] = conMod
 	
 	return event
 

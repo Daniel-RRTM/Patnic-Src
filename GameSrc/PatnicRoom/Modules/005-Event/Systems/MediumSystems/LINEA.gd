@@ -21,12 +21,11 @@ static func run(taskData:Dictionary) -> Array:
 
 
 func getAutoDoc() -> Dictionary : return {
-	"descriiption"  : "selects by a line in one of 4 directions"
+	"description"  : "selects by a line in one of 4 directions with reach of parameter"
 	,"concept"      : "SEIZE"
 	,"name"         : "MEDIUM"
-	,"valids"       : [  ]
-	,"WIP"          : ""
-	,"example"      : [
-		"MEDIUM  --->  LINEA"
+	,"valids"       : [  
+		["reach"]
 	]
+	
 }

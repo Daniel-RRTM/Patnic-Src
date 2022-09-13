@@ -111,6 +111,17 @@
  "nextlayerid":10,
  "nextobjectid":1,
  "orientation":"orthogonal",
+ "properties":[
+        {
+         "name":"ID",
+         "type":"string",
+         "value":"TEMPLATE"
+        }, 
+        {
+         "name":"PLAYABLE",
+         "type":"bool",
+         "value":false
+        }],
  "renderorder":"right-down",
  "tiledversion":"1.7.2",
  "tileheight":16,

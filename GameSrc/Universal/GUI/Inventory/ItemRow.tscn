@@ -32,7 +32,7 @@ margin_bottom = 208.0
 script = ExtResource( 2 )
 
 [node name="Name" type="Panel" parent="."]
-margin_right = 184.0
+margin_right = 349.0
 margin_bottom = 25.0
 rect_min_size = Vector2( 150, 25 )
 custom_styles/panel = SubResource( 1 )
@@ -52,8 +52,8 @@ __meta__ = {
 }
 
 [node name="Summary" type="Panel" parent="."]
-margin_left = 200.0
-margin_right = 584.0
+margin_left = 368.0
+margin_right = 1040.0
 margin_bottom = 25.0
 rect_min_size = Vector2( 184, 25 )
 custom_styles/panel = SubResource( 1 )
@@ -72,8 +72,8 @@ __meta__ = {
 }
 
 [node name="Time" type="Panel" parent="."]
-margin_left = 592.0
-margin_right = 617.0
+margin_left = 1056.0
+margin_right = 1081.0
 margin_bottom = 25.0
 rect_min_size = Vector2( 25, 25 )
 custom_styles/panel = SubResource( 1 )
@@ -94,12 +94,9 @@ __meta__ = {
 [node name="Button" type="Button" parent="."]
 margin_left = -8.0
 margin_top = 3.0
-margin_right = 624.0
+margin_right = 1097.0
 margin_bottom = 23.0
 custom_styles/hover = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

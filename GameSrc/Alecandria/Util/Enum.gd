@@ -37,7 +37,8 @@ enum FORMS{         VOID         = 20 ,
 enum MODES{         WRITE_PAIR   = 31 ,
 					READ         = 32 ,
 					SELECT       = 33 ,
-					WRITE_EVENT  = 34 }
+					WRITE_EVENT  = 34 ,
+					BROWSE       = 35 }
 
 
 

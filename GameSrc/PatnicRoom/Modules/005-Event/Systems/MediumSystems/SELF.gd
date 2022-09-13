@@ -13,12 +13,8 @@ static func run(taskData:Dictionary) -> Array:
 
 
 func getAutoDoc() -> Dictionary : return {
-	"descriiption"  : "Selects Player-char!"
+	"description"  : "Selects current Player-char!"
 	,"concept"      : "SEIZE"
 	,"name"         : "MEDIUM"
 	,"valids"       : [  ]
-	,"WIP"          : ""
-	,"example"      : [
-		"MEDIUM  --->  SELF"
-	]
 }

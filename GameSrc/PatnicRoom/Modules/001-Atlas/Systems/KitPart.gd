@@ -60,6 +60,14 @@ func getKitGroup(string_enum_kitCat) -> Dictionary:
 	return {}
 
 
+func getCoreAndTraitPartsOfFamilyIndex(familyIndex:String, createCopy=true) -> Dictionary:
+	var toReturn = {}
+	for  entry in atlasEntry.keys():
+		if familyIndex in entry and entry != familyIndex: 
+			toReturn[entry] = DemocrECS.copyEntity(atlasEntry[entry]) if createCopy else atlasEntry[entry]
+	return toReturn
+
+
 
 # ----- SETTER --------------------------------------------------------------- ##
 

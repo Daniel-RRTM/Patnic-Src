@@ -6,7 +6,9 @@ func declare() -> void:
 	self.name              = "_005_Medium,"
 	self.description       = "applies the shape of selections on source(s)"
 	self.APIRef            = API_005_Event
-	self.signalsConnection = {}
+	self.signalsConnection = {
+		
+	}
 	
 	self.operations = {
 		 "AREA"   : _004_Seize_MediumArea

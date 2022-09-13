@@ -32,10 +32,12 @@ static func convertArrayToDict(parameters:Array) -> Dictionary : return {
 
 
 static func getAutoDoc() -> Dictionary : return {
-	 "descriiption" : "returns selections with the Flag!"
+	 "description" : "returns valid entities with or without searched Flag"
 	,"concept"      : "CONSIDER"
 	,"name"         : "FLAG"
-	,"inputs"       :  [ ["HAS","NOT"] , "Flag" ]
+	,"inputs"       :  [ 
+		[["HAS","NOT"] , "Flag"] 
+	]
 }
 
 

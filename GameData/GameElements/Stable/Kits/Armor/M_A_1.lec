@@ -1,0 +1,72 @@
+META{
+  INDEX ---> M_A_1
+  USE   ---> KITPART_BASE
+  BY    ---> RedRastaRigger(inhouse)
+}
+
+
+
+//==============================================================================\\
+//==============================================================================\\
+//==============================================================================\\
+
+
+
+MAIN{
+
+
+//------------------------------------------------------------------------------\\
+  COMPONENTS[
+    C_6_NAME ---> medical aid kit
+    C_12_ATLAS_INDEX ---> M_A_1
+    C_0_DESCRIPTION ---> Standard-issue, containing bandages and most necessary drugs
+    C_35_KIT_MECHANICAL_SUMMARY ---> recovers 5 Hitpoint of self, no move 1 round
+    C_48_RARITY --->  3
+    C_31_KIT_CAT_TYPE --->  ARMOR
+    C_37_M_TYPE ---> MEAT
+    C_38_KIT_PART_TYPE ---> BASE
+    C_36_KIT_MOD_TIME ---> 1
+    C_33_COOLDOWN_TIMER ---> 4
+    C_49_EVENT_REFERENCE ---> M_A_1
+  ]
+
+
+//------------------------------------------------------------------------------\\
+  FLAGS[
+    F_5_KITPART_TYPE
+    F_15_KITPART_TYPE_BASE
+  ]
+
+
+//------------------------------------------------------------------------------\\
+  SELECT[
+    SEIZE:
+      MEDIUM ---> SELF
+      SOURCE ---> SELF
+      REACH ---> 1
+    CONSIDER:
+      THIS ---> COMP C_57_HITPOINTS NOT C_16_MAX_HITPOINTS
+    PERFORM:
+      CACHE ---> SET THIS FILE
+  ]
+
+
+//------------------------------------------------------------------------------\\
+  RUN[
+    PERFORM:
+    FILE ---> COMP C_57_HITPOINTS INCREMENT BY 5
+    FILE ---> COND INCAPACITATED LVL 3 AND DURA 2
+  ]
+}
+
+
+
+//==============================================================================\\
+//==============================================================================\\
+//==============================================================================\\
+
+
+
+REFERENCE{
+
+}

@@ -19,6 +19,7 @@ static func getAutoDoc() -> Dictionary:
 
 
 static func run(parameter:Array) -> void:
+
 	if API_003_Player.currentChar.hasFlag("F_CHEAT_1_NO_CLIP") :   API_003_Player.currentChar.flags.erase("F_CHEAT_1_NO_CLIP")
 	else                                                       :   API_003_Player.currentChar.addFlag("F_CHEAT_1_NO_CLIP")
 

@@ -3,7 +3,7 @@
 					{ "path" : "../CLI" },
 					{ "path" : "../Docs" },
 					{ "path" : "../Website"       },
-					{ "path" : "../Installer"     }],
+					{ "path" : "../IDE"     }],
 
 
 	"settings": {
@@ -41,7 +41,7 @@
 		"editor.fontLigatures"            : true,											// enables Ligature
 		"editor.fontSize"                 : 10,                   							// Text size combined with Zoomlevel
 		"workbench.editor.revealIfOpen"   : true,								 			// focuses already opened files when clicked again in explorer
-		"window.zoomLevel"                : 1,
+		"window.zoomLevel"                : 2,
 		"editor.tokenColorCustomizations" : {"[One Dark Pro]": {"comments": "#fff897"}},  // more visible Comments
 
 		// LINE COUNTER
@@ -324,7 +324,7 @@
 		
 			
 		],
-		"liveServer.settings.multiRootWorkspaceName": "Docs",
+		"liveServer.settings.multiRootWorkspaceName": "Website",
 
 
 

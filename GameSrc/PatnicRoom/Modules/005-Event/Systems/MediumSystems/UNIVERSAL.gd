@@ -29,11 +29,8 @@ static func convertDirectionToVector(directionEnum) -> Vector2 :
 
 
 func getAutoDoc() -> Dictionary : return {
-		"descriiption"  : "used by other as a helper"
+		"description"  : "used by other as a helper"
 		,"concept"      : "SEIZE"
 		,"name"         : "MEDIUM"
 		,"valids"       : [  ]
-		,"WIP"          : ""
-		,"example"      : [
-		]
 	}

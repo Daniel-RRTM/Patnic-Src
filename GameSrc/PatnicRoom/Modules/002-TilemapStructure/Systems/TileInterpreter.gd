@@ -5,7 +5,15 @@ class_name _002_TileInterpreter
 
 func interpreteTileNr(actor,node:Node) -> void:
 	var interact = SokraTiles.getMeatInteract().getEntByPos_quack(actor.pos())
+	
+
+	
 	if is_instance_valid(interact):
+		
+		if ["POI_0_2","POI_0_6","POI_0_12"].has(interact.index()):
+			API_011_ProcGen_Loot.generateLoot()
+			SokraTiles.removeEntOnTilemap(interact)
+			
 		match interact.index():
 			"General_2_0":
 				var loadedInfo = load("res://GameSrc/PatnicRoom/scenes/Unique/Enter Restmode Popup/enterRestmode/enterSaveroom.tscn")

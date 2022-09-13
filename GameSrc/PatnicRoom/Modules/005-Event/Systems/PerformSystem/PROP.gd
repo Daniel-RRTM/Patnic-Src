@@ -32,8 +32,10 @@ static func convertArrayToDict(parameters:Array) -> Dictionary : return {
 	
 
 func getAutoDoc() -> Dictionary : return {
-	"descriiption"  : "manipulates a property of triggered selection"
+	"description"  : "manipulates a property of triggered selection"
 	,"concept"      : "PERFORM"
 	,"name"         : "PROP"
-	,"valids"       : [ ["ADD","REMOVE","SWAP"] , PROPERTIES.OF  ]
+	,"valids"       : [
+		[["ADD","REMOVE","SWAP"] , "PROP_INDEX"]
+	]
 }

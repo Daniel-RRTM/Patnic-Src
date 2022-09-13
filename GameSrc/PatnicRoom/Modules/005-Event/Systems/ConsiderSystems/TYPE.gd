@@ -18,8 +18,12 @@ static func run(para:Dictionary, toConsider:Array) -> Array :
 			"INTERACT" :   searchedType = InteractEntity
 			"ACTOR"    :   searchedType = ActorEntity
 		
-		if   para.operand == "IS"  and  ent is searchedType : toReturn.append(ent)
-		elif para.operand == "NOT" and !ent is searchedType : toReturn.append(ent)
+		if   para.operand == "IS"  and  ent is searchedType: 
+			toReturn.append(ent)
+		elif para.operand == "NOT" and !ent is searchedType : 
+			toReturn.append(ent)
+		elif ent is PlayerEntity and API_004_KitSet.selection.medium == "SELF":
+			toReturn.append(ent)
 	
 	return toReturn
 
@@ -38,10 +42,12 @@ static func convertArrayToDict(parameters:Array) -> Dictionary : return {
 
 
 static func getAutoDoc() -> Dictionary : return {
-	"descriiption"  : "returns selections with the Specific Entity-class"
+	"description"  : "returns valid entities with or without searched Type/Class"
 	,"concept"      : "CONSIDER"
 	,"name"         : "TYPE"
-	,"inputs"       :  [  ["NOT","IS"] , ["ACTOR","TILE","INTERACT"] ]
+	,"inputs"       :  [  
+		[ ["NOT","IS"] , ["ACTOR","TILE","INTERACT"] ]
+	]
 }
 
 

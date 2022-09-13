@@ -3,7 +3,7 @@ extends Button
 
 
 func _on_Text_pressed() -> void:
-		for entry in get_node("/root/Node2D/kit_effect_details").get_children(): entry.queue_free()
+		for entry in get_node("/root/Settingwechsel/SwitchPanel/Node2D/KitEffectDetails").get_children(): entry.queue_free()
 		
 		var kitpart = API_001_Atlas.KitParts().getEntryByName(text)
 		if is_instance_valid(kitpart):
@@ -14,13 +14,13 @@ func _on_Text_pressed() -> void:
 				ENUM.KITS.PARTS.BASE: 
 					effect = kitpart.event()
 					var effectDetails = load("res://GameSrc/Universal/GUI/EventTString/Base/Scene.tscn").instance()
-					get_node("/root/Node2D/kit_effect_details").add_child(effectDetails)
+					get_node("/root/Settingwechsel/SwitchPanel/Node2D/KitEffectDetails").add_child(effectDetails)
 					effectDetails.loadKitpartByIndex(kitpart.index())
 					
 				ENUM.KITS.PARTS.MOD: 
-					effect = kitpart.event().main()
+					effect = kitpart.event()
 					var effectDetails = load("res://GameSrc/Universal/GUI/EventTString/Mod/Scene.tscn").instance()
-					get_node("/root/Node2D/kit_effect_details").add_child(effectDetails)
+					get_node("/root/Settingwechsel/SwitchPanel/Node2D/KitEffectDetails").add_child(effectDetails)
 					#effectDetails.loadEffect(effect)
 					effectDetails.fillInByIndex(kitpart.index())
 				

@@ -33,6 +33,7 @@ static func getValueToString_quack() -> String     :   return "has [color=lime]F
 
 static func convertArrayToDict(parameters:Array) -> Dictionary : 
 	parameters.erase("THAN")
+	parameters.erase("BY")
 	return {	"compName" : parameters[0]   ,
 				"operand"  : parameters[1]   ,
 				"value"    : parameters[2]   }
@@ -40,10 +41,12 @@ static func convertArrayToDict(parameters:Array) -> Dictionary :
 
 
 func getAutoDoc() -> Dictionary : return {
-	"descriiption"  : "manipulates a Component of triggered selection"
+	"description"  : "manipulates a Component of triggered selection"
 	,"concept"      : "CONSIDER"
 	,"name"         : "TYPE"
-	,"inputs"       :  [  DemocrECS.getAllComponents() , ["SET","INCREMENT","DECREMENT"] , "dynamic typed value" ]
+	,"inputs"       :  [
+		[ "COMP_INDEX" , ["SET","INCREMENT","DECREMENT"] , "dynamic typed value" ]
+	]
 }
 
 

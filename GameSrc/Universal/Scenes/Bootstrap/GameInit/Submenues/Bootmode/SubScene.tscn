@@ -116,10 +116,10 @@ margin_right = 144.0
 margin_bottom = 144.0
 hint_tooltip = "Start Game in Panic-mode"
 theme = ExtResource( 4 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.717647, 0.85098, 1, 1 )
 custom_colors/font_color_hover = Color( 0.45098, 0.705882, 1, 1 )
 custom_colors/font_color_pressed = Color( 0.0235294, 0.388235, 0.807843, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "P@NIC"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -132,10 +132,10 @@ margin_right = 144.0
 margin_bottom = 96.0
 hint_tooltip = "Start Game in Rest-mode"
 theme = ExtResource( 4 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.717647, 0.85098, 1, 1 )
 custom_colors/font_color_hover = Color( 0.45098, 0.705882, 1, 1 )
 custom_colors/font_color_pressed = Color( 0.0235294, 0.388235, 0.807843, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "REST"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -166,14 +166,11 @@ margin_right = 144.0
 margin_bottom = 144.0
 hint_tooltip = "call temporary function for experimentall (cool) stuff"
 theme = ExtResource( 4 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.717647, 0.85098, 1, 1 )
 custom_colors/font_color_hover = Color( 0.45098, 0.705882, 1, 1 )
 custom_colors/font_color_pressed = Color( 0.0235294, 0.388235, 0.807843, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "TEMP"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="LEC-Viewer" type="Button" parent="Control/Debugging"]
 visible = false
@@ -182,11 +179,11 @@ margin_top = 160.0
 margin_right = 144.0
 margin_bottom = 192.0
 theme = ExtResource( 4 )
-custom_styles/hover = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.254902, 1, 0.423529, 1 )
 custom_colors/font_color_hover = Color( 0.741176, 1, 0.721569, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 text = "LEC-Viewer"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -199,10 +196,10 @@ margin_right = 144.0
 margin_bottom = 95.1591
 hint_tooltip = "Start Game in Panic-mode with the Map of config/experimental tilemap.json"
 theme = ExtResource( 4 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.717647, 0.85098, 1, 1 )
 custom_colors/font_color_hover = Color( 0.45098, 0.705882, 1, 1 )
 custom_colors/font_color_pressed = Color( 0.0235294, 0.388235, 0.807843, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "TILEMAP"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -233,10 +230,10 @@ margin_right = 144.0
 margin_bottom = 96.0
 hint_tooltip = "Calculates Atlas and parses it into Markdown-files"
 theme = ExtResource( 4 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.717647, 0.85098, 1, 1 )
 custom_colors/font_color_hover = Color( 0.45098, 0.705882, 1, 1 )
 custom_colors/font_color_pressed = Color( 0.0235294, 0.388235, 0.807843, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "STATISTICS"
 __meta__ = {
 "_edit_use_anchors_": false

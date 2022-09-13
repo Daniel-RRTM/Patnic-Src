@@ -22,7 +22,8 @@ func loadKitset(kitset:KitSetEntity): # BUG
 		loadKitPart(kitset.appendix, appendixControle)
 		setKitPartButtonVisibillity("Appendix",false,true,true)
 	else : setKitPartButtonVisibillity("Appendix",true,false,false)
-
+	
+	API_003_Player.getCurrentStationSetter().setKitset(kitSetEnt)
 
 
 

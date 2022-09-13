@@ -4,61 +4,48 @@
 
 
 
-  "ressources" : {
-     "Synths"      : 20
-    ,"Electronics" : 20
-    ,"Steel"       : 20
-    ,"biomass"     : 20
-  },
-
-
-
-  "cloudprinter storage" : [
-
-  ],
-
-
-
-  "unicycler licenses":[
-
-  ],
-
-
-
   "kitventory" : [
     "C_I_1",
     "C_S_1",
-    "C_S_1__M_1",
-    "C_S_2__M_1",
+    "C_S_2__M_2",
     "X_H_1",
-    "C_S_1__M_1"
+    "C_S_1__M_2"
   ],
 
 
 
-  "station":{
-
-    "Workshop":{
-      "basekit"        : "",
-      "kitpart to mod" : "",
-      "mode"           : "",
-      "countdown"      : ""
-    },
-
-    "Terminal":{
-      "basekit"        : "",
-      "kitpart to mod" : "",
-      "mode"           : "",
-      "countdown"      : ""
-    },
-
-    "Retreat":{
-      "basekit"        : "",
-      "kitpart to mod" : "",
-      "mode"           : "",
-      "countdown"      : ""
-    }
-  }
+  "station": {
+		"Workshop": {
+			"basekit": [
+				"",
+				"",
+				""
+			],
+			"kitpart to mod": "",
+			"mode": 0,
+			"countdown": false
+		},
+		"Terminal": {
+			"basekit": [
+				"X_H_2",
+				"",
+				""
+			],
+			"kitpart to mod": "X_H_2__M_1",
+			"mode": 0,
+			"countdown": true
+		},
+		"Retreat": {
+			"basekit": [
+				"C_I_2",
+				"",
+				""
+			],
+			"kitpart to mod": "C_I_2",
+			"mode": 0,
+			"countdown": true
+		}
+	}
 
 
 }

@@ -16,8 +16,4 @@ func getAutoDoc() -> Dictionary : return {
 	,"concept"      : "SEIZE"
 	,"name"         : "SOURCE"
 	,"valids"       : [  ]
-	,"WIP"          : ""
-	,"example"      : [
-		"MEDIUM  --->  SELF"
-	]
 }

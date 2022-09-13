@@ -15,3 +15,9 @@ func fileToDictionary(filepath:String):                                         
 func tilesOfTilesetToDictionary(filepath):
 	var tileset = fileToDictionary(filepath)
 	return tileset["tiles"]
+
+func saveDictAsJSON(filepath:String, dict:Dictionary):
+	var file = File.new()
+	file.open(filepath, File.WRITE)
+	file.store_string(JSON.print(dict,"\t"))
+	file.close()

@@ -12,6 +12,7 @@ static func calculate(ent):
 static func getHealthpoints(ent:PlayerEntity):
 	var cache = 8+ent.stats.attributes().constitution()/3
 	ent.addComponent(C_57_HITPOINTS.new(cache))
+	ent.addComponent(C_16_MAX_HITPOINTS.new(cache))
 
 
 static func getCarriageCapacity(ent):

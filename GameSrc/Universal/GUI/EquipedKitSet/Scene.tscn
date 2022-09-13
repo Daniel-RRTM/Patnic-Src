@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/CustomeStyle/RTL/Rest_Frame_Title.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Assets/DynamicFonts/new_dynamicfontdata.tres" type="DynamicFontData" id=2]
 [ext_resource path="res://Assets/CustomeStyle/Panel/Main_Menue.tres" type="StyleBox" id=3]
-[ext_resource path="res://GameSrc/Universal/GUI/EquipedKitSet/Manager.gd" type="Script" id=4]
+[ext_resource path="res://GameSrc/PatnicRoom/Scenes/Gameloop/RestMode/Station/new revised script/Manager.gd" type="Script" id=4]
 [ext_resource path="res://Assets/Themes/ThemeOxfordBLue.tres" type="Theme" id=5]
 [ext_resource path="res://Assets/Themes/ThemeSpanishViolet.tres" type="Theme" id=6]
 
@@ -36,12 +36,9 @@ bg_color = Color( 0, 0.129412, 0.278431, 0.666667 )
 
 [node name="Geared Kitsets" type="Control"]
 margin_left = -136.0
-margin_top = 770.0
+margin_top = 730.0
 margin_right = -96.0
-margin_bottom = 810.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_bottom = 770.0
 
 [node name="Window" type="Control" parent="."]
 margin_left = -16.0
@@ -53,7 +50,7 @@ __meta__ = {
 }
 
 [node name="Frame" type="Panel" parent="Window"]
-margin_left = 152.0
+margin_left = 134.0
 margin_top = -55.0
 margin_right = 1274.0
 margin_bottom = 265.0

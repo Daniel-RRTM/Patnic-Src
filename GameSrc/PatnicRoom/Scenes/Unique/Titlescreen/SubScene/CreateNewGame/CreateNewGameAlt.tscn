@@ -37,12 +37,9 @@ __meta__ = {
 [node name="Panel2" type="Panel" parent="."]
 margin_left = 392.0
 margin_top = 392.0
-margin_right = 1352.0
+margin_right = 984.0
 margin_bottom = 944.0
 custom_styles/panel = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Name" type="Control" parent="Panel2"]
 margin_right = 40.0
@@ -54,27 +51,30 @@ __meta__ = {
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel2/Name"]
 margin_left = 32.0
 margin_top = 32.0
-margin_right = 288.0
+margin_right = 220.0
 margin_bottom = 72.0
 custom_fonts/normal_font = ExtResource( 1 )
 bbcode_enabled = true
-bbcode_text = "My Name is"
-text = "My Name is"
+bbcode_text = "Name
+"
+text = "Name
+"
+scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Panel" type="Panel" parent="Panel2/Name"]
-margin_left = 376.0
+margin_left = 192.0
 margin_top = 32.0
-margin_right = 648.0
+margin_right = 464.0
 margin_bottom = 72.0
 theme = ExtResource( 5 )
 
 [node name="input" type="TextEdit" parent="Panel2/Name"]
-margin_left = 378.0
+margin_left = 194.0
 margin_top = 32.0
-margin_right = 648.0
+margin_right = 464.0
 margin_bottom = 72.0
 custom_fonts/font = ExtResource( 1 )
 text = "Chummer"
@@ -88,9 +88,9 @@ __meta__ = {
 }
 
 [node name="OptionButton" type="OptionButton" parent="Panel2/Race"]
-margin_left = 376.0
+margin_left = 192.0
 margin_top = 48.0
-margin_right = 648.0
+margin_right = 464.0
 margin_bottom = 85.0
 theme = ExtResource( 5 )
 custom_fonts/font = ExtResource( 1 )
@@ -101,12 +101,13 @@ __meta__ = {
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel2/Race"]
 margin_left = 32.0
 margin_top = 48.0
-margin_right = 272.0
+margin_right = 216.0
 margin_bottom = 88.0
 custom_fonts/normal_font = ExtResource( 1 )
 bbcode_enabled = true
-bbcode_text = "I am a"
-text = "I am a"
+bbcode_text = "Race"
+text = "Race"
+scroll_active = false
 
 [node name="toString" type="RichTextLabel" parent="Panel2/Race"]
 margin_left = 656.0
@@ -128,9 +129,9 @@ __meta__ = {
 }
 
 [node name="OptionButton" type="OptionButton" parent="Panel2/kits"]
-margin_left = 376.0
+margin_left = 192.0
 margin_top = 48.0
-margin_right = 648.0
+margin_right = 464.0
 margin_bottom = 85.0
 theme = ExtResource( 5 )
 custom_fonts/font = ExtResource( 1 )
@@ -141,12 +142,13 @@ __meta__ = {
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel2/kits"]
 margin_left = 32.0
 margin_top = 48.0
-margin_right = 368.0
+margin_right = 232.0
 margin_bottom = 88.0
 custom_fonts/normal_font = ExtResource( 1 )
 bbcode_enabled = true
-bbcode_text = "Trying to survive with"
-text = "Trying to survive with"
+bbcode_text = "Kit"
+text = "Kit"
+scroll_active = false
 
 [node name="toString" type="RichTextLabel" parent="Panel2/kits"]
 margin_left = 656.0
@@ -161,10 +163,10 @@ __meta__ = {
 
 [node name="start" type="Panel" parent="."]
 visible = false
-margin_left = 984.0
-margin_top = 952.0
-margin_right = 1352.0
-margin_bottom = 1048.0
+margin_left = 488.0
+margin_top = 828.0
+margin_right = 856.0
+margin_bottom = 924.0
 custom_styles/panel = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false

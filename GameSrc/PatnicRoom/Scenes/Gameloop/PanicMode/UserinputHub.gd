@@ -10,6 +10,7 @@ func _enter_tree() -> void:
 	Davinci.initialicePanicScene(self)
 	API_009_Sound.buildSceneReference()
 
+func _ready(): _SokraTiles_SpawnActor.parse()
 
 func _input(event: InputEvent) -> void:   
 	Davinci.manageInput(event)

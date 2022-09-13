@@ -6,9 +6,6 @@
 	"kitslot progression": 0,
 	"trait progression": 0,
 	"race": "Human",
-	"gear": [
-
-	],
 	"attributes": {
 		"con": "3",
 		"agi": "3",
@@ -19,18 +16,12 @@
 		"wil": "3",
 		"cha": "3"
 	},
-	"skills": {
-
-	},
 	"kitsets": [
 		[
-			"C_I_2",
+			"X_H_2",
 			"",
 			""
 		]
-	],
-	"traits": [
-
 	],
 	"credits": 0
 }

@@ -66,9 +66,9 @@ __meta__ = {
 
 [node name="Filter" type="Control" parent="."]
 margin_left = 768.0
-margin_top = 790.0
+margin_top = 726.0
 margin_right = 984.0
-margin_bottom = 968.0
+margin_bottom = 904.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

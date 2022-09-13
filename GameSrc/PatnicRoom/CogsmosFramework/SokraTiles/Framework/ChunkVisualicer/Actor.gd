@@ -29,6 +29,7 @@ func moveActor(directionEnum,ent) -> void:
 	if   !is_instance_valid(interact)     : move = true
 	elif ent.hasFlag("F_CHEAT_1_NO_CLIP") : move = true 
 	elif interact.isWalkable()            : move = true
+	if ent.hasFlag("F_19_ACTOR_CAN_NOT_MOVE"): move = false
 	
 	if move: moveaActor(newPos,ent)
 

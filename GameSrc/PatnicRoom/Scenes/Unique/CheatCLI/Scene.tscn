@@ -3791,9 +3791,6 @@ margin_top = 71.0
 margin_right = 1800.0
 margin_bottom = 111.0
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Input/VScrollBar"]
 margin_top = -32.0
@@ -3832,4 +3829,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="item_selected" from="Input/VScrollBar" to="Input/VScrollBar" method="_on_Execution_by_Suggestion"]
+[connection signal="item_selected" from="Input/VScrollBar" to="Input/VScrollBar" method="evaluateState"]

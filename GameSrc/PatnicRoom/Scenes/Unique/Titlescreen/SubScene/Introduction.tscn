@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Assets/DynamicFonts/new_dynamicfontdata.tres" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/GUI/KitSymbols/cyberware.png" type="Texture" id=2]
@@ -7,255 +7,508 @@
 [ext_resource path="res://Assets/GUI/KitSymbols/infusion.png" type="Texture" id=5]
 [ext_resource path="res://Assets/GUI/KitSymbols/spell.png" type="Texture" id=6]
 [ext_resource path="res://Assets/GUI/KitSymbols/gun.png" type="Texture" id=7]
-[ext_resource path="res://Assets/temp/HUD_BLUE.tres" type="StyleBox" id=8]
-[ext_resource path="res://Assets/DynamicFonts/Text_Default.tres" type="DynamicFont" id=9]
+[ext_resource path="res://Assets/CustomeStyle/Button/MainMenue/Hover.tres" type="StyleBox" id=8]
+[ext_resource path="res://Assets/CustomeStyle/Panel/Main_Menue.tres" type="StyleBox" id=10]
 [ext_resource path="res://Assets/GUI/Titlescreen/Introduction_1.PNG" type="Texture" id=11]
 [ext_resource path="res://Assets/GUI/Titlescreen/Introduction_2.PNG" type="Texture" id=12]
-[ext_resource path="res://Assets/GUI/Titlescreen/Introduction_4.PNG" type="Texture" id=13]
+[ext_resource path="res://Assets/GUI/Titlescreen/Upgrade.PNG" type="Texture" id=13]
 [ext_resource path="res://Assets/GUI/Titlescreen/Introduction_3.PNG" type="Texture" id=14]
+[ext_resource path="res://Assets/CustomeStyle/Button/MainMenue/Pressed.tres" type="StyleBox" id=15]
+[ext_resource path="res://Assets/CustomeStyle/Button/MainMenue/Normal.tres" type="StyleBox" id=16]
+[ext_resource path="res://Assets/DynamicFonts/FixedSysTemplate.ttf" type="DynamicFontData" id=17]
+[ext_resource path="res://Assets/DynamicFonts/Text_Header.tres" type="DynamicFont" id=18]
+[ext_resource path="res://Assets/GUI/Titlescreen/forest.png" type="Texture" id=19]
+[ext_resource path="res://Assets/GUI/Titlescreen/barrens.png" type="Texture" id=20]
+[ext_resource path="res://Assets/GUI/Titlescreen/forestBurn.png" type="Texture" id=21]
+[ext_resource path="res://Assets/GUI/Titlescreen/pool.png" type="Texture" id=22]
+[ext_resource path="res://Assets/GUI/Titlescreen/browser.PNG" type="Texture" id=23]
+[ext_resource path="res://GameSrc/PatnicRoom/Scenes/Unique/Titlescreen/SubScene/Manager.gd" type="Script" id=24]
 
 [sub_resource type="DynamicFont" id=2]
 size = 30
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+outline_size = 3
+outline_color = Color( 0.172549, 0.203922, 0.286275, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-draw_center = false
-border_width_bottom = 2
-border_color = Color( 0, 0.952941, 1, 1 )
-border_blend = true
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-expand_margin_left = 5.0
-expand_margin_right = 5.0
+[sub_resource type="DynamicFont" id=5]
+size = 25
+outline_size = 3
+outline_color = Color( 0.172549, 0.203922, 0.286275, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 35
+outline_size = 3
+outline_color = Color( 0.172549, 0.203922, 0.286275, 1 )
+font_data = ExtResource( 1 )
 
 [node name="root_Introduction" type="Node2D"]
 
-[node name="Frame" type="Panel" parent="."]
+[node name="Steps" type="Panel" parent="."]
 margin_left = 392.0
 margin_top = 392.0
-margin_right = 960.0
+margin_right = 706.0
 margin_bottom = 944.0
-custom_styles/panel = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+custom_styles/panel = ExtResource( 10 )
 
-[node name="1" type="Panel" parent="Frame"]
-margin_top = 65.0
-margin_right = 296.0
-margin_bottom = 301.0
-custom_styles/panel = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Step" type="RichTextLabel" parent="Frame/1"]
-margin_left = 56.0
-margin_top = 8.0
-margin_right = 248.0
-margin_bottom = 41.0
-custom_fonts/normal_font = ExtResource( 9 )
+[node name="Title" type="RichTextLabel" parent="Steps"]
+margin_right = 314.0
+margin_bottom = 56.0
+custom_fonts/normal_font = ExtResource( 18 )
 bbcode_enabled = true
-bbcode_text = "[center]GET A KIT"
-text = "GET A KIT"
+bbcode_text = "[center][color=yellow]Steps"
+text = "Steps"
 
-[node name="TextureRect" type="TextureRect" parent="Frame/1"]
-margin_left = 16.0
-margin_top = 48.0
-margin_right = 48.0
-margin_bottom = 80.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Steps"]
+margin_left = 60.0
+margin_top = 89.0
+margin_right = 260.0
+margin_bottom = 454.0
+rect_min_size = Vector2( 180, 300 )
+custom_constants/separation = 50
+
+[node name="0" type="Button" parent="Steps/VBoxContainer"]
+margin_right = 200.0
+margin_bottom = 33.0
+custom_colors/font_color = Color( 0.878431, 1, 0.988235, 1 )
+custom_colors/font_color_hover = Color( 0.992157, 1, 0.72549, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.25098, 0.25098, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 8 )
+custom_styles/pressed = ExtResource( 15 )
+custom_styles/normal = ExtResource( 16 )
+text = "1> Character"
+align = 0
+
+[node name="1" type="Button" parent="Steps/VBoxContainer"]
+margin_top = 83.0
+margin_right = 200.0
+margin_bottom = 116.0
+custom_colors/font_color = Color( 0.878431, 1, 0.988235, 1 )
+custom_colors/font_color_hover = Color( 0.992157, 1, 0.72549, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.25098, 0.25098, 1 )
+custom_constants/hseparation = 5
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 8 )
+custom_styles/pressed = ExtResource( 15 )
+custom_styles/normal = ExtResource( 16 )
+text = "2> Objective"
+align = 0
+
+[node name="2" type="Button" parent="Steps/VBoxContainer"]
+margin_top = 166.0
+margin_right = 200.0
+margin_bottom = 199.0
+custom_colors/font_color = Color( 0.878431, 1, 0.988235, 1 )
+custom_colors/font_color_hover = Color( 0.992157, 1, 0.72549, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.25098, 0.25098, 1 )
+custom_constants/hseparation = 5
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 8 )
+custom_styles/pressed = ExtResource( 15 )
+custom_styles/normal = ExtResource( 16 )
+text = "3> Challenge"
+align = 0
+
+[node name="3" type="Button" parent="Steps/VBoxContainer"]
+margin_top = 249.0
+margin_right = 200.0
+margin_bottom = 282.0
+custom_colors/font_color = Color( 0.878431, 1, 0.988235, 1 )
+custom_colors/font_color_hover = Color( 0.992157, 1, 0.72549, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.25098, 0.25098, 1 )
+custom_constants/hseparation = 5
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 8 )
+custom_styles/pressed = ExtResource( 15 )
+custom_styles/normal = ExtResource( 16 )
+text = "4> Reward"
+align = 0
+
+[node name="4" type="Button" parent="Steps/VBoxContainer"]
+margin_top = 332.0
+margin_right = 200.0
+margin_bottom = 365.0
+custom_colors/font_color = Color( 0.878431, 1, 0.988235, 1 )
+custom_colors/font_color_hover = Color( 0.992157, 1, 0.72549, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.25098, 0.25098, 1 )
+custom_constants/hseparation = 5
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 8 )
+custom_styles/pressed = ExtResource( 15 )
+custom_styles/normal = ExtResource( 16 )
+text = "5> Level up"
+align = 0
+
+[node name="Guide" type="Panel" parent="."]
+margin_left = 761.0
+margin_top = 392.0
+margin_right = 1353.0
+margin_bottom = 944.0
+custom_styles/panel = ExtResource( 10 )
+script = ExtResource( 24 )
+
+[node name="hint" type="RichTextLabel" parent="Guide"]
+margin_left = 184.0
+margin_top = 520.0
+margin_right = 776.0
+margin_bottom = 576.0
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+bbcode_text = "Hover over pictures  for for more info"
+text = "Hover over pictures  for for more info"
+
+[node name="texts" type="Control" parent="Guide"]
+margin_right = 568.0
+margin_bottom = 552.0
+
+[node name="1" type="Control" parent="Guide/texts"]
+margin_top = 65.0
+margin_right = 232.0
+margin_bottom = 296.0
+
+[node name="Title4" type="RichTextLabel" parent="Guide/texts/1"]
+margin_left = 79.0
+margin_top = 135.0
+margin_right = 239.0
+margin_bottom = 169.0
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "Meat"
+text = "Meat"
+
+[node name="Title6" type="RichTextLabel" parent="Guide/texts/1"]
+margin_left = 191.0
+margin_top = 87.0
+margin_right = 255.0
+margin_bottom = 121.0
+rect_pivot_offset = Vector2( 40, 24 )
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "Body"
+text = "Body"
+
+[node name="Title7" type="RichTextLabel" parent="Guide/texts/1"]
+margin_left = 391.0
+margin_top = 87.0
+margin_right = 455.0
+margin_bottom = 121.0
+rect_pivot_offset = Vector2( 40, 24 )
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "Util	"
+text = "Util	"
+scroll_active = false
+
+[node name="Title8" type="RichTextLabel" parent="Guide/texts/1"]
+margin_left = 295.0
+margin_top = 87.0
+margin_right = 359.0
+margin_bottom = 121.0
+rect_pivot_offset = Vector2( 40, 24 )
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "Env."
+text = "Env."
+
+[node name="Title5" type="RichTextLabel" parent="Guide/texts/1"]
+margin_left = 79.0
+margin_top = 196.0
+margin_right = 239.0
+margin_bottom = 230.0
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "Magic"
+text = "Magic"
+
+[node name="Title9" type="RichTextLabel" parent="Guide/texts/1"]
+margin_left = 79.0
+margin_top = 255.0
+margin_right = 239.0
+margin_bottom = 289.0
+custom_fonts/normal_font = SubResource( 5 )
+bbcode_enabled = true
+bbcode_text = "Matrix"
+text = "Matrix"
+
+[node name="TextureRect" type="TextureRect" parent="Guide/texts/1"]
+margin_left = 200.0
+margin_top = 248.0
+margin_right = 232.0
+margin_bottom = 280.0
 rect_scale = Vector2( 1.5, 1.5 )
+hint_tooltip = "Cyberware!
+Humans beyond their Nature "
 texture = ExtResource( 2 )
 
-[node name="TextureRect2" type="TextureRect" parent="Frame/1"]
-margin_left = 240.0
-margin_top = 48.0001
-margin_right = 272.0
-margin_bottom = 80.0001
+[node name="TextureRect5" type="TextureRect" parent="Guide/texts/1"]
+margin_left = 200.0
+margin_top = 128.0
+margin_right = 232.0
+margin_bottom = 160.0
 rect_scale = Vector2( 1.5, 1.5 )
-texture = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect3" type="TextureRect" parent="Frame/1"]
-margin_left = 240.0
-margin_top = 112.0
-margin_right = 272.0
-margin_bottom = 144.0
-rect_scale = Vector2( 1.5, 1.5 )
-texture = ExtResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect4" type="TextureRect" parent="Frame/1"]
-margin_left = 16.0
-margin_top = 112.0
-margin_right = 48.0
-margin_bottom = 144.0
-rect_scale = Vector2( 1.5, 1.5 )
+hint_tooltip = "Meele!
+unique Martial arts "
 texture = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect5" type="TextureRect" parent="Frame/1"]
-margin_left = 16.0
-margin_top = 176.0
-margin_right = 48.0
-margin_bottom = 208.0
+[node name="TextureRect6" type="TextureRect" parent="Guide/texts/1"]
+margin_left = 200.0
+margin_top = 188.0
+margin_right = 232.0
+margin_bottom = 220.0
 rect_scale = Vector2( 1.5, 1.5 )
+hint_tooltip = "Infusion!
+Magic channeled in your Veins"
+texture = ExtResource( 5 )
+
+[node name="TextureRect7" type="TextureRect" parent="Guide/texts/1"]
+margin_left = 300.0
+margin_top = 248.0
+margin_right = 332.0
+margin_bottom = 280.0
+rect_scale = Vector2( 1.5, 1.5 )
+hint_tooltip = "Hacks!
+There is no Spoon"
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect8" type="TextureRect" parent="Guide/texts/1"]
+margin_left = 300.0
+margin_top = 128.0
+margin_right = 332.0
+margin_bottom = 160.0
+rect_scale = Vector2( 1.5, 1.5 )
+hint_tooltip = "Guns!
+Everything that has a trigger"
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect9" type="TextureRect" parent="Guide/texts/1"]
+margin_left = 300.0
+margin_top = 188.0
+margin_right = 332.0
+margin_bottom = 220.0
+rect_scale = Vector2( 1.5, 1.5 )
+hint_tooltip = "Infusion!
+Magic channeled in your Veins"
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect6" type="TextureRect" parent="Frame/1"]
-margin_left = 240.0
-margin_top = 176.0
-margin_right = 272.0
-margin_bottom = 208.0
+[node name="TextureRect10" type="TextureRect" parent="Guide/texts/1"]
+margin_left = 400.0
+margin_top = 248.0
+margin_right = 432.0
+margin_bottom = 280.0
 rect_scale = Vector2( 1.5, 1.5 )
+hint_tooltip = "Cyberware!
+Humans beyond their Nature "
+texture = ExtResource( 2 )
+
+[node name="TextureRect11" type="TextureRect" parent="Guide/texts/1"]
+margin_left = 400.0
+margin_top = 128.0
+margin_right = 432.0
+margin_bottom = 160.0
+rect_scale = Vector2( 1.5, 1.5 )
+hint_tooltip = "Meele!
+unique Martial arts "
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect12" type="TextureRect" parent="Guide/texts/1"]
+margin_left = 400.0
+margin_top = 188.0
+margin_right = 432.0
+margin_bottom = 220.0
+rect_scale = Vector2( 1.5, 1.5 )
+hint_tooltip = "Spells!
+Mind over Matter"
 texture = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="2" type="Panel" parent="Frame"]
-margin_left = 293.0
+[node name="Title2" type="RichTextLabel" parent="Guide/texts/1"]
+margin_top = -50.0
+margin_right = 592.0
+margin_bottom = 6.0
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center][color=white
+]1> Every action is a Kit"
+text = "1> Every action is a Kit"
+
+[node name="2" type="Control" parent="Guide/texts"]
+visible = false
+margin_left = 232.0
 margin_top = 65.0
 margin_right = 568.0
-margin_bottom = 301.0
-custom_styles/panel = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_bottom = 296.0
 
-[node name="Step" type="RichTextLabel" parent="Frame/2"]
-margin_left = 35.0
-margin_top = 8.0
-margin_right = 247.0
-margin_bottom = 41.0
-custom_fonts/normal_font = ExtResource( 9 )
+[node name="Title3" type="RichTextLabel" parent="Guide/texts/2"]
+margin_left = -232.0
+margin_top = -50.0
+margin_right = 360.0
+margin_bottom = 6.0
+custom_fonts/normal_font = SubResource( 4 )
 bbcode_enabled = true
-bbcode_text = "[center]FIND P@NICROOM"
-text = "FIND P@NICROOM"
+bbcode_text = "[center][color=white
+]2> Explore and find P@nicRoom"
+text = "2> Explore and find P@nicRoom"
 
-[node name="TextureRect2" type="TextureRect" parent="Frame/2"]
-margin_left = 35.0
-margin_top = 63.0
-margin_right = 404.0
-margin_bottom = 200.0
-rect_scale = Vector2( 0.5, 0.5 )
+[node name="TextureRect2" type="TextureRect" parent="Guide/texts/2"]
+margin_left = 15.0
+margin_top = 87.0
+margin_right = 384.0
+margin_bottom = 224.0
+rect_scale = Vector2( 0.85, 0.85 )
+hint_tooltip = "High security doors can be hacked, walls can be broken down"
 texture = ExtResource( 12 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="3" type="Panel" parent="Frame"]
+[node name="TextureRect4" type="TextureRect" parent="Guide/texts/2"]
+margin_left = 79.0
+margin_top = 231.0
+margin_right = 463.0
+margin_bottom = 623.0
+rect_scale = Vector2( 0.5, 0.5 )
+hint_tooltip = " loose soil enables player to dig beneath the fence"
+texture = ExtResource( 20 )
+
+[node name="TextureRect3" type="TextureRect" parent="Guide/texts/2"]
+margin_left = -193.0
+margin_top = 231.0
+margin_right = 212.0
+margin_bottom = 534.0
+rect_scale = Vector2( 0.5, 0.5 )
+hint_tooltip = "Forests and Lakes can be a welcome change from Urban settings "
+texture = ExtResource( 19 )
+
+[node name="3" type="Control" parent="Guide/texts"]
+visible = false
 margin_top = 296.0
 margin_right = 296.0
 margin_bottom = 552.0
-custom_styles/panel = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Step" type="RichTextLabel" parent="Frame/3"]
-margin_left = 21.0
-margin_top = 8.0
-margin_right = 278.0
-margin_bottom = 41.0
-custom_fonts/normal_font = ExtResource( 9 )
-bbcode_enabled = true
-bbcode_text = "[center] USE YOUR KITS"
-text = " USE YOUR KITS"
-
-[node name="TextureRect" type="TextureRect" parent="Frame/3"]
-margin_left = 27.5122
-margin_top = 76.3601
-margin_right = 479.512
-margin_bottom = 242.36
-rect_scale = Vector2( 0.5, 0.5 )
+[node name="TextureRect" type="TextureRect" parent="Guide/texts/3"]
+margin_left = 279.0
+margin_top = -160.0
+margin_right = 731.0
+margin_bottom = 6.0
+rect_scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="4" type="Panel" parent="Frame"]
+[node name="TextureRect3" type="TextureRect" parent="Guide/texts/3"]
+margin_left = 287.0
+margin_top = -48.0
+margin_right = 585.0
+margin_bottom = 265.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Guide/texts/3"]
+margin_left = 7.0
+margin_top = -8.0
+margin_right = 402.0
+margin_bottom = 199.0
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title4" type="RichTextLabel" parent="Guide/texts/3"]
+margin_top = -281.0
+margin_right = 592.0
+margin_bottom = -225.0
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center][color=white
+]2> No intended solution, DIY"
+text = "2> No intended solution, DIY"
+
+[node name="4" type="Control" parent="Guide/texts"]
+visible = false
 margin_left = 293.0
 margin_top = 296.0
 margin_right = 568.0
 margin_bottom = 552.0
-custom_styles/panel = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Step" type="RichTextLabel" parent="Frame/4"]
-margin_left = 9.0
-margin_top = 5.0
-margin_right = 266.0
-margin_bottom = 38.0
-custom_fonts/normal_font = ExtResource( 9 )
+[node name="Title5" type="RichTextLabel" parent="Guide/texts/4"]
+margin_left = -293.0
+margin_top = -281.0
+margin_right = 299.0
+margin_bottom = -225.0
+custom_fonts/normal_font = SubResource( 4 )
 bbcode_enabled = true
-bbcode_text = "[center]Stay Resilient"
-text = "Stay Resilient"
+bbcode_text = "[center][color=white
+]4> Collect new parts, exploit"
+text = "4> Collect new parts, exploit"
 
-[node name="TextureRect2" type="TextureRect" parent="Frame/4"]
-margin_left = 19.0001
+[node name="TextureRect2" type="TextureRect" parent="Guide/texts/4"]
+margin_left = 19.0
 margin_top = 56.0
 margin_right = 554.0
 margin_bottom = 424.0
-rect_scale = Vector2( 0.4, 0.4 )
+rect_scale = Vector2( 0.45, 0.45 )
 texture = ExtResource( 14 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="5" type="Panel" parent="Frame"]
+[node name="5" type="Control" parent="Guide/texts"]
+visible = false
 margin_top = 552.0
 margin_right = 568.0
 margin_bottom = 688.0
-custom_styles/panel = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Step" type="RichTextLabel" parent="Frame/5"]
-margin_left = 120.0
-margin_right = 440.0
-margin_bottom = 33.0
-custom_fonts/normal_font = ExtResource( 9 )
-bbcode_enabled = true
-bbcode_text = "[center]IMPROVE KIT"
-text = "IMPROVE KIT"
-
-[node name="TextureRect2" type="TextureRect" parent="Frame/5"]
-margin_left = 112.0
-margin_top = 40.0
-margin_right = 973.0
-margin_bottom = 225.0
-rect_scale = Vector2( 0.4, 0.4 )
+[node name="TextureRect2" type="TextureRect" parent="Guide/texts/5"]
+margin_left = 15.0
+margin_top = -280.0
+margin_right = 1175.0
+margin_bottom = -31.0
+rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 13 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Headline" type="Button" parent="Frame"]
-margin_left = 192.0
-margin_top = 17.0
-margin_right = 384.0
-margin_bottom = 50.0
-custom_colors/font_color = Color( 0.878431, 1, 0.988235, 1 )
-custom_colors/font_color_pressed = Color( 1, 0.25098, 0.25098, 1 )
-custom_fonts/font = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
-text = "HOW TO PLAY"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="TextureRect3" type="TextureRect" parent="Guide/texts/5"]
+margin_left = 7.0
+margin_top = -408.0
+margin_right = 971.0
+margin_bottom = -263.0
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 23 )
+
+[node name="Title5" type="RichTextLabel" parent="Guide/texts/5"]
+margin_top = -537.0
+margin_right = 592.0
+margin_bottom = -481.0
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center][color=white
+]5> Specialice your Gear"
+text = "5> Specialice your Gear"
+
+[connection signal="pressed" from="Steps/VBoxContainer/0" to="Guide" method="_on_pressed" binds= [ 0 ]]
+[connection signal="pressed" from="Steps/VBoxContainer/1" to="Guide" method="_on_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="Steps/VBoxContainer/2" to="Guide" method="_on_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="Steps/VBoxContainer/3" to="Guide" method="_on_pressed" binds= [ 3 ]]
+[connection signal="pressed" from="Steps/VBoxContainer/4" to="Guide" method="_on_pressed" binds= [ 4 ]]

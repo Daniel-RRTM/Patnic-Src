@@ -25,7 +25,8 @@ func _ready() -> void:
 
 func updateMap() -> void:
 	for layerNode in cachedTilemapNode.values(): 
-		layerNode.drawWholeLayer_quack()
+		if layerNode is Sokratiles_Chunk_Selection: layerNode.clear()
+		else:layerNode.drawWholeLayer_quack()
 
 
 "

@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/DynamicFonts/new_dynamicfontdata.tres" type="DynamicFontData" id=1]
+[ext_resource path="res://GameSrc/PatnicRoom/Scenes/Gameloop/RestMode/Station/new revised script/initialiceStation.gd" type="Script" id=2]
 [ext_resource path="res://GameSrc/Universal/GUI/EquipedKitSet/Scene.tscn" type="PackedScene" id=4]
-[ext_resource path="res://GameSrc/PatnicRoom/scenes/Gameloop/RestMode/Station/Title.gd" type="Script" id=5]
 [ext_resource path="res://Assets/CustomeStyle/Panel/Main_Menue.tres" type="StyleBox" id=7]
 [ext_resource path="res://GameSrc/Universal/GUI/KitSetModder/Scene.tscn" type="PackedScene" id=9]
 [ext_resource path="res://GameSrc/Universal/GUI/Inventory/Scene.tscn" type="PackedScene" id=12]
@@ -40,17 +40,14 @@ margin_left = 160.0
 margin_top = 119.0
 margin_right = 200.0
 margin_bottom = 159.0
-script = ExtResource( 5 )
+script = ExtResource( 2 )
 
 [node name="Panel" type="Panel" parent="Title"]
-margin_left = 1072.0
-margin_top = -45.0
-margin_right = 1464.0
-margin_bottom = 165.0
+margin_left = 1073.0
+margin_top = -46.0
+margin_right = 1465.0
+margin_bottom = 129.0
 custom_styles/panel = ExtResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="1" type="TextureRect" parent="Title/Panel"]
 margin_left = 8.0
@@ -145,9 +142,9 @@ __meta__ = {
 
 [node name="reminder" type="RichTextLabel" parent="Title"]
 margin_left = 1080.0
-margin_top = 89.0
+margin_top = 65.0
 margin_right = 1456.0
-margin_bottom = 137.0
+margin_bottom = 113.0
 custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = true
 scroll_active = false
@@ -157,30 +154,27 @@ __meta__ = {
 
 [node name="countdown" type="RichTextLabel" parent="Title"]
 margin_left = 1072.0
-margin_top = 129.0
+margin_top = 97.0
 margin_right = 1465.0
-margin_bottom = 162.0
+margin_bottom = 130.0
 custom_fonts/normal_font = SubResource( 4 )
 bbcode_enabled = true
 scroll_active = false
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="GearedKitSetTable" parent="." instance=ExtResource( 4 )]
-margin_top = 792.0
-margin_bottom = 832.0
+margin_top = 760.0
+margin_bottom = 800.0
 
 [node name="KitSetOverview" parent="." instance=ExtResource( 9 )]
 visible = false
 margin_left = -24.0
-margin_top = -216.0
+margin_top = -200.0
 margin_right = -24.0
-margin_bottom = -216.0
+margin_bottom = -200.0
 
-[node name="BuilldSelection" parent="." instance=ExtResource( 12 )]
+[node name="BuildSelection" parent="." instance=ExtResource( 12 )]
 visible = false
-position = Vector2( 14, -80 )
+position = Vector2( 14, 16 )
 
 [node name="KitEffectDetails" type="Control" parent="."]
 margin_left = 1016.0

@@ -56,9 +56,9 @@ func getDataToFill(ent) -> Dictionary:
 		toReturn["NAME"] = ent.synonym()
 		toReturn["WALKABLE"] = false 
 		toReturn["DESC"] = ""
-		toReturn["RACE"] = ent.getCompTempValue("race","C_6_NAME")
-		toReturn["ROLE"] = ent.getCompTempValue("role","C_6_NAME")
-		toReturn["SPECIALTY"] = ent.getCompTempValue("specialty","C_6_NAME")
+		toReturn["RACE"] = ent.getCompTempValue("RACE","C_6_NAME")
+		toReturn["ROLE"] = ent.getCompTempValue("ROLE","C_6_NAME")
+		toReturn["SPECIALTY"] = ent.getCompTempValue("SPECIALTY","C_6_NAME")
 		
 	
 	return toReturn

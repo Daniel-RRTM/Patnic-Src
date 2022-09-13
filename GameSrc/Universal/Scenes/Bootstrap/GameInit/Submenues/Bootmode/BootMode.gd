@@ -18,6 +18,8 @@ func _on_quickstart_details_pressed() -> void:
 
 func _on_Restmode_pressed() -> void:
 	OS.window_fullscreen = !OS.window_fullscreen
+	
+	SokraTiles.loadChunk("res://GameData/Tiled/TileMaps/Story/Suburban_One.json")
 	GameInit.runRestmode()
 
 

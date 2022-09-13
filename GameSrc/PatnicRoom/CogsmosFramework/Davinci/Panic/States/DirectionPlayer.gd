@@ -15,9 +15,21 @@ func _init() -> void:
 
 func actOnInput_quack(event:InputEvent) -> void:   
 	var inputEnum = Davinci.getInputToEnum(event) as int
-	SokraTiles.getPlayer().movePlayer(inputEnum)
-	SokraTiles.getSelection().clearLayer()
-	API_009_Sound.playMovePlayer()
+	var playerPos = API_003_Player.currentChar.pos()
+	var newPos    = API_002_Tilemap.getMovePos(playerPos,inputEnum)
+	
+	if SokraTiles.hasPlayerRested:
+		if newPos.x == 100 or newPos.x == -1 or newPos.y == 100 or newPos.y == -1:
+			SokraTiles.loadRandomChunk()
+			SokraTiles.setHasPlayerRested(false)
+			
+	
+	if newPos.x < 100 and newPos.x >= 0:
+		if newPos.y < 100 and newPos.y >= 0:
+	
+			SokraTiles.getPlayer().movePlayer(inputEnum)
+			SokraTiles.getSelection().clearLayer()
+			API_009_Sound.playMovePlayer()
 
 
 

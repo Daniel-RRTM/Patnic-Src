@@ -55,9 +55,6 @@ margin_top = 168.0
 margin_right = 304.0
 margin_bottom = 208.0
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Window" type="Control" parent="."]
 margin_right = 40.0

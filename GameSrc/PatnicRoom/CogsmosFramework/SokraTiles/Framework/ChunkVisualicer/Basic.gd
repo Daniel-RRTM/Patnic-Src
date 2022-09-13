@@ -24,11 +24,17 @@ func drawWholeLayer_quack() -> void:
 	
 	var toItterate = []
 	if entsOnMap.values().front() is Entity: toItterate = entsOnMap.values()
-	else: for ent in entsOnMap.values() : toItterate.append(instance_from_id(ent))
+	else: 
+		for ent in entsOnMap.values() : 
+			var inst = instance_from_id(ent)
+			if inst != null:toItterate.append(inst)
 	
 	for currentEnt in toItterate:
-		var cacheID  = tile_set.find_tile_by_name(currentEnt.components["C_12_ATLAS_INDEX"].value)
-		set_cell(currentEnt.position.x, currentEnt.position.y, cacheID)
+		if currentEnt == null:
+			print("df")
+		else:
+			var cacheID  = tile_set.find_tile_by_name(currentEnt.components["C_12_ATLAS_INDEX"].value)
+			set_cell(currentEnt.position.x, currentEnt.position.y, cacheID)
 		
 
 

@@ -19,14 +19,14 @@ func isSpecificallyValid_quack(currentType:int,currentState:int) -> bool:
 
 func actOnInput_quack(currentInput:InputEvent) -> void:   
 		API_004_KitSet.manageKitSelection(Davinci.cachedInput.as_text())
-		
-		if API_005_Event.isNeedingDirection() : Davinci.playerState = ENUM.INPUT_PANIC.PLAYER_STATE.NEEDING_DIRECTION
-		else                                  : Davinci.playerState = ENUM.INPUT_PANIC.PLAYER_STATE.SELECTING
-		stateAfterSucces = Davinci.playerState
-		SokraTiles.getSelection().clearLayer()
-		if API_004_KitSet.selection.highlightTexture != "-1": 
-			API_004_KitSet.drawHighlight()
-		API_004_KitSet.drawAlert()
-		API_009_Sound.playSelectKit()
+		if API_004_KitSet.selection is Dictionary:
+			if API_005_Event.isNeedingDirection() : Davinci.playerState = ENUM.INPUT_PANIC.PLAYER_STATE.NEEDING_DIRECTION
+			else                                  : Davinci.playerState = ENUM.INPUT_PANIC.PLAYER_STATE.SELECTING
+			stateAfterSucces = Davinci.playerState
+			SokraTiles.getSelection().clearLayer()
+			if API_004_KitSet.selection.highlightTexture != "-1": 
+				API_004_KitSet.drawHighlight()
+			API_004_KitSet.drawAlert()
+			API_009_Sound.playSelectKit()
 
 

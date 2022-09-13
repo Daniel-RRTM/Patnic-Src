@@ -12,7 +12,6 @@ onready var timer = get_node("Timer")
 
 func _ready() -> void:
 	selfTicker += getKitSlot()
-	selfTicker += getTrait()
 	
 	
 	
@@ -31,7 +30,8 @@ func _on_Timer_timeout() -> void:
 			
 			progress["RTL"].bbcode_text =  stationProgressToString(progress)
 			
-			if progress["BAR"].value == progress["MAX"]: get_node(progress["BUTTON"]).visible = true
+			if progress["BAR"].value == progress["MAX"]: 
+				get_node(progress["BUTTON"]).visible = true
 
 
 
