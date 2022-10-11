@@ -13,7 +13,9 @@ onready var allGroups = [
 
 
 
-func _enter_tree(): API_009_Sound.playTriggerPanicSlide()
+func _enter_tree(): 
+	if API_008_CLI.getGroupedSyntax().empty(): API_008_CLI.groupCmds()
+	API_009_Sound.playTriggerPanicSlide()
 
 
 func _ready():

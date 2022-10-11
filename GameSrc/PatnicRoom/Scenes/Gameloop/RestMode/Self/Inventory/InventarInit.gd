@@ -1,63 +1,66 @@
 extends Control
 
 
+var toSell = {   "object":null , "mode":null   }
+
 func _ready():
 	API_009_Sound.buildSceneReference()
 	Gameloop.scene.get_node("background").texture = Utils.rng().getBackground("rest")
 
 
 
-var player = API_003_Player.currentChar
-func getSpecificCLickedNode():
-	for i in 10:
-		var currentNode = get_node("root_Kits/list").get_node(str(i+1))
-		if Utils.node().isMouseOnNode(currentNode):
-			var kitPartString
-			
-			
-			if Utils.node().isMouseOnNode(currentNode.get_node("Base")):
-				kitPartString = currentNode.get_node("Base").get_node("text").bbcode_text
-				
-			elif Utils.node().isMouseOnNode(currentNode.get_node("Mod")):
-				kitPartString = currentNode.get_node("Mod").get_node("text").bbcode_text
-			
-			elif Utils.node().isMouseOnNode(currentNode.get_node("Appendix")):
-				kitPartString = currentNode.get_node("Appendix").get_node("text").bbcode_text
-			
+func calcToSell(obj,mode) -> void:
+	get_node("Selling").visible = true
+	toSell["object"] = obj
+	toSell["mode"] = mode
+	
+	match mode:
+		"VALUABLE" : get_node("Selling").insert(valuable(obj))
+		"KITPART"  : get_node("Selling").insert(kitPart(obj))
 
-			set_005_Character_StatsFor(player.kitset().getKitSetByLevel(0).base)
+
+func sell(credits):
+	API_008_CLI.processCmdRaw("add credits",[credits])
+	
+	if toSell["mode"] == "VALUABLE":
+		API_003_Player.currentChar.getComp("C_50_VALUABLES").substract(toSell.object[0],toSell.object[1],toSell.object[2],1)
+		get_node("Valuables").initialice()
 		
-	
-
-
-func set_005_Character_StatsFor(kitPart:KitPartEntity):
-	get_node("root_Kits2/selected kit").bbcode_text = kitPart.toString()
-	get_node("root_Kits2/whole Panel/Generall/description value Panel/text").bbcode_text = str(kitPart.decription())
-	get_node("root_Kits2/whole Panel/Meta/Rarity value Panel/text").bbcode_text = "[center]"+str(kitPart.rarity())
-	get_node("root_Kits2/whole Panel/Meta/cooldown value Panel/text").bbcode_text = "[center]"+str(kitPart.cooldownTime())
+	if toSell["mode"] == "KITPART":
+		API_003_Player.currentChar.kitventory().kitparts().remove(toSell.object)
+		get_node("kitpart_browser").loadKitparts(API_003_Player.currentChar.kitventory().kitparts().getAll())
 
 
 
-func fillKitInfo(kitset):
-	for part in ["BASE","MOD","APPENDIX"]: get_node("Kit Info/"+part).visible = false
-	
-	
-	get_node("Kit Info/Generall").manageGenerall(kitset)
-	
-	
-	var cache
-	if   kitset.hasFlag("F_15_KITPART_TYPE_BASE"):       cache = fillByFlag(kitset , "C_49_EVENT_REFERENCE" , "BASE"     )
-	elif kitset.hasFlag("F_16_KITPART_TYPE_MOD"):        cache = fillByFlag(kitset , "C_59_KIT_MOD_CHANGE"   , "MOD"      )
-	elif kitset.hasFlag("F_17_KITPART_TYPE_APPENDIX"):   cache = fillByFlag(kitset , ""                      , "APPENDIX" )
-	
-	
-	cache["TO_SHOW"].visible = true
-	cache["TO_SHOW"].fillForm(cache["TO_PARSE"])
 
 
 
-func fillByFlag(kitset,comp,type):
-	return { 
-		"TO_PARSE" : kitset.getCompValue(comp),
-		"TO_SHOW"  : get_node("Kit Info/"+type)
-		}
+
+
+func valuable(arr) -> Dictionary:
+	var stocks = Utils.rng().getRandomNumber(0,100)
+	return{
+		"type"    : [arr[0],10],
+		"subType" : [arr[1],0],
+		"quality" : [arr[2],int(arr[2])*10],
+		"stocks"  : [str(stocks),stepify(stocks/10,0.1)]
+	}
+
+func kitPart(kitpart) -> Dictionary:
+	var stocks = Utils.rng().getRandomNumber(0,100)
+	var arrType = ["KitPart",25]
+	var arrSubType : Array
+	match kitpart.partType():
+		ENUM.KITS.PARTS.BASE : arrSubType = ["Core",75]
+		ENUM.KITS.PARTS.MOD  : arrSubType = ["Upgrade",25]
+		ENUM.KITS.PARTS.BASE : arrSubType = ["Auxillary",0]
+	return{
+		"type"    : arrType,
+		"subType" : arrSubType,
+		"quality" : [str(kitpart.rarity()),int(kitpart.rarity())*10],
+		"stocks"  : [str(stocks),stepify(stocks/10,0.1)]
+	}
+
+
+
+

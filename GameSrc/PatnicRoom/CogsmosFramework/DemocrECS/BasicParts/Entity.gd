@@ -59,6 +59,8 @@ func getCompTempValue(tempName:String, compName:String):
 func hasTemplate(tempName:String) -> bool:
 	return self.templates.has(tempName)
 
+func getFlagTemp(tempName:String):
+	return templates[tempName].flags
 
 
 #>>> Other Validators <<<#

@@ -13,11 +13,16 @@ func _init() -> void:
 
 func actOnInput_quack(currentInput:InputEvent) -> void:   
 	var subInfoPanelInstance = load(sceneForInfopanel).instance()
+	var sidePanel = Gameloop.scene.get_node("SidePanel")
+	var hadPreviousSidePanel = false
 	
-	if Gameloop.scene.get_node("SidePanel").get_child_count() == 1: 
-		Gameloop.scene.get_node("SidePanel").get_child(0).exitAnimation(self)
-		Gameloop.scene.get_node("SidePanel").get_child(0).queue_free()
+	if sidePanel.get_child_count() == 1: 
+		sidePanel.get_child(0).exitAnimation(self)
+		sidePanel.get_child(0).queue_free()
+		hadPreviousSidePanel = sidePanel.get_child(0).name != "News"
 	
-	Gameloop.scene.get_node("SidePanel").add_child(subInfoPanelInstance)
-	Gameloop.scene.get_node("SidePanel").get_child(0).buildRef(self)
+	if sidePanel.get_child_count() == 0 or hadPreviousSidePanel: 
+		sidePanel.add_child(subInfoPanelInstance)
+		sidePanel.get_child(0).buildRef(self)
+	
 	API_009_Sound.playTriggerPanicSlide()

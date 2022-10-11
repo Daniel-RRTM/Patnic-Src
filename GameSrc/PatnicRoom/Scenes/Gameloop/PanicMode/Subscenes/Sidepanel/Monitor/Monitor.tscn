@@ -84,11 +84,8 @@ tracks/0/keys = {
 "values": [ Vector2( 1920, 8 ), Vector2( 1150, 8 ) ]
 }
 
-[node name="root_Status" type="Control"]
+[node name="Root_Monitor" type="Control"]
 script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Background" type="Panel" parent="."]
 margin_left = 1920.0
@@ -163,9 +160,6 @@ __meta__ = {
 [node name="credits" type="Control" parent="Background/Stats"]
 margin_right = 40.0
 margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Name2" type="RichTextLabel" parent="Background/Stats/credits"]
 margin_left = 66.0

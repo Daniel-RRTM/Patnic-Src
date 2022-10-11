@@ -14,6 +14,16 @@ var considerSystem := _005_ConsiderSystem.new()
 
 
 
+# ----- GETTER ------------------------------------------------------------------- ##
+
+
+func consider()   ->   _005_ConsiderSystem : return considerSystem
+func perform()    ->   _005_PerformSystem  : return performSystem
+func medium()     ->   _005_MediumSystem   : return mediumSystem
+func source()     ->   _005_SourceSystem   : return sourceSystem
+
+
+
 # ----- PROCESS ------------------------------------------------------------------ ##
 
 
@@ -45,7 +55,6 @@ func getTriggeredSelects(taskData:Dictionary) -> Array:
 
 
 func runKitSet(step:Dictionary) -> void  : 
-	API_004_KitSet.selection.entity.currentCooldownTime = 0
 	if "FILE" in step.typeOfCache:
 		for select in API_004_KitSet.selection.triggeredEnts:
 			performSystem._operateOnParameter(step,select)

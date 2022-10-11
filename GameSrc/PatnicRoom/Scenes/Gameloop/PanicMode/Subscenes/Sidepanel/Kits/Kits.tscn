@@ -45,7 +45,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1920, 8 ), Vector2( 1150, 8 ) ]
 }
 
-[node name="root" type="Control"]
+[node name="Root_Kits" type="Control"]
 script = ExtResource( 4 )
 
 [node name="background" type="Panel" parent="."]

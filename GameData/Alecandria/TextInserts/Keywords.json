@@ -25,6 +25,9 @@
 
 
     "Selection":{
+        "ENTER" : "#07e02b",
+        "ADD" : "#07e02b",
+        "CLEAR" : "#07e02b",
         "Actor"               : "#6bceff",
         "Misc"                : "#6bceff",
         "KitParts"            : "#6bceff",
@@ -41,6 +44,7 @@
 
     
     "Design":{
+        "ENTER" : "#07e02b",
         "CREATE GAME ELEMENTE" : "#07e02b",
         "xxx"                  : "#ebb434"
     }

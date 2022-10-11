@@ -24,9 +24,10 @@ MAIN{
 
 
 //------------------------------------------------------------------------------\\
-  EFFECT[
-    AFFECTING ---> C_57_HITPOINTS MOD -1
-    SPREADING ---> PROPERTY EQUALS BURNABLE 30 1
+  CONDITION[
+    EFFECT:
+      AFFECTING ---> C_57_HITPOINTS MOD -1
+      SPREADING ---> PROPERTY EQUALS BURNABLE 30 1
   ]
 }
 
@@ -37,6 +38,6 @@ MAIN{
 
 
 
-REFERENCE{
+REFERENCES{
 
 }

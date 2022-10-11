@@ -24,6 +24,7 @@ static func buildMainStructure(content:Array,toReturn={}) -> Dictionary:
 
 
 static func buildMetaStructure(metaData:Array,toReturn={}) -> Dictionary:
+	toReturn={   "INDEX":{} , "USE":{} ,"BY":{}   }
 	for line in metaData:
 		var saniticedMeta = line.replace(" ","").split("--->")
 		toReturn[saniticedMeta[0]] = saniticedMeta[1]
@@ -32,4 +33,8 @@ static func buildMetaStructure(metaData:Array,toReturn={}) -> Dictionary:
 
 
 static func buildReferenceStructure(metaData:Array,toReturn={}) -> Dictionary:
+	for line in metaData:
+		var set = line.split(" ---> ")
+		toReturn[set[0]] = set[1]
+	
 	return toReturn

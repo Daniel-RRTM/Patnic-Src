@@ -16,6 +16,7 @@ var sceneQueue   = [kitEntry,kitEntryAlt]
 
 
 func loadKitparts(kitPartArr:Array):
+	clearEntries()
 	for kitPart in kitPartArr:
 		sceneQueue.invert()
 		
@@ -37,4 +38,9 @@ func getCurrentList(): return listOfEntries
 func resetCurrentList(): 
 	for entry in listOfEntries:
 		entry.scene.visible = true
+
+func clearEntries():
+	for node in get_node("All KitParts/ScrollContainer/VBoxContainer").get_children():
+		node.queue_free()
+
 

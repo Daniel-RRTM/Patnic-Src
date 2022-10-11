@@ -91,7 +91,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1920, 8 ), Vector2( 1150, 8 ) ]
 }
 
-[node name="root_News" type="Control"]
+[node name="Root_News" type="Control"]
 script = ExtResource( 1 )
 
 [node name="Control" type="Control" parent="."]

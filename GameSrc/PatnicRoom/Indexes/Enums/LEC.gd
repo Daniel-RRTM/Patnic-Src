@@ -22,14 +22,18 @@ var SPACING = [10,15,20,2,2]
 
 
 var TYPES_METADATA = {
-	 "KITPART_BASE"    :  {   "CLASS" : KitPartEntity     , "MANDATORY"  : ENUM.MINIMAL_COMP.KITPART_BASE   }
-	 ,"CONDITION"       :  {   "CLASS" : ConditionEntity     , "MANDATORY"  : []   }
+	 "QUEST"    :  {   "CLASS" : Entity     , "MANDATORY"  : ENUM.MINIMAL_COMP.QUEST }
+	,"KITPART_BASE"    :  {   "CLASS" : KitPartEntity     , "MANDATORY"  : ENUM.MINIMAL_COMP.KITPART_BASE   }
+	,"CONNECTION"    :  {   "CLASS" : ActorEntity     , "MANDATORY"  : ENUM.MINIMAL_COMP.CONNECTION   }
+	,"CONDITION"       :  {   "CLASS" : ConditionEntity     , "MANDATORY"  : []   }
 	,"KITPART_MOD"     :  {   "CLASS" : KitPartEntity     , "MANDATORY"  : ENUM.MINIMAL_COMP.KITPART_MOD    }
 	
 	,"ACTOR_ROLE"      :  {   "CLASS" : Entity            , "MANDATORY"  : ENUM.MINIMAL_COMP.ROLE           }
 	,"ACTOR_RACE"      :  {   "CLASS" : Entity            , "MANDATORY"  : ENUM.MINIMAL_COMP.RACE           }
 	,"ACTOR_SPECIALTY" :  {   "CLASS" : Entity            , "MANDATORY"  : ENUM.MINIMAL_COMP.SPECIALTY      }
 	,"ACTOR_RNG_TABLE" :  {   "CLASS" : ActorRNGTemplate  , "MANDATORY"  : []                               }
+	
+	,"LOOT_FILTER"      :  {   "CLASS" : Entity            , "MANDATORY"  : ENUM.MINIMAL_COMP.LOOT_FILTER           }
 }
 
 

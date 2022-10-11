@@ -1,11 +1,15 @@
 extends Node
 
 
-
+var LECDistribuution = {
+	"TOTAL_LEC" : 0
+}
 
 func _ready()-> void:
+	HomErrorLog.printIntoSeshLog("INIT","Alecandria parses external LEC into Entities...")
 	_Alecandria_LecToEnt.parse()
 	API_001_Atlas.sortKitpartsAtlas()
+	HomErrorLog.printIntoSeshLog("INIT","Alecandria done!")
 	
 
 

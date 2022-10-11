@@ -13,6 +13,10 @@ func interpreteTileNr(actor,node:Node) -> void:
 		if ["POI_0_2","POI_0_6","POI_0_12"].has(interact.index()):
 			API_011_ProcGen_Loot.generateLoot()
 			SokraTiles.removeEntOnTilemap(interact)
+			match interact.index():
+				"POI_0_2" : API_011_ProcGen_Loot.generateValuable("VALUABLE_PED_FULL")
+				"POI_0_6" : API_011_ProcGen_Loot.generateValuable("VALUABLE_PCD_FULL")
+				"POI_0_12" : API_011_ProcGen_Loot.generateValuable("VALUABLE_REAGENTS_FULL")
 			
 		match interact.index():
 			"General_2_0":

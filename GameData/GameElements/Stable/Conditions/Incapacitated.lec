@@ -24,8 +24,9 @@ MAIN{
 
 
 //------------------------------------------------------------------------------\\
-  EFFECT[
-    CONSTRAINT ---> MOVEMENT
+  CONDITION[
+    EFFECT:
+      CONSTRAINT ---> MOVEMENT
   ]
 }
 
@@ -36,6 +37,6 @@ MAIN{
 
 
 
-REFERENCE{
+REFERENCES{
 
 }

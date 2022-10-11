@@ -175,11 +175,8 @@ margin_right = 86.7754
 margin_bottom = 88.8867
 rect_min_size = Vector2( 130, 0 )
 theme = ExtResource( 5 )
-text = "Termina    [6]"
+text = "Terminal   [6]"
 script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="4" type="Button" parent="shortcut"]
 margin_left = -43.2246

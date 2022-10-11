@@ -22,6 +22,9 @@ static func loadCommon(jsonCrossRef):
 	for toSave in jsonCrossRef.keys():
 		match toSave:
 			
+			"QUESTS_CYCLE":
+				dictOfCommon["quest-cycle"] = API_003_Player.getQuestCycle().atlas
+			
 			
 			"C_68_KITVENTORY":
 				dictOfCommon["kitventory"] = []
@@ -63,7 +66,7 @@ static func loadStation():
 			if is_instance_valid(stationValue.kitset.mod)      : currentKit.append(stationValue.kitset.mod.index())      ; else: currentKit.append("")
 			if is_instance_valid(stationValue.kitset.appendix) : currentKit.append(stationValue.kitset.appendix.index()) ; else: currentKit.append("")
 			toReturn[stationKey]["basekit"]        = currentKit
-			toReturn[stationKey]["kitpart to mod"] = API_003_Player.stations.meat.kitpartToMod.index()
+			toReturn[stationKey]["kitpart to mod"] = stationValue.kitpartToMod.index()
 	
 	return toReturn
 	

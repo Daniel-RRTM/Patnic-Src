@@ -19,9 +19,9 @@ func addKitPart(kitpart):
 "
 
 [node name="kitpart_browser" type="Control"]
-margin_left = -232.0
+margin_left = 64.0
 margin_top = -352.0
-margin_right = -232.0
+margin_right = 64.0
 margin_bottom = -352.0
 theme = ExtResource( 2 )
 script = ExtResource( 10 )
@@ -34,32 +34,32 @@ __meta__ = {
 }
 
 [node name="Frame2" type="Panel" parent="Window"]
-margin_left = 681.0
+margin_left = 768.0
 margin_top = 712.0
-margin_right = 1017.0
+margin_right = 992.0
 margin_bottom = 813.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Frame" type="Panel" parent="Window"]
-margin_left = 680.0
+margin_left = 768.0
 margin_top = 776.0
-margin_right = 1952.0
+margin_right = 1896.0
 margin_bottom = 1062.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Title" type="RichTextLabel" parent="Window"]
-margin_left = 689.0
+margin_left = 768.0
 margin_top = 720.0
-margin_right = 1017.0
+margin_right = 992.0
 margin_bottom = 776.0
 custom_fonts/normal_font = ExtResource( 3 )
 bbcode_enabled = true
-bbcode_text = "[center]Own Kitparts"
-text = "Own Kitparts"
+bbcode_text = "[center]Kitparts"
+text = "Kitparts"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -69,23 +69,21 @@ margin_left = 768.0
 margin_top = 726.0
 margin_right = 984.0
 margin_bottom = 904.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="mType" type="OptionButton" parent="Filter"]
-margin_left = 56.0
-margin_top = 75.621
+margin_left = 104.0
+margin_top = 76.0
 margin_right = 214.0
-margin_bottom = 99.621
+margin_bottom = 100.0
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Text" type="RichTextLabel" parent="Filter/mType"]
-margin_left = -144.0
+margin_left = -96.0
 margin_top = 91.0
+margin_right = -16.0
 margin_bottom = 125.0
 custom_fonts/normal_font = ExtResource( 8 )
 bbcode_enabled = true
@@ -96,18 +94,19 @@ __meta__ = {
 }
 
 [node name="Family" type="OptionButton" parent="Filter"]
-margin_left = 56.0
-margin_top = 219.621
+margin_left = 104.0
+margin_top = 220.0
 margin_right = 214.0
-margin_bottom = 243.621
+margin_bottom = 244.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Text" type="RichTextLabel" parent="Filter/Family"]
-margin_left = -144.0
+margin_left = -96.0
 margin_top = -5.0
+margin_right = -16.0
 margin_bottom = 29.0
 custom_fonts/normal_font = ExtResource( 8 )
 bbcode_enabled = true
@@ -118,18 +117,19 @@ __meta__ = {
 }
 
 [node name="part" type="OptionButton" parent="Filter"]
-margin_left = 56.0
-margin_top = 171.621
+margin_left = 104.0
+margin_top = 172.0
 margin_right = 214.0
-margin_bottom = 195.621
+margin_bottom = 196.0
 script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Text" type="RichTextLabel" parent="Filter/part"]
-margin_left = -144.0
+margin_left = -96.0
 margin_top = -98.0
+margin_right = -16.0
 margin_bottom = -64.0
 custom_fonts/normal_font = ExtResource( 8 )
 bbcode_enabled = true
@@ -140,18 +140,19 @@ __meta__ = {
 }
 
 [node name="category" type="OptionButton" parent="Filter"]
-margin_left = 56.0
-margin_top = 123.621
+margin_left = 104.0
+margin_top = 124.0
 margin_right = 214.0
-margin_bottom = 147.621
+margin_bottom = 148.0
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Text" type="RichTextLabel" parent="Filter/category"]
-margin_left = -144.0
+margin_left = -96.0
 margin_top = -2.0
+margin_right = -16.0
 margin_bottom = 32.0
 custom_fonts/normal_font = ExtResource( 8 )
 bbcode_enabled = true

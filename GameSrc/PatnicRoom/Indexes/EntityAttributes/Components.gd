@@ -35,7 +35,7 @@ static func getComponents() -> Dictionary:
 	"C_29_LISTING_PRICE"  				:   C_29_LISTING_PRICE,
 	"C_30_NEEDED_BACKPACK_SLOTS"   		:   C_30_NEEDED_BACKPACK_SLOTS,
 	"C_31_KIT_CAT_TYPE"				    :   C_31_KIT_CAT_TYPE,
-
+	"C_32_LISTENER"				        :   C_32_LISTENER,
 	"C_33_COOLDOWN_TIMER"   			: 	C_33_COOLDOWN_TIMER,
 	"C_34_LOG_TO_STRING"  				:   C_34_LOG_TO_STRING,
 	"C_35_KIT_MECHANICAL_SUMMARY"	    :   C_35_KIT_MECHANICAL_SUMMARY,
@@ -45,17 +45,17 @@ static func getComponents() -> Dictionary:
 	"C_39_KITSLOT_PROGRESSION"          :   C_39_KITSLOT_PROGRESSION,
 	"C_41_PERK_PROGRESSION"             :   C_41_PERK_PROGRESSION,
 	"C_42_ROLE_VARIETY"					:	C_42_ROLE_VARIETY,
-
+	"C_43_QUESTS_GIVEN"                  :  C_43_QUESTS_GIVEN,
 	"C_44_STREETNAME"				    : 	C_44_STREETNAME,
 	"C_45_CHARACTER_NAME" 				:   C_45_CHARACTER_NAME,
 	"C_46_ACTOR_ITEMS"                  :   C_46_ACTOR_ITEMS,
 	"C_47_SYNONYM"						:	C_47_SYNONYM,
 	"C_48_RARITY"						:	C_48_RARITY,
 	"C_49_EVENT_REFERENCE"			    :	C_49_EVENT_REFERENCE,
-
+	"C_50_VALUABLES"			    :	C_50_VALUABLES,
 	"C_51_PLAYER_KITSETS" 				: 	C_51_PLAYER_KITSETS,
 	"C_52_STARTING_KITSETS" 			: 	C_52_STARTING_KITSETS,
-
+	"C_53_LISTENER"             :C_53_LISTENER,
 	
 	
 	"C_56_GEAR"                         :   C_56_GEAR,
@@ -79,6 +79,13 @@ static func getComponents() -> Dictionary:
 	"C_74_EVENT_MAIN_DICT"              :   C_74_EVENT_MAIN_DICT,
 
 	"C_76_EVENT_REFERENCE_DICT"         :   C_76_EVENT_REFERENCE_DICT,
+#
+#	"C_78_QUEST_SLOT_1"                 :   C_78_QUEST_SLOT_1,
+#	"C_79_QUEST_PROGRESS_1"             :   C_79_QUEST_PROGRESS_1,
+#	"C_80_QUEST_SLOT_2"                 :   C_80_QUEST_SLOT_2,
+#	"C_81_QUEST_PROGRESS_2"             :   C_81_QUEST_PROGRESS_2,
+#	"C_82_QUEST_SLOT_3"                 :   C_82_QUEST_SLOT_3,
+#	"C_83_QUEST_PROGRESS_3"             :   C_83_QUEST_PROGRESS_3,
 
 	
 	

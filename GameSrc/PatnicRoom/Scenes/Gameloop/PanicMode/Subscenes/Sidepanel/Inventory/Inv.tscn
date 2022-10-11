@@ -65,18 +65,15 @@ tracks/0/keys = {
 "values": [ Vector2( 1940, 8 ), Vector2( 1100, 8 ) ]
 }
 
-[node name="root_News" type="Control"]
+[node name="Root_Jurnal" type="Control"]
 margin_left = 64.0
 margin_right = 64.0
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Background" type="Panel" parent="."]
-margin_left = 1940.0
+margin_left = 1100.0
 margin_top = 8.0
-margin_right = 2646.0
+margin_right = 1806.0
 margin_bottom = 837.0
 custom_styles/panel = ExtResource( 4 )
 __meta__ = {

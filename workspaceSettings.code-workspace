@@ -1,6 +1,7 @@
 {
 	"folders": [ 	{ "path" : "."   },
 					{ "path" : "../CLI" },
+					//{ "path" : ".." },
 					{ "path" : "../Docs" },
 					{ "path" : "../Website"       },
 					{ "path" : "../IDE"     }],
@@ -41,7 +42,7 @@
 		"editor.fontLigatures"            : true,											// enables Ligature
 		"editor.fontSize"                 : 10,                   							// Text size combined with Zoomlevel
 		"workbench.editor.revealIfOpen"   : true,								 			// focuses already opened files when clicked again in explorer
-		"window.zoomLevel"                : 2,
+		"window.zoomLevel"                : 1,
 		"editor.tokenColorCustomizations" : {"[One Dark Pro]": {"comments": "#fff897"}},  // more visible Comments
 
 		// LINE COUNTER
@@ -90,7 +91,7 @@
 			{ "icon": "binary",				"extensions": ["GameSrc"], 	    			"format": "FileFormat.svg" },
 			{ "icon": "library",			"extensions": ["Indexes"],  				"format": "FileFormat.svg" },
 			{ "icon": "helper",				"extensions": ["Systems"], 					"format": "FileFormat.svg" },
-			{ "icon": "docs", 				"extensions": ["mkDocs"],					"format": "FileFormat.svg" },
+			{ "icon": "docs", 				"extensions": ["mkDocs","HomErrorLog"],		"format": "FileFormat.svg" },
 			{ "icon": "client",				"extensions": ["Scenes"], 					"format": "FileFormat.svg" },
 			{ "icon": "coverage",			"extensions": ["Tiled"],					"format": "FileFormat.svg" },
 			{ "icon": "library",			"extensions": ["Wiki"],						"format": "FileFormat.svg" },
@@ -104,7 +105,7 @@
 					 "001-Atlas"       ,   "002-TilemapStructure"    ,   "003-Player"         ,   "004-KitSet"
 					,"005-Event"       ,   "006-Conditions"          ,   "007-Statmods"       ,   "008-CLI"
 					,"009-Sound"       ,   "010-ProcGen-Actor"       ,   "011-ProcGen-Loot"   ,   "012-ProcGen-Chunk"
-					,"013-Behavior"
+					,"013-Behavior"    ,   "014-NewsLog"             ,   "015-Quest"
 			]
 		}
 	],

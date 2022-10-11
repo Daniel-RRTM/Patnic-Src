@@ -1,7 +1,7 @@
 extends OptionButton
 
 
-var syntax = API_008_CLI.getGroupedSyntax()
+var syntax = {}
 var shallowCmdAtlas = {}
 enum SUGGESTION {
 	BASE_CMD
@@ -17,9 +17,10 @@ var state
 
 func _init() :
 	state = SUGGESTION.BASE_CMD
-	for type in syntax.keys(): for cmd in syntax[type].keys(): shallowCmdAtlas[cmd] = syntax[type][cmd]
 
 func _enter_tree() -> void:
+	syntax = API_008_CLI.getGroupedSyntax()
+	for type in syntax.keys(): for cmd in syntax[type].keys(): shallowCmdAtlas[cmd] = syntax[type][cmd]
 	for groupCmd in syntax.keys():
 		add_item("")
 		add_item("--- "+groupCmd+" ---")

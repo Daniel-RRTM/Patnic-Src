@@ -4,9 +4,9 @@ class_name _03_00_EntityManager
 
 func RNGeneratBasicActor(toGenerate:ActorRngTemplateEntity) -> ActorEntity:
 	var keywordsToCompose = {}
-	var mandatoryStats    = [ { "atlas":toGenerate.role()      , "keyword":"C_12_FOR_ROLE"      }  ,
-							  { "atlas":toGenerate.race()      , "keyword":"C_12_FOR_RACE"      }  ,
-							  { "atlas":toGenerate.specialty() , "keyword":"C_12_FOR_SPECIALTY" }  ]
+	var mandatoryStats    = [ { "atlas":toGenerate.role()      , "keyword":"ROLE"      }  ,
+							  { "atlas":toGenerate.race()      , "keyword":"RACE"      }  ,
+							  { "atlas":toGenerate.specialty() , "keyword":"SPECIALTY" }  ]
 	
 	for type in mandatoryStats:
 		var randomNumber = Utils.rng().getRandomNumber(0,type.atlas.size())-1
@@ -19,11 +19,15 @@ func RNGeneratBasicActor(toGenerate:ActorRngTemplateEntity) -> ActorEntity:
 func dictGenerateActor(dict:Dictionary) -> ActorEntity:
 	#>>> Basic Entries <<<#
 	var ent               = ActorEntity.new()
-	var specialtyTemplate = API_001_Atlas.Specialties().getEntry(dict["C_12_FOR_SPECIALTY"])
-	var raceTemplate      = API_001_Atlas.Race().getEntry(dict["C_12_FOR_RACE"])
-	var roleTemplate      = API_001_Atlas.Role().getEntry(dict["C_12_FOR_ROLE"])
+	var specialtyTemplate = API_001_Atlas.Specialties().getEntry(dict["SPECIALTY"])
+	var raceTemplate      = API_001_Atlas.Race().getEntry(dict["RACE"])
+	var roleTemplate      = API_001_Atlas.Role().getEntry(dict["ROLE"])
 	
-
+	ent.addComponent(C_50_VALUABLES.new())
+	ent.addComponent(C_12_ATLAS_INDEX.new("Actors_0_0"))
+	ent.addComponent(C_25_MAX_KITSETS.new())
+	ent.addComponent(C_6_NAME.new("Actors_0_0"))
+	
 	#>>> Add Templates <<<#
 	ent.addTemplate("RACE",raceTemplate)
 	ent.addTemplate("ROLE",roleTemplate)
@@ -59,10 +63,8 @@ func dictGenerateActor(dict:Dictionary) -> ActorEntity:
 	
 	#>>> Add Indirects <<<#
 	var comp = C_26_INDIRECT_STATS.new(ent.getComp("C_19_ATTRIBUTES"), ent)
-	ent.addComponent(C_12_ATLAS_INDEX.new("Actors_0_0"))
-	ent.addComponent(C_25_MAX_KITSETS.new())
-	ent.addComponent(C_6_NAME.new("Actors_0_0"))
-
+	
+	
 	return ent
 
 

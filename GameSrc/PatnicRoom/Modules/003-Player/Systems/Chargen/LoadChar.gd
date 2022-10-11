@@ -30,6 +30,9 @@ static func generateNewSaveState(chargenDict:Dictionary) -> void:
 
 
 static func parse(chargenDict, charNr:int) -> void:
+	if chargenDict is String:HomErrorLog.printIntoSeshLog("BOOT","loading savestate [color=lime]"+chargenDict+"[color=white] with Nr[color=lime]"+str(charNr)+"[color=white]")
+	if chargenDict is Dictionary:HomErrorLog.printIntoSeshLog("BOOT","loading savestate [color=lime]"+chargenDict.name+"[color=white] with Nr[color=lime]"+str(charNr)+"[color=white]")
+	
 	var filePath
 	if chargenDict is String     : filePath = "res://Config/savestate/"+chargenDict
 	if chargenDict is Dictionary : filePath = "res://Config/savestate/"+chargenDict["name"]
@@ -66,6 +69,9 @@ static func loadCommonPart(filePath:String, entContent={}):
 	for compIndex in cachedCrossRef.keys():
 		match compIndex:
 			
+			"QUESTS_CYCLE":
+				API_003_Player.getQuestCycle().initialiceBySavedJson(dictToParse["quest-cycle"])
+			
 			"C_68_KITVENTORY": 
 				entContent[compIndex] = []
 				for kit in dictToParse[cachedCrossRef[compIndex]]: 
@@ -85,9 +91,7 @@ static func loadChar(filePath:String, nr:int, entContent={}):
 	
 	for compIndex in cachedCrossRef.keys():
 		match compIndex:
-			
-			_: 
-				entContent[compIndex] = dictToParse[cachedCrossRef[compIndex]]
+			_                : entContent[compIndex] = dictToParse[cachedCrossRef[compIndex]]
 	
 	return entContent
 

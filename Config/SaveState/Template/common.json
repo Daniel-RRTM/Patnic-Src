@@ -4,32 +4,56 @@
   "archivements" : [
   ],
 
+  "valuables":[
+
+  ],
+
+
   "kitventory" : [
   ],
 
   "station":{
-
     "Workshop":{
       "basekit"        : "",
       "kitpart to mod" : "",
       "mode"           : "",
       "countdown"      : ""
     },
-
     "Terminal":{
       "basekit"        : "",
       "kitpart to mod" : "",
       "mode"           : "",
       "countdown"      : ""
     },
-
     "Retreat":{
       "basekit"        : "",
       "kitpart to mod" : "",
       "mode"           : "",
       "countdown"      : ""
     }
-  }
-
+  },
+	"quest-cycle":{
+		"Meat":{
+			"Connection" : "JUDGE_LEAD",
+			"Order"      :{   "ent":"REST_WITH_STEPS_MIN_99"   , "finished":false , "active":true    },
+			"Task"       :{   "ent":""     , "finished":false , "active":false   },
+			"FavorL"     :{   "ent":""                      , "finished":false , "active":false   },
+			"FavorR"     :{   "ent":""                      , "finished":false , "active":false   }
+		  },
+		  "Matrix":{
+			"Connection" : "BRAIN_LAGG",
+			"Order"      :{   "ent":"REST_WITH_STEPS_MIN_99"   , "finished":false , "active":true    },
+			"Task"       :{   "ent":""    , "finished":false , "active":false   },
+			"FavorL"     :{   "ent":""                      , "finished":false , "active":false   },
+			"FavorR"     :{   "ent":""                      , "finished":false , "active":false   }
+		  },
+		  "Magic":{
+			"Connection" : "SHAMANI_SAM",
+			"Order"      :{   "ent":"REST_WITH_STEPS_MIN_99" , "finished":false , "active":true    },
+			"Task"       :{   "ent":""     , "finished":false , "active":false   },
+			"FavorL"     :{   "ent":""                      , "finished":false , "active":false   },
+			"FavorR"     :{   "ent":""                      , "finished":false , "active":false   }
+		}
+	}
 
 }

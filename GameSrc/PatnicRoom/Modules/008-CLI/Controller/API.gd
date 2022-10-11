@@ -12,13 +12,14 @@ var groupedCmdAtlas = {}
 var cmdsToString    = []
 var activeCheats    = []
 
-var commandSystem : _008_CommandSystem
+var commandSystem := _008_CommandSystem.new()
+func groupCmds() -> void : 
+	commandSystem.APIRef = self
+	commandSystem.prepare()
 
 
-func _ready() -> void:
-	commandSystem = _008_CommandSystem.new()
 
-
+func commands() -> _008_CommandSystem:return commandSystem
 
 # ----- GETTER ------------------------------------------------------------- ##
 
@@ -27,11 +28,10 @@ func getGroupedSyntax()         -> Dictionary :   return groupedCmdAtlas
 func getMetaByInputKey(cmd)     -> Dictionary :   return shallowCmdAtlas[cmd]
 func getAllCmdMeta()            -> Dictionary :   return shallowCmdAtlas
 
-
 # ----- MAIN --------------------------------------------------------------- ##
 
 
 func processCmdRaw(cmd:String,arrOfParameter:Array) -> void: 
 	commandSystem.addTask(cmd,arrOfParameter)
-	Signals.emit_signal("API_008_runCmds")
+	commandSystem.runTasks()
 

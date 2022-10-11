@@ -31,8 +31,10 @@ func _on_ActorMoveFinished():
 
 
 func beginActorTurn():
+	Signals.emit_signal("Player_Turn_Started")
+	Signals.emit_signal("Player_Turn_Started",{})
 	#Signals.emit_signal("updateEntropy")
-	Signals.emit_signal("Effect_Turn_Startedddd")
+	Signals.emit_signal("Effect_Turn_Started")
 	API_013_Behavior.loopThroughActor()
 	Signals.emit_signal("Actor_Turn_Finished")
 

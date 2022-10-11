@@ -74,15 +74,10 @@ const KITPART_MOD = [
 
 
 const LOOT_TABLE = [
-	 "C_7_STATIC_TILESET_NR"
-	,"C_3_LAYER"
-	,"C_6_NAME"
+	 "C_6_NAME"
 	,"C_12_ATLAS_INDEX"
 	,"C_0_DESCRIPTION"
-	,"C_4_MAGIC_NOISE"
-	,"C_5_MATRIX_NOISE"
 	,"C_61_LOOT_TABLE"
-	,"C_62_LOOT_STATE"
 	]
 
 
@@ -126,3 +121,32 @@ const LEC_EVENT = [
 	,"C_75_EVENT_INDEX"
 	,"C_76_MAIN_"
 ]
+
+
+
+
+const QUEST = [
+	 "C_12_ATLAS_INDEX"
+	,"C_6_NAME"
+	,"C_0_DESCRIPTION"
+	,"C_65_TIER"
+	]
+
+
+const LOOT_FILTER = [
+	"C_12_ATLAS_INDEX"
+	,"C_6_NAME"
+	,"C_0_DESCRIPTION"
+	,"C_65_TIER"
+]
+
+const CONNECTION = [
+	"C_12_ATLAS_INDEX"
+	,"C_6_NAME"
+	,"C_0_DESCRIPTION"
+	,"C_13_GENDER"
+	,"C_43_QUESTS_GIVEN"
+]
+
+
+

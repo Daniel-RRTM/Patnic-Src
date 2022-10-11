@@ -4,7 +4,10 @@ var fsm
 func buildRef(fsmPara): 
 	fsm = fsmPara
 
+
+
 func _enter_tree() -> void: 
+	name = "Kits"
 	get_node("AnimationPlayer").play("enter")
 
 

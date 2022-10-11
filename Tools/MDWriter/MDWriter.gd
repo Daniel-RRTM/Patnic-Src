@@ -11,7 +11,7 @@ var _stringOfMd               = ""
 
 
 # Simple Syntax
-func add_content_new_line(content)  -> void:	_addRawContent(str(content) + str("\r\n") )
+func add_content_new_line(content)  -> void:	_addRawContent(str(content) + str("  \r\n") )
 func add_content_same_line(content) -> void:	_addRawContent(content)
 
 func add_linebreak()                -> void:	_addRawContent( str("\r\n") )

@@ -8,12 +8,11 @@ extends Node
 
 
 var _statmodindex : Dictionary
-var uniqueStatModsSystem : _007_UniqueStatModsSystem
+var uniqueStatModsSystem := _007_UniqueStatModsSystem.new()
 
 
 func _ready() :
 	self.name            = "API_019_EffectStatmods"
-	uniqueStatModsSystem = _007_UniqueStatModsSystem.new()
 
 
 
@@ -22,6 +21,7 @@ func _ready() :
 
 func getStatModNames()                  -> Array      :   return SYNTAX.EVENT.STAT_MODS.keys()
 func getStatMods()                      -> Dictionary :   return SYNTAX.EVENT.STAT_MODS
+func uniqueStatmods() -> _007_UniqueStatModsSystem: return uniqueStatModsSystem
 
 
 # ----- RUN ---------------------------------------------------------------------- ##

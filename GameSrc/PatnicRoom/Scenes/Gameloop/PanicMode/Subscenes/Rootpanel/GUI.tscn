@@ -1,6 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
+[ext_resource path="res://Assets/Themes/ThemeOxfordBLue.tres" type="Theme" id=1]
+[ext_resource path="res://Assets/DynamicFonts/Text_Default.tres" type="DynamicFont" id=2]
 [ext_resource path="res://GameSrc/PatnicRoom/Scenes/Gameloop/PanicMode/RNGBackground.gd" type="Script" id=3]
+[ext_resource path="res://Assets/DynamicFonts/new_dynamicfontdata.tres" type="DynamicFontData" id=4]
+[ext_resource path="res://GameSrc/PatnicRoom/scenes/Gameloop/PanicMode/Subscenes/Rootpanel/QuestManager.gd" type="Script" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.14902, 0.14902, 0.14902, 0.427451 )
@@ -31,14 +35,17 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 shadow_size = 13
 
+[sub_resource type="DynamicFont" id=4]
+size = 15
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
 [node name="Node2D" type="Node2D"]
 
 [node name="GUI" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="background" type="TextureRect" parent="GUI"]
 margin_right = 40.0
@@ -98,3 +105,638 @@ margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Quest" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 5 )
+
+[node name="0" type="Control" parent="Quest"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Frame" type="Panel" parent="Quest/0"]
+margin_left = 1216.0
+margin_top = 704.0
+margin_right = 1792.0
+margin_bottom = 821.0
+theme = ExtResource( 1 )
+
+[node name="Origin" type="Panel" parent="Quest/0"]
+margin_left = 1224.0
+margin_top = 728.0
+margin_right = 1432.0
+margin_bottom = 729.0
+theme = ExtResource( 1 )
+
+[node name="Type" type="RichTextLabel" parent="Quest/0"]
+margin_left = 1352.0
+margin_top = 708.0
+margin_right = 1440.0
+margin_bottom = 732.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "Favor"
+text = "Favor"
+
+[node name="Connection" type="RichTextLabel" parent="Quest/0"]
+margin_left = 1216.0
+margin_top = 708.0
+margin_right = 1336.0
+margin_bottom = 732.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "Shamani Sam"
+text = "Shamani Sam"
+
+[node name="Steps" type="Control" parent="Quest/0"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="0" type="Control" parent="Quest/0/Steps"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="desc" type="RichTextLabel" parent="Quest/0/Steps/0"]
+margin_left = 1239.0
+margin_top = 747.0
+margin_right = 1663.0
+margin_bottom = 763.0
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "Kill the next 5 spirits you sess"
+text = "Kill the next 5 spirits you sess"
+scroll_active = false
+
+[node name="point" type="RichTextLabel" parent="Quest/0/Steps/0"]
+margin_left = 1224.0
+margin_top = 744.0
+margin_right = 1240.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = ">"
+text = ">"
+
+[node name="Of" type="RichTextLabel" parent="Quest/0/Steps/0"]
+margin_left = 1760.0
+margin_top = 744.0
+margin_right = 1784.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "99"
+text = "99"
+
+[node name="Slash" type="RichTextLabel" parent="Quest/0/Steps/0"]
+margin_left = 1736.0
+margin_top = 744.0
+margin_right = 1760.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]/"
+text = "/"
+
+[node name="Out" type="RichTextLabel" parent="Quest/0/Steps/0"]
+margin_left = 1720.0
+margin_top = 744.0
+margin_right = 1744.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "99"
+text = "99"
+
+[node name="1" type="Control" parent="Quest/0/Steps"]
+margin_top = 24.0
+margin_right = 40.0
+margin_bottom = 64.0
+
+[node name="desc" type="RichTextLabel" parent="Quest/0/Steps/1"]
+margin_left = 1239.0
+margin_top = 747.0
+margin_right = 1663.0
+margin_bottom = 763.0
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "Kill the next 5 spirits you sess"
+text = "Kill the next 5 spirits you sess"
+scroll_active = false
+
+[node name="point" type="RichTextLabel" parent="Quest/0/Steps/1"]
+margin_left = 1224.0
+margin_top = 744.0
+margin_right = 1240.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = ">"
+text = ">"
+
+[node name="Of" type="RichTextLabel" parent="Quest/0/Steps/1"]
+margin_left = 1760.0
+margin_top = 744.0
+margin_right = 1784.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "99"
+text = "99"
+
+[node name="Slash" type="RichTextLabel" parent="Quest/0/Steps/1"]
+margin_left = 1736.0
+margin_top = 744.0
+margin_right = 1760.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]/"
+text = "/"
+
+[node name="Out" type="RichTextLabel" parent="Quest/0/Steps/1"]
+margin_left = 1720.0
+margin_top = 744.0
+margin_right = 1744.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "99"
+text = "99"
+
+[node name="2" type="Control" parent="Quest/0/Steps"]
+margin_top = 48.0
+margin_right = 40.0
+margin_bottom = 88.0
+
+[node name="desc" type="RichTextLabel" parent="Quest/0/Steps/2"]
+margin_left = 1239.0
+margin_top = 747.0
+margin_right = 1663.0
+margin_bottom = 763.0
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "Kill the next 5 spirits you sess"
+text = "Kill the next 5 spirits you sess"
+scroll_active = false
+
+[node name="point" type="RichTextLabel" parent="Quest/0/Steps/2"]
+margin_left = 1224.0
+margin_top = 744.0
+margin_right = 1240.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = ">"
+text = ">"
+
+[node name="Of" type="RichTextLabel" parent="Quest/0/Steps/2"]
+margin_left = 1760.0
+margin_top = 744.0
+margin_right = 1784.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "99"
+text = "99"
+
+[node name="Slash" type="RichTextLabel" parent="Quest/0/Steps/2"]
+margin_left = 1736.0
+margin_top = 744.0
+margin_right = 1760.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]/"
+text = "/"
+
+[node name="Out" type="RichTextLabel" parent="Quest/0/Steps/2"]
+margin_left = 1720.0
+margin_top = 744.0
+margin_right = 1744.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "99"
+text = "99"
+
+[node name="1" type="Control" parent="Quest"]
+margin_top = -136.0
+margin_right = 40.0
+margin_bottom = -96.0
+
+[node name="Frame" type="Panel" parent="Quest/1"]
+margin_left = 1216.0
+margin_top = 704.0
+margin_right = 1792.0
+margin_bottom = 821.0
+theme = ExtResource( 1 )
+
+[node name="Origin" type="Panel" parent="Quest/1"]
+margin_left = 1224.0
+margin_top = 728.0
+margin_right = 1432.0
+margin_bottom = 729.0
+theme = ExtResource( 1 )
+
+[node name="Type" type="RichTextLabel" parent="Quest/1"]
+margin_left = 1352.0
+margin_top = 708.0
+margin_right = 1440.0
+margin_bottom = 732.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "Task"
+text = "Task"
+
+[node name="Connection" type="RichTextLabel" parent="Quest/1"]
+margin_left = 1216.0
+margin_top = 708.0
+margin_right = 1336.0
+margin_bottom = 732.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "Shamani Sam"
+text = "Shamani Sam"
+
+[node name="Steps" type="Control" parent="Quest/1"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="0" type="Control" parent="Quest/1/Steps"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="desc" type="RichTextLabel" parent="Quest/1/Steps/0"]
+margin_left = 1239.0
+margin_top = 747.0
+margin_right = 1663.0
+margin_bottom = 763.0
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "Kill the next 5 spirits you sess"
+text = "Kill the next 5 spirits you sess"
+scroll_active = false
+
+[node name="point" type="RichTextLabel" parent="Quest/1/Steps/0"]
+margin_left = 1224.0
+margin_top = 744.0
+margin_right = 1240.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = ">"
+text = ">"
+
+[node name="Of" type="RichTextLabel" parent="Quest/1/Steps/0"]
+margin_left = 1760.0
+margin_top = 744.0
+margin_right = 1784.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "99"
+text = "99"
+
+[node name="Slash" type="RichTextLabel" parent="Quest/1/Steps/0"]
+margin_left = 1736.0
+margin_top = 744.0
+margin_right = 1760.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]/"
+text = "/"
+
+[node name="Out" type="RichTextLabel" parent="Quest/1/Steps/0"]
+margin_left = 1720.0
+margin_top = 744.0
+margin_right = 1744.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "99"
+text = "99"
+
+[node name="1" type="Control" parent="Quest/1/Steps"]
+margin_top = 24.0
+margin_right = 40.0
+margin_bottom = 64.0
+
+[node name="desc" type="RichTextLabel" parent="Quest/1/Steps/1"]
+margin_left = 1239.0
+margin_top = 747.0
+margin_right = 1663.0
+margin_bottom = 763.0
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "Kill the next 5 spirits you sess"
+text = "Kill the next 5 spirits you sess"
+scroll_active = false
+
+[node name="point" type="RichTextLabel" parent="Quest/1/Steps/1"]
+margin_left = 1224.0
+margin_top = 744.0
+margin_right = 1240.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = ">"
+text = ">"
+
+[node name="Of" type="RichTextLabel" parent="Quest/1/Steps/1"]
+margin_left = 1760.0
+margin_top = 744.0
+margin_right = 1784.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "99"
+text = "99"
+
+[node name="Slash" type="RichTextLabel" parent="Quest/1/Steps/1"]
+margin_left = 1736.0
+margin_top = 744.0
+margin_right = 1760.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]/"
+text = "/"
+
+[node name="Out" type="RichTextLabel" parent="Quest/1/Steps/1"]
+margin_left = 1720.0
+margin_top = 744.0
+margin_right = 1744.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "99"
+text = "99"
+
+[node name="2" type="Control" parent="Quest/1/Steps"]
+margin_top = 48.0
+margin_right = 40.0
+margin_bottom = 88.0
+
+[node name="desc" type="RichTextLabel" parent="Quest/1/Steps/2"]
+margin_left = 1239.0
+margin_top = 747.0
+margin_right = 1663.0
+margin_bottom = 763.0
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "Kill the next 5 spirits you sess"
+text = "Kill the next 5 spirits you sess"
+scroll_active = false
+
+[node name="point" type="RichTextLabel" parent="Quest/1/Steps/2"]
+margin_left = 1224.0
+margin_top = 744.0
+margin_right = 1240.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = ">"
+text = ">"
+
+[node name="Of" type="RichTextLabel" parent="Quest/1/Steps/2"]
+margin_left = 1760.0
+margin_top = 744.0
+margin_right = 1784.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "99"
+text = "99"
+
+[node name="Slash" type="RichTextLabel" parent="Quest/1/Steps/2"]
+margin_left = 1736.0
+margin_top = 744.0
+margin_right = 1760.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]/"
+text = "/"
+
+[node name="Out" type="RichTextLabel" parent="Quest/1/Steps/2"]
+margin_left = 1720.0
+margin_top = 744.0
+margin_right = 1744.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "99"
+text = "99"
+
+[node name="2" type="Control" parent="Quest"]
+margin_top = -272.0
+margin_right = 40.0
+margin_bottom = -232.0
+
+[node name="Frame" type="Panel" parent="Quest/2"]
+margin_left = 1216.0
+margin_top = 704.0
+margin_right = 1792.0
+margin_bottom = 821.0
+theme = ExtResource( 1 )
+
+[node name="Origin" type="Panel" parent="Quest/2"]
+margin_left = 1224.0
+margin_top = 728.0
+margin_right = 1432.0
+margin_bottom = 729.0
+theme = ExtResource( 1 )
+
+[node name="Type" type="RichTextLabel" parent="Quest/2"]
+margin_left = 1352.0
+margin_top = 708.0
+margin_right = 1440.0
+margin_bottom = 732.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "Specific"
+text = "Specific"
+
+[node name="Connection" type="RichTextLabel" parent="Quest/2"]
+margin_left = 1216.0
+margin_top = 708.0
+margin_right = 1336.0
+margin_bottom = 732.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "Shamani Sam"
+text = "Shamani Sam"
+
+[node name="Steps" type="Control" parent="Quest/2"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="0" type="Control" parent="Quest/2/Steps"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="desc" type="RichTextLabel" parent="Quest/2/Steps/0"]
+margin_left = 1239.0
+margin_top = 747.0
+margin_right = 1663.0
+margin_bottom = 763.0
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "Kill the next 5 spirits you sess"
+text = "Kill the next 5 spirits you sess"
+scroll_active = false
+
+[node name="point" type="RichTextLabel" parent="Quest/2/Steps/0"]
+margin_left = 1224.0
+margin_top = 744.0
+margin_right = 1240.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = ">"
+text = ">"
+
+[node name="Of" type="RichTextLabel" parent="Quest/2/Steps/0"]
+margin_left = 1760.0
+margin_top = 744.0
+margin_right = 1784.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "99"
+text = "99"
+scroll_active = false
+
+[node name="Slash" type="RichTextLabel" parent="Quest/2/Steps/0"]
+margin_left = 1736.0
+margin_top = 744.0
+margin_right = 1760.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]/"
+text = "/"
+
+[node name="Out" type="RichTextLabel" parent="Quest/2/Steps/0"]
+margin_left = 1720.0
+margin_top = 744.0
+margin_right = 1744.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "99"
+text = "99"
+
+[node name="1" type="Control" parent="Quest/2/Steps"]
+margin_top = 24.0
+margin_right = 40.0
+margin_bottom = 64.0
+
+[node name="desc" type="RichTextLabel" parent="Quest/2/Steps/1"]
+margin_left = 1239.0
+margin_top = 747.0
+margin_right = 1663.0
+margin_bottom = 763.0
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "Kill the next 5 spirits you sess"
+text = "Kill the next 5 spirits you sess"
+scroll_active = false
+
+[node name="point" type="RichTextLabel" parent="Quest/2/Steps/1"]
+margin_left = 1224.0
+margin_top = 744.0
+margin_right = 1240.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = ">"
+text = ">"
+
+[node name="Of" type="RichTextLabel" parent="Quest/2/Steps/1"]
+margin_left = 1760.0
+margin_top = 744.0
+margin_right = 1784.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "99"
+text = "99"
+
+[node name="Slash" type="RichTextLabel" parent="Quest/2/Steps/1"]
+margin_left = 1736.0
+margin_top = 744.0
+margin_right = 1760.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]/"
+text = "/"
+
+[node name="Out" type="RichTextLabel" parent="Quest/2/Steps/1"]
+margin_left = 1720.0
+margin_top = 744.0
+margin_right = 1744.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "99"
+text = "99"
+
+[node name="2" type="Control" parent="Quest/2/Steps"]
+margin_top = 48.0
+margin_right = 40.0
+margin_bottom = 88.0
+
+[node name="desc" type="RichTextLabel" parent="Quest/2/Steps/2"]
+margin_left = 1239.0
+margin_top = 747.0
+margin_right = 1663.0
+margin_bottom = 763.0
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "Kill the next 5 spirits you sess"
+text = "Kill the next 5 spirits you sess"
+scroll_active = false
+
+[node name="point" type="RichTextLabel" parent="Quest/2/Steps/2"]
+margin_left = 1224.0
+margin_top = 744.0
+margin_right = 1240.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = ">"
+text = ">"
+
+[node name="Of" type="RichTextLabel" parent="Quest/2/Steps/2"]
+margin_left = 1760.0
+margin_top = 744.0
+margin_right = 1784.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "99"
+text = "99"
+
+[node name="Slash" type="RichTextLabel" parent="Quest/2/Steps/2"]
+margin_left = 1736.0
+margin_top = 744.0
+margin_right = 1760.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]/"
+text = "/"
+
+[node name="Out" type="RichTextLabel" parent="Quest/2/Steps/2"]
+margin_left = 1720.0
+margin_top = 744.0
+margin_right = 1744.0
+margin_bottom = 768.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "99"
+text = "99"

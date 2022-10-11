@@ -1,16 +1,10 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/DynamicFonts/new_dynamicfontdata.tres" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/DynamicFonts/Text_Default.tres" type="DynamicFont" id=2]
 [ext_resource path="res://GameSrc/Universal/Scenes/Bootstrap/GameInit/Submenues/Bootmode/BootMode.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Themes/ThemeOxfordBLue.tres" type="Theme" id=4]
 [ext_resource path="res://Assets/Themes/ThemeSpanishViolet.tres" type="Theme" id=5]
-
-[sub_resource type="DynamicFont" id=1]
-size = 20
-outline_size = 1
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 20
@@ -24,48 +18,11 @@ outline_size = 1
 outline_color = Color( 0.117647, 0.52549, 1, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.176471, 0.239216, 0.176471, 1 )
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color( 0.152941, 0.807843, 0.180392, 1 )
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-shadow_color = Color( 0.282353, 0.545098, 0.235294, 1 )
-shadow_size = 5
-
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.176471, 0.247059, 0.176471, 1 )
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color( 0.160784, 0.941176, 0.0941176, 1 )
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-shadow_color = Color( 0.427451, 0.639216, 0.427451, 0.6 )
-shadow_size = 5
-
-[sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-corner_radius_top_left = 1
-corner_radius_top_right = 1
-corner_radius_bottom_right = 1
-corner_radius_bottom_left = 1
-
-[sub_resource type="DynamicFont" id=7]
-size = 15
-font_data = ExtResource( 1 )
+[sub_resource type="StyleBoxFlat" id=8]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Node" type="Node2D"]
 script = ExtResource( 3 )
@@ -80,28 +37,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Tips" type="RichTextLabel" parent="."]
-visible = false
-margin_left = 320.0
-margin_top = 192.0
-margin_right = 728.0
-margin_bottom = 232.0
-custom_fonts/normal_font = SubResource( 1 )
-bbcode_enabled = true
-bbcode_text = "Hover over a button get more information"
-text = "Hover over a button get more information"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Control" type="Control" parent="."]
 margin_left = 8.0
 margin_top = -48.0
 margin_right = 48.0
 margin_bottom = -8.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Loop" type="Control" parent="Control"]
 margin_left = 320.0
@@ -137,9 +77,32 @@ custom_colors/font_color_hover = Color( 0.45098, 0.705882, 1, 1 )
 custom_colors/font_color_pressed = Color( 0.0235294, 0.388235, 0.807843, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "REST"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="BROWSE" type="Button" parent="Control/Loop"]
+margin_left = 24.0
+margin_top = 160.0
+margin_right = 144.0
+margin_bottom = 192.0
+hint_tooltip = "Start Game in Rest-mode"
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0.717647, 0.85098, 1, 1 )
+custom_colors/font_color_hover = Color( 0.45098, 0.705882, 1, 1 )
+custom_colors/font_color_pressed = Color( 0.0235294, 0.388235, 0.807843, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "BROWSE LEC"
+
+[node name="DESIGN" type="Button" parent="Control/Loop"]
+margin_left = 24.0
+margin_top = 208.0
+margin_right = 144.0
+margin_bottom = 240.0
+hint_tooltip = "Start Game in Rest-mode"
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0.717647, 0.85098, 1, 1 )
+custom_colors/font_color_hover = Color( 0.45098, 0.705882, 1, 1 )
+custom_colors/font_color_pressed = Color( 0.0235294, 0.388235, 0.807843, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "DESIGN LEC"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/Loop"]
 margin_top = 9.0
@@ -161,6 +124,19 @@ margin_bottom = 504.0
 
 [node name="TEMP" type="Button" parent="Control/Debugging"]
 margin_left = 24.0
+margin_top = 160.0
+margin_right = 144.0
+margin_bottom = 192.0
+hint_tooltip = "call temporary function for experimentall (cool) stuff"
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0.717647, 0.85098, 1, 1 )
+custom_colors/font_color_hover = Color( 0.45098, 0.705882, 1, 1 )
+custom_colors/font_color_pressed = Color( 0.0235294, 0.388235, 0.807843, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "TEMP"
+
+[node name="Log" type="Button" parent="Control/Debugging"]
+margin_left = 24.0
 margin_top = 112.0
 margin_right = 144.0
 margin_bottom = 144.0
@@ -170,24 +146,7 @@ custom_colors/font_color = Color( 0.717647, 0.85098, 1, 1 )
 custom_colors/font_color_hover = Color( 0.45098, 0.705882, 1, 1 )
 custom_colors/font_color_pressed = Color( 0.0235294, 0.388235, 0.807843, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "TEMP"
-
-[node name="LEC-Viewer" type="Button" parent="Control/Debugging"]
-visible = false
-margin_left = 24.0
-margin_top = 160.0
-margin_right = 144.0
-margin_bottom = 192.0
-theme = ExtResource( 4 )
-custom_colors/font_color = Color( 0.254902, 1, 0.423529, 1 )
-custom_colors/font_color_hover = Color( 0.741176, 1, 0.721569, 1 )
-custom_fonts/font = SubResource( 2 )
-custom_styles/hover = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
-text = "LEC-Viewer"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+text = "RTF LOG"
 
 [node name="TILEMAP" type="Button" parent="Control/Debugging"]
 margin_left = 24.0
@@ -239,6 +198,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Deserialice" type="Button" parent="Control/AUTOMATION"]
+margin_left = 24.0
+margin_top = 112.0
+margin_right = 144.0
+margin_bottom = 144.0
+hint_tooltip = "Calculates Atlas and parses it into Markdown-files"
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0.717647, 0.85098, 1, 1 )
+custom_colors/font_color_hover = Color( 0.45098, 0.705882, 1, 1 )
+custom_colors/font_color_pressed = Color( 0.0235294, 0.388235, 0.807843, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "DESERIALICE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/AUTOMATION"]
 margin_top = 9.0
 margin_right = 168.0
@@ -251,51 +226,55 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="detail" type="Control" parent="."]
+[node name="Log" type="Panel" parent="."]
 visible = false
-margin_left = 552.0
-margin_top = 56.0
-margin_right = 592.0
-margin_bottom = 96.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = 288.0
+margin_top = 160.0
+margin_right = 1136.0
+margin_bottom = 552.0
+rect_min_size = Vector2( 700, 30 )
 
-[node name="Panel3" type="Panel" parent="detail"]
-margin_right = 424.0
-margin_bottom = 88.0
-custom_styles/panel = SubResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Panel" type="Panel" parent="Log"]
+margin_left = -176.0
+margin_top = 64.0
+margin_right = -32.0
+margin_bottom = 176.0
+custom_styles/panel = SubResource( 8 )
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="detail"]
-margin_left = -8.0
-margin_right = 560.0
-margin_bottom = 40.0
+[node name="RichTextLabel" type="RichTextLabel" parent="Log"]
+margin_right = 928.0
+margin_bottom = 392.0
 custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
-bbcode_text = "[color=yellow] Details"
-text = " Details"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="detail"]
-margin_left = 16.0
-margin_top = 40.0
-margin_right = 416.0
-margin_bottom = 80.0
-custom_fonts/normal_font = SubResource( 7 )
-bbcode_enabled = true
-scroll_active = false
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="group" type="OptionButton" parent="Log"]
+margin_left = -168.0
+margin_top = 80.0
+margin_right = -40.0
+margin_bottom = 112.0
+
+[node name="TextEdit" type="TextEdit" parent="Log"]
+margin_left = -168.0
+margin_top = 128.0
+margin_right = -40.0
+margin_bottom = 160.0
+
+[node name="Button" type="Button" parent="Log"]
+margin_left = -144.0
+margin_top = 32.0
+margin_right = -52.0
+margin_bottom = 52.0
+text = "Reset"
 
 [connection signal="pressed" from="Control/Loop/PANIC" to="." method="_on_Quickstart_pressed"]
 [connection signal="pressed" from="Control/Loop/REST" to="." method="_on_Restmode_pressed"]
+[connection signal="pressed" from="Control/Loop/BROWSE" to="." method="_on_BROWSE_pressed"]
+[connection signal="pressed" from="Control/Loop/DESIGN" to="." method="_on_DESIGN_pressed"]
 [connection signal="pressed" from="Control/Debugging/TEMP" to="." method="_on_Experimental_pressed"]
-[connection signal="pressed" from="Control/Debugging/LEC-Viewer" to="." method="_on_LEC_Viewer_pressed"]
+[connection signal="pressed" from="Control/Debugging/Log" to="." method="_on_Log_pressed"]
 [connection signal="pressed" from="Control/Debugging/TILEMAP" to="." method="_on_Tilemap_pressed"]
 [connection signal="pressed" from="Control/AUTOMATION/statistics" to="." method="_on_Statistics_pressed"]
+[connection signal="pressed" from="Control/AUTOMATION/Deserialice" to="." method="_on_Deserialice_pressed"]
+[connection signal="item_selected" from="Log/group" to="." method="_on_group_item_selected"]
+[connection signal="text_changed" from="Log/TextEdit" to="." method="_on_TextEdit_text_changed"]
+[connection signal="pressed" from="Log/Button" to="." method="_on_reset_pressed"]

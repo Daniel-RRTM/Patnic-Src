@@ -17,6 +17,7 @@ func getKitSetByNr(kitsetNr:int):      			return listOfKits.values()[kitsetNr]
 
 
 func addKitSet(kitset):
+	Signals.emit_signal("Player_Found_KitPart",{"keyword":"kitparts","index":kitset.index()})
 	var kitPartEnt
 	if kitset is String: 		kitPartEnt = API_001_Atlas.KitParts().getEntry(kitset)
 	if kitset is KitPartEntity: kitPartEnt = kitset
@@ -24,7 +25,14 @@ func addKitSet(kitset):
 	if is_instance_valid(kitPartEnt):
 		listOfKits[kitPartEnt.index()] = kitPartEnt
 
-
+func removeKitset(kitset) -> void:
+	if kitset is String:
+		listOfKits[kitset].queue_free()
+		listOfKits.erase(kitset)
+	if kitset is KitPartEntity: 
+		var index = kitset.index()
+		listOfKits[index].queue_free()
+		listOfKits.erase(index)
 
 
 static func getType_quack():   return "ARRAY"

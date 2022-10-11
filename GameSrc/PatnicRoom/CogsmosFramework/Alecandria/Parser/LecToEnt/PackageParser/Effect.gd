@@ -4,21 +4,30 @@ class_name _Alecandria_LecToEnt_PackageEffect
 
 
 static func run(content:Array,ent) -> Array:
-	var eventEnt    = ConditionEntity.new()
-	for component in content:
-		var cache = component.replace("--->","").split(" ") as Array
-		for parameter in cache: if parameter.empty(): cache.erase(parameter)
-		
-		var dict = SYNTAX.EVENT.EFFECTS[cache[0]].getArrToDict(cache)
-		
-		ent.effects.append(dict)
+	var eventEnt = ConditionEntity.new()
+	var concept
+	var effectDict = {}
+	
+	for line in content:
+		if ":" in line : 
+			concept = line.replace(":","").dedent()
+			effectDict[concept] = []
+
+		else:
+			var saniticedStep = line.replace("--->","").split(" ") as Array
+			for parameter in saniticedStep: if parameter.empty(): saniticedStep.erase(parameter)
+			effectDict[concept].append(SYNTAX.EVENT.EFFECTS[saniticedStep[0]].getArrToDict(saniticedStep))
 	
 	
-#	for compInst in cachedInstances: 
-#		ent.addComponent(compInst)
-#
-#	for compToString in cachedDictComps.keys():
-#		ent.addComponent(DemocrECS.getComponentClass(compToString).new(cachedDictComps[compToString]))
+	
+	
+	
+	
+	for step in effectDict["EFFECT"]:ent.effects.append(step)
+	
+	
+	
+	
 	
 	
 	return ent

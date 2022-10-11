@@ -1,29 +1,238 @@
 {
-	"credits": 0,
+	"credits": 200,
 	"archivements": [
 
 	],
+	"valuables": {
+		"PERFORMANCE_ENHANCING_DRUGS": {
+			"AMPHETAMINES": {
+				"1": 0,
+				"2": 0,
+				"3": 0,
+				"4": 0,
+				"5": 0,
+				"6": 0,
+				"7": 0,
+				"8": 0,
+				"9": 0,
+				"10": 0
+			},
+			"BARBITURATES": {
+				"1": 0,
+				"2": 0,
+				"3": 0,
+				"4": 0,
+				"5": 0,
+				"6": 0,
+				"7": 0,
+				"8": 0,
+				"9": 0,
+				"10": 0
+			},
+			"OPIOTS": {
+				"1": 0,
+				"2": 0,
+				"3": 0,
+				"4": 0,
+				"5": 0,
+				"6": 0,
+				"7": 0,
+				"8": 0,
+				"9": 0,
+				"10": 0
+			}
+		},
+		"PRE_CRASH_DATA": {
+			"SCIENCE": {
+				"1": 0,
+				"2": 0,
+				"3": 0,
+				"4": 0,
+				"5": 0,
+				"6": 0,
+				"7": 0,
+				"8": 0,
+				"9": 0,
+				"10": 0
+			},
+			"CULTURE": {
+				"1": 0,
+				"2": 0,
+				"3": 0,
+				"4": 0,
+				"5": 0,
+				"6": 0,
+				"7": 0,
+				"8": 0,
+				"9": 0,
+				"10": 0
+			},
+			"META": {
+				"1": 0,
+				"2": 0,
+				"3": 0,
+				"4": 0,
+				"5": 0,
+				"6": 0,
+				"7": 0,
+				"8": 0,
+				"9": 0,
+				"10": 0
+			}
+		},
+		"REAGENTS": {
+			"SHAMANIC": {
+				"1": 0,
+				"2": 0,
+				"3": 0,
+				"4": 0,
+				"5": 0,
+				"6": 0,
+				"7": 0,
+				"8": 0,
+				"9": 0,
+				"10": 0
+			},
+			"CHAOTIC": {
+				"1": 0,
+				"2": 0,
+				"3": 0,
+				"4": 0,
+				"5": 0,
+				"6": 0,
+				"7": 0,
+				"8": 0,
+				"9": 0,
+				"10": 0
+			},
+			"HERMETIC": {
+				"1": 0,
+				"2": 0,
+				"3": 0,
+				"4": 0,
+				"5": 3,
+				"6": 0,
+				"7": 0,
+				"8": 0,
+				"9": 0,
+				"10": 0
+			}
+		}
+	},
 	"kitventory": [
-
+		"C_I_1",
+		"C_S_1",
+		"C_S_2__M_2",
+		"X_H_1",
+		"C_S_1__M_2"
 	],
 	"station": {
 		"Workshop": {
-			"basekit": "",
-			"kitpart to mod": "",
-			"mode": "",
-			"countdown": ""
-		},
-		"Terminal": {
-			"basekit": "",
-			"kitpart to mod": "",
-			"mode": "",
-			"countdown": ""
+			"mode": 0,
+			"basekit": [
+
+			],
+			"is ready": 0,
+			"max length": 0,
+			"kitpart to mod": [
+
+			],
+			"current length": 0
 		},
 		"Retreat": {
-			"basekit": "",
-			"kitpart to mod": "",
-			"mode": "",
-			"countdown": ""
+			"mode": 0,
+			"basekit": [
+
+			],
+			"is ready": 0,
+			"max length": 0,
+			"kitpart to mod": [
+
+			],
+			"current length": 0
+		},
+		"Terminal": {
+			"mode": 0,
+			"basekit": [
+
+			],
+			"is ready": 0,
+			"max length": 0,
+			"kitpart to mod": [
+
+			],
+			"current length": 0
+		}
+	},
+	"quest-cycle": {
+		"Meat": {
+			"Connection": "[Node:4494]",
+			"Order": {
+				"ent": "[Node:4423]",
+				"finished": false,
+				"active": true
+			},
+			"Task": {
+				"ent": "[Node:4423]",
+				"finished": false,
+				"active": false
+			},
+			"FavorL": {
+				"ent": null,
+				"finished": false,
+				"active": false
+			},
+			"FavorR": {
+				"ent": null,
+				"finished": false,
+				"active": false
+			}
+		},
+		"Matrix": {
+			"Connection": "[Node:4461]",
+			"Order": {
+				"ent": "[Node:4436]",
+				"finished": false,
+				"active": true
+			},
+			"Task": {
+				"ent": "[Node:4410]",
+				"finished": false,
+				"active": false
+			},
+			"FavorL": {
+				"ent": null,
+				"finished": false,
+				"active": false
+			},
+			"FavorR": {
+				"ent": null,
+				"finished": false,
+				"active": false
+			}
+		},
+		"Magic": {
+			"Connection": "[Node:4593]",
+			"Order": {
+				"ent": "[Node:4449]",
+				"finished": false,
+				"active": true
+			},
+			"Task": {
+				"ent": "[Node:4397]",
+				"finished": false,
+				"active": false
+			},
+			"FavorL": {
+				"ent": null,
+				"finished": false,
+				"active": false
+			},
+			"FavorR": {
+				"ent": null,
+				"finished": false,
+				"active": false
+			}
 		}
 	}
 }

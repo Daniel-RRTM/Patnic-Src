@@ -4,7 +4,9 @@ var fsm
 func buildRef(fsmPara): 
 	fsm = fsmPara
 
+
 func _enter_tree() -> void: 
+	name = "News"
 	get_node("AnimationPlayer").play("rightToLeft")
 	
 

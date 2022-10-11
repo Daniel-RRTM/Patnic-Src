@@ -1,12 +1,12 @@
 extends Component
 class_name C_23_CARRIAGE
 
-var capacity
+var value
 var inventory = []
 
 func _init(valuePara):
 	name = "C_23_CARRIAGE"
-	capacity = valuePara
+	value = valuePara
 
 
 func addToInventory(entPara):
@@ -18,7 +18,7 @@ func removeFromInventory(entPara):
 
 
 func isInventoryFull():
-	return inventory.size <= capacity
+	return inventory.size <= value
 
 
 

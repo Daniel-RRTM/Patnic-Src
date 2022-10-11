@@ -1,13 +1,38 @@
 {
-	"Core Kitparts": 15,
-	"Upgrade Kitparts": 18,
-	"Trait Kitparts": 0,
-	"Tiles": 65,
-	"Race": 15,
-	"Role": 0,
-	"Specialty": 19,
-	"Conditions": 4,
-	"ActorRNGTemplates": 4,
-	"Interactables": 121,
-	"Cheat/Commands": 9
+	"KIT_PART": {
+		"TOTAL": 40,
+		"MEAT": {
+			"BASE": 8,
+			"MOD": 6,
+			"APPENDIX": 0,
+			"TOTAL": 14
+		},
+		"MAGIC": {
+			"BASE": 6,
+			"MOD": 9,
+			"APPENDIX": 0,
+			"TOTAL": 15
+		},
+		"MATRIX": {
+			"BASE": 3,
+			"MOD": 8,
+			"APPENDIX": 0,
+			"TOTAL": 11
+		}
+	},
+	"TILES": 121,
+	"INTERACTABLES": 67,
+	"Cheat/Commands": 0,
+	"COMMANDS": 0,
+	"TOTAL_LEC": 148,
+	"ACTOR_RACE": 23,
+	"ACTOR_ROLE": 9,
+	"ACTOR_SPECIALTY": 38,
+	"ACTOR_RNG_TABLE": 7,
+	"CONDITION": 5,
+	"CONNECTION": 7,
+	"KITPART_BASE": 22,
+	"KITPART_MOD": 18,
+	"LOOT_FILTER": 14,
+	"QUEST": 5
 }

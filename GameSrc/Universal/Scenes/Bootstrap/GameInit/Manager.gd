@@ -19,7 +19,7 @@ func _on_default_pressed() -> void:
 # TODOD entfernen
 func alt_Alecandria():
 	OS.window_fullscreen = !OS.window_fullscreen
-	get_tree().change_scene("res://GameSrc/Alt Alecandria/Main.tscn")
+	get_tree().change_scene("res://GameSrc/Alecandria/Main.tscn")
 
 
 func _on_options_pressed() -> void:

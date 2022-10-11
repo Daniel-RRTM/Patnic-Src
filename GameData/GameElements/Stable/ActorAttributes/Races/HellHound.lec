@@ -40,6 +40,7 @@ MAIN{
 //------------------------------------------------------------------------------\\
   FLAGS[
     F_6_ACTOR_ATTRIBUTES
+    F_WANTED_PARA_CRITTER
     F_11_ACTOR_ATTRIBUTES_RACE
   ]
 
@@ -51,6 +52,6 @@ MAIN{
 
 
 
-REFERENCE{
+REFERENCES{
 
 }

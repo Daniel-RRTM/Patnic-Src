@@ -18,7 +18,8 @@ func _init() -> void:
 	declare()
 	DemocrECS.atlas_systems[self.name] = self
 	for signalName in signalsConnection.keys():   Signals.connect(signalName,self,signalsConnection[signalName])
-	prepare()
+
+func _ready():prepare()
 
 func declare() -> void :   printerr("There was no declaration for this system set")
 func prepare() -> void :   printerr("There was no preparation for this system set")
@@ -30,8 +31,10 @@ func prepare() -> void :   printerr("There was no preparation for this system se
 
 func runTasks() -> void:
 	for task in tasks:
-		if is_instance_valid(task.affectedEnt):  operations[task.operation].run(task.affectedEnt, task.parameter)
-		else:operations[task.operation].run(task.parameter)
+		if is_instance_valid(task.affectedEnt): 
+			operations[task.operation].run(task.affectedEnt, task.parameter)
+		else:
+			operations[task.operation].run(task.parameter)
 		tasks.erase(task)
 
 

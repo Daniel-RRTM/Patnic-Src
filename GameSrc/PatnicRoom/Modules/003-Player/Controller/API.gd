@@ -19,7 +19,13 @@ var team              := _005_Common_Team.new()
 var stations          := _005_Common_Station.new()
 var stationSetter     := _005_Common_StationSetter.new()
 
+var questCycle        := _005_Common_QuestCycle.new()
+var activeQuests       = [_005_Common_Quests.new(),_005_Common_Quests.new(),_005_Common_Quests.new()]
+var chunkStats        := _003_ChunkStats.new()
 
+func _ready(): 
+	chunkStats.reset()
+	inputSignals.initialice()
 
 # ----- GETTER --------------------------------------------------------------- ##
 
@@ -27,7 +33,15 @@ var stationSetter     := _005_Common_StationSetter.new()
 func getInputMode()            -> bool                      :  return inputMode
 func getStations()             -> _005_Common_Station       :  return stations
 func getCurrentStationSetter() -> _005_Common_StationSetter :  return stationSetter
+func getQuestCycle()           -> _005_Common_QuestCycle    :  return questCycle
 
+func getAllQuests()            -> Array                     :  return activeQuests
+func getFirstQuest()           -> _005_Common_Quests        :  return activeQuests[0]
+func getSecondQuest()          -> _005_Common_Quests        :  return activeQuests[1]
+func getThirdtQuest()          -> _005_Common_Quests        :  return activeQuests[2]
+
+func resetChunkStats()         -> void                      :  chunkStats.reset()
+func getChunkStats()           -> Dictionary                :  return chunkStats.getDict()
 
 
 # ----- CHARACTER ------------------------------------------------------------ ##
@@ -48,7 +62,8 @@ func getJSONCrossReference() -> Dictionary: return {
 		"C_9_CREDITS_ACCOUNT"       : "credits"
 #		,"C_X_ARCHIVEMENTS"         : "archivements"
 		,"C_68_KITVENTORY"          : "kitventory"
-#		,"C_X_STATIONEN"            : "archivements"
+		,"QUESTS_CYCLE"             : "quest-cycle"
+		,"C_50_VALUABLES"           : "valuables"
 	},
 	"character":{
 		 "C_39_KITSLOT_PROGRESSION" : "kitslot progression"

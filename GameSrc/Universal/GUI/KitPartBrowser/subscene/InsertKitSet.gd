@@ -13,6 +13,7 @@ func initialice(kitsetPara:KitPartEntity):
 	get_node("MechanicalSummary/RichTextLabel").bbcode_text = kitset.mechanicalSummary()
 
 
-
+func _on_Button_pressed():
+	get_node("../../../../..").calcToSell(kitset,"KITPART")
 
 

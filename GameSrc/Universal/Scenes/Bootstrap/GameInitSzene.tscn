@@ -76,6 +76,7 @@ custom_styles/normal = ExtResource( 13 )
 text = "START CONTENT CREATOR"
 
 [node name="Advanced" type="Button" parent="."]
+visible = false
 margin_left = 32.0
 margin_top = 184.0
 margin_right = 262.0
@@ -91,23 +92,16 @@ text = "ADVANCED OPTIONS"
 script = ExtResource( 5 )
 
 [node name="optionsPanel" type="Control" parent="."]
-visible = false
 margin_left = 16.0
 margin_top = 296.0
 margin_right = 240.0
 margin_bottom = 496.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Form" type="Control" parent="optionsPanel"]
 margin_left = -56.0
 margin_top = -304.0
 margin_right = -16.0
 margin_bottom = -264.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="KitsToStart" type="Button" parent="optionsPanel"]
 margin_left = 16.0
@@ -139,9 +133,6 @@ custom_styles/hover = ExtResource( 11 )
 custom_styles/pressed = ExtResource( 6 )
 custom_styles/normal = ExtResource( 14 )
 text = "MODE TO BOOT"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="CommunityContent" type="Button" parent="optionsPanel"]
 margin_left = 16.0
@@ -172,6 +163,7 @@ __meta__ = {
 }
 
 [node name="EventInfo" type="RichTextLabel" parent="."]
+visible = false
 margin_left = 584.0
 margin_top = 328.0
 margin_right = 992.0

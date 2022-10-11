@@ -10,8 +10,12 @@ extends Node
 var _interactables ; var _tiles      ; var _actorTemplate
 var _role          ; var _race       ; var _specialty
 var _kitparts      ; var _conditions
+var _quest         ; var _lootFilter ; var _connection
 
 func _init() -> void:
+	_connection    = _001_Connection.new()
+	_lootFilter     = _001_LootFilter.new()
+	_quest           = _001_Quest.new()
 	_tiles           = _001_Tiles.new()
 	_interactables   = _001_Interactables.new()
 	_actorTemplate   = _001_RNG_Actor_Template.new()
@@ -36,6 +40,10 @@ func Specialties()			-> _001_Specialty			:  return _specialty
 func Role()					-> _001_Role				:  return _role
 func KitParts()				-> _001_Kitparts			:  return _kitparts
 func RNGActorTemplate()		-> _001_RNG_Actor_Template	:  return _actorTemplate
+func LootFilter()		    -> _001_LootFilter      	:  return _lootFilter
+func Quest()	        	-> _001_Quest	            :  return _quest
+func Connection()			-> _001_Connection			:  return _connection
+
 
 
 
@@ -46,6 +54,11 @@ func addTileSet(name:String,dict:Array)	-> void	: _tiles.createTileset(name,dict
 func sortKitpartsAtlas()				-> void : _kitparts.sortEntries()
 
 
-
-
-	
+func getTemplate(type:String,index:String) -> Entity:
+	match type.replace(" ",""):
+		"RACE"       : return Race().getEntry(index) as Entity
+		"ROLE"       : return Role().getEntry(index) as Entity
+		"QUEST"      : return Quest().getEntry(index) as Entity
+		"SPECIALTY"  : return Specialties().getEntry(index) as Entity
+		"LOOTFILTER" : return LootFilter().getEntry(index) as Entity
+	return null

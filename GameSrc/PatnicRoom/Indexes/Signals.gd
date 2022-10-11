@@ -10,12 +10,13 @@ signal Player_Turn_Finished
 
 signal Effect_Turn_Finished
 signal Effect_Turn_Started
-
+signal Wanted_Actor_Killed
 
 
 
 signal Tilemap_Changed
-
+signal Player_Found_KitPart
+signal Player_Found_Valuables
 
 
 

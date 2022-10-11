@@ -135,9 +135,6 @@ margin_right = 464.0
 margin_bottom = 85.0
 theme = ExtResource( 5 )
 custom_fonts/font = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel2/kits"]
 margin_left = 32.0

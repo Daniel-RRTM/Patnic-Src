@@ -30,6 +30,7 @@ func actOnInput_quack(event:InputEvent) -> void:
 			SokraTiles.getPlayer().movePlayer(inputEnum)
 			SokraTiles.getSelection().clearLayer()
 			API_009_Sound.playMovePlayer()
+			API_015_Quest.emitSignal("Player_Walked_Step",{"keyword":"steps","factor":1})
 
 
 

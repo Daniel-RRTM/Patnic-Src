@@ -12,9 +12,10 @@ func _init() -> void:
 
 
 func actOnInput_quack(currentInput:InputEvent) -> void:   
+	API_004_KitSet.selection.entity.currentCooldownTime = 0
 	for step in API_004_KitSet.selection.perform:
 		var cachedStep = step.duplicate()
 		API_005_Event.runKitSet(cachedStep)
 		API_009_Sound.playRunKit()
-
+	API_015_Quest.emitSignal("Player_Used_Kit",{"keyword":"kituses","factor":1})
 

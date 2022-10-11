@@ -8,13 +8,13 @@ extends Node
 
 
 var entMan           : _03_00_EntityManager
-
+var _actorAttributeSystem := _010_ActorAttributesSystem.new()
 func _init() :
 	self.name        = "API_0007_ProcgenActor"
 	entMan           = _03_00_EntityManager.new()
 
 
-
+func actorAttribute() ->_010_ActorAttributesSystem: return _actorAttributeSystem
 # ----- GETTER ------------------------------------------------------------- ##
 
 
@@ -26,15 +26,31 @@ func RNGenerateBasicActor(templateForGeneration) -> ActorEntity:
 	
 func createActorSpecific(toConvert) -> ActorEntity:
 	if toConvert is Array: 
-		return entMan.dictGenerateActor({"C_12_FOR_RACE":toConvert[0],"C_12_FOR_ROLE":toConvert[1],"C_12_FOR_SPECIALTY":toConvert[2]})
+		return entMan.dictGenerateActor({"RACE":toConvert[0],"ROLE":toConvert[1],"SPECIALTY":toConvert[2]})
 	else:
 		return entMan.dictGenerateActor(toConvert)
 
+func createConnectionFromActor(data) -> ActorEntity:
+	var actorEnt = createActorSpecific(data[2])
+	for flag in data[1]["FLAGS"]: actorEnt.addFlag(flag)
+	
+	for metaComp in data[0].keys(): 
+		actorEnt.addComponent(DemocrECS.getComponentClass(metaComp).new(data[0][metaComp]))
+	
+	for comp in data[1]["COMPONENTS"].keys():
+		if actorEnt.hasComp(comp):actorEnt.getComp(comp).free()
+		actorEnt.addComponent(DemocrECS.getComponentClass(comp).new(data[1]["COMPONENTS"][comp]))
+	
+	return actorEnt
 
 # ----- SETTER ------------------------------------------------------------- ##
 
 
 func removeActorFromGame(ent:ActorEntity):
+	var allFlags : Array
+	for tmpl in ["RACE","ROLE","SPECIALTY"]: allFlags += ent.getFlagTemp(tmpl)
+	API_015_Quest.emitSignal("Wanted_Actor_Killed",{"flags":allFlags})
+	
 	var body = API_001_Atlas.Tiles().getEntry("Actors_6_3")
 	body = DemocrECS.copyEntity(body)
 	body.position = ent.pos()

@@ -19,8 +19,10 @@ var spawnLayer = {}
 
 
 func _ready() -> void : 
+	HomErrorLog.printIntoSeshLog("INIT","Sokratiles parses Tilesets into Entities...")
 	TilesetParser.run()
 	allCuratedMaps = SokraTiles_CuratedMapsParser.parse()
+	HomErrorLog.printIntoSeshLog("INIT","Sokratiles done!")
 
 
 

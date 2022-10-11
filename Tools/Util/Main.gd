@@ -4,9 +4,9 @@ extends Node
 var all : Dictionary
 
 
-func _init() -> void:
-	all["directory"]             = _Util_Directory.new()
+func _ready() -> void:
 	all["randomNumberGenerator"] = _Util_RNG.new()
+	all["directory"]             = _Util_Directory.new()
 	all["dictionary"]            = _Util_Dictionary.new()
 	all["nodes"]                 = NodesManager.new()
 	all["json"]                  = _Util_JSON.new()

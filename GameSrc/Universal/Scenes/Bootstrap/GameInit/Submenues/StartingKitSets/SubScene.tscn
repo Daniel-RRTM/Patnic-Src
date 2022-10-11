@@ -61,7 +61,7 @@ func updateStartingKits():
 		if kitSet.count(\"\")!= 3:
 			startingKits.append(kitSet)
 	API_003_Player.startingKitsets = startingKits
-
+	HomErrorLog.printIntoSeshLog(\"BOOT\",\"[color=lime]StartingKits[color=white] set!\")
 func _input(event): if event is InputEventMouseButton: updateStartingKits()
 "
 

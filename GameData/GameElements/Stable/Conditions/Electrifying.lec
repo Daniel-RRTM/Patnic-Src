@@ -24,9 +24,10 @@ MAIN{
 
 
 //------------------------------------------------------------------------------\\
-  EFFECT[
-    AFFECTING ---> C_57_HITPOINTS MOD -1
-    SPREADING ---> PROPERTY EQUALS CONDUCTOR 80 2
+  CONDITION[
+    EFFECT:
+      AFFECTING ---> C_57_HITPOINTS MOD -1
+      SPREADING ---> PROPERTY EQUALS CONDUCTOR 80 2
   ]
 }
 
@@ -37,6 +38,6 @@ MAIN{
 
 
 
-REFERENCE{
+REFERENCES{
 
 }
