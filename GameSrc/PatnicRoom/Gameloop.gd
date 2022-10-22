@@ -19,7 +19,7 @@ func startRestMode():
 func startPanicMode():
 	get_tree().change_scene(ENUM.FILE_PATHS.SCENES.PANIC)
 	API_014_NewsLog.metaEntry("Starting Panic-mode on Suburban!")
-	SokraTiles.loadChunk("res://GameData/Tiled/TileMaps/Story/Suburban_One.json")
+	SokraTiles.loadChunk("res://GameData/Tiled/Maps/Unique/Suburban_1.json")
 
 
 

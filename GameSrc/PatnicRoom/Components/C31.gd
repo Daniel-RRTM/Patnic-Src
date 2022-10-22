@@ -19,4 +19,4 @@ static func getAutoDoc(): return{
 	"validType"   : "STATIC_LIST",
 	"nameToShow"  : "kit Category",
 }
-static func getType_quack(): return "STRING"
+static func getType_quack(): return "ENUM"

@@ -18,6 +18,11 @@ var currentInput
 
 
 func manageInput(event:InputEvent, root) -> void:
+	if currentMode == MODE.FORM_SELECTION : loadForm(root)
+	printCurrentRows(root)
+	
+	
+	
 	if currentMode == MODE.ROW_SELECTION or currentMode == MODE.INPUT_SELECTION: 
 		root.mainTed.cursor_set_column(42)
 	if event.is_action("Interface_Generall_Enter"):
@@ -51,7 +56,6 @@ func loadForm(root) -> void:
 		for compName in formOfDesign["mandatory to fill out"]: 
 			var compDoc = root.compAtlas[compName].getAutoDoc()
 			allRowsInput[compDoc.nameToShow.replace(" ","")]=_TextToolBox_RowMetaData.new(compDoc,compName)
-			printCurrentRows(root)
 		currentMode = MODE.INPUT_SELECTION
 
 

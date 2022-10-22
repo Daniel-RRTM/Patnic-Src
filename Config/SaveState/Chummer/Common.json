@@ -166,14 +166,14 @@
 	},
 	"quest-cycle": {
 		"Meat": {
-			"Connection": "[Node:4494]",
+			"Connection": "[Node:4540]",
 			"Order": {
-				"ent": "[Node:4423]",
+				"ent": "[Node:4469]",
 				"finished": false,
 				"active": true
 			},
 			"Task": {
-				"ent": "[Node:4423]",
+				"ent": "[Node:4469]",
 				"finished": false,
 				"active": false
 			},
@@ -189,14 +189,14 @@
 			}
 		},
 		"Matrix": {
-			"Connection": "[Node:4461]",
+			"Connection": "[Node:4507]",
 			"Order": {
-				"ent": "[Node:4436]",
+				"ent": "[Node:4482]",
 				"finished": false,
 				"active": true
 			},
 			"Task": {
-				"ent": "[Node:4410]",
+				"ent": "[Node:4456]",
 				"finished": false,
 				"active": false
 			},
@@ -212,14 +212,14 @@
 			}
 		},
 		"Magic": {
-			"Connection": "[Node:4593]",
+			"Connection": "[Node:4639]",
 			"Order": {
-				"ent": "[Node:4449]",
+				"ent": "[Node:4495]",
 				"finished": false,
 				"active": true
 			},
 			"Task": {
-				"ent": "[Node:4397]",
+				"ent": "[Node:4443]",
 				"finished": false,
 				"active": false
 			},

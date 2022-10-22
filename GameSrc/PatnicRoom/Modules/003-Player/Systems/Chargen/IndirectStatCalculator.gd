@@ -28,7 +28,6 @@ static func getLimits(ent):
 	var menCache  = (cache.intuition() + cache.willpower() + (cache.logic()*2)        ) / 3
 	var socCache  = (cache.intuition() + cache.willpower() + (cache.charisma()*2)     ) / 3
 	
-	ent.addComponent(C_22_LIMITS.new(physCache,menCache,socCache))
 
 
 

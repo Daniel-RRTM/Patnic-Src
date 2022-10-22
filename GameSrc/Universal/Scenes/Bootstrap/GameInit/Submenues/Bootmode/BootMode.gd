@@ -105,3 +105,12 @@ func _on_Deserialice_pressed():
 	OS.window_fullscreen = true
 	Statistics_JSON_Hub.run()
 	get_tree().quit()
+
+
+func _on_DevRoom_pressed():
+	OS.window_fullscreen = true
+	API_003_Player.loadQuickStartChar()
+	SokraTiles.loadChunk(ENUM.FILE_PATHS.DEV_ROOM_TILEMAP)
+	SokraTiles.hasPlayerRested = true
+	get_tree().change_scene(ENUM.FILE_PATHS.SCENES.PANIC)
+	HomErrorLog.printIntoSeshLog("BOOT","starting in [color=lime]Tilemap[color=white]")

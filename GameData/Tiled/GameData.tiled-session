@@ -3,24 +3,35 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "reskinn/Maps/Chunk.json",
+    "activeFile": "",
     "expandedProjectPaths": [
+        "TileMaps/Unique",
+        "Maps/Bricks",
+        "TileSets/cache",
+        "reskinn",
+        "TileMaps",
+        "TileSets",
+        "Maps",
+        "TileSets/JSON",
         "TileMaps/Story",
+        "Sets",
+        "TileMaps/Special",
+        "Maps/Unique",
+        "TileMaps/custome",
+        "TileMaps/beta Maps",
         "reskinn/Maps",
         ".",
-        "TileSets",
-        "reskinn",
-        "TileSets/cache",
-        "TileMaps/Special",
-        "TileMaps/custome",
-        "TileSets/JSON",
-        "TileMaps",
-        "TileMaps/Unique",
-        "TileMaps/beta Maps",
-        "TileMaps/custome/Suburban"
+        "TileMaps/custome/Suburban",
+        "Sets/JSON",
+        "Sets/PNG",
+        "reskinn/Tileset"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
+        "": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "C:/Desktop/Tiled Project/Tilesets/JSON/01_General.json": {
             "scaleInDock": 1
         },
@@ -36,6 +47,97 @@
         "C:/Desktop/Tiled Project/Tilesets/JSON/08_Nature.json": {
             "scaleInDock": 1
         },
+        "C:/Users/user/Desktop/Lighthous keeper/FIRST (2).json": {
+            "scaleInDock": 1,
+            "scaleInEditor": 3
+        },
+        "C:/Users/user/Desktop/Lighthous keeper/FIRST.json": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "C:/Users/user/Desktop/Lighthous keeper/GameData/Map/FIRST_TWO.json": {
+            "scaleInDock": 1,
+            "scaleInEditor": 2
+        },
+        "C:/Users/user/Desktop/Lighthous keeper/GameData/Map/Overworld.json": {
+            "dynamicWrapping": false,
+            "scaleInDock": 3,
+            "scaleInEditor": 5.5
+        },
+        "C:/Users/user/Desktop/Lighthous keeper/GameData/Map/big_map.json": {
+            "scale": 0.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 6250,
+                "y": 6566
+            }
+        },
+        "C:/Users/user/Desktop/Lighthous keeper/GameData/Map/map.json": {
+            "scale": 8,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 799.9375,
+                "y": 799.9375
+            }
+        },
+        "C:/Users/user/Desktop/Lighthous keeper/GameData/Set/FIRST.json": {
+            "dynamicWrapping": false,
+            "scaleInDock": 3,
+            "scaleInEditor": 2
+        },
+        "C:/Users/user/Desktop/Lighthous keeper/GameData/Set/FIRST_TWO.json": {
+            "scaleInDock": 1,
+            "scaleInEditor": 2
+        },
+        "C:/Users/user/Desktop/Lighthous keeper/GameData/Set/Overworld.json": {
+            "scaleInDock": 4,
+            "scaleInEditor": 16
+        },
+        "C:/Users/user/Desktop/Lighthous keeper/GameData/Set/SECOND.json": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 3
+        },
+        "C:/Users/user/Desktop/Lighthous keeper/GameData/Set/two.json": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 2
+        },
+        "C:/Users/user/Desktop/Lighthous keeper/Tilemap/Map/Unbenannt.json": {
+            "scaleInDock": 1
+        },
+        "C:/Users/user/Desktop/Lighthous keeper/Tilemap/Map/map.json": {
+            "scale": 0.33,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": -36.36363636363626,
+                "y": 518.1818181818182
+            }
+        },
+        "C:/Users/user/Desktop/Lighthous keeper/Tilemap/Map/unbenannt.json": {
+            "scale": 0.53675,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 791.8025151374011,
+                "y": 61.4811364694923
+            }
+        },
+        "C:/Users/user/Desktop/Lighthous keeper/Tilemap/Set/FIRST.json": {
+            "scaleInDock": 1,
+            "scaleInEditor": 8
+        },
+        "C:/Users/user/Desktop/Lighthous keeper/Unbenannt.json": {
+            "scaleInDock": 1,
+            "scaleInEditor": 8
+        },
+        "C:/Users/user/Desktop/Lighthous keeper/map.json": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 552,
+                "y": -97.33333333333326
+            }
+        },
         "C:/Users/user/Desktop/PatnicRoom Env/Workspace/Src/Config/ExperimentalTilemap.json": {
             "scale": 1.5,
             "selectedLayer": 4,
@@ -43,6 +145,27 @@
                 "x": 1065,
                 "y": 683.3333333333333
             }
+        },
+        "C:/Users/user/Desktop/PatnicRoom Env/Workspace/Src/GameData/TileSets/JSON/001_Terrain.json": {
+            "scaleInDock": 1
+        },
+        "C:/Users/user/Desktop/PatnicRoom Env/Workspace/Src/GameData/TileSets/JSON/002_Indoors.json": {
+            "scaleInDock": 1
+        },
+        "C:/Users/user/Desktop/PatnicRoom Env/Workspace/Src/GameData/TileSets/JSON/003_POI.json": {
+            "scaleInDock": 1
+        },
+        "C:/Users/user/Desktop/PatnicRoom Env/Workspace/Src/GameData/TileSets/JSON/004_General.json": {
+            "scaleInDock": 1
+        },
+        "C:/Users/user/Desktop/PatnicRoom Env/Workspace/Src/GameData/TileSets/JSON/007_Decoration.json": {
+            "scaleInDock": 1
+        },
+        "C:/Users/user/Desktop/PatnicRoom Env/Workspace/Src/GameData/TileSets/JSON/010_Shop.json": {
+            "scaleInDock": 1
+        },
+        "C:/Users/user/Desktop/PatnicRoom Env/Workspace/Src/GameData/TileSets/JSON/011_Introduction.json": {
+            "scaleInDock": 1
         },
         "C:/Users/user/Desktop/back up/GameData/Tiled/TileMaps/beta Maps/Suburban_One.json": {
             "scale": 1.5,
@@ -126,6 +249,141 @@
         "C:/Users/user/Documents/GitHub/Tilesets/JSON/07_Shop.json": {
             "scaleInDock": 1
         },
+        "Maps/Bricks/Container.json": {
+            "scale": 1,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": -17,
+                "y": 217
+            }
+        },
+        "Maps/Bricks/Streets.json": {
+            "scale": 1,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 45.5,
+                "y": 130
+            }
+        },
+        "Maps/DevRoom.json": {
+            "scale": 1.5,
+            "selectedLayer": 8,
+            "viewCenter": {
+                "x": 514.6666666666667,
+                "y": 524
+            }
+        },
+        "Maps/ExperimentalTilemap.json": {
+            "scale": 0.5,
+            "selectedLayer": 7,
+            "viewCenter": {
+                "x": 836,
+                "y": 604
+            }
+        },
+        "Maps/Generall.json": {
+            "scaleInDock": 1
+        },
+        "Maps/Indoor.json": {
+            "scaleInDock": 1
+        },
+        "Maps/POI.json": {
+            "scaleInDock": 1
+        },
+        "Maps/Symbols.json": {
+            "scaleInDock": 1
+        },
+        "Maps/Template.json": {
+            "scale": 0.33,
+            "selectedLayer": 7,
+            "viewCenter": {
+                "x": 2106.060606060606,
+                "y": 1172.7272727272725
+            }
+        },
+        "Maps/Tutorial.json": {
+            "scale": 0.37346874999999996,
+            "selectedLayer": 8,
+            "viewCenter": {
+                "x": 633.2524474939337,
+                "y": 797.9248598443646
+            }
+        },
+        "Maps/Unique/Barrens_1.json": {
+            "scale": 0.33,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 1218.1818181818182,
+                "y": 1054.5454545454545
+            }
+        },
+        "Maps/Unique/Docks_1.json": {
+            "scale": 0.5,
+            "selectedLayer": 8,
+            "viewCenter": {
+                "x": 945,
+                "y": 744
+            }
+        },
+        "Maps/Unique/Penthouse_1.json": {
+            "scale": 0.5,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 817,
+                "y": 764
+            }
+        },
+        "Maps/Unique/Sewers_1.json": {
+            "scale": 0.5,
+            "selectedLayer": 8,
+            "viewCenter": {
+                "x": 967,
+                "y": 764
+            }
+        },
+        "Maps/Unique/Suburban_1.json": {
+            "scale": 0.5,
+            "selectedLayer": 8,
+            "viewCenter": {
+                "x": 639,
+                "y": 988
+            }
+        },
+        "Maps/Unique/suburban.json": {
+            "scale": 1,
+            "selectedLayer": 8,
+            "viewCenter": {
+                "x": 814.5,
+                "y": 263.5
+            }
+        },
+        "Maps/Unique/suburban.json#Terrain": {
+            "scaleInDock": 1
+        },
+        "Sets/JSON/01_Terrain.json": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 4
+        },
+        "Sets/JSON/02_Indoors.json": {
+            "scaleInDock": 2,
+            "scaleInEditor": 3
+        },
+        "Sets/JSON/03_POI.json": {
+            "scaleInDock": 2,
+            "scaleInEditor": 5.5
+        },
+        "Sets/JSON/04_Marker.json": {
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        },
+        "Sets/JSON/05_Generall.json": {
+            "scaleInDock": 3,
+            "scaleInEditor": 5.5
+        },
+        "Sets/JSON/06_Nature.json": {
+            "scaleInDock": 4,
+            "scaleInEditor": 2
+        },
         "TileMaps/Special/DebugCompass.json": {
             "scale": 0.37346874999999996,
             "selectedLayer": 0,
@@ -154,16 +412,16 @@
             "scale": 0.5,
             "selectedLayer": 8,
             "viewCenter": {
-                "x": 791,
-                "y": 800
+                "x": 973,
+                "y": 798
             }
         },
         "TileMaps/Story/Barrens.json": {
             "scale": 0.75,
             "selectedLayer": 7,
             "viewCenter": {
-                "x": 791.3333333333334,
-                "y": 800
+                "x": 718,
+                "y": 797.3333333333333
             }
         },
         "TileMaps/Story/Mall.json": {
@@ -171,23 +429,31 @@
             "selectedLayer": 5,
             "viewCenter": {
                 "x": 791.3333333333333,
-                "y": 800
+                "y": 798.6666666666665
             }
         },
         "TileMaps/Story/Sewers.json": {
             "scale": 1.5,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 764.3333333333333,
-                "y": 1401.3333333333333
+                "x": 791.6666666666666,
+                "y": 800
+            }
+        },
+        "TileMaps/Story/ShoppingStreetOne.json": {
+            "scale": 0.53675,
+            "selectedLayer": 8,
+            "viewCenter": {
+                "x": 960.40987424313,
+                "y": 799.2547741034001
             }
         },
         "TileMaps/Story/Suburban_One.json": {
-            "scale": 1,
-            "selectedLayer": 4,
+            "scale": 1.5,
+            "selectedLayer": 7,
             "viewCenter": {
-                "x": 904.5,
-                "y": 537
+                "x": 938.9999999999999,
+                "y": 772
             }
         },
         "TileMaps/Story/Suburban_Two.json": {
@@ -195,7 +461,7 @@
             "selectedLayer": 5,
             "viewCenter": {
                 "x": 791,
-                "y": 798
+                "y": 800
             }
         },
         "TileMaps/SuburbanTestSide.json": {
@@ -390,6 +656,7 @@
             "scaleInEditor": 4
         },
         "TileSets/JSON/009_Conditions.json": {
+            "dynamicWrapping": true,
             "scaleInDock": 1,
             "scaleInEditor": 3
         },
@@ -546,25 +813,36 @@
             "scale": 0.75,
             "selectedLayer": 5,
             "viewCenter": {
-                "x": 148.66666666666674,
-                "y": 540
+                "x": 788.6666666666665,
+                "y": 1322.6666666666665
             }
         },
         "reskinn/Generall.json": {
-            "scaleInDock": 1,
+            "scaleInDock": 4,
             "scaleInEditor": 8
         },
         "reskinn/Indoor.json": {
-            "scaleInDock": 3,
+            "scaleInDock": 2,
             "scaleInEditor": 4
         },
         "reskinn/Maps/Chunk.json": {
-            "scale": 1,
+            "scale": 0.33,
             "selectedLayer": 5,
             "viewCenter": {
-                "x": 977.5,
-                "y": 413
+                "x": 1228.7878787878788,
+                "y": 672.7272727272727
             }
+        },
+        "reskinn/Maps/Docks.json": {
+            "scale": 0.75,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 885.9999999999999,
+                "y": 1116
+            }
+        },
+        "reskinn/Maps/Docks.json#Terrain": {
+            "scaleInDock": 1
         },
         "reskinn/Maps/Generall.json": {
             "scaleInDock": 1
@@ -573,6 +851,28 @@
             "scaleInDock": 1
         },
         "reskinn/Maps/Motel.json": {
+            "scale": 1,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 1346.5,
+                "y": 128
+            }
+        },
+        "reskinn/Maps/POI.json": {
+            "scaleInDock": 1
+        },
+        "reskinn/Maps/Sewers.json": {
+            "scale": 0.75,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 791.3333333333333,
+                "y": 798.6666666666665
+            }
+        },
+        "reskinn/Maps/Symbols.json": {
+            "scaleInDock": 1
+        },
+        "reskinn/Maps/Template.json": {
             "scale": 0.53675,
             "selectedLayer": 8,
             "viewCenter": {
@@ -580,25 +880,30 @@
                 "y": 801.1178388448999
             }
         },
-        "reskinn/Maps/POI.json": {
-            "scaleInDock": 1
-        },
-        "reskinn/Maps/Symbols.json": {
-            "scaleInDock": 1
-        },
         "reskinn/Maps/Terrain.json": {
             "scaleInDock": 1
+        },
+        "reskinn/Maps/suburban.json": {
+            "scale": 0.75,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 791.3333333333333,
+                "y": 798.6666666666665
+            }
+        },
+        "reskinn/Maps/suburban.json#Terrain": {
+            "scaleInDock": 2
         },
         "reskinn/Marker.json": {
             "scaleInDock": 1,
             "scaleInEditor": 8
         },
         "reskinn/POI.json": {
-            "scaleInDock": 1,
+            "scaleInDock": 1.5,
             "scaleInEditor": 8
         },
         "reskinn/Symbols.json": {
-            "scaleInDock": 1,
+            "scaleInDock": 4,
             "scaleInEditor": 8
         },
         "reskinn/Template.json": {
@@ -610,8 +915,16 @@
             }
         },
         "reskinn/Terrain.json": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 3
+        },
+        "reskinn/Tileset/01_Terrain.json": {
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        },
+        "reskinn/Tileset/02_Indoors.json": {
             "scaleInDock": 2,
-            "scaleInEditor": 8
+            "scaleInEditor": 4
         },
         "reskinn/Unbenannt.json": {
             "scaleInDock": 1,
@@ -626,35 +939,30 @@
             }
         }
     },
-    "last.externalTilesetPath": "C:/Users/user/Desktop/PatnicRoom Env/Workspace/Src/GameData/Tiled/reskinn",
-    "last.imagePath": "C:/Users/user/Desktop/PatnicRoom Env/Workspace/Src/GameData/Tiled/reskinn",
+    "last.externalTilesetPath": "C:/Users/user/Desktop/Lighthous keeper/GameData/Set",
+    "last.imagePath": "C:/Users/user/Desktop/PatnicRoom Env/Workspace/Src/GameData/Tiled/Sets/PNG",
+    "map.height": 20,
     "map.lastUsedFormat": "json",
     "map.tileHeight": 16,
     "map.tileWidth": 16,
+    "map.width": 20,
     "openFiles": [
-        "reskinn/POI.json",
-        "reskinn/Terrain.json",
-        "reskinn/Symbols.json",
-        "reskinn/Maps/Chunk.json",
-        "TileMaps/Story/Barrens.json",
-        "TileMaps/Story/Sewers.json",
-        "reskinn/Maps/Motel.json"
     ],
     "project": "GameData.tiled-project",
-    "property.type": "int",
+    "property.type": "bool",
     "recentFiles": [
-        "reskinn/POI.json",
-        "reskinn/Terrain.json",
-        "reskinn/Symbols.json",
-        "reskinn/Maps/Motel.json",
-        "TileMaps/Story/Sewers.json",
-        "TileMaps/Story/Barrens.json",
-        "reskinn/Maps/Chunk.json",
-        "TileSets/JSON/001_Terrain.json",
-        "reskinn/Generall.json",
-        "reskinn/Chunk.json",
-        "TileMaps/Story/Suburban_One.json",
-        "TileMaps/Story/Suburban_Two.json"
+        "Sets/JSON/06_Nature.json",
+        "Sets/JSON/05_Generall.json",
+        "Sets/JSON/04_Marker.json",
+        "Sets/JSON/03_POI.json",
+        "Sets/JSON/02_Indoors.json",
+        "Sets/JSON/01_Terrain.json",
+        "Maps/Unique/Suburban_1.json",
+        "Maps/Unique/Sewers_1.json",
+        "Maps/Unique/Docks_1.json",
+        "Maps/Unique/Penthouse_1.json",
+        "Maps/Template.json",
+        "Maps/ExperimentalTilemap.json"
     ],
     "tileset.lastUsedFormat": "json",
     "tileset.tileSize": {

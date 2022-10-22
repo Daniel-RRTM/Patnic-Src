@@ -3,7 +3,7 @@ class_name _SokraTiles_SpawnActor
 
 
 static func parse() -> void:
-	if SokraTiles.spawnLayer.empty():
+	if SokraTiles.spawnLayer.size() <0:
 		for entTemp in SokraTiles.spawnLayer.objects:
 			var actor = {}
 			for template in entTemp.properties: actor[template.name] = template.value

@@ -11,23 +11,23 @@ static func getComponents() -> Dictionary:
 	"C_5_MATRIX_NOISE"      			: 	C_5_MATRIX_NOISE,
 	"C_6_NAME"         				    : 	C_6_NAME,
 	"C_7_STATIC_TILESET_NR" 			:	C_7_STATIC_TILESET_NR,
-	"C_8_LEC_META"                      :   C_8_LEC_META, 
+
 	"C_9_CREDITS_ACCOUNT"               :   C_9_CREDITS_ACCOUNT,
-	"C_10_PERKS"             			:   C_10_PERKS,
+
 	"C_11_RACE_NAME"        	 		:   C_11_RACE_NAME,
 	"C_12_ATLAS_INDEX"        			: 	C_12_ATLAS_INDEX,
 	"C_13_GENDER"                       :   C_13_GENDER,
 	"C_14_LEC_RAW_DATA"                 :   C_14_LEC_RAW_DATA,
-	"C_15_BODYPARTS"   			        :	C_15_BODYPARTS,
+
 	"C_16_MAX_HITPOINTS"				: 	C_16_MAX_HITPOINTS,
-	"C_17_HITPROBABILLITY"          	:   C_17_HITPROBABILLITY,
+
 	"C_18_ATTRIBUTEMOD" 				:   C_18_ATTRIBUTEMOD,
 	"C_19_ATTRIBUTES"  				    : 	C_19_ATTRIBUTES,
 	"C_20_SKILLBLOCK"     			    : 	C_20_SKILLBLOCK,
 	"C_21_POS_TO_WALK_TO"               :   C_21_POS_TO_WALK_TO,
-	"C_22_LIMITS"     			    	:   C_22_LIMITS,
+
 	"C_23_CARRIAGE"     				: 	C_23_CARRIAGE,
-	"C_24_PASSIVE_ACTIVE"              : C_24_PASSIVE_ACTIVE,
+	"C_24_PASSIVE_ACTIVE"               : 	C_24_PASSIVE_ACTIVE,
 	"C_25_MAX_KITSETS"                  :   C_25_MAX_KITSETS,
 	"C_26_INDIRECT_STATS" 		    	:	C_26_INDIRECT_STATS,
 	"C_27_RACIAL_ENEMIES" 			    : 	C_27_RACIAL_ENEMIES,
@@ -43,28 +43,27 @@ static func getComponents() -> Dictionary:
 	"C_37_M_TYPE"            			:	C_37_M_TYPE,
 	"C_38_KIT_PART_TYPE"		    	: 	C_38_KIT_PART_TYPE,
 	"C_39_KITSLOT_PROGRESSION"          :   C_39_KITSLOT_PROGRESSION,
-	"C_41_PERK_PROGRESSION"             :   C_41_PERK_PROGRESSION,
-	"C_42_ROLE_VARIETY"					:	C_42_ROLE_VARIETY,
-	"C_43_QUESTS_GIVEN"                  :  C_43_QUESTS_GIVEN,
+	"C_43_QUESTS_GIVEN"                 :  	C_43_QUESTS_GIVEN,
 	"C_44_STREETNAME"				    : 	C_44_STREETNAME,
 	"C_45_CHARACTER_NAME" 				:   C_45_CHARACTER_NAME,
 	"C_46_ACTOR_ITEMS"                  :   C_46_ACTOR_ITEMS,
 	"C_47_SYNONYM"						:	C_47_SYNONYM,
 	"C_48_RARITY"						:	C_48_RARITY,
 	"C_49_EVENT_REFERENCE"			    :	C_49_EVENT_REFERENCE,
-	"C_50_VALUABLES"			    :	C_50_VALUABLES,
+	"C_50_VALUABLES"			        :	C_50_VALUABLES,
 	"C_51_PLAYER_KITSETS" 				: 	C_51_PLAYER_KITSETS,
 	"C_52_STARTING_KITSETS" 			: 	C_52_STARTING_KITSETS,
-	"C_53_LISTENER"             :C_53_LISTENER,
+	"C_53_LISTENER"                     : 	C_53_LISTENER,
 	
 	
-	"C_56_GEAR"                         :   C_56_GEAR,
+
 	"C_57_HITPOINTS"                    :   C_57_HITPOINTS,
 	"C_58_ALTERNATIVE_TEXTURES"         :   C_58_ALTERNATIVE_TEXTURES,
 	"C_59_KIT_MOD_CHANGE"               :   C_59_KIT_MOD_CHANGE,
 	"C_60_BASE_KIT_REFERENCE"           :   C_60_BASE_KIT_REFERENCE,
 	"C_61_LOOT_TABLE"                   :   C_61_LOOT_TABLE,
-	"C_62_LOOT_STATE"                   :   C_62_LOOT_STATE,
+
+
 
 
 	"C_65_TIER"                         :   C_65_TIER,
@@ -72,20 +71,12 @@ static func getComponents() -> Dictionary:
 
 	"C_68_KITVENTORY"                   :   C_68_KITVENTORY,
 	"C_69_KITSET_FAMILY"                :   C_69_KITSET_FAMILY,
-	"C_70_SELECTED_TARGET"              :   C_70_SELECTED_TARGET,
+
 	"C_71_LEC_META_BY"                  :   C_71_LEC_META_BY,
 	"C_72_LEC_META_USE"                 :   C_72_LEC_META_USE,
-	"C_73_KITSET_OF_EVENT"              :   C_73_KITSET_OF_EVENT,
-	"C_74_EVENT_MAIN_DICT"              :   C_74_EVENT_MAIN_DICT,
 
-	"C_76_EVENT_REFERENCE_DICT"         :   C_76_EVENT_REFERENCE_DICT,
-#
-#	"C_78_QUEST_SLOT_1"                 :   C_78_QUEST_SLOT_1,
-#	"C_79_QUEST_PROGRESS_1"             :   C_79_QUEST_PROGRESS_1,
-#	"C_80_QUEST_SLOT_2"                 :   C_80_QUEST_SLOT_2,
-#	"C_81_QUEST_PROGRESS_2"             :   C_81_QUEST_PROGRESS_2,
-#	"C_82_QUEST_SLOT_3"                 :   C_82_QUEST_SLOT_3,
-#	"C_83_QUEST_PROGRESS_3"             :   C_83_QUEST_PROGRESS_3,
+
+	"C_74_EVENT_MAIN_DICT"              :   C_74_EVENT_MAIN_DICT
 
 	
 	

@@ -19,4 +19,4 @@ static func getAutoDoc(): return{
 	"validType"   : "STATIC_LIST",
 	"nameToShow"  : "Rarity",
 }
-static func getType_quack(): return "INTEGER"
+static func getType_quack(): return "ENUM"

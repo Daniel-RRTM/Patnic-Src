@@ -11,6 +11,7 @@ class_name SokraTiles_TilemapParser
 static func parseByString(filepathToMap:String) -> Dictionary:
 	var tiledImport = Utils.json().fileToDictionary(filepathToMap)
 	var mapMetaData = cleanUpTiledImport(Utils.json().fileToDictionary(filepathToMap))
+	mapMetaData["ID"] = tiledImport.properties[0].value
 	var toReturn    = itterateLayers(mapMetaData)
 	
 	return toReturn
@@ -52,6 +53,9 @@ static func _parseLayer(mapMetaDataPara,layer):
 			var currentTileNr = layer[x*100+y]
 			
 			if currentTileNr != 0:
+				if !knownTileNrs.has(int(currentTileNr)) : 
+					HomErrorLog.printIntoSeshLog("[color=red]TMAP","FATAL ERROR AT PARSING "+mapMetaDataPara.ID+" at pos "+str(x)+"/"+str(y))
+				
 				var entTemp            = API_001_Atlas.Tiles().getEntry( knownTileNrs[int(currentTileNr)] )
 				var entInstance        = DemocrECS.copyEntity(entTemp)
 				entInstance.position   = Vector2(y,x)
@@ -95,7 +99,7 @@ static func getLayersOfLevel(import,ordered=[]):
 
 static func getMapSpecificTileNr(tiledImport,usedTiles={}):
 	var staticNrOffset   = []
-	for i in tiledImport.size():staticNrOffset.append(i*256)
+	for i in tiledImport.size():staticNrOffset.append(i*160)
 	
 	for tiledOrderEntry in tiledImport:
 		var offset = staticNrOffset.pop_front()

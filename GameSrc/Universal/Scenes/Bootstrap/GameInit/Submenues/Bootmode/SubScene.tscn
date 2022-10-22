@@ -149,20 +149,32 @@ custom_fonts/font = SubResource( 2 )
 text = "RTF LOG"
 
 [node name="TILEMAP" type="Button" parent="Control/Debugging"]
-margin_left = 24.0
-margin_top = 63.1591
-margin_right = 144.0
-margin_bottom = 95.1591
+margin_left = 88.0
+margin_top = 64.0
+margin_right = 168.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 88, 65 )
 hint_tooltip = "Start Game in Panic-mode with the Map of config/experimental tilemap.json"
 theme = ExtResource( 4 )
 custom_colors/font_color = Color( 0.717647, 0.85098, 1, 1 )
 custom_colors/font_color_hover = Color( 0.45098, 0.705882, 1, 1 )
 custom_colors/font_color_pressed = Color( 0.0235294, 0.388235, 0.807843, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "TILEMAP"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+text = "DevRoom"
+
+[node name="TILEMAP2" type="Button" parent="Control/Debugging"]
+margin_left = -16.0
+margin_top = 64.0
+margin_right = 72.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 88, 65 )
+hint_tooltip = "Start Game in Panic-mode with the Map of config/experimental tilemap.json"
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0.717647, 0.85098, 1, 1 )
+custom_colors/font_color_hover = Color( 0.45098, 0.705882, 1, 1 )
+custom_colors/font_color_pressed = Color( 0.0235294, 0.388235, 0.807843, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "DevMap"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/Debugging"]
 margin_top = 9.0
@@ -273,6 +285,7 @@ text = "Reset"
 [connection signal="pressed" from="Control/Debugging/TEMP" to="." method="_on_Experimental_pressed"]
 [connection signal="pressed" from="Control/Debugging/Log" to="." method="_on_Log_pressed"]
 [connection signal="pressed" from="Control/Debugging/TILEMAP" to="." method="_on_Tilemap_pressed"]
+[connection signal="pressed" from="Control/Debugging/TILEMAP2" to="." method="_on_DevRoom_pressed"]
 [connection signal="pressed" from="Control/AUTOMATION/statistics" to="." method="_on_Statistics_pressed"]
 [connection signal="pressed" from="Control/AUTOMATION/Deserialice" to="." method="_on_Deserialice_pressed"]
 [connection signal="item_selected" from="Log/group" to="." method="_on_group_item_selected"]

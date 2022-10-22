@@ -63,9 +63,6 @@ func logic()            -> int:		return getCompValue("C_19_ATTRIBUTES").logic.va
 
 
 func carriageCapacity() -> int:		return getCompValue("C_26_INDIRECT_STATS").carriageCapacity
-func physicalLimit()    -> int:		return getCompValue("C_22_LIMITS").physicalLimit
-func socialLimit()      -> int:		return getCompValue("C_22_LIMITS").socialLimit
-func mentalLimit()      -> int:		return getCompValue("C_22_LIMITS").mentalLimit
 func hitpoints()        -> int:		return getComp("C_57_HITPOINTS").value
 func condition()        -> int:		return getCompValue("C_26_INDIRECT_STATS").condition
 

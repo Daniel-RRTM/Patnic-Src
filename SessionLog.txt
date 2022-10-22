@@ -1,1 +1,283 @@
 TIME,GROUP,DESC
+18:56:08,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+18:56:08,INIT,[color=red]XX========== BOOTING ==============================================XX
+18:56:08,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+18:56:08,INIT,Alecandria parses external LEC into Entities...
+18:56:08,INIT,[color=lime]148[color=white] LECs Parsed
+18:56:08,INIT,Alecandria done!
+18:56:08,INIT,Sokratiles parses Tilesets into Entities...
+18:56:08,INIT,Sokratiles done!
+18:56:08,INIT,Mode to start by file "tools/gameinit.txt": [color=lime]bootMenue
+18:56:08,INIT,Finished at [color=lime]1265 [color=white]Milliseconds!
+18:56:08,INIT,====================================================================
+18:56:08,INIT,============ BOOTING DONE ==========================================
+18:56:08,INIT,====================================================================
+18:56:09,BOOT,[color=lime]StartingKits[color=white] set!
+18:56:09,BOOT,[color=lime]StartingKits[color=white] set!
+18:56:11,BOOT,loading savestate [color=lime]quickStart[color=white] with Nr[color=lime]1[color=white]
+18:56:11,BOOT,starting in [color=lime]Tilemap[color=white]
+18:57:36,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+18:57:36,INIT,[color=red]XX========== BOOTING ==============================================XX
+18:57:36,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+18:57:36,INIT,Alecandria parses external LEC into Entities...
+18:57:36,INIT,[color=lime]148[color=white] LECs Parsed
+18:57:36,INIT,Alecandria done!
+18:57:36,INIT,Sokratiles parses Tilesets into Entities...
+18:57:36,INIT,Sokratiles done!
+18:57:36,INIT,Mode to start by file "tools/gameinit.txt": [color=lime]bootMenue
+18:57:36,INIT,Finished at [color=lime]1318 [color=white]Milliseconds!
+18:57:36,INIT,====================================================================
+18:57:36,INIT,============ BOOTING DONE ==========================================
+18:57:36,INIT,====================================================================
+18:57:37,BOOT,[color=lime]StartingKits[color=white] set!
+18:57:37,BOOT,[color=lime]StartingKits[color=white] set!
+18:57:39,BOOT,loading savestate [color=lime]quickStart[color=white] with Nr[color=lime]1[color=white]
+18:57:39,BOOT,starting in [color=lime]Tilemap[color=white]
+19:02:52,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+19:02:52,INIT,[color=red]XX========== BOOTING ==============================================XX
+19:02:52,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+19:02:52,INIT,Alecandria parses external LEC into Entities...
+19:02:52,INIT,[color=lime]148[color=white] LECs Parsed
+19:02:52,INIT,Alecandria done!
+19:02:52,INIT,Sokratiles parses Tilesets into Entities...
+19:02:52,INIT,Sokratiles done!
+19:02:52,INIT,Mode to start by file "tools/gameinit.txt": [color=lime]bootMenue
+19:02:52,INIT,Finished at [color=lime]1370 [color=white]Milliseconds!
+19:02:52,INIT,====================================================================
+19:02:52,INIT,============ BOOTING DONE ==========================================
+19:02:52,INIT,====================================================================
+19:02:53,BOOT,[color=lime]StartingKits[color=white] set!
+19:02:53,BOOT,[color=lime]StartingKits[color=white] set!
+19:02:55,BOOT,loading savestate [color=lime]quickStart[color=white] with Nr[color=lime]1[color=white]
+19:02:55,[color=red]TMAP,FATAL ERROR AT PARSING TEMPLATE at pos 32/30
+19:06:39,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+19:06:39,INIT,[color=red]XX========== BOOTING ==============================================XX
+19:06:39,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+19:06:39,INIT,Alecandria parses external LEC into Entities...
+19:06:39,INIT,[color=lime]148[color=white] LECs Parsed
+19:06:39,INIT,Alecandria done!
+19:06:39,INIT,Sokratiles parses Tilesets into Entities...
+19:06:40,INIT,Sokratiles done!
+19:06:40,INIT,Mode to start by file "tools/gameinit.txt": [color=lime]bootMenue
+19:06:40,INIT,Finished at [color=lime]1308 [color=white]Milliseconds!
+19:06:40,INIT,====================================================================
+19:06:40,INIT,============ BOOTING DONE ==========================================
+19:06:40,INIT,====================================================================
+19:06:41,BOOT,[color=lime]StartingKits[color=white] set!
+19:06:41,BOOT,[color=lime]StartingKits[color=white] set!
+19:06:43,BOOT,loading savestate [color=lime]quickStart[color=white] with Nr[color=lime]1[color=white]
+19:09:23,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+19:09:23,INIT,[color=red]XX========== BOOTING ==============================================XX
+19:09:23,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+19:09:23,INIT,Alecandria parses external LEC into Entities...
+19:09:23,INIT,[color=lime]148[color=white] LECs Parsed
+19:09:23,INIT,Alecandria done!
+19:09:23,INIT,Sokratiles parses Tilesets into Entities...
+19:09:23,INIT,Sokratiles done!
+19:09:23,INIT,Mode to start by file "tools/gameinit.txt": [color=lime]bootMenue
+19:09:23,INIT,Finished at [color=lime]1278 [color=white]Milliseconds!
+19:09:23,INIT,====================================================================
+19:09:23,INIT,============ BOOTING DONE ==========================================
+19:09:23,INIT,====================================================================
+19:09:25,BOOT,loading savestate [color=lime]quickStart[color=white] with Nr[color=lime]1[color=white]
+19:09:27,[color=red]TMAP,FATAL ERROR AT PARSING TEMPLATE at pos 32/29
+19:10:37,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+19:10:37,INIT,[color=red]XX========== BOOTING ==============================================XX
+19:10:37,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+19:10:37,INIT,Alecandria parses external LEC into Entities...
+19:10:37,INIT,[color=lime]148[color=white] LECs Parsed
+19:10:37,INIT,Alecandria done!
+19:10:37,INIT,Sokratiles parses Tilesets into Entities...
+19:10:37,INIT,Sokratiles done!
+19:10:37,INIT,Mode to start by file "tools/gameinit.txt": [color=lime]bootMenue
+19:10:37,INIT,Finished at [color=lime]1311 [color=white]Milliseconds!
+19:10:37,INIT,====================================================================
+19:10:37,INIT,============ BOOTING DONE ==========================================
+19:10:37,INIT,====================================================================
+19:10:38,BOOT,[color=lime]StartingKits[color=white] set!
+19:10:38,BOOT,[color=lime]StartingKits[color=white] set!
+19:10:39,BOOT,loading savestate [color=lime]quickStart[color=white] with Nr[color=lime]1[color=white]
+19:10:40,[color=red]TMAP,FATAL ERROR AT PARSING TEMPLATE at pos 32/29
+19:11:09,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+19:11:09,INIT,[color=red]XX========== BOOTING ==============================================XX
+19:11:09,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+19:11:09,INIT,Alecandria parses external LEC into Entities...
+19:11:09,INIT,[color=lime]148[color=white] LECs Parsed
+19:11:09,INIT,Alecandria done!
+19:11:09,INIT,Sokratiles parses Tilesets into Entities...
+19:11:10,INIT,Sokratiles done!
+19:11:10,INIT,Mode to start by file "tools/gameinit.txt": [color=lime]bootMenue
+19:11:10,INIT,Finished at [color=lime]1388 [color=white]Milliseconds!
+19:11:10,INIT,====================================================================
+19:11:10,INIT,============ BOOTING DONE ==========================================
+19:11:10,INIT,====================================================================
+19:11:11,BOOT,[color=lime]StartingKits[color=white] set!
+19:11:11,BOOT,[color=lime]StartingKits[color=white] set!
+19:11:12,BOOT,loading savestate [color=lime]quickStart[color=white] with Nr[color=lime]1[color=white]
+19:11:12,[color=red]TMAP,FATAL ERROR AT PARSING TEMPLATE at pos 32/29
+19:13:36,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+19:13:36,INIT,[color=red]XX========== BOOTING ==============================================XX
+19:13:36,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+19:13:36,INIT,Alecandria parses external LEC into Entities...
+19:13:37,INIT,[color=lime]148[color=white] LECs Parsed
+19:13:37,INIT,Alecandria done!
+19:13:37,INIT,Sokratiles parses Tilesets into Entities...
+19:13:37,INIT,Sokratiles done!
+19:13:37,INIT,Mode to start by file "tools/gameinit.txt": [color=lime]bootMenue
+19:13:37,INIT,Finished at [color=lime]1290 [color=white]Milliseconds!
+19:13:37,INIT,====================================================================
+19:13:37,INIT,============ BOOTING DONE ==========================================
+19:13:37,INIT,====================================================================
+19:13:39,BOOT,loading savestate [color=lime]quickStart[color=white] with Nr[color=lime]1[color=white]
+19:13:39,[color=red]TMAP,FATAL ERROR AT PARSING TEMPLATE at pos 32/29
+19:21:34,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+19:21:34,INIT,[color=red]XX========== BOOTING ==============================================XX
+19:21:34,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+19:21:34,INIT,Alecandria parses external LEC into Entities...
+19:21:34,INIT,[color=lime]148[color=white] LECs Parsed
+19:21:34,INIT,Alecandria done!
+19:21:34,INIT,Sokratiles parses Tilesets into Entities...
+19:21:34,INIT,Sokratiles done!
+19:21:34,INIT,Mode to start by file "tools/gameinit.txt": [color=lime]bootMenue
+19:21:34,INIT,Finished at [color=lime]1362 [color=white]Milliseconds!
+19:21:34,INIT,====================================================================
+19:21:34,INIT,============ BOOTING DONE ==========================================
+19:21:34,INIT,====================================================================
+19:21:35,BOOT,[color=lime]StartingKits[color=white] set!
+19:21:35,BOOT,[color=lime]StartingKits[color=white] set!
+19:21:36,BOOT,loading savestate [color=lime]quickStart[color=white] with Nr[color=lime]1[color=white]
+19:21:37,[color=red]TMAP,FATAL ERROR AT PARSING TEMPLATE at pos 32/29
+19:22:34,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+19:22:34,INIT,[color=red]XX========== BOOTING ==============================================XX
+19:22:34,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+19:22:34,INIT,Alecandria parses external LEC into Entities...
+19:22:34,INIT,[color=lime]148[color=white] LECs Parsed
+19:22:34,INIT,Alecandria done!
+19:22:34,INIT,Sokratiles parses Tilesets into Entities...
+19:22:34,INIT,Sokratiles done!
+19:22:34,INIT,Mode to start by file "tools/gameinit.txt": [color=lime]bootMenue
+19:22:34,INIT,Finished at [color=lime]1335 [color=white]Milliseconds!
+19:22:34,INIT,====================================================================
+19:22:34,INIT,============ BOOTING DONE ==========================================
+19:22:34,INIT,====================================================================
+19:22:35,BOOT,[color=lime]StartingKits[color=white] set!
+19:22:35,BOOT,[color=lime]StartingKits[color=white] set!
+19:22:36,BOOT,loading savestate [color=lime]quickStart[color=white] with Nr[color=lime]1[color=white]
+19:22:36,BOOT,starting in [color=lime]Tilemap[color=white]
+19:26:20,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+19:26:20,INIT,[color=red]XX========== BOOTING ==============================================XX
+19:26:20,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+19:26:20,INIT,Alecandria parses external LEC into Entities...
+19:26:20,INIT,[color=lime]148[color=white] LECs Parsed
+19:26:20,INIT,Alecandria done!
+19:26:20,INIT,Sokratiles parses Tilesets into Entities...
+19:26:20,INIT,Sokratiles done!
+19:26:20,INIT,Mode to start by file "tools/gameinit.txt": [color=lime]bootMenue
+19:26:20,INIT,Finished at [color=lime]1292 [color=white]Milliseconds!
+19:26:20,INIT,====================================================================
+19:26:20,INIT,============ BOOTING DONE ==========================================
+19:26:20,INIT,====================================================================
+19:26:21,BOOT,[color=lime]StartingKits[color=white] set!
+19:26:22,BOOT,[color=lime]StartingKits[color=white] set!
+19:26:22,BOOT,loading savestate [color=lime]quickStart[color=white] with Nr[color=lime]1[color=white]
+19:26:23,BOOT,starting with [color=lime]Quickstart[color=white] Char
+20:46:37,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+20:46:37,INIT,[color=red]XX========== BOOTING ==============================================XX
+20:46:37,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+20:46:37,INIT,Alecandria parses external LEC into Entities...
+20:46:37,INIT,[color=lime]148[color=white] LECs Parsed
+20:46:37,INIT,Alecandria done!
+20:46:37,INIT,Sokratiles parses Tilesets into Entities...
+20:46:37,INIT,Sokratiles done!
+20:46:37,INIT,Mode to start by file "tools/gameinit.txt": [color=lime]bootMenue
+20:46:37,INIT,Finished at [color=lime]1234 [color=white]Milliseconds!
+20:46:37,INIT,====================================================================
+20:46:37,INIT,============ BOOTING DONE ==========================================
+20:46:37,INIT,====================================================================
+20:50:37,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+20:50:37,INIT,[color=red]XX========== BOOTING ==============================================XX
+20:50:37,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+20:50:37,INIT,Alecandria parses external LEC into Entities...
+20:50:37,INIT,[color=lime]148[color=white] LECs Parsed
+20:50:37,INIT,Alecandria done!
+20:50:37,INIT,Sokratiles parses Tilesets into Entities...
+20:50:37,INIT,Sokratiles done!
+20:50:37,INIT,Mode to start by file "tools/gameinit.txt": [color=lime]bootMenue
+20:50:37,INIT,Finished at [color=lime]1238 [color=white]Milliseconds!
+20:50:37,INIT,====================================================================
+20:50:37,INIT,============ BOOTING DONE ==========================================
+20:50:37,INIT,====================================================================
+00:46:05,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+00:46:05,INIT,[color=red]XX========== BOOTING ==============================================XX
+00:46:05,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+00:46:05,INIT,Alecandria parses external LEC into Entities...
+00:46:05,INIT,[color=lime]148[color=white] LECs Parsed
+00:46:05,INIT,Alecandria done!
+00:46:05,INIT,Sokratiles parses Tilesets into Entities...
+00:46:05,INIT,Sokratiles done!
+00:46:05,INIT,Mode to start by file "tools/gameinit.txt": [color=lime]bootMenue
+00:46:05,INIT,Finished at [color=lime]1393 [color=white]Milliseconds!
+00:46:05,INIT,====================================================================
+00:46:05,INIT,============ BOOTING DONE ==========================================
+00:46:05,INIT,====================================================================
+05:23:41,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+05:23:41,INIT,[color=red]XX========== BOOTING ==============================================XX
+05:23:41,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+05:23:41,INIT,Alecandria parses external LEC into Entities...
+05:23:42,INIT,[color=lime]148[color=white] LECs Parsed
+05:23:42,INIT,Alecandria done!
+05:23:42,INIT,Sokratiles parses Tilesets into Entities...
+05:26:38,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+05:26:38,INIT,[color=red]XX========== BOOTING ==============================================XX
+05:26:38,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+05:26:38,INIT,Alecandria parses external LEC into Entities...
+05:26:38,INIT,[color=lime]148[color=white] LECs Parsed
+05:26:38,INIT,Alecandria done!
+05:26:38,INIT,Sokratiles parses Tilesets into Entities...
+05:26:38,INIT,Sokratiles done!
+05:26:38,INIT,Mode to start by file "tools/gameinit.txt": [color=lime]bootMenue
+05:26:38,INIT,Finished at [color=lime]1276 [color=white]Milliseconds!
+05:26:38,INIT,====================================================================
+05:26:38,INIT,============ BOOTING DONE ==========================================
+05:26:38,INIT,====================================================================
+05:26:41,BOOT,loading savestate [color=lime]quickStart[color=white] with Nr[color=lime]1[color=white]
+05:26:41,BOOT,starting with [color=lime]Quickstart[color=white] Char
+05:29:51,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+05:29:51,INIT,[color=red]XX========== BOOTING ==============================================XX
+05:29:51,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+05:29:51,INIT,Alecandria parses external LEC into Entities...
+05:29:51,INIT,[color=lime]148[color=white] LECs Parsed
+05:29:51,INIT,Alecandria done!
+05:29:51,INIT,Sokratiles parses Tilesets into Entities...
+05:29:51,INIT,Sokratiles done!
+05:29:51,INIT,Mode to start by file "tools/gameinit.txt": [color=lime]bootMenue
+05:29:51,INIT,Finished at [color=lime]1251 [color=white]Milliseconds!
+05:29:51,INIT,====================================================================
+05:29:51,INIT,============ BOOTING DONE ==========================================
+05:29:51,INIT,====================================================================
+05:31:09,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+05:31:09,INIT,[color=red]XX========== BOOTING ==============================================XX
+05:31:09,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+05:31:09,INIT,Alecandria parses external LEC into Entities...
+05:31:09,INIT,[color=lime]148[color=white] LECs Parsed
+05:31:09,INIT,Alecandria done!
+05:31:09,INIT,Sokratiles parses Tilesets into Entities...
+05:31:09,INIT,Sokratiles done!
+05:31:09,INIT,Mode to start by file "tools/gameinit.txt": [color=lime]bootMenue
+05:31:09,INIT,Finished at [color=lime]1230 [color=white]Milliseconds!
+05:31:09,INIT,====================================================================
+05:31:09,INIT,============ BOOTING DONE ==========================================
+05:31:09,INIT,====================================================================
+05:51:12,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+05:51:12,INIT,[color=red]XX========== BOOTING ==============================================XX
+05:51:12,INIT,[color=red]XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+05:51:12,INIT,Alecandria parses external LEC into Entities...
+05:51:12,INIT,[color=lime]148[color=white] LECs Parsed
+05:51:12,INIT,Alecandria done!
+05:51:12,INIT,Sokratiles parses Tilesets into Entities...
+05:51:12,INIT,Sokratiles done!
+05:51:12,INIT,Mode to start by file "tools/gameinit.txt": [color=lime]bootMenue
+05:51:12,INIT,Finished at [color=lime]1232 [color=white]Milliseconds!
+05:51:12,INIT,====================================================================
+05:51:12,INIT,============ BOOTING DONE ==========================================
+05:51:12,INIT,====================================================================

@@ -3,7 +3,7 @@ class_name SokraTiles_CuratedMapsParser
 
 
 static func parse() -> Dictionary:
-	var filepath = "res://GameData/Tiled/TileMaps/Story/"
+	var filepath = "res://GameData/Tiled/Maps/Unique/"
 	var curatedMaps = {}
 	
 	for mapName in Utils.directory().getFileNamesInFilepath(filepath):

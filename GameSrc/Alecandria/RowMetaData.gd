@@ -14,6 +14,7 @@ var value      = ""
 
 var spacing    = ""
 
+var UtilOfDataType
 
 
 func _init(compDict:Dictionary, compToStringPara:String) -> void:
@@ -27,7 +28,14 @@ func _init(compDict:Dictionary, compToStringPara:String) -> void:
 	value        = ""
 	
 	for i in range(20-nameToShow.length()): spacing += " "
-
+	
+	match validType:
+			"STRING"     : UtilOfDataType = _Alecandria_Designer_String
+			"INTEGER"    : UtilOfDataType = _Alecandria_Designer_Integer
+			"BOOLEAN"    : UtilOfDataType = _Alecandria_Designer_Boolean
+			"DICTIONARY" : UtilOfDataType = _Alecandria_Designer_Dictionary
+			"ENUM"       : UtilOfDataType = _Alecandria_Designer_Enum
+	
 
 
 func printRow()         -> String : 

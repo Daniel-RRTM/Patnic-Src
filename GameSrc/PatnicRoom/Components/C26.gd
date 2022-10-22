@@ -27,10 +27,6 @@ func update_005_Character_Stats(dict,entToFill):
 	carriageCapacity = attributesBlock.strength.value + (attributesBlock.constitution.value  * 2)
 	entToFill.addComponent( C_23_CARRIAGE.new(carriageCapacity) )
 	
-	physicalLimit    = (attributesBlock.constitution.value  +attributesBlock.reaction.value   +(attributesBlock.strength.value  * 2))  / 3
-	socialLimit      = (attributesBlock.constitution.value  +attributesBlock.intuition.value  +(attributesBlock.charisma.value  * 2))  / 3
-	mentalLimit      = (attributesBlock.willpower.value     +attributesBlock.intuition.value  +(attributesBlock.logic.value     * 2))  / 3
-	entToFill.addComponent( C_22_LIMITS.new(physicalLimit, socialLimit, mentalLimit) )
 
 
 ########################

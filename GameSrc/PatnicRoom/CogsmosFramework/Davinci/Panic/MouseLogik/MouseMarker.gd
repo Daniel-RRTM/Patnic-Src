@@ -13,7 +13,7 @@ static func getMouseMarker(ent):
 
 
 static func _getActionType(mode,ent):
-	match mode:
+	match mode:	
 		ENUM.SOKRATILES.MOUSE_INPUT_MODE.ONLOOK:   return _getOnlookMarker(ent)
 		ENUM.SOKRATILES.MOUSE_INPUT_MODE.LOOT:     return _getLootMarker(ent)
 
@@ -36,3 +36,4 @@ static func _getLootMarker(availabillity):
 		"EMPTY"    : return "Marker_3_0"
 		"OPEN"     : return "Marker_3_1"
 		"CLOSED"   : return "Marker_3_2"
+		

@@ -14,8 +14,9 @@ var ENUMS_TO_STRING = {
 }
 
 
-const EXPERIMENTAL_TILEMAP = "res://Config/ExperimentalTilemap.json"
-const TILE_SETS     = "res://GameData/Tiled/TileSets/JSON"
+const EXPERIMENTAL_TILEMAP = "res://GameData/Tiled/Maps/ExperimentalTilemap.json"
+const DEV_ROOM_TILEMAP = "res://GameData/Tiled/Maps/DevRoom.json"
+const TILE_SETS     = "res://GameData/Tiled/Sets/JSON"
 const SUB_TITLES    = "res://Config/DynamicSubtitles.json"
 
 const SAVE_STATE    = "res://Config/SaveState"

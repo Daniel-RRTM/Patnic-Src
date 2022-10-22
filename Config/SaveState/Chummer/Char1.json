@@ -2,7 +2,7 @@
 	"name": "Chummer",
 	"street-name": "",
 	"max kitsets": 5,
-	"texture": "General_0_2",
+	"texture": "General_2_0",
 	"kitslot progression": 2,
 	"trait progression": 0,
 	"race": "TROLL",
@@ -17,6 +17,30 @@
 		"charisma": 3
 	},
 	"kitsets": [
-
+		[
+			"X_H_2",
+			"X_H_2__M_1",
+			""
+		],
+		[
+			"C_S_3",
+			"",
+			""
+		],
+		[
+			"C_S_2",
+			"C_S_2__M_1",
+			""
+		],
+		[
+			"M_A_1",
+			"M_A_1__M_1",
+			""
+		],
+		[
+			"M_A_1",
+			"M_A_1__M_2",
+			""
+		]
 	]
 }
