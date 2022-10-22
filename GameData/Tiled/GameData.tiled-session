@@ -337,16 +337,16 @@
             "scale": 0.5,
             "selectedLayer": 8,
             "viewCenter": {
-                "x": 967,
+                "x": 1092,
                 "y": 764
             }
         },
         "Maps/Unique/Suburban_1.json": {
-            "scale": 0.5,
-            "selectedLayer": 8,
+            "scale": 1,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 639,
-                "y": 988
+                "x": 342,
+                "y": 288
             }
         },
         "Maps/Unique/suburban.json": {
